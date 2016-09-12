@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
                 "lib/pokemongodb/types/steel.rb",
                 "lib/pokemongodb/types/water.rb",
                 "lib/pokemongodb/move.rb",
+                "lib/pokemongodb/moves/category.rb",
                 "lib/pokemongodb/moves/acid.rb"
               ]
   s.homepage = "http://rubygems.org/gems/pokemongodb"

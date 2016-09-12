@@ -1,7 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/teoucsb82/pokemongodb/badges/gpa.svg)](https://codeclimate.com/github/teoucsb82/pokemongodb)
 
-# PokemonGoDB
-Quick Pokemon Go Database featuring stats on all available Pokemon, Moves, Types, etc.
+# Pokemon Go DataBase
+Quick Pokemon Go Database featuring stats on all available Pokemon, Moves, Types, etc. Used to power [MongoDatabase](http://mongodatabase.herokuapp.com)
 
 ## Quick Installation
 To install on your system, run:

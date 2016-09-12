@@ -1,6 +1,6 @@
 class Pokemongodb
   class Move
-    class Acid
+    class Acid < Move
       def self.power
         10
       end
@@ -14,7 +14,7 @@ class Pokemongodb
       end
 
       def self.category
-        [Pokemongodb::Move::FAST]
+        Category::FAST
       end
 
       def self.type
