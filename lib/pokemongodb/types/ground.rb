@@ -3,11 +3,11 @@ class Pokemongodb
     class Ground < Type
       def self.offense_strong
         [
+          Pokemongodb::Type::Electric,
+          Pokemongodb::Type::Fire,
           Pokemongodb::Type::Poison,
           Pokemongodb::Type::Rock,
-          Pokemongodb::Type::Steel,
-          Pokemongodb::Type::Fire,
-          Pokemongodb::Type::Electric
+          Pokemongodb::Type::Steel
         ]
       end
 

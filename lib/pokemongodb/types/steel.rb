@@ -3,18 +3,18 @@ class Pokemongodb
     class Steel < Type
       def self.offense_strong
         [
-          Pokemongodb::Type::Rock,
+          Pokemongodb::Type::Fairy,
           Pokemongodb::Type::Ice,
-          Pokemongodb::Type::Fairy
+          Pokemongodb::Type::Rock
         ]
       end
 
       def self.offense_weak
         [
-          Pokemongodb::Type::Steel,
+          Pokemongodb::Type::Electric,
           Pokemongodb::Type::Fire,
-          Pokemongodb::Type::Water,
-          Pokemongodb::Type::Electric
+          Pokemongodb::Type::Steel,
+          Pokemongodb::Type::Water
         ]
       end
     end

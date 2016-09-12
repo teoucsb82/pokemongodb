@@ -10,9 +10,9 @@ class Pokemongodb
 
       def self.offense_weak
         [
-          Pokemongodb::Type::Grass,
+          Pokemongodb::Type::Dragon,
           Pokemongodb::Type::Electric,
-          Pokemongodb::Type::Dragon
+          Pokemongodb::Type::Grass
         ]
       end
     end

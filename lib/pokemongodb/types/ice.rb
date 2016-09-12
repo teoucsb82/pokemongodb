@@ -3,19 +3,19 @@ class Pokemongodb
     class Ice < Type
       def self.offense_strong
         [
+          Pokemongodb::Type::Dragon,
           Pokemongodb::Type::Flying,
-          Pokemongodb::Type::Ground,
           Pokemongodb::Type::Grass,
-          Pokemongodb::Type::Dragon
+          Pokemongodb::Type::Ground
         ]
       end
 
       def self.offense_weak
         [
-          Pokemongodb::Type::Steel,
+          Pokemongodb::Type::Ice,
           Pokemongodb::Type::Fire,
-          Pokemongodb::Type::Water,
-          Pokemongodb::Type::Ice
+          Pokemongodb::Type::Steel,
+          Pokemongodb::Type::Water
         ]
       end
     end

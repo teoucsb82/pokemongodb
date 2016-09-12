@@ -3,9 +3,9 @@ class Pokemongodb
     class Rock < Type
       def self.offense_strong
         [
-          Pokemongodb::Type::Flying,
           Pokemongodb::Type::Bug,
           Pokemongodb::Type::Fire,
+          Pokemongodb::Type::Flying,
           Pokemongodb::Type::Ice
         ]
       end

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "pokemongodb"
-  s.version  = "0.0.2"
+  s.version  = "0.1.0"
   s.date     = "2016-09-12"
   s.summary  = "Quick Pokemon Go Database / API. Used to power www.mongodatabase.com"
   s.authors  = "TeoUCSB82"

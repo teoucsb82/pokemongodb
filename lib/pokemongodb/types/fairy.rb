@@ -3,17 +3,17 @@ class Pokemongodb
     class Fairy < Type
       def self.offense_strong
         [
-          Pokemongodb::Type::Fighting,
+          Pokemongodb::Type::Dark,
           Pokemongodb::Type::Dragon,
-          Pokemongodb::Type::Dark
+          Pokemongodb::Type::Fighting
         ]
       end
 
       def self.offense_weak
         [
+          Pokemongodb::Type::Fire,
           Pokemongodb::Type::Poison,
-          Pokemongodb::Type::Steel,
-          Pokemongodb::Type::Fire
+          Pokemongodb::Type::Steel
         ]
       end
     end

@@ -3,17 +3,17 @@ class Pokemongodb
     class Poison < Type
       def self.offense_strong
         [
-          Pokemongodb::Type::Grass,
-          Pokemongodb::Type::Fairy
+          Pokemongodb::Type::Fairy,
+          Pokemongodb::Type::Grass
         ]
       end
 
       def self.offense_weak
         [
-          Pokemongodb::Type::Poison,
+          Pokemongodb::Type::Ghost,
           Pokemongodb::Type::Ground,
-          Pokemongodb::Type::Rock,
-          Pokemongodb::Type::Ghost
+          Pokemongodb::Type::Poison,
+          Pokemongodb::Type::Rock
         ]
       end
     end

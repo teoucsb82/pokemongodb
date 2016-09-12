@@ -10,8 +10,8 @@ class Pokemongodb
 
       def self.offense_weak
         [
-          Pokemongodb::Type::Steel,
-          Pokemongodb::Type::Psychic
+          Pokemongodb::Type::Psychic,
+          Pokemongodb::Type::Steel
         ]
       end
     end

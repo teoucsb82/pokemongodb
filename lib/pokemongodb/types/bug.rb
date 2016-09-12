@@ -11,13 +11,13 @@ class Pokemongodb
 
       def self.offense_weak
         [
+          Pokemongodb::Type::Fairy,
           Pokemongodb::Type::Fighting,
-          Pokemongodb::Type::Flying,
-          Pokemongodb::Type::Poison,
-          Pokemongodb::Type::Ghost,
-          Pokemongodb::Type::Steel,
           Pokemongodb::Type::Fire,
-          Pokemongodb::Type::Fairy
+          Pokemongodb::Type::Flying,
+          Pokemongodb::Type::Ghost,
+          Pokemongodb::Type::Poison,
+          Pokemongodb::Type::Steel
         ]
       end
     end
