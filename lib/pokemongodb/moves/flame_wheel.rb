@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class FlameWheel < Move
       def self.power
-        10
+        40
       end
 
       def self.cooldown
-        1.05
+        4.6
       end
 
       def self.energy
-        7
+        -25
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Fire
       end
     end
   end

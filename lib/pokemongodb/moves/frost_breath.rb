@@ -1,12 +1,12 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class FrostBreath < Move
       def self.power
-        10
+        9
       end
 
       def self.cooldown
-        1.05
+        0.81
       end
 
       def self.energy
@@ -14,7 +14,7 @@ class Pokemongodb
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Ice
       end
     end
   end

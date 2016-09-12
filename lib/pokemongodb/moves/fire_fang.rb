@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class FireFang < Move
       def self.power
         10
       end
 
       def self.cooldown
-        1.05
+        0.84
       end
 
       def self.energy
-        7
+        4
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Fire
       end
     end
   end

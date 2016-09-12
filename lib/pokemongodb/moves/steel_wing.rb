@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class SteelWing < Move
       def self.power
-        10
+        15
       end
 
       def self.cooldown
-        1.05
+        1.33
       end
 
       def self.energy
-        7
+        4
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Steel
       end
     end
   end

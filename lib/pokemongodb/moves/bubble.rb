@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class Bubble < Move
       def self.power
-        10
+        25
       end
 
       def self.cooldown
-        1.05
+        2.3
       end
 
       def self.energy
-        7
+        15
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Water
       end
     end
   end

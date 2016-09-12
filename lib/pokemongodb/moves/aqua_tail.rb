@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class AquaTail < Move
       def self.power
-        10
+        45
       end
 
       def self.cooldown
-        1.05
+        2.35
       end
 
       def self.energy
-        7
+        -50
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Water
       end
     end
   end

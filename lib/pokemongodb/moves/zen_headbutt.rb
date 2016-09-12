@@ -1,8 +1,8 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class ZenHeadbutt < Move
       def self.power
-        10
+        12
       end
 
       def self.cooldown
@@ -10,11 +10,11 @@ class Pokemongodb
       end
 
       def self.energy
-        7
+        4
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Psychic
       end
     end
   end

@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class PetalBlizzard < Move
       def self.power
-        10
+        65
       end
 
       def self.cooldown
-        1.05
+        3.2
       end
 
       def self.energy
-        7
+        -50
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Grass
       end
     end
   end

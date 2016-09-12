@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class PlayRough < Move
       def self.power
-        10
+        55
       end
 
       def self.cooldown
-        1.05
+        2.9
       end
 
       def self.energy
-        7
+        -50
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Fairy
       end
     end
   end

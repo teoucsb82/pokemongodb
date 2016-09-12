@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class AirCutter < Move
       def self.power
-        10
+        30
       end
 
       def self.cooldown
-        1.05
+        3.3
       end
 
       def self.energy
-        7
+        -25
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Flying
       end
     end
   end

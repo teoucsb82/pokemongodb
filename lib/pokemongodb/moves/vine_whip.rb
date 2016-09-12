@@ -1,12 +1,12 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class VineWhip < Move
       def self.power
-        10
+        7
       end
 
       def self.cooldown
-        1.05
+        0.65
       end
 
       def self.energy
@@ -14,7 +14,7 @@ class Pokemongodb
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Grass
       end
     end
   end

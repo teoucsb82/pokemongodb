@@ -1,12 +1,12 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class RockSmash < Move
       def self.power
-        10
+        15
       end
 
       def self.cooldown
-        1.05
+        1.41
       end
 
       def self.energy
@@ -14,7 +14,7 @@ class Pokemongodb
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Fighting
       end
     end
   end

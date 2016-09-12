@@ -1,20 +1,20 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class Megahorn < Move
       def self.power
-        10
+        80
       end
 
       def self.cooldown
-        1.05
+        3.2
       end
 
       def self.energy
-        7
+        -100
       end
 
       def self.type
-        Pokemongodb::Type::Poison
+        Pokemongodb::Type::Bug
       end
     end
   end

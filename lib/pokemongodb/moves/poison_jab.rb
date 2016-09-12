@@ -1,8 +1,8 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class PoisonJab < Move
       def self.power
-        10
+        12
       end
 
       def self.cooldown

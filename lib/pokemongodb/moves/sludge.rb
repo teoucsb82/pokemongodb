@@ -1,16 +1,16 @@
 class Pokemongodb
   class Move
-    class Acid < Move
+    class Sludge < Move
       def self.power
-        10
+        30
       end
 
       def self.cooldown
-        1.05
+        2.6
       end
 
       def self.energy
-        7
+        -25
       end
 
       def self.type
