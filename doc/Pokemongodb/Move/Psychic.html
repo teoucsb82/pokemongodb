@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Pokemongodb::Move::Psychic - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/pokemongodb/moves/psychic.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../Move.html">Pokemongodb::Move</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-cooldown">::cooldown</a>
+    
+    <li ><a href="#method-c-energy">::energy</a>
+    
+    <li ><a href="#method-c-power">::power</a>
+    
+    <li ><a href="#method-c-type">::type</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../doc/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb_html.html">Pokemongodb.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Move_html.html">Move.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Move/Acid_html.html">Acid.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type_html.html">Type.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Bug_html.html">Bug.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Dark_html.html">Dark.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Dragon_html.html">Dragon.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Electric_html.html">Electric.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fairy_html.html">Fairy.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fighting_html.html">Fighting.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fire_html.html">Fire.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Flying_html.html">Flying.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ghost_html.html">Ghost.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Grass_html.html">Grass.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ground_html.html">Ground.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ice_html.html">Ice.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Normal_html.html">Normal.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Poison_html.html">Poison.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Psychic_html.html">Psychic.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Rock_html.html">Rock.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Steel_html.html">Steel.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Water_html.html">Water.html</a>
+  
+    <li class="file"><a href="../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../doc/TypeTest_html.html">TypeTest.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/pokemongodb_gemspec_html.html">pokemongodb_gemspec.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../pokemongodb_gemspec.html">pokemongodb.gemspec</a>
+  
+    <li class="file"><a href="../../readme_md.html">readme</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../MoveTest.html">MoveTest</a>
+  
+    <li><a href="../../Pokemongodb.html">Pokemongodb</a>
+  
+    <li><a href="../../Pokemongodb/Move.html">Pokemongodb::Move</a>
+  
+    <li><a href="../../Pokemongodb/Move/Acid.html">Pokemongodb::Move::Acid</a>
+  
+    <li><a href="../../Pokemongodb/Move/AerielAce.html">Pokemongodb::Move::AerielAce</a>
+  
+    <li><a href="../../Pokemongodb/Move/AirCutter.html">Pokemongodb::Move::AirCutter</a>
+  
+    <li><a href="../../Pokemongodb/Move/AncientPower.html">Pokemongodb::Move::AncientPower</a>
+  
+    <li><a href="../../Pokemongodb/Move/AquaJet.html">Pokemongodb::Move::AquaJet</a>
+  
+    <li><a href="../../Pokemongodb/Move/AquaTail.html">Pokemongodb::Move::AquaTail</a>
+  
+    <li><a href="../../Pokemongodb/Move/Bite.html">Pokemongodb::Move::Bite</a>
+  
+    <li><a href="../../Pokemongodb/Move/Blizzard.html">Pokemongodb::Move::Blizzard</a>
+  
+    <li><a href="../../Pokemongodb/Move/BodySlam.html">Pokemongodb::Move::BodySlam</a>
+  
+    <li><a href="../../Pokemongodb/Move/BoneClub.html">Pokemongodb::Move::BoneClub</a>
+  
+    <li><a href="../../Pokemongodb/Move/BrickBreak.html">Pokemongodb::Move::BrickBreak</a>
+  
+    <li><a href="../../Pokemongodb/Move/Brine.html">Pokemongodb::Move::Brine</a>
+  
+    <li><a href="../../Pokemongodb/Move/Bubble.html">Pokemongodb::Move::Bubble</a>
+  
+    <li><a href="../../Pokemongodb/Move/BubbleBeam.html">Pokemongodb::Move::BubbleBeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/BugBite.html">Pokemongodb::Move::BugBite</a>
+  
+    <li><a href="../../Pokemongodb/Move/BugBuzz.html">Pokemongodb::Move::BugBuzz</a>
+  
+    <li><a href="../../Pokemongodb/Move/Bulldoze.html">Pokemongodb::Move::Bulldoze</a>
+  
+    <li><a href="../../Pokemongodb/Move/BulletPunch.html">Pokemongodb::Move::BulletPunch</a>
+  
+    <li><a href="../../Pokemongodb/Move/Category.html">Pokemongodb::Move::Category</a>
+  
+    <li><a href="../../Pokemongodb/Move/Confusion.html">Pokemongodb::Move::Confusion</a>
+  
+    <li><a href="../../Pokemongodb/Move/CrossChop.html">Pokemongodb::Move::CrossChop</a>
+  
+    <li><a href="../../Pokemongodb/Move/CrossPoison.html">Pokemongodb::Move::CrossPoison</a>
+  
+    <li><a href="../../Pokemongodb/Move/Cut.html">Pokemongodb::Move::Cut</a>
+  
+    <li><a href="../../Pokemongodb/Move/DarkPulse.html">Pokemongodb::Move::DarkPulse</a>
+  
+    <li><a href="../../Pokemongodb/Move/DazzlingGleam.html">Pokemongodb::Move::DazzlingGleam</a>
+  
+    <li><a href="../../Pokemongodb/Move/Dig.html">Pokemongodb::Move::Dig</a>
+  
+    <li><a href="../../Pokemongodb/Move/DisarmingVoice.html">Pokemongodb::Move::DisarmingVoice</a>
+  
+    <li><a href="../../Pokemongodb/Move/Discharge.html">Pokemongodb::Move::Discharge</a>
+  
+    <li><a href="../../Pokemongodb/Move/DragonBreath.html">Pokemongodb::Move::DragonBreath</a>
+  
+    <li><a href="../../Pokemongodb/Move/DragonClaw.html">Pokemongodb::Move::DragonClaw</a>
+  
+    <li><a href="../../Pokemongodb/Move/DragonPulse.html">Pokemongodb::Move::DragonPulse</a>
+  
+    <li><a href="../../Pokemongodb/Move/DrainingKiss.html">Pokemongodb::Move::DrainingKiss</a>
+  
+    <li><a href="../../Pokemongodb/Move/DrillPeck.html">Pokemongodb::Move::DrillPeck</a>
+  
+    <li><a href="../../Pokemongodb/Move/DrillRun.html">Pokemongodb::Move::DrillRun</a>
+  
+    <li><a href="../../Pokemongodb/Move/Earthquake.html">Pokemongodb::Move::Earthquake</a>
+  
+    <li><a href="../../Pokemongodb/Move/Ember.html">Pokemongodb::Move::Ember</a>
+  
+    <li><a href="../../Pokemongodb/Move/FeintAttack.html">Pokemongodb::Move::FeintAttack</a>
+  
+    <li><a href="../../Pokemongodb/Move/FireBlast.html">Pokemongodb::Move::FireBlast</a>
+  
+    <li><a href="../../Pokemongodb/Move/FireFang.html">Pokemongodb::Move::FireFang</a>
+  
+    <li><a href="../../Pokemongodb/Move/FirePunch.html">Pokemongodb::Move::FirePunch</a>
+  
+    <li><a href="../../Pokemongodb/Move/FlameBurst.html">Pokemongodb::Move::FlameBurst</a>
+  
+    <li><a href="../../Pokemongodb/Move/FlameCharge.html">Pokemongodb::Move::FlameCharge</a>
+  
+    <li><a href="../../Pokemongodb/Move/FlameWheel.html">Pokemongodb::Move::FlameWheel</a>
+  
+    <li><a href="../../Pokemongodb/Move/Flamethrower.html">Pokemongodb::Move::Flamethrower</a>
+  
+    <li><a href="../../Pokemongodb/Move/FlashCannon.html">Pokemongodb::Move::FlashCannon</a>
+  
+    <li><a href="../../Pokemongodb/Move/FrostBreath.html">Pokemongodb::Move::FrostBreath</a>
+  
+    <li><a href="../../Pokemongodb/Move/FuryCutter.html">Pokemongodb::Move::FuryCutter</a>
+  
+    <li><a href="../../Pokemongodb/Move/GunkShot.html">Pokemongodb::Move::GunkShot</a>
+  
+    <li><a href="../../Pokemongodb/Move/HeatWave.html">Pokemongodb::Move::HeatWave</a>
+  
+    <li><a href="../../Pokemongodb/Move/HornAttack.html">Pokemongodb::Move::HornAttack</a>
+  
+    <li><a href="../../Pokemongodb/Move/Hurricane.html">Pokemongodb::Move::Hurricane</a>
+  
+    <li><a href="../../Pokemongodb/Move/HydroPump.html">Pokemongodb::Move::HydroPump</a>
+  
+    <li><a href="../../Pokemongodb/Move/HyperBeam.html">Pokemongodb::Move::HyperBeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/HyperFang.html">Pokemongodb::Move::HyperFang</a>
+  
+    <li><a href="../../Pokemongodb/Move/IceBeam.html">Pokemongodb::Move::IceBeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/IcePunch.html">Pokemongodb::Move::IcePunch</a>
+  
+    <li><a href="../../Pokemongodb/Move/IceShard.html">Pokemongodb::Move::IceShard</a>
+  
+    <li><a href="../../Pokemongodb/Move/IcyWind.html">Pokemongodb::Move::IcyWind</a>
+  
+    <li><a href="../../Pokemongodb/Move/IronHead.html">Pokemongodb::Move::IronHead</a>
+  
+    <li><a href="../../Pokemongodb/Move/KarateChop.html">Pokemongodb::Move::KarateChop</a>
+  
+    <li><a href="../../Pokemongodb/Move/LeafBlade.html">Pokemongodb::Move::LeafBlade</a>
+  
+    <li><a href="../../Pokemongodb/Move/Lick.html">Pokemongodb::Move::Lick</a>
+  
+    <li><a href="../../Pokemongodb/Move/LowKick.html">Pokemongodb::Move::LowKick</a>
+  
+    <li><a href="../../Pokemongodb/Move/LowSweep.html">Pokemongodb::Move::LowSweep</a>
+  
+    <li><a href="../../Pokemongodb/Move/MagnetBomb.html">Pokemongodb::Move::MagnetBomb</a>
+  
+    <li><a href="../../Pokemongodb/Move/Megahorn.html">Pokemongodb::Move::Megahorn</a>
+  
+    <li><a href="../../Pokemongodb/Move/MetalClaw.html">Pokemongodb::Move::MetalClaw</a>
+  
+    <li><a href="../../Pokemongodb/Move/Moonblast.html">Pokemongodb::Move::Moonblast</a>
+  
+    <li><a href="../../Pokemongodb/Move/MudBomb.html">Pokemongodb::Move::MudBomb</a>
+  
+    <li><a href="../../Pokemongodb/Move/MudShot.html">Pokemongodb::Move::MudShot</a>
+  
+    <li><a href="../../Pokemongodb/Move/MudSlap.html">Pokemongodb::Move::MudSlap</a>
+  
+    <li><a href="../../Pokemongodb/Move/NightSlash.html">Pokemongodb::Move::NightSlash</a>
+  
+    <li><a href="../../Pokemongodb/Move/OminousWind.html">Pokemongodb::Move::OminousWind</a>
+  
+    <li><a href="../../Pokemongodb/Move/Peck.html">Pokemongodb::Move::Peck</a>
+  
+    <li><a href="../../Pokemongodb/Move/PetalBlizzard.html">Pokemongodb::Move::PetalBlizzard</a>
+  
+    <li><a href="../../Pokemongodb/Move/PlayRough.html">Pokemongodb::Move::PlayRough</a>
+  
+    <li><a href="../../Pokemongodb/Move/PoisonFang.html">Pokemongodb::Move::PoisonFang</a>
+  
+    <li><a href="../../Pokemongodb/Move/PoisonJab.html">Pokemongodb::Move::PoisonJab</a>
+  
+    <li><a href="../../Pokemongodb/Move/PoisonSting.html">Pokemongodb::Move::PoisonSting</a>
+  
+    <li><a href="../../Pokemongodb/Move/Pound.html">Pokemongodb::Move::Pound</a>
+  
+    <li><a href="../../Pokemongodb/Move/PowerGem.html">Pokemongodb::Move::PowerGem</a>
+  
+    <li><a href="../../Pokemongodb/Move/PowerWhip.html">Pokemongodb::Move::PowerWhip</a>
+  
+    <li><a href="../../Pokemongodb/Move/Psybeam.html">Pokemongodb::Move::Psybeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/Psychic.html">Pokemongodb::Move::Psychic</a>
+  
+    <li><a href="../../Pokemongodb/Move/PsychoCut.html">Pokemongodb::Move::PsychoCut</a>
+  
+    <li><a href="../../Pokemongodb/Move/Psyshock.html">Pokemongodb::Move::Psyshock</a>
+  
+    <li><a href="../../Pokemongodb/Move/QuickAttack.html">Pokemongodb::Move::QuickAttack</a>
+  
+    <li><a href="../../Pokemongodb/Move/RazorLeaf.html">Pokemongodb::Move::RazorLeaf</a>
+  
+    <li><a href="../../Pokemongodb/Move/RockSlide.html">Pokemongodb::Move::RockSlide</a>
+  
+    <li><a href="../../Pokemongodb/Move/RockSmash.html">Pokemongodb::Move::RockSmash</a>
+  
+    <li><a href="../../Pokemongodb/Move/RockThrow.html">Pokemongodb::Move::RockThrow</a>
+  
+    <li><a href="../../Pokemongodb/Move/RockTomb.html">Pokemongodb::Move::RockTomb</a>
+  
+    <li><a href="../../Pokemongodb/Move/Scald.html">Pokemongodb::Move::Scald</a>
+  
+    <li><a href="../../Pokemongodb/Move/Scratch.html">Pokemongodb::Move::Scratch</a>
+  
+    <li><a href="../../Pokemongodb/Move/SeedBomb.html">Pokemongodb::Move::SeedBomb</a>
+  
+    <li><a href="../../Pokemongodb/Move/ShadowBall.html">Pokemongodb::Move::ShadowBall</a>
+  
+    <li><a href="../../Pokemongodb/Move/ShadowClaw.html">Pokemongodb::Move::ShadowClaw</a>
+  
+    <li><a href="../../Pokemongodb/Move/SignalBeam.html">Pokemongodb::Move::SignalBeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/Sludge.html">Pokemongodb::Move::Sludge</a>
+  
+    <li><a href="../../Pokemongodb/Move/SludgeBomb.html">Pokemongodb::Move::SludgeBomb</a>
+  
+    <li><a href="../../Pokemongodb/Move/SludgeWave.html">Pokemongodb::Move::SludgeWave</a>
+  
+    <li><a href="../../Pokemongodb/Move/SolarBeam.html">Pokemongodb::Move::SolarBeam</a>
+  
+    <li><a href="../../Pokemongodb/Move/Spark.html">Pokemongodb::Move::Spark</a>
+  
+    <li><a href="../../Pokemongodb/Move/Splash.html">Pokemongodb::Move::Splash</a>
+  
+    <li><a href="../../Pokemongodb/Move/SteelWing.html">Pokemongodb::Move::SteelWing</a>
+  
+    <li><a href="../../Pokemongodb/Move/Stomp.html">Pokemongodb::Move::Stomp</a>
+  
+    <li><a href="../../Pokemongodb/Move/StoneEdge.html">Pokemongodb::Move::StoneEdge</a>
+  
+    <li><a href="../../Pokemongodb/Move/Struggle.html">Pokemongodb::Move::Struggle</a>
+  
+    <li><a href="../../Pokemongodb/Move/Submission.html">Pokemongodb::Move::Submission</a>
+  
+    <li><a href="../../Pokemongodb/Move/SuckerPunch.html">Pokemongodb::Move::SuckerPunch</a>
+  
+    <li><a href="../../Pokemongodb/Move/Swift.html">Pokemongodb::Move::Swift</a>
+  
+    <li><a href="../../Pokemongodb/Move/Tackle.html">Pokemongodb::Move::Tackle</a>
+  
+    <li><a href="../../Pokemongodb/Move/Thunder.html">Pokemongodb::Move::Thunder</a>
+  
+    <li><a href="../../Pokemongodb/Move/ThunderPunch.html">Pokemongodb::Move::ThunderPunch</a>
+  
+    <li><a href="../../Pokemongodb/Move/ThunderShock.html">Pokemongodb::Move::ThunderShock</a>
+  
+    <li><a href="../../Pokemongodb/Move/Thunderbolt.html">Pokemongodb::Move::Thunderbolt</a>
+  
+    <li><a href="../../Pokemongodb/Move/Twister.html">Pokemongodb::Move::Twister</a>
+  
+    <li><a href="../../Pokemongodb/Move/ViceGrip.html">Pokemongodb::Move::ViceGrip</a>
+  
+    <li><a href="../../Pokemongodb/Move/VineWhip.html">Pokemongodb::Move::VineWhip</a>
+  
+    <li><a href="../../Pokemongodb/Move/WaterGun.html">Pokemongodb::Move::WaterGun</a>
+  
+    <li><a href="../../Pokemongodb/Move/WaterPulse.html">Pokemongodb::Move::WaterPulse</a>
+  
+    <li><a href="../../Pokemongodb/Move/WingAttack.html">Pokemongodb::Move::WingAttack</a>
+  
+    <li><a href="../../Pokemongodb/Move/Wrap.html">Pokemongodb::Move::Wrap</a>
+  
+    <li><a href="../../Pokemongodb/Move/XScissor.html">Pokemongodb::Move::XScissor</a>
+  
+    <li><a href="../../Pokemongodb/Move/ZenHeadbutt.html">Pokemongodb::Move::ZenHeadbutt</a>
+  
+    <li><a href="../../Pokemongodb/Type.html">Pokemongodb::Type</a>
+  
+    <li><a href="../../Pokemongodb/Type/Bug.html">Pokemongodb::Type::Bug</a>
+  
+    <li><a href="../../Pokemongodb/Type/Dark.html">Pokemongodb::Type::Dark</a>
+  
+    <li><a href="../../Pokemongodb/Type/Dragon.html">Pokemongodb::Type::Dragon</a>
+  
+    <li><a href="../../Pokemongodb/Type/Electric.html">Pokemongodb::Type::Electric</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fairy.html">Pokemongodb::Type::Fairy</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fighting.html">Pokemongodb::Type::Fighting</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fire.html">Pokemongodb::Type::Fire</a>
+  
+    <li><a href="../../Pokemongodb/Type/Flying.html">Pokemongodb::Type::Flying</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ghost.html">Pokemongodb::Type::Ghost</a>
+  
+    <li><a href="../../Pokemongodb/Type/Grass.html">Pokemongodb::Type::Grass</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ground.html">Pokemongodb::Type::Ground</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ice.html">Pokemongodb::Type::Ice</a>
+  
+    <li><a href="../../Pokemongodb/Type/Normal.html">Pokemongodb::Type::Normal</a>
+  
+    <li><a href="../../Pokemongodb/Type/Poison.html">Pokemongodb::Type::Poison</a>
+  
+    <li><a href="../../Pokemongodb/Type/Psychic.html">Pokemongodb::Type::Psychic</a>
+  
+    <li><a href="../../Pokemongodb/Type/Rock.html">Pokemongodb::Type::Rock</a>
+  
+    <li><a href="../../Pokemongodb/Type/Steel.html">Pokemongodb::Type::Steel</a>
+  
+    <li><a href="../../Pokemongodb/Type/Water.html">Pokemongodb::Type::Water</a>
+  
+    <li><a href="../../TypeTest.html">TypeTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Pokemongodb::Move::Psychic</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-cooldown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cooldown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cooldown-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/moves/psychic.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cooldown</span>
+  <span class="ruby-value">2.8</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cooldown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cooldown-method -->
+
+    
+      <div id="method-c-energy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">energy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="energy-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/moves/psychic.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">energy</span>
+  <span class="ruby-value">-50</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- energy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- energy-method -->
+
+    
+      <div id="method-c-power" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">power</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="power-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/moves/psychic.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span>
+  <span class="ruby-value">55</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- power-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- power-method -->
+
+    
+      <div id="method-c-type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">type</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="type-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/moves/psychic.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type</span>
+  <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Psychic</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- type-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- type-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -17,7 +17,7 @@ class MoveTest < Minitest::Test
   end
 
   def test_that_all_works_off_filenames
-    assert_equal @all_moves.length, 43
+    assert_equal @all_moves.length, 124
   end
 
   def test_that_fast_moves_include_the_right_kind
@@ -32,7 +32,7 @@ class MoveTest < Minitest::Test
 
   def test_that_dps_calculates_properly
     assert_equal @fast_move.dps, 9.52
-    assert_equal @charge_move.dps, 9.52
+    assert_equal @charge_move.dps, 10.34
   end
 
   def test_that_moves_have_categories
@@ -42,6 +42,6 @@ class MoveTest < Minitest::Test
 
   def test_that_fast_moves_generate_energy
     assert_equal @fast_move.eps, 6.67
-    assert_equal @charge_move.eps, -6.67
+    assert_equal @charge_move.eps, -8.62
   end
 end
