@@ -1,5 +1,11 @@
 class Pokemongodb
   class Type
+
+    # Returns array of all available Types.
+    #
+    # Example:
+    #   >> Pokemongodb::Type.all
+    #   => [Pokemongodb::Type::Bug, ..., Pokemongodb::Type::Water]
     def self.all
       [
         Type::Bug,
@@ -23,23 +29,48 @@ class Pokemongodb
       ]
     end
 
+    # Returns string name inferred from class name.
+    #
+    # Example:
+    #   >> Pokemongodb::Type::Normal.name
+    #   => "Normal"
     def self.name
       to_s.split("::").last
     end
 
+    # Returns array of types where both the offense and defense are strong.
+    #
+    # Example:
+    #   >> Pokemongodb::Type.::Steel.strong_against
+    #   => [Pokemongodb::Type::Fairy, Pokemongodb::Type::Ice, Pokemongodb::Type::Rock]
     def self.strong_against
       self.offense_strong & self.defense_strong
     end
 
+    # Returns array of types where both the offense and defense are weak.
+    #
+    # Example:
+    #   >> Pokemongodb::Type.::Grass.weak_against
+    #   => [Pokemongodb::Type::Bug, Pokemongodb::Type::Fire, Pokemongodb::Type::Flying, Pokemongodb::Type::Poison]
     def self.weak_against
       self.offense_weak & self.defense_weak
     end
 
     protected
+    # Returns array of types where you have a strong defense.
+    #
+    # Example:
+    #   >> Pokemongodb::Type.::Dark.defense_strong
+    #   => [Pokemongodb::Type::Dark, Pokemongodb::Type::Ghost]
     def self.defense_strong
       all.select { |type| type.offense_weak.include?(self) }
     end
 
+    # Returns array of types where you have a weak defense.
+    #
+    # Example:
+    #   >> Pokemongodb::Type.::Bug.defense_weak
+    #   => [Pokemongodb::Type::Flying, Pokemongodb::Type::Fire, Pokemongodb::Type::Dark]
     def self.defense_weak
       all.select { |type| type.offense_strong.include?(self) }
     end

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../doc/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb_html.html">Pokemongodb.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Move_html.html">Move.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Move/Acid_html.html">Acid.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type_html.html">Type.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Bug_html.html">Bug.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Dark_html.html">Dark.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Dragon_html.html">Dragon.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Electric_html.html">Electric.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fairy_html.html">Fairy.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fighting_html.html">Fighting.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Fire_html.html">Fire.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Flying_html.html">Flying.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ghost_html.html">Ghost.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Grass_html.html">Grass.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ground_html.html">Ground.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Ice_html.html">Ice.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Normal_html.html">Normal.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Poison_html.html">Poison.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Psychic_html.html">Psychic.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Rock_html.html">Rock.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Steel_html.html">Steel.html</a>
+  
+    <li class="file"><a href="../../doc/Pokemongodb/Type/Water_html.html">Water.html</a>
+  
+    <li class="file"><a href="../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../doc/TypeTest_html.html">TypeTest.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/doc/CHANGELOG_md_html_html.html">CHANGELOG_md_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Move/Acid_html_html.html">Acid_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Move_html_html.html">Move_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Bug_html_html.html">Bug_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Dark_html_html.html">Dark_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Dragon_html_html.html">Dragon_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Electric_html_html.html">Electric_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Fairy_html_html.html">Fairy_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Fighting_html_html.html">Fighting_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Fire_html_html.html">Fire_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Flying_html_html.html">Flying_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Ghost_html_html.html">Ghost_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Grass_html_html.html">Grass_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Ground_html_html.html">Ground_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Ice_html_html.html">Ice_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Normal_html_html.html">Normal_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Poison_html_html.html">Poison_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Psychic_html_html.html">Psychic_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Rock_html_html.html">Rock_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Steel_html_html.html">Steel_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type/Water_html_html.html">Water_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb/Type_html_html.html">Type_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Pokemongodb_html_html.html">Pokemongodb_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/TypeTest_html_html.html">TypeTest_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/CHANGELOG_md_html_html_html.html">CHANGELOG_md_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Move/Acid_html_html_html.html">Acid_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Move_html_html_html.html">Move_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Bug_html_html_html.html">Bug_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Dark_html_html_html.html">Dark_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Dragon_html_html_html.html">Dragon_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Electric_html_html_html.html">Electric_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Fairy_html_html_html.html">Fairy_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Fighting_html_html_html.html">Fighting_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Fire_html_html_html.html">Fire_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Flying_html_html_html.html">Flying_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Ghost_html_html_html.html">Ghost_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Grass_html_html_html.html">Grass_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Ground_html_html_html.html">Ground_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Ice_html_html_html.html">Ice_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Normal_html_html_html.html">Normal_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Poison_html_html_html.html">Poison_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Psychic_html_html_html.html">Psychic_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Rock_html_html_html.html">Rock_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Steel_html_html_html.html">Steel_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type/Water_html_html_html.html">Water_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb/Type_html_html_html.html">Type_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Pokemongodb_html_html_html.html">Pokemongodb_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/Rakefile_html_html_html.html">Rakefile_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/TypeTest_html_html_html.html">TypeTest_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/doc/created_rid_html_html_html.html">created_rid_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/index_html_html_html.html">index_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/darkfish_js_html_html.html">darkfish_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/jquery_js_html_html.html">jquery_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/navigation_js_html_html.html">navigation_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/search_index_js_html_html.html">search_index_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/search_js_html_html.html">search_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/js/searcher_js_html_html.html">searcher_js_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/pokemongodb_gemspec_html_html_html.html">pokemongodb_gemspec_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/rdoc_css_html_html.html">rdoc_css_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/table_of_contents_html_html_html.html">table_of_contents_html_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/pokemongodb_gemspec_html_html.html">pokemongodb_gemspec_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/pokemongodb_gemspec_html.html">pokemongodb_gemspec.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../pokemongodb_gemspec.html">pokemongodb.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Pokemongodb.html">Pokemongodb</a>
+  
+    <li><a href="../../Pokemongodb/Move.html">Pokemongodb::Move</a>
+  
+    <li><a href="../../Pokemongodb/Move/Acid.html">Pokemongodb::Move::Acid</a>
+  
+    <li><a href="../../Pokemongodb/Type.html">Pokemongodb::Type</a>
+  
+    <li><a href="../../Pokemongodb/Type/Bug.html">Pokemongodb::Type::Bug</a>
+  
+    <li><a href="../../Pokemongodb/Type/Dark.html">Pokemongodb::Type::Dark</a>
+  
+    <li><a href="../../Pokemongodb/Type/Dragon.html">Pokemongodb::Type::Dragon</a>
+  
+    <li><a href="../../Pokemongodb/Type/Electric.html">Pokemongodb::Type::Electric</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fairy.html">Pokemongodb::Type::Fairy</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fighting.html">Pokemongodb::Type::Fighting</a>
+  
+    <li><a href="../../Pokemongodb/Type/Fire.html">Pokemongodb::Type::Fire</a>
+  
+    <li><a href="../../Pokemongodb/Type/Flying.html">Pokemongodb::Type::Flying</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ghost.html">Pokemongodb::Type::Ghost</a>
+  
+    <li><a href="../../Pokemongodb/Type/Grass.html">Pokemongodb::Type::Grass</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ground.html">Pokemongodb::Type::Ground</a>
+  
+    <li><a href="../../Pokemongodb/Type/Ice.html">Pokemongodb::Type::Ice</a>
+  
+    <li><a href="../../Pokemongodb/Type/Normal.html">Pokemongodb::Type::Normal</a>
+  
+    <li><a href="../../Pokemongodb/Type/Poison.html">Pokemongodb::Type::Poison</a>
+  
+    <li><a href="../../Pokemongodb/Type/Psychic.html">Pokemongodb::Type::Psychic</a>
+  
+    <li><a href="../../Pokemongodb/Type/Rock.html">Pokemongodb::Type::Rock</a>
+  
+    <li><a href="../../Pokemongodb/Type/Steel.html">Pokemongodb::Type::Steel</a>
+  
+    <li><a href="../../Pokemongodb/Type/Water.html">Pokemongodb::Type::Water</a>
+  
+    <li><a href="../../TypeTest.html">TypeTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>var search_data = {“index”:{“<a
+href="http://"pokemongodb","move","acid","type","bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost","grass","ground","ice","normal","poison","psychic","rock","steel","water","typetest","all()","category()","cooldown()","defense_strong()","defense_weak()","energy()","name()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_strong()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","offense_weak()","power()","strong_against()","test_that_defense_strong_does_a_reverse_lookup_to_find_matches()","test_that_defense_weak_does_a_reverse_lookup_to_find_matches()","test_that_name_returns_string_from_class_name()","test_that_strong_against_returns_best_case_attack_types()","test_that_strong_against_returns_empty_array_if_nothing_matches()","test_that_there_are_eighteen_types()","test_that_weak_against_returns_best_case_attack_types()","test_that_weak_against_returns_empty_array_if_nothing_matches()","type()","weak_against()","changelog","rakefile","changelog_md.html","pokemongodb.html","move.html","acid.html","type.html","bug.html","dark.html","dragon.html","electric.html","fairy.html","fighting.html","fire.html","flying.html","ghost.html","grass.html","ground.html","ice.html","normal.html","poison.html","psychic.html","rock.html","steel.html","water.html","rakefile.html","typetest.html","created.rid","changelog_md_html.html","acid_html.html","move_html.html","bug_html.html","dark_html.html","dragon_html.html","electric_html.html","fairy_html.html","fighting_html.html","fire_html.html","flying_html.html","ghost_html.html","grass_html.html","ground_html.html","ice_html.html","normal_html.html","poison_html.html","psychic_html.html","rock_html.html","steel_html.html","water_html.html","type_html.html","pokemongodb_html.html","rakefile_html.html","typetest_html.html","created_rid.html","created_rid_html.html","index_html.html","darkfish_js.html","jquery_js.html","navigation_js.html","search_index_js.html","search_js.html","searcher_js.html","pokemongodb_gemspec_html.html","rdoc_css.html","table_of_contents_html.html","index.html","darkfish.js","jquery.js","navigation.js","search.js","search_index.js","searcher.js","pokemongodb_gemspec.html","rdoc.css","table_of_contents.html","pokemongodb.gemspec"">searchIndex”:</a>,“<a
+href=""pokemongodb","pokemongodb::move","pokemongodb::move::acid","pokemongodb::type","pokemongodb::type::bug","pokemongodb::type::dark","pokemongodb::type::dragon","pokemongodb::type::electric","pokemongodb::type::fairy","pokemongodb::type::fighting","pokemongodb::type::fire","pokemongodb::type::flying","pokemongodb::type::ghost","pokemongodb::type::grass","pokemongodb::type::ground","pokemongodb::type::ice","pokemongodb::type::normal","pokemongodb::type::poison","pokemongodb::type::psychic","pokemongodb::type::rock","pokemongodb::type::steel","pokemongodb::type::water","typetest","pokemongodb::type::all()","pokemongodb::move::acid::category()","pokemongodb::move::acid::cooldown()","pokemongodb::type::defense_strong()","pokemongodb::type::defense_weak()","pokemongodb::move::acid::energy()","pokemongodb::type::name()","pokemongodb::type::bug::offense_strong()","pokemongodb::type::dark::offense_strong()","pokemongodb::type::dragon::offense_strong()","pokemongodb::type::electric::offense_strong()","pokemongodb::type::fairy::offense_strong()","pokemongodb::type::fighting::offense_strong()","pokemongodb::type::fire::offense_strong()","pokemongodb::type::flying::offense_strong()","pokemongodb::type::ghost::offense_strong()","pokemongodb::type::grass::offense_strong()","pokemongodb::type::ground::offense_strong()","pokemongodb::type::ice::offense_strong()","pokemongodb::type::normal::offense_strong()","pokemongodb::type::poison::offense_strong()","pokemongodb::type::psychic::offense_strong()","pokemongodb::type::rock::offense_strong()","pokemongodb::type::steel::offense_strong()","pokemongodb::type::water::offense_strong()","pokemongodb::type::bug::offense_weak()","pokemongodb::type::dark::offense_weak()","pokemongodb::type::dragon::offense_weak()","pokemongodb::type::electric::offense_weak()","pokemongodb::type::fairy::offense_weak()","pokemongodb::type::fighting::offense_weak()","pokemongodb::type::fire::offense_weak()","pokemongodb::type::flying::offense_weak()","pokemongodb::type::ghost::offense_weak()","pokemongodb::type::grass::offense_weak()","pokemongodb::type::ground::offense_weak()","pokemongodb::type::ice::offense_weak()","pokemongodb::type::normal::offense_weak()","pokemongodb::type::poison::offense_weak()","pokemongodb::type::psychic::offense_weak()","pokemongodb::type::rock::offense_weak()","pokemongodb::type::steel::offense_weak()","pokemongodb::type::water::offense_weak()","pokemongodb::move::acid::power()","pokemongodb::type::strong_against()","typetest#test_that_defense_strong_does_a_reverse_lookup_to_find_matches()","typetest#test_that_defense_weak_does_a_reverse_lookup_to_find_matches()","typetest#test_that_name_returns_string_from_class_name()","typetest#test_that_strong_against_returns_best_case_attack_types()","typetest#test_that_strong_against_returns_empty_array_if_nothing_matches()","typetest#test_that_there_are_eighteen_types()","typetest#test_that_weak_against_returns_best_case_attack_types()","typetest#test_that_weak_against_returns_empty_array_if_nothing_matches()","pokemongodb::move::acid::type()","pokemongodb::type::weak_against()","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""">longSearchIndex”:</a>,“<a
+href="http://"Pokemongodb","","Pokemongodb.html","",""">info”:[</a>,[“<a
+href=""Pokemongodb::Move::Acid","","Pokemongodb/Move/Acid.html","",""">:Move”,“”,“Pokemongodb/Move.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Bug","","Pokemongodb/Type/Bug.html","",""">:Type”,“”,“Pokemongodb/Type.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Dragon","","Pokemongodb/Type/Dragon.html","",""">:Type::Dark”,“”,“Pokemongodb/Type/Dark.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Fairy","","Pokemongodb/Type/Fairy.html","",""">:Type::Electric”,“”,“Pokemongodb/Type/Electric.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Fire","","Pokemongodb/Type/Fire.html","",""">:Type::Fighting”,“”,“Pokemongodb/Type/Fighting.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Ghost","","Pokemongodb/Type/Ghost.html","",""">:Type::Flying”,“”,“Pokemongodb/Type/Flying.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Ground","","Pokemongodb/Type/Ground.html","",""">:Type::Grass”,“”,“Pokemongodb/Type/Grass.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Normal","","Pokemongodb/Type/Normal.html","",""">:Type::Ice”,“”,“Pokemongodb/Type/Ice.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Psychic","","Pokemongodb/Type/Psychic.html","",""">:Type::Poison”,“”,“Pokemongodb/Type/Poison.html”,“”,“”],</a>,[“<a
+href=""Pokemongodb::Type::Steel","","Pokemongodb/Type/Steel.html","",""">:Type::Rock”,“”,“Pokemongodb/Type/Rock.html”,“”,“”],</a>,[“<a
+href="http://"TypeTest","","TypeTest.html","",""">Pokemongodb::Type::Water”,“”,“Pokemongodb/Type/Water.html”,“”,“”],</a>,[“all”,“Pokemongodb::Type”,“Pokemongodb/Type.html#method-c-all”,“()”,“&lt;p&gt;Returns
+all available Pokemon Go Typesn&lt;p&gt;Example:nn&lt;pre
+class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span
+class=&quot;ruby-constant&quot;&gt;Pokemongodb&lt;/span&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span
+class=&quot;ruby-constant&quot;&gt;Type&lt;/span&gt;.&lt;span
+class=&quot;ruby-identifier&quot;&gt;all&lt;/span&gt;n=&lt;span
+class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; [&lt;span
+class=&quot;ruby-constant&quot;&gt;Pokemongodb&lt;/span&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span
+class=&quot;ruby-constant&quot;&gt;Type&lt;/span&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span
+class=&quot;ruby-constant&quot;&gt;Bug&lt;/span&gt;, &lt;span
+class=&quot;ruby-operator&quot;&gt;…&lt;/span&gt;, &lt;span <a
+href=""category","Pokemongodb::Move::Acid","Pokemongodb/Move/Acid.html#method-c-category","()",""">class="ruby-operator">…</span>n</pre>n”],</a>,[“<a
+href=""defense_strong","Pokemongodb::Type","Pokemongodb/Type.html#method-c-defense_strong","()",""">cooldown”,“Pokemongodb::Move::Acid”,“Pokemongodb/Move/Acid.html#method-c-cooldown”,“()”,“”],</a>,[“<a
+href=""energy","Pokemongodb::Move::Acid","Pokemongodb/Move/Acid.html#method-c-energy","()",""">defense_weak”,“Pokemongodb::Type”,“Pokemongodb/Type.html#method-c-defense_weak”,“()”,“”],</a>,[“name”,“Pokemongodb::Type”,“Pokemongodb/Type.html#method-c-name”,“()”,“&lt;p&gt;Converts
+longform class name into stringn&lt;p&gt;Example:nn&lt;pre
+class=&quot;ruby&quot;&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span
+class=&quot;ruby-constant&quot;&gt;Pokemongodb&lt;/span&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span
+class=&quot;ruby-constant&quot;&gt;Type&lt;/span&gt;&lt;span
+class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span
+class=&quot;ruby-constant&quot;&gt;Normal&lt;/span&gt;.&lt;span
+class=&quot;ruby-identifier&quot;&gt;name&lt;/span&gt;n=&lt;span
+class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span <a
+href=""offense_strong","Pokemongodb::Type::Bug","Pokemongodb/Type/Bug.html#method-c-offense_strong","()",""">class="ruby-string">”Normal“</span>n</pre>n”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Dragon","Pokemongodb/Type/Dragon.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Dark”,“Pokemongodb/Type/Dark.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Fairy","Pokemongodb/Type/Fairy.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Electric”,“Pokemongodb/Type/Electric.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Fire","Pokemongodb/Type/Fire.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Fighting”,“Pokemongodb/Type/Fighting.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Ghost","Pokemongodb/Type/Ghost.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Flying”,“Pokemongodb/Type/Flying.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Ground","Pokemongodb/Type/Ground.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Grass”,“Pokemongodb/Type/Grass.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Normal","Pokemongodb/Type/Normal.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Ice”,“Pokemongodb/Type/Ice.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Psychic","Pokemongodb/Type/Psychic.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Poison”,“Pokemongodb/Type/Poison.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_strong","Pokemongodb::Type::Steel","Pokemongodb/Type/Steel.html#method-c-offense_strong","()",""">offense_strong”,“Pokemongodb::Type::Rock”,“Pokemongodb/Type/Rock.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Bug","Pokemongodb/Type/Bug.html#method-c-offense_weak","()",""">offense_strong”,“Pokemongodb::Type::Water”,“Pokemongodb/Type/Water.html#method-c-offense_strong”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Dragon","Pokemongodb/Type/Dragon.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Dark”,“Pokemongodb/Type/Dark.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Fairy","Pokemongodb/Type/Fairy.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Electric”,“Pokemongodb/Type/Electric.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Fire","Pokemongodb/Type/Fire.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Fighting”,“Pokemongodb/Type/Fighting.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Ghost","Pokemongodb/Type/Ghost.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Flying”,“Pokemongodb/Type/Flying.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Ground","Pokemongodb/Type/Ground.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Grass”,“Pokemongodb/Type/Grass.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Normal","Pokemongodb/Type/Normal.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Ice”,“Pokemongodb/Type/Ice.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Psychic","Pokemongodb/Type/Psychic.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Poison”,“Pokemongodb/Type/Poison.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""offense_weak","Pokemongodb::Type::Steel","Pokemongodb/Type/Steel.html#method-c-offense_weak","()",""">offense_weak”,“Pokemongodb::Type::Rock”,“Pokemongodb/Type/Rock.html#method-c-offense_weak”,“()”,“”],</a>,[“<a
+href=""power","Pokemongodb::Move::Acid","Pokemongodb/Move/Acid.html#method-c-power","()",""">offense_weak”,“Pokemongodb::Type::Water”,“Pokemongodb/Type/Water.html#method-c-offense_weak”,“()”,“”],</a>,[“strong_against”,“Pokemongodb::Type”,“Pokemongodb/Type.html#method-c-strong_against”,“()”,“&lt;p&gt;Returns
+types where both the offense and defense are
+strongn&lt;p&gt;Example:nn&lt;pre&gt;&amp;gt;&amp;gt; <a
+href="../../Pokemongodb/Type.html">Pokemongodb::Type</a>.::Steel.strong_against
+…&lt;/<a
+href="http://"test_that_defense_strong_does_a_reverse_lookup_to_find_matches","TypeTest","TypeTest.html#method-i-test_that_defense_strong_does_a_reverse_lookup_to_find_matches","()",""">pre>n”],</a>,[“<a
+href="http://"test_that_name_returns_string_from_class_name","TypeTest","TypeTest.html#method-i-test_that_name_returns_string_from_class_name","()",""">test_that_defense_weak_does_a_reverse_lookup_to_find_matches”,“TypeTest”,“TypeTest.html#method-i-test_that_defense_weak_does_a_reverse_lookup_to_find_matches”,“()”,“”],</a>,[“<a
+href="http://"test_that_strong_against_returns_empty_array_if_nothing_matches","TypeTest","TypeTest.html#method-i-test_that_strong_against_returns_empty_array_if_nothing_matches","()",""">test_that_strong_against_returns_best_case_attack_types”,“TypeTest”,“TypeTest.html#method-i-test_that_strong_against_returns_best_case_attack_types”,“()”,“”],</a>,[“<a
+href="http://"test_that_weak_against_returns_best_case_attack_types","TypeTest","TypeTest.html#method-i-test_that_weak_against_returns_best_case_attack_types","()",""">test_that_there_are_eighteen_types”,“TypeTest”,“TypeTest.html#method-i-test_that_there_are_eighteen_types”,“()”,“”],</a>,[“<a
+href=""type","Pokemongodb::Move::Acid","Pokemongodb/Move/Acid.html#method-c-type","()",""">test_that_weak_against_returns_empty_array_if_nothing_matches”,“TypeTest”,“TypeTest.html#method-i-test_that_weak_against_returns_empty_array_if_nothing_matches”,“()”,“”],</a>,[“weak_against”,“Pokemongodb::Type”,“Pokemongodb/Type.html#method-c-weak_against”,“()”,“&lt;p&gt;Returns
+types where both the offense and defense are
+weakn&lt;p&gt;Example:nn&lt;pre&gt;&amp;gt;&amp;gt; <a
+href="../../Pokemongodb/Type.html">Pokemongodb::Type</a>.::Bug.weak_against
+…&lt;/pre&gt;n”],[“CHANGELOG”,“”,“CHANGELOG_md.html”,“”,“&lt;p&gt;0.1.0 -
+2016-09-12n&lt;p&gt;Added
+Pokemon::Typenn”],[“Rakefile”,“”,“Rakefile.html”,“”,“&lt;p&gt;require
+&amp;#39;rake/testtask&amp;#39;n&lt;p&gt;Rake::TestTask.new do
+|t|nn&lt;pre&gt;t.libs &amp;lt;&amp;lt;
+&amp;#39;test&amp;#39;&lt;/pre&gt;n”],[“CHANGELOG_md.html”,“”,“doc/CHANGELOG_md_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Pokemongodb.html”,“”,“doc/Pokemongodb_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Move.html”,“”,“doc/Pokemongodb/Move_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Acid.html”,“”,“doc/Pokemongodb/Move/Acid_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Type.html”,“”,“doc/Pokemongodb/Type_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Bug.html”,“”,“doc/Pokemongodb/Type/Bug_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Dark.html”,“”,“doc/Pokemongodb/Type/Dark_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Dragon.html”,“”,“doc/Pokemongodb/Type/Dragon_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Electric.html”,“”,“doc/Pokemongodb/Type/Electric_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fairy.html”,“”,“doc/Pokemongodb/Type/Fairy_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fighting.html”,“”,“doc/Pokemongodb/Type/Fighting_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fire.html”,“”,“doc/Pokemongodb/Type/Fire_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Flying.html”,“”,“doc/Pokemongodb/Type/Flying_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ghost.html”,“”,“doc/Pokemongodb/Type/Ghost_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Grass.html”,“”,“doc/Pokemongodb/Type/Grass_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ground.html”,“”,“doc/Pokemongodb/Type/Ground_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ice.html”,“”,“doc/Pokemongodb/Type/Ice_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Normal.html”,“”,“doc/Pokemongodb/Type/Normal_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Poison.html”,“”,“doc/Pokemongodb/Type/Poison_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Psychic.html”,“”,“doc/Pokemongodb/Type/Psychic_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Rock.html”,“”,“doc/Pokemongodb/Type/Rock_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Steel.html”,“”,“doc/Pokemongodb/Type/Steel_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Water.html”,“”,“doc/Pokemongodb/Type/Water_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Rakefile.html”,“”,“doc/Rakefile_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“TypeTest.html”,“”,“doc/TypeTest_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“created.rid”,“”,“doc/created_rid.html”,“”,“&lt;p&gt;Mon, 12 Sep 2016
+10:49:32 -0700 ./CHANGELOG.md  Mon, 12 Sep 2016 10:40:59n-0700
+./doc/CHANGELOG_md.html
+…n”],[“CHANGELOG_md_html.html”,“”,“doc/doc/CHANGELOG_md_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Acid_html.html”,“”,“doc/doc/Pokemongodb/Move/Acid_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Move_html.html”,“”,“doc/doc/Pokemongodb/Move_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Bug_html.html”,“”,“doc/doc/Pokemongodb/Type/Bug_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Dark_html.html”,“”,“doc/doc/Pokemongodb/Type/Dark_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Dragon_html.html”,“”,“doc/doc/Pokemongodb/Type/Dragon_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Electric_html.html”,“”,“doc/doc/Pokemongodb/Type/Electric_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fairy_html.html”,“”,“doc/doc/Pokemongodb/Type/Fairy_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fighting_html.html”,“”,“doc/doc/Pokemongodb/Type/Fighting_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Fire_html.html”,“”,“doc/doc/Pokemongodb/Type/Fire_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Flying_html.html”,“”,“doc/doc/Pokemongodb/Type/Flying_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ghost_html.html”,“”,“doc/doc/Pokemongodb/Type/Ghost_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Grass_html.html”,“”,“doc/doc/Pokemongodb/Type/Grass_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ground_html.html”,“”,“doc/doc/Pokemongodb/Type/Ground_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Ice_html.html”,“”,“doc/doc/Pokemongodb/Type/Ice_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Normal_html.html”,“”,“doc/doc/Pokemongodb/Type/Normal_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Poison_html.html”,“”,“doc/doc/Pokemongodb/Type/Poison_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Psychic_html.html”,“”,“doc/doc/Pokemongodb/Type/Psychic_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Rock_html.html”,“”,“doc/doc/Pokemongodb/Type/Rock_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Steel_html.html”,“”,“doc/doc/Pokemongodb/Type/Steel_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Water_html.html”,“”,“doc/doc/Pokemongodb/Type/Water_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Type_html.html”,“”,“doc/doc/Pokemongodb/Type_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Pokemongodb_html.html”,“”,“doc/doc/Pokemongodb_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Rakefile_html.html”,“”,“doc/doc/Rakefile_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“TypeTest_html.html”,“”,“doc/doc/TypeTest_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“created_rid.html”,“”,“doc/doc/created_rid_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“created_rid_html.html”,“”,“doc/doc/doc/created_rid_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“index_html.html”,“”,“doc/doc/index_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“darkfish_js.html”,“”,“doc/doc/js/darkfish_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“jquery_js.html”,“”,“doc/doc/js/jquery_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“navigation_js.html”,“”,“doc/doc/js/navigation_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“search_index_js.html”,“”,“doc/doc/js/search_index_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“search_js.html”,“”,“doc/doc/js/search_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“searcher_js.html”,“”,“doc/doc/js/searcher_js_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“pokemongodb_gemspec_html.html”,“”,“doc/doc/pokemongodb_gemspec_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“rdoc_css.html”,“”,“doc/doc/rdoc_css_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“table_of_contents_html.html”,“”,“doc/doc/table_of_contents_html_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“index.html”,“”,“doc/index_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“darkfish.js”,“”,“doc/js/darkfish_js.html”,“”,“n&lt;pre&gt;Darkfish
+Page Functionsn$Id: darkfish.js 53 2009-01-07 02:52:03Z deveiant $nnAuthor:
+Michael Granger
+…&lt;/pre&gt;n”],[“jquery.js”,“”,“doc/js/jquery_js.html”,“”,“n&lt;pre&gt;!n
+jQuery JavaScript Library v1.6.2n <a
+href="http://jquery.com/\n\n">jquery.com/nn</a> Copyright 2011, John Resign
+Dual licensed under
+…&lt;/pre&gt;n”],[“navigation.js”,“”,“doc/js/navigation_js.html”,“”,“n&lt;pre&gt;Navigation
+allows movement using the arrow keys through the search results.nnWhen
+using this library
+…&lt;/pre&gt;n”],[“search.js”,“”,“doc/js/search_js.html”,“”,“&lt;p&gt;Search
+= function(data, input, result) {nn&lt;pre&gt;this.data = data;nthis.$input
+= $(input);nthis.$result = $(result);
+…&lt;/pre&gt;n”],[“search_index.js”,“”,“doc/js/search_index_js.html”,“”,“&lt;p&gt;var
+search_data = {“index”:{“searchIndex”:,“longSearchIndex”:,“info”:[,[“
+…n”],[“searcher.js”,“”,“doc/js/searcher_js.html”,“”,“&lt;p&gt;Searcher =
+function(data) {nn&lt;pre&gt;this.data = data;nthis.handlers =
+[];&lt;/pre&gt;n&lt;p&gt;}n”],[“pokemongodb_gemspec.html”,“”,“doc/pokemongodb_gemspec_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“rdoc.css”,“”,“doc/rdoc_css.html”,“”,“n&lt;pre&gt;&amp;quot;Darkfish&amp;quot;
+Rdoc CSSn$Id: rdoc.css 54 2009-01-27 01:09:48Z deveiant $nnAuthor: Michael
+Granger &amp;lt;ged@FaerieMUD.org&amp;gt;
+…&lt;/pre&gt;n”],[“table_of_contents.html”,“”,“doc/table_of_contents_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“pokemongodb.gemspec”,“”,“pokemongodb_gemspec.html”,“”,“&lt;p&gt;Gem::Specification.new
+do |s|nn&lt;pre&gt;s.name     = &amp;quot;pokemongodb&amp;quot;ns.version 
+= &amp;quot;0.1.0&amp;quot;ns.date     = &amp;quot;2016-09-12&amp;quot;
+…&lt;/pre&gt;n”]]}}</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
