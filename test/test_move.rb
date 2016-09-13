@@ -11,7 +11,7 @@ class MoveTest < Minitest::Test
     assert_equal @fast_move.power, 10
     assert_equal @fast_move.cooldown, 1.05
 
-    @charge_move = Pokemongodb::Move::AerielAce
+    @charge_move = Pokemongodb::Move::AerialAce
     assert_equal @charge_move.power, 30
     assert_equal @charge_move.cooldown, 2.9
   end
@@ -42,6 +42,9 @@ class MoveTest < Minitest::Test
 
   def test_that_fast_moves_generate_energy
     assert_equal @fast_move.eps, 6.67
+  end
+
+  def test_that_charge_moves_use_energy
     assert_equal @charge_move.eps, -8.62
   end
 end

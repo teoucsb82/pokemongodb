@@ -1,5 +1,4 @@
 [![Code Climate](https://codeclimate.com/github/teoucsb82/pokemongodb/badges/gpa.svg)](https://codeclimate.com/github/teoucsb82/pokemongodb)
-[![Code Climate](https://codeclimate.com/github/teoucsb82/pokemongodb/badges/coverage.svg)](https://codeclimate.com/github/teoucsb82/pokemongodb/coverage)
 [![Code Climate](https://codeclimate.com/github/teoucsb82/pokemongodb/badges/issue_count.svg)](https://codeclimate.com/github/teoucsb82/pokemongodb)
 
 # Pokemon Go DataBase

@@ -41,7 +41,7 @@ class Pokemongodb
     # Returns array of types where both the offense and defense are strong.
     #
     # Example:
-    #   >> Pokemongodb::Type.::Steel.strong_against
+    #   >> Pokemongodb::Type::Steel.strong_against
     #   => [Pokemongodb::Type::Fairy, Pokemongodb::Type::Ice, Pokemongodb::Type::Rock]
     def self.strong_against
       self.offense_strong & self.defense_strong
@@ -50,7 +50,7 @@ class Pokemongodb
     # Returns array of types where both the offense and defense are weak.
     #
     # Example:
-    #   >> Pokemongodb::Type.::Grass.weak_against
+    #   >> Pokemongodb::Type::Grass.weak_against
     #   => [Pokemongodb::Type::Bug, Pokemongodb::Type::Fire, Pokemongodb::Type::Flying, Pokemongodb::Type::Poison]
     def self.weak_against
       self.offense_weak & self.defense_weak
@@ -60,7 +60,7 @@ class Pokemongodb
     # Returns array of types where you have a strong defense.
     #
     # Example:
-    #   >> Pokemongodb::Type.::Dark.defense_strong
+    #   >> Pokemongodb::Type::Dark.defense_strong
     #   => [Pokemongodb::Type::Dark, Pokemongodb::Type::Ghost]
     def self.defense_strong
       all.select { |type| type.offense_weak.include?(self) }
@@ -69,7 +69,7 @@ class Pokemongodb
     # Returns array of types where you have a weak defense.
     #
     # Example:
-    #   >> Pokemongodb::Type.::Bug.defense_weak
+    #   >> Pokemongodb::Type::Bug.defense_weak
     #   => [Pokemongodb::Type::Flying, Pokemongodb::Type::Fire, Pokemongodb::Type::Dark]
     def self.defense_weak
       all.select { |type| type.offense_strong.include?(self) }
@@ -77,21 +77,4 @@ class Pokemongodb
   end
 end
 
-require 'pokemongodb/types/dark'
-require 'pokemongodb/types/bug'
-require 'pokemongodb/types/dragon'
-require 'pokemongodb/types/electric'
-require 'pokemongodb/types/fairy'
-require 'pokemongodb/types/fighting'
-require 'pokemongodb/types/fire'
-require 'pokemongodb/types/flying'
-require 'pokemongodb/types/ghost'
-require 'pokemongodb/types/grass'
-require 'pokemongodb/types/ground'
-require 'pokemongodb/types/ice'
-require 'pokemongodb/types/normal'
-require 'pokemongodb/types/poison'
-require 'pokemongodb/types/psychic'
-require 'pokemongodb/types/rock'
-require 'pokemongodb/types/steel'
-require 'pokemongodb/types/water'
+Dir["./lib/pokemongodb/types/*.rb"].each {|file| require file }

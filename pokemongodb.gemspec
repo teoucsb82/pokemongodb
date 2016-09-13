@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "pokemongodb"
-  s.version  = "0.2.0"
+  s.version  = "0.3.0.pre"
   s.date     = "2016-09-12"
   s.summary  = "Quick Pokemon Go Database / API. Used to power www.mongodatabase.com"
   s.authors  = "TeoUCSB82"
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
                 "lib/pokemongodb/types/water.rb",
                 "lib/pokemongodb/move.rb",
                 "lib/pokemongodb/moves/acid.rb",
-                "lib/pokemongodb/moves/aeriel_ace.rb",
+                "lib/pokemongodb/moves/aerial_ace.rb",
                 "lib/pokemongodb/moves/air_cutter.rb",
                 "lib/pokemongodb/moves/ancient_power.rb",
                 "lib/pokemongodb/moves/aqua_jet.rb",
@@ -149,8 +149,9 @@ Gem::Specification.new do |s|
                 "lib/pokemongodb/moves/wing_attack.rb",
                 "lib/pokemongodb/moves/wrap.rb",
                 "lib/pokemongodb/moves/x_scissor.rb",
-                "lib/pokemongodb/moves/zen_headbutt.rb"
+                "lib/pokemongodb/moves/zen_headbutt.rb",
+                "lib/pokemongodb/pokemon.rb"
               ]
-  s.homepage = "http://rubygems.org/gems/pokemongodb"
+  s.homepage = "http://www.github.com/teoucsb82/pokemongodb"
   s.license  = "MIT"
 end

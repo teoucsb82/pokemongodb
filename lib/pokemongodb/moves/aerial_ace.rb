@@ -1,6 +1,6 @@
 class Pokemongodb
   class Move
-    class AerielAce < Move
+    class AerialAce < Move
       def self.power
         30
       end
