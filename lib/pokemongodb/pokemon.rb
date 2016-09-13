@@ -54,6 +54,15 @@ class Pokemongodb
       end
     end
 
+    # Returns pokemon by type
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon.find_by_type(Pokemongodb::Type::Water)
+    #   => [Pokemongodb::Pokemon::Blastoise, Pokemongodb::Pokemon::Cloyster, ...]
+    def self.find_by_type(t)
+      all.select { |pokemon| pokemon.types.include?(t) }.uniq
+    end
+
     protected
     # Returns nil or evolution precursor
     #
@@ -66,10 +75,19 @@ class Pokemongodb
       all.detect { |type| type.evolves_into == self }
     end
 
+    # Returns array of possible move types
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.move_types
+    #   => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass, Pokemongodb::Type::Poison]
+    def self.move_types
+      moves.map { |m| m.type }.uniq
+    end
+
     private
     def self.file_names
       dir = Dir["./lib/pokemongodb/pokemon/*"]
-      return dir.map { |path| path.split("pokemon/").last.gsub(".!rb", "") }
+      return dir.map { |path| path.split("pokemon/").last.gsub(".rb", "") }
     end
   end
 end
