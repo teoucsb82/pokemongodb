@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::AncientPower,
          Pokemongodb::Move::StoneEdge,
          Pokemongodb::Move::WaterPulse
-        ].sort
+        ]
       end
 
       def self.perfect_iv

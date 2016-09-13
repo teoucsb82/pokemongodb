@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::BodySlam,
          Pokemongodb::Move::DazzlingGleam,
          Pokemongodb::Move::DisarmingVoice
-        ].sort
+        ]
       end
 
       def self.perfect_iv

@@ -56,11 +56,11 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::AquaJet,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::IceBeam
-        ].sort
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::AquaJet,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::IceBeam
+        ]
       end
 
       def self.perfect_iv

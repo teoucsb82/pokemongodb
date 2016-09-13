@@ -56,11 +56,11 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FeintAttack,
-         Pokemongodb::Move::Pound,
-         Pokemongodb::Move::DazzlingGleam,
-         Pokemongodb::Move::HyperBeam,
-         Pokemongodb::Move::PlayRough
-        ].sort
+          Pokemongodb::Move::Pound,
+          Pokemongodb::Move::DazzlingGleam,
+          Pokemongodb::Move::HyperBeam,
+          Pokemongodb::Move::PlayRough
+        ]
       end
 
       def self.perfect_iv

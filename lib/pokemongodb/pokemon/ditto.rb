@@ -57,7 +57,7 @@ class Pokemongodb
         [
           Pokemongodb::Move::Pound,
          Pokemongodb::Move::Struggle
-        ].sort
+        ]
       end
 
       def self.perfect_iv

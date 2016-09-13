@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::FirePunch,
          Pokemongodb::Move::FlameBurst,
          Pokemongodb::Move::Flamethrower
-        ].sort
+        ]
       end
 
       def self.perfect_iv

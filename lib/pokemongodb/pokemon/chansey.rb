@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::DazzlingGleam,
          Pokemongodb::Move::HyperBeam,
          Pokemongodb::Move::Psychic
-        ].sort
+        ]
       end
 
       def self.perfect_iv

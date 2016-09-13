@@ -58,7 +58,7 @@ class Pokemongodb
           Pokemongodb::Move::Tackle,
          Pokemongodb::Move::BugBite,
          Pokemongodb::Move::Struggle
-        ].sort
+        ]
       end
 
       def self.perfect_iv

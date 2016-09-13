@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::ViceGrip,
          Pokemongodb::Move::WaterPulse,
          Pokemongodb::Move::XScissor
-        ].sort
+        ]
       end
 
       def self.perfect_iv

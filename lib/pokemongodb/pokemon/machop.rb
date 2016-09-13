@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::BrickBreak,
          Pokemongodb::Move::CrossChop,
          Pokemongodb::Move::LowSweep
-        ].sort
+        ]
       end
 
       def self.perfect_iv

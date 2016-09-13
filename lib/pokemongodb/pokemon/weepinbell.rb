@@ -56,11 +56,11 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::RazorLeaf,
-         Pokemongodb::Move::PowerWhip,
-         Pokemongodb::Move::SeedBomb,
-         Pokemongodb::Move::SludgeBomb
-        ].sort
+          Pokemongodb::Move::RazorLeaf,
+          Pokemongodb::Move::PowerWhip,
+          Pokemongodb::Move::SeedBomb,
+          Pokemongodb::Move::SludgeBomb
+        ]
       end
 
       def self.perfect_iv

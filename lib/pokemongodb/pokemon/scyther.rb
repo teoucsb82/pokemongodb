@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::BugBuzz,
          Pokemongodb::Move::NightSlash,
          Pokemongodb::Move::XScissor
-        ].sort
+        ]
       end
 
       def self.perfect_iv

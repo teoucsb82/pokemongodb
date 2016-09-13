@@ -56,10 +56,10 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::DarkPulse,
-         Pokemongodb::Move::ShadowBall,
-         Pokemongodb::Move::SludgeBomb
-        ].sort
+          Pokemongodb::Move::DarkPulse,
+          Pokemongodb::Move::ShadowBall,
+          Pokemongodb::Move::SludgeBomb
+        ]
       end
 
       def self.perfect_iv

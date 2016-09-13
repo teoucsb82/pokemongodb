@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::AquaTail,
          Pokemongodb::Move::CrossChop,
          Pokemongodb::Move::Psybeam
-        ].sort
+        ]
       end
 
       def self.perfect_iv

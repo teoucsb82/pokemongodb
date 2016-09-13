@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::BubbleBeam,
          Pokemongodb::Move::ViceGrip,
          Pokemongodb::Move::WaterPulse
-        ].sort
+        ]
       end
 
       def self.perfect_iv

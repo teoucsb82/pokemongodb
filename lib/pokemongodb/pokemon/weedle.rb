@@ -56,9 +56,9 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::PoisonSting,
-         Pokemongodb::Move::Struggle
-        ].sort
+          Pokemongodb::Move::PoisonSting,
+          Pokemongodb::Move::Struggle
+        ]
       end
 
       def self.perfect_iv

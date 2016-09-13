@@ -56,11 +56,11 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Ember,
-         Pokemongodb::Move::KarateChop,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::FirePunch,
-         Pokemongodb::Move::Flamethrower
-        ].sort
+          Pokemongodb::Move::KarateChop,
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::FirePunch,
+          Pokemongodb::Move::Flamethrower
+        ]
       end
 
       def self.perfect_iv

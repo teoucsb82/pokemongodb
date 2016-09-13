@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::Bulldoze,
          Pokemongodb::Move::HornAttack,
          Pokemongodb::Move::Stomp
-        ].sort
+        ]
       end
 
       def self.perfect_iv

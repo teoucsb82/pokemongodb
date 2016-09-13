@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::IronHead,
          Pokemongodb::Move::RockSlide,
          Pokemongodb::Move::StoneEdge
-        ].sort
+        ]
       end
 
       def self.perfect_iv

@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::Psybeam,
          Pokemongodb::Move::Psychic,
          Pokemongodb::Move::Psyshock
-        ].sort
+        ]
       end
 
       def self.perfect_iv

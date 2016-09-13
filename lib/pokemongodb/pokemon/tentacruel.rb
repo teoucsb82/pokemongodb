@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::Blizzard,
          Pokemongodb::Move::HydroPump,
          Pokemongodb::Move::SludgeWave
-        ].sort
+        ]
       end
 
       def self.perfect_iv

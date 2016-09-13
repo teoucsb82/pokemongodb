@@ -98,7 +98,7 @@ class Pokemongodb
       def self.moves
         [
           #{rb_moves.join(",\n          ")}
-        ].sort
+        ]
       end
 
       def self.perfect_iv

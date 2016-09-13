@@ -56,10 +56,10 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::ThunderShock,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::Thunder,
-         Pokemongodb::Move::Thunderbolt
-        ].sort
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::Thunder,
+          Pokemongodb::Move::Thunderbolt
+        ]
       end
 
       def self.perfect_iv

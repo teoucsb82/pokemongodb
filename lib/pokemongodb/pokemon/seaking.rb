@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::IcyWind,
          Pokemongodb::Move::Megahorn,
          Pokemongodb::Move::DrillRun
-        ].sort
+        ]
       end
 
       def self.perfect_iv

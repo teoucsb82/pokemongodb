@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::AerialAce,
          Pokemongodb::Move::AirCutter,
          Pokemongodb::Move::DrillPeck
-        ].sort
+        ]
       end
 
       def self.perfect_iv

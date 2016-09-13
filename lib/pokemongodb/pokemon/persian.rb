@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::NightSlash,
          Pokemongodb::Move::PlayRough,
          Pokemongodb::Move::PowerGem
-        ].sort
+        ]
       end
 
       def self.perfect_iv

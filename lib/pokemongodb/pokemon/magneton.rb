@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::Discharge,
          Pokemongodb::Move::FlashCannon,
          Pokemongodb::Move::MagnetBomb
-        ].sort
+        ]
       end
 
       def self.perfect_iv

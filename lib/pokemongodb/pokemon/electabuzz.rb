@@ -60,7 +60,7 @@ class Pokemongodb
          Pokemongodb::Move::Thunder,
          Pokemongodb::Move::ThunderPunch,
          Pokemongodb::Move::Thunderbolt
-        ].sort
+        ]
       end
 
       def self.perfect_iv

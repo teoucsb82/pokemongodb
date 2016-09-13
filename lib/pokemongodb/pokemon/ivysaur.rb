@@ -61,7 +61,7 @@ class Pokemongodb
          Pokemongodb::Move::PowerWhip,
          Pokemongodb::Move::SludgeBomb,
          Pokemongodb::Move::SolarBeam
-        ].sort
+        ]
       end
 
       def self.perfect_iv
