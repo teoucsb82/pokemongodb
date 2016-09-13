@@ -24,6 +24,27 @@ class Pokemongodb
       end
     end
 
+    # Returns pokemon by id, string, or symbol
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon.find(1)
+    #   => Pokemongodb::Pokemon::Bulbasaur
+    #   >> Pokemongodb::Pokemon.find('ivysaur')
+    #   => Pokemongodb::Pokemon::Ivysaur
+    #   >> Pokemongodb::Pokemon.find(:venusaur)
+    #   => Pokemongodb::Pokemon::Venusaur
+    def self.find(query)
+      if query.is_a?(Integer)
+        all.detect { |type| type.id == query }
+      elsif query.is_a?(String)
+        Pokemongodb::Pokemon.const_get(query.capitalize)
+      elsif query.is_a?(Symbol)
+        Pokemongodb::Pokemon.const_get(query.to_s.capitalize)
+      else
+        nil
+      end
+    end
+
     protected
     # Returns nil or evolution precursor
     #

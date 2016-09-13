@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Pokemongodb::Pokemon - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/pokemongodb/pokemon.rb
+    <li>lib/pokemongodb/pokemon/abra.rb
+    <li>lib/pokemongodb/pokemon/aerodactyl.rb
+    <li>lib/pokemongodb/pokemon/alakazam.rb
+    <li>lib/pokemongodb/pokemon/arbok.rb
+    <li>lib/pokemongodb/pokemon/arcanine.rb
+    <li>lib/pokemongodb/pokemon/articuno.rb
+    <li>lib/pokemongodb/pokemon/beedrill.rb
+    <li>lib/pokemongodb/pokemon/bellsprout.rb
+    <li>lib/pokemongodb/pokemon/blastoise.rb
+    <li>lib/pokemongodb/pokemon/bulbasaur.rb
+    <li>lib/pokemongodb/pokemon/butterfree.rb
+    <li>lib/pokemongodb/pokemon/caterpie.rb
+    <li>lib/pokemongodb/pokemon/chansey.rb
+    <li>lib/pokemongodb/pokemon/charizard.rb
+    <li>lib/pokemongodb/pokemon/charmander.rb
+    <li>lib/pokemongodb/pokemon/charmeleon.rb
+    <li>lib/pokemongodb/pokemon/clefable.rb
+    <li>lib/pokemongodb/pokemon/clefairy.rb
+    <li>lib/pokemongodb/pokemon/cloyster.rb
+    <li>lib/pokemongodb/pokemon/cubone.rb
+    <li>lib/pokemongodb/pokemon/dewgong.rb
+    <li>lib/pokemongodb/pokemon/diglett.rb
+    <li>lib/pokemongodb/pokemon/ditto.rb
+    <li>lib/pokemongodb/pokemon/dodrio.rb
+    <li>lib/pokemongodb/pokemon/doduo.rb
+    <li>lib/pokemongodb/pokemon/dragonair.rb
+    <li>lib/pokemongodb/pokemon/dragonite.rb
+    <li>lib/pokemongodb/pokemon/dratini.rb
+    <li>lib/pokemongodb/pokemon/drowzee.rb
+    <li>lib/pokemongodb/pokemon/dugtrio.rb
+    <li>lib/pokemongodb/pokemon/eevee.rb
+    <li>lib/pokemongodb/pokemon/ekans.rb
+    <li>lib/pokemongodb/pokemon/electabuzz.rb
+    <li>lib/pokemongodb/pokemon/electrode.rb
+    <li>lib/pokemongodb/pokemon/exeggcute.rb
+    <li>lib/pokemongodb/pokemon/exeggutor.rb
+    <li>lib/pokemongodb/pokemon/farfetchd.rb
+    <li>lib/pokemongodb/pokemon/fearow.rb
+    <li>lib/pokemongodb/pokemon/flareon.rb
+    <li>lib/pokemongodb/pokemon/gastly.rb
+    <li>lib/pokemongodb/pokemon/gengar.rb
+    <li>lib/pokemongodb/pokemon/geodude.rb
+    <li>lib/pokemongodb/pokemon/gloom.rb
+    <li>lib/pokemongodb/pokemon/golbat.rb
+    <li>lib/pokemongodb/pokemon/goldeen.rb
+    <li>lib/pokemongodb/pokemon/golduck.rb
+    <li>lib/pokemongodb/pokemon/golem.rb
+    <li>lib/pokemongodb/pokemon/graveler.rb
+    <li>lib/pokemongodb/pokemon/grimer.rb
+    <li>lib/pokemongodb/pokemon/growlithe.rb
+    <li>lib/pokemongodb/pokemon/gyarados.rb
+    <li>lib/pokemongodb/pokemon/haunter.rb
+    <li>lib/pokemongodb/pokemon/hitmonchan.rb
+    <li>lib/pokemongodb/pokemon/hitmonlee.rb
+    <li>lib/pokemongodb/pokemon/horsea.rb
+    <li>lib/pokemongodb/pokemon/hypno.rb
+    <li>lib/pokemongodb/pokemon/ivysaur.rb
+    <li>lib/pokemongodb/pokemon/jigglypuff.rb
+    <li>lib/pokemongodb/pokemon/jolteon.rb
+    <li>lib/pokemongodb/pokemon/kabuto.rb
+    <li>lib/pokemongodb/pokemon/kabutops.rb
+    <li>lib/pokemongodb/pokemon/kadabra.rb
+    <li>lib/pokemongodb/pokemon/kakuna.rb
+    <li>lib/pokemongodb/pokemon/kangaskhan.rb
+    <li>lib/pokemongodb/pokemon/kingler.rb
+    <li>lib/pokemongodb/pokemon/koffing.rb
+    <li>lib/pokemongodb/pokemon/krabby.rb
+    <li>lib/pokemongodb/pokemon/lapras.rb
+    <li>lib/pokemongodb/pokemon/lickitung.rb
+    <li>lib/pokemongodb/pokemon/machamp.rb
+    <li>lib/pokemongodb/pokemon/machoke.rb
+    <li>lib/pokemongodb/pokemon/machop.rb
+    <li>lib/pokemongodb/pokemon/magikarp.rb
+    <li>lib/pokemongodb/pokemon/magmar.rb
+    <li>lib/pokemongodb/pokemon/magnemite.rb
+    <li>lib/pokemongodb/pokemon/magneton.rb
+    <li>lib/pokemongodb/pokemon/mankey.rb
+    <li>lib/pokemongodb/pokemon/marowak.rb
+    <li>lib/pokemongodb/pokemon/meowth.rb
+    <li>lib/pokemongodb/pokemon/metapod.rb
+    <li>lib/pokemongodb/pokemon/mewtwo.rb
+    <li>lib/pokemongodb/pokemon/moltres.rb
+    <li>lib/pokemongodb/pokemon/mr_mime.rb
+    <li>lib/pokemongodb/pokemon/muk.rb
+    <li>lib/pokemongodb/pokemon/nidoking.rb
+    <li>lib/pokemongodb/pokemon/nidoqueen.rb
+    <li>lib/pokemongodb/pokemon/nidorina.rb
+    <li>lib/pokemongodb/pokemon/nidorino.rb
+    <li>lib/pokemongodb/pokemon/ninetales.rb
+    <li>lib/pokemongodb/pokemon/oddish.rb
+    <li>lib/pokemongodb/pokemon/omanyte.rb
+    <li>lib/pokemongodb/pokemon/omastar.rb
+    <li>lib/pokemongodb/pokemon/onix.rb
+    <li>lib/pokemongodb/pokemon/paras.rb
+    <li>lib/pokemongodb/pokemon/parasect.rb
+    <li>lib/pokemongodb/pokemon/persian.rb
+    <li>lib/pokemongodb/pokemon/pidgeot.rb
+    <li>lib/pokemongodb/pokemon/pidgeotto.rb
+    <li>lib/pokemongodb/pokemon/pidgey.rb
+    <li>lib/pokemongodb/pokemon/pikachu.rb
+    <li>lib/pokemongodb/pokemon/pinsir.rb
+    <li>lib/pokemongodb/pokemon/poliwag.rb
+    <li>lib/pokemongodb/pokemon/poliwhirl.rb
+    <li>lib/pokemongodb/pokemon/poliwrath.rb
+    <li>lib/pokemongodb/pokemon/ponyta.rb
+    <li>lib/pokemongodb/pokemon/porygon.rb
+    <li>lib/pokemongodb/pokemon/primeape.rb
+    <li>lib/pokemongodb/pokemon/psyduck.rb
+    <li>lib/pokemongodb/pokemon/raichu.rb
+    <li>lib/pokemongodb/pokemon/rapidash.rb
+    <li>lib/pokemongodb/pokemon/raticate.rb
+    <li>lib/pokemongodb/pokemon/rattata.rb
+    <li>lib/pokemongodb/pokemon/rhydon.rb
+    <li>lib/pokemongodb/pokemon/rhyhorn.rb
+    <li>lib/pokemongodb/pokemon/sandshrew.rb
+    <li>lib/pokemongodb/pokemon/sandslash.rb
+    <li>lib/pokemongodb/pokemon/scyther.rb
+    <li>lib/pokemongodb/pokemon/seadra.rb
+    <li>lib/pokemongodb/pokemon/seaking.rb
+    <li>lib/pokemongodb/pokemon/seel.rb
+    <li>lib/pokemongodb/pokemon/shellder.rb
+    <li>lib/pokemongodb/pokemon/slowbro.rb
+    <li>lib/pokemongodb/pokemon/slowpoke.rb
+    <li>lib/pokemongodb/pokemon/snorlax.rb
+    <li>lib/pokemongodb/pokemon/spearow.rb
+    <li>lib/pokemongodb/pokemon/squirtle.rb
+    <li>lib/pokemongodb/pokemon/starmie.rb
+    <li>lib/pokemongodb/pokemon/staryu.rb
+    <li>lib/pokemongodb/pokemon/tangela.rb
+    <li>lib/pokemongodb/pokemon/tauros.rb
+    <li>lib/pokemongodb/pokemon/tentacool.rb
+    <li>lib/pokemongodb/pokemon/tentacruel.rb
+    <li>lib/pokemongodb/pokemon/vaporeon.rb
+    <li>lib/pokemongodb/pokemon/venomoth.rb
+    <li>lib/pokemongodb/pokemon/venonat.rb
+    <li>lib/pokemongodb/pokemon/venusaur.rb
+    <li>lib/pokemongodb/pokemon/victreebel.rb
+    <li>lib/pokemongodb/pokemon/vileplume.rb
+    <li>lib/pokemongodb/pokemon/voltorb.rb
+    <li>lib/pokemongodb/pokemon/vulpix.rb
+    <li>lib/pokemongodb/pokemon/wartortle.rb
+    <li>lib/pokemongodb/pokemon/weedle.rb
+    <li>lib/pokemongodb/pokemon/weepinbell.rb
+    <li>lib/pokemongodb/pokemon/weezing.rb
+    <li>lib/pokemongodb/pokemon/wigglytuff.rb
+    <li>lib/pokemongodb/pokemon/zapdos.rb
+    <li>lib/pokemongodb/pokemon/zubat.rb
+    <li>test/test_pokemon.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-all">::all</a>
+    
+    <li ><a href="#method-c-evolves_from">::evolves_from</a>
+    
+    <li ><a href="#method-c-find">::find</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../pokemongodb_gemspec.html">pokemongodb.gemspec</a>
+  
+    <li class="file"><a href="../readme_md.html">readme</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MoveTest.html">MoveTest</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../PokemonTest.html">PokemonTest</a>
+  
+    <li><a href="../Pokemongodb.html">Pokemongodb</a>
+  
+    <li><a href="../Pokemongodb/Move.html">Pokemongodb::Move</a>
+  
+    <li><a href="../Pokemongodb/Move/Acid.html">Pokemongodb::Move::Acid</a>
+  
+    <li><a href="../Pokemongodb/Move/AerialAce.html">Pokemongodb::Move::AerialAce</a>
+  
+    <li><a href="../Pokemongodb/Move/AirCutter.html">Pokemongodb::Move::AirCutter</a>
+  
+    <li><a href="../Pokemongodb/Move/AncientPower.html">Pokemongodb::Move::AncientPower</a>
+  
+    <li><a href="../Pokemongodb/Move/AquaJet.html">Pokemongodb::Move::AquaJet</a>
+  
+    <li><a href="../Pokemongodb/Move/AquaTail.html">Pokemongodb::Move::AquaTail</a>
+  
+    <li><a href="../Pokemongodb/Move/Bite.html">Pokemongodb::Move::Bite</a>
+  
+    <li><a href="../Pokemongodb/Move/Blizzard.html">Pokemongodb::Move::Blizzard</a>
+  
+    <li><a href="../Pokemongodb/Move/BodySlam.html">Pokemongodb::Move::BodySlam</a>
+  
+    <li><a href="../Pokemongodb/Move/BoneClub.html">Pokemongodb::Move::BoneClub</a>
+  
+    <li><a href="../Pokemongodb/Move/BrickBreak.html">Pokemongodb::Move::BrickBreak</a>
+  
+    <li><a href="../Pokemongodb/Move/Brine.html">Pokemongodb::Move::Brine</a>
+  
+    <li><a href="../Pokemongodb/Move/Bubble.html">Pokemongodb::Move::Bubble</a>
+  
+    <li><a href="../Pokemongodb/Move/BubbleBeam.html">Pokemongodb::Move::BubbleBeam</a>
+  
+    <li><a href="../Pokemongodb/Move/BugBite.html">Pokemongodb::Move::BugBite</a>
+  
+    <li><a href="../Pokemongodb/Move/BugBuzz.html">Pokemongodb::Move::BugBuzz</a>
+  
+    <li><a href="../Pokemongodb/Move/Bulldoze.html">Pokemongodb::Move::Bulldoze</a>
+  
+    <li><a href="../Pokemongodb/Move/BulletPunch.html">Pokemongodb::Move::BulletPunch</a>
+  
+    <li><a href="../Pokemongodb/Move/Category.html">Pokemongodb::Move::Category</a>
+  
+    <li><a href="../Pokemongodb/Move/Confusion.html">Pokemongodb::Move::Confusion</a>
+  
+    <li><a href="../Pokemongodb/Move/CrossChop.html">Pokemongodb::Move::CrossChop</a>
+  
+    <li><a href="../Pokemongodb/Move/CrossPoison.html">Pokemongodb::Move::CrossPoison</a>
+  
+    <li><a href="../Pokemongodb/Move/Cut.html">Pokemongodb::Move::Cut</a>
+  
+    <li><a href="../Pokemongodb/Move/DarkPulse.html">Pokemongodb::Move::DarkPulse</a>
+  
+    <li><a href="../Pokemongodb/Move/DazzlingGleam.html">Pokemongodb::Move::DazzlingGleam</a>
+  
+    <li><a href="../Pokemongodb/Move/Dig.html">Pokemongodb::Move::Dig</a>
+  
+    <li><a href="../Pokemongodb/Move/DisarmingVoice.html">Pokemongodb::Move::DisarmingVoice</a>
+  
+    <li><a href="../Pokemongodb/Move/Discharge.html">Pokemongodb::Move::Discharge</a>
+  
+    <li><a href="../Pokemongodb/Move/DragonBreath.html">Pokemongodb::Move::DragonBreath</a>
+  
+    <li><a href="../Pokemongodb/Move/DragonClaw.html">Pokemongodb::Move::DragonClaw</a>
+  
+    <li><a href="../Pokemongodb/Move/DragonPulse.html">Pokemongodb::Move::DragonPulse</a>
+  
+    <li><a href="../Pokemongodb/Move/DrainingKiss.html">Pokemongodb::Move::DrainingKiss</a>
+  
+    <li><a href="../Pokemongodb/Move/DrillPeck.html">Pokemongodb::Move::DrillPeck</a>
+  
+    <li><a href="../Pokemongodb/Move/DrillRun.html">Pokemongodb::Move::DrillRun</a>
+  
+    <li><a href="../Pokemongodb/Move/Earthquake.html">Pokemongodb::Move::Earthquake</a>
+  
+    <li><a href="../Pokemongodb/Move/Ember.html">Pokemongodb::Move::Ember</a>
+  
+    <li><a href="../Pokemongodb/Move/FeintAttack.html">Pokemongodb::Move::FeintAttack</a>
+  
+    <li><a href="../Pokemongodb/Move/FireBlast.html">Pokemongodb::Move::FireBlast</a>
+  
+    <li><a href="../Pokemongodb/Move/FireFang.html">Pokemongodb::Move::FireFang</a>
+  
+    <li><a href="../Pokemongodb/Move/FirePunch.html">Pokemongodb::Move::FirePunch</a>
+  
+    <li><a href="../Pokemongodb/Move/FlameBurst.html">Pokemongodb::Move::FlameBurst</a>
+  
+    <li><a href="../Pokemongodb/Move/FlameCharge.html">Pokemongodb::Move::FlameCharge</a>
+  
+    <li><a href="../Pokemongodb/Move/FlameWheel.html">Pokemongodb::Move::FlameWheel</a>
+  
+    <li><a href="../Pokemongodb/Move/Flamethrower.html">Pokemongodb::Move::Flamethrower</a>
+  
+    <li><a href="../Pokemongodb/Move/FlashCannon.html">Pokemongodb::Move::FlashCannon</a>
+  
+    <li><a href="../Pokemongodb/Move/FrostBreath.html">Pokemongodb::Move::FrostBreath</a>
+  
+    <li><a href="../Pokemongodb/Move/FuryCutter.html">Pokemongodb::Move::FuryCutter</a>
+  
+    <li><a href="../Pokemongodb/Move/GunkShot.html">Pokemongodb::Move::GunkShot</a>
+  
+    <li><a href="../Pokemongodb/Move/HeatWave.html">Pokemongodb::Move::HeatWave</a>
+  
+    <li><a href="../Pokemongodb/Move/HornAttack.html">Pokemongodb::Move::HornAttack</a>
+  
+    <li><a href="../Pokemongodb/Move/Hurricane.html">Pokemongodb::Move::Hurricane</a>
+  
+    <li><a href="../Pokemongodb/Move/HydroPump.html">Pokemongodb::Move::HydroPump</a>
+  
+    <li><a href="../Pokemongodb/Move/HyperBeam.html">Pokemongodb::Move::HyperBeam</a>
+  
+    <li><a href="../Pokemongodb/Move/HyperFang.html">Pokemongodb::Move::HyperFang</a>
+  
+    <li><a href="../Pokemongodb/Move/IceBeam.html">Pokemongodb::Move::IceBeam</a>
+  
+    <li><a href="../Pokemongodb/Move/IcePunch.html">Pokemongodb::Move::IcePunch</a>
+  
+    <li><a href="../Pokemongodb/Move/IceShard.html">Pokemongodb::Move::IceShard</a>
+  
+    <li><a href="../Pokemongodb/Move/IcyWind.html">Pokemongodb::Move::IcyWind</a>
+  
+    <li><a href="../Pokemongodb/Move/IronHead.html">Pokemongodb::Move::IronHead</a>
+  
+    <li><a href="../Pokemongodb/Move/KarateChop.html">Pokemongodb::Move::KarateChop</a>
+  
+    <li><a href="../Pokemongodb/Move/LeafBlade.html">Pokemongodb::Move::LeafBlade</a>
+  
+    <li><a href="../Pokemongodb/Move/Lick.html">Pokemongodb::Move::Lick</a>
+  
+    <li><a href="../Pokemongodb/Move/LowKick.html">Pokemongodb::Move::LowKick</a>
+  
+    <li><a href="../Pokemongodb/Move/LowSweep.html">Pokemongodb::Move::LowSweep</a>
+  
+    <li><a href="../Pokemongodb/Move/MagnetBomb.html">Pokemongodb::Move::MagnetBomb</a>
+  
+    <li><a href="../Pokemongodb/Move/Megahorn.html">Pokemongodb::Move::Megahorn</a>
+  
+    <li><a href="../Pokemongodb/Move/MetalClaw.html">Pokemongodb::Move::MetalClaw</a>
+  
+    <li><a href="../Pokemongodb/Move/Moonblast.html">Pokemongodb::Move::Moonblast</a>
+  
+    <li><a href="../Pokemongodb/Move/MudBomb.html">Pokemongodb::Move::MudBomb</a>
+  
+    <li><a href="../Pokemongodb/Move/MudShot.html">Pokemongodb::Move::MudShot</a>
+  
+    <li><a href="../Pokemongodb/Move/MudSlap.html">Pokemongodb::Move::MudSlap</a>
+  
+    <li><a href="../Pokemongodb/Move/NightSlash.html">Pokemongodb::Move::NightSlash</a>
+  
+    <li><a href="../Pokemongodb/Move/OminousWind.html">Pokemongodb::Move::OminousWind</a>
+  
+    <li><a href="../Pokemongodb/Move/Peck.html">Pokemongodb::Move::Peck</a>
+  
+    <li><a href="../Pokemongodb/Move/PetalBlizzard.html">Pokemongodb::Move::PetalBlizzard</a>
+  
+    <li><a href="../Pokemongodb/Move/PlayRough.html">Pokemongodb::Move::PlayRough</a>
+  
+    <li><a href="../Pokemongodb/Move/PoisonFang.html">Pokemongodb::Move::PoisonFang</a>
+  
+    <li><a href="../Pokemongodb/Move/PoisonJab.html">Pokemongodb::Move::PoisonJab</a>
+  
+    <li><a href="../Pokemongodb/Move/PoisonSting.html">Pokemongodb::Move::PoisonSting</a>
+  
+    <li><a href="../Pokemongodb/Move/Pound.html">Pokemongodb::Move::Pound</a>
+  
+    <li><a href="../Pokemongodb/Move/PowerGem.html">Pokemongodb::Move::PowerGem</a>
+  
+    <li><a href="../Pokemongodb/Move/PowerWhip.html">Pokemongodb::Move::PowerWhip</a>
+  
+    <li><a href="../Pokemongodb/Move/Psybeam.html">Pokemongodb::Move::Psybeam</a>
+  
+    <li><a href="../Pokemongodb/Move/Psychic.html">Pokemongodb::Move::Psychic</a>
+  
+    <li><a href="../Pokemongodb/Move/PsychoCut.html">Pokemongodb::Move::PsychoCut</a>
+  
+    <li><a href="../Pokemongodb/Move/Psyshock.html">Pokemongodb::Move::Psyshock</a>
+  
+    <li><a href="../Pokemongodb/Move/QuickAttack.html">Pokemongodb::Move::QuickAttack</a>
+  
+    <li><a href="../Pokemongodb/Move/RazorLeaf.html">Pokemongodb::Move::RazorLeaf</a>
+  
+    <li><a href="../Pokemongodb/Move/RockSlide.html">Pokemongodb::Move::RockSlide</a>
+  
+    <li><a href="../Pokemongodb/Move/RockSmash.html">Pokemongodb::Move::RockSmash</a>
+  
+    <li><a href="../Pokemongodb/Move/RockThrow.html">Pokemongodb::Move::RockThrow</a>
+  
+    <li><a href="../Pokemongodb/Move/RockTomb.html">Pokemongodb::Move::RockTomb</a>
+  
+    <li><a href="../Pokemongodb/Move/Scald.html">Pokemongodb::Move::Scald</a>
+  
+    <li><a href="../Pokemongodb/Move/Scratch.html">Pokemongodb::Move::Scratch</a>
+  
+    <li><a href="../Pokemongodb/Move/SeedBomb.html">Pokemongodb::Move::SeedBomb</a>
+  
+    <li><a href="../Pokemongodb/Move/ShadowBall.html">Pokemongodb::Move::ShadowBall</a>
+  
+    <li><a href="../Pokemongodb/Move/ShadowClaw.html">Pokemongodb::Move::ShadowClaw</a>
+  
+    <li><a href="../Pokemongodb/Move/SignalBeam.html">Pokemongodb::Move::SignalBeam</a>
+  
+    <li><a href="../Pokemongodb/Move/Sludge.html">Pokemongodb::Move::Sludge</a>
+  
+    <li><a href="../Pokemongodb/Move/SludgeBomb.html">Pokemongodb::Move::SludgeBomb</a>
+  
+    <li><a href="../Pokemongodb/Move/SludgeWave.html">Pokemongodb::Move::SludgeWave</a>
+  
+    <li><a href="../Pokemongodb/Move/SolarBeam.html">Pokemongodb::Move::SolarBeam</a>
+  
+    <li><a href="../Pokemongodb/Move/Spark.html">Pokemongodb::Move::Spark</a>
+  
+    <li><a href="../Pokemongodb/Move/Splash.html">Pokemongodb::Move::Splash</a>
+  
+    <li><a href="../Pokemongodb/Move/SteelWing.html">Pokemongodb::Move::SteelWing</a>
+  
+    <li><a href="../Pokemongodb/Move/Stomp.html">Pokemongodb::Move::Stomp</a>
+  
+    <li><a href="../Pokemongodb/Move/StoneEdge.html">Pokemongodb::Move::StoneEdge</a>
+  
+    <li><a href="../Pokemongodb/Move/Struggle.html">Pokemongodb::Move::Struggle</a>
+  
+    <li><a href="../Pokemongodb/Move/Submission.html">Pokemongodb::Move::Submission</a>
+  
+    <li><a href="../Pokemongodb/Move/SuckerPunch.html">Pokemongodb::Move::SuckerPunch</a>
+  
+    <li><a href="../Pokemongodb/Move/Swift.html">Pokemongodb::Move::Swift</a>
+  
+    <li><a href="../Pokemongodb/Move/Tackle.html">Pokemongodb::Move::Tackle</a>
+  
+    <li><a href="../Pokemongodb/Move/Thunder.html">Pokemongodb::Move::Thunder</a>
+  
+    <li><a href="../Pokemongodb/Move/ThunderPunch.html">Pokemongodb::Move::ThunderPunch</a>
+  
+    <li><a href="../Pokemongodb/Move/ThunderShock.html">Pokemongodb::Move::ThunderShock</a>
+  
+    <li><a href="../Pokemongodb/Move/Thunderbolt.html">Pokemongodb::Move::Thunderbolt</a>
+  
+    <li><a href="../Pokemongodb/Move/Twister.html">Pokemongodb::Move::Twister</a>
+  
+    <li><a href="../Pokemongodb/Move/ViceGrip.html">Pokemongodb::Move::ViceGrip</a>
+  
+    <li><a href="../Pokemongodb/Move/VineWhip.html">Pokemongodb::Move::VineWhip</a>
+  
+    <li><a href="../Pokemongodb/Move/WaterGun.html">Pokemongodb::Move::WaterGun</a>
+  
+    <li><a href="../Pokemongodb/Move/WaterPulse.html">Pokemongodb::Move::WaterPulse</a>
+  
+    <li><a href="../Pokemongodb/Move/WingAttack.html">Pokemongodb::Move::WingAttack</a>
+  
+    <li><a href="../Pokemongodb/Move/Wrap.html">Pokemongodb::Move::Wrap</a>
+  
+    <li><a href="../Pokemongodb/Move/XScissor.html">Pokemongodb::Move::XScissor</a>
+  
+    <li><a href="../Pokemongodb/Move/ZenHeadbutt.html">Pokemongodb::Move::ZenHeadbutt</a>
+  
+    <li><a href="../Pokemongodb/Pokemon.html">Pokemongodb::Pokemon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Abra.html">Pokemongodb::Pokemon::Abra</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Aerodactyl.html">Pokemongodb::Pokemon::Aerodactyl</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Alakazam.html">Pokemongodb::Pokemon::Alakazam</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Arbok.html">Pokemongodb::Pokemon::Arbok</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Arcanine.html">Pokemongodb::Pokemon::Arcanine</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Articuno.html">Pokemongodb::Pokemon::Articuno</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Beedrill.html">Pokemongodb::Pokemon::Beedrill</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Bellsprout.html">Pokemongodb::Pokemon::Bellsprout</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Blastoise.html">Pokemongodb::Pokemon::Blastoise</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Bulbasaur.html">Pokemongodb::Pokemon::Bulbasaur</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Butterfree.html">Pokemongodb::Pokemon::Butterfree</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Caterpie.html">Pokemongodb::Pokemon::Caterpie</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Chansey.html">Pokemongodb::Pokemon::Chansey</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Charizard.html">Pokemongodb::Pokemon::Charizard</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Charmander.html">Pokemongodb::Pokemon::Charmander</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Charmeleon.html">Pokemongodb::Pokemon::Charmeleon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Clefable.html">Pokemongodb::Pokemon::Clefable</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Clefairy.html">Pokemongodb::Pokemon::Clefairy</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Cloyster.html">Pokemongodb::Pokemon::Cloyster</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Cubone.html">Pokemongodb::Pokemon::Cubone</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dewgong.html">Pokemongodb::Pokemon::Dewgong</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Diglett.html">Pokemongodb::Pokemon::Diglett</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Ditto.html">Pokemongodb::Pokemon::Ditto</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dodrio.html">Pokemongodb::Pokemon::Dodrio</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Doduo.html">Pokemongodb::Pokemon::Doduo</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dragonair.html">Pokemongodb::Pokemon::Dragonair</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dragonite.html">Pokemongodb::Pokemon::Dragonite</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dratini.html">Pokemongodb::Pokemon::Dratini</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Drowzee.html">Pokemongodb::Pokemon::Drowzee</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Dugtrio.html">Pokemongodb::Pokemon::Dugtrio</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Eevee.html">Pokemongodb::Pokemon::Eevee</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Ekans.html">Pokemongodb::Pokemon::Ekans</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Electabuzz.html">Pokemongodb::Pokemon::Electabuzz</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Electrode.html">Pokemongodb::Pokemon::Electrode</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Exeggcute.html">Pokemongodb::Pokemon::Exeggcute</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Exeggutor.html">Pokemongodb::Pokemon::Exeggutor</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Farfetchd.html">Pokemongodb::Pokemon::Farfetchd</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Fearow.html">Pokemongodb::Pokemon::Fearow</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Flareon.html">Pokemongodb::Pokemon::Flareon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Gastly.html">Pokemongodb::Pokemon::Gastly</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Gengar.html">Pokemongodb::Pokemon::Gengar</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Geodude.html">Pokemongodb::Pokemon::Geodude</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Gloom.html">Pokemongodb::Pokemon::Gloom</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Golbat.html">Pokemongodb::Pokemon::Golbat</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Goldeen.html">Pokemongodb::Pokemon::Goldeen</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Golduck.html">Pokemongodb::Pokemon::Golduck</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Golem.html">Pokemongodb::Pokemon::Golem</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Graveler.html">Pokemongodb::Pokemon::Graveler</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Grimer.html">Pokemongodb::Pokemon::Grimer</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Growlithe.html">Pokemongodb::Pokemon::Growlithe</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Gyarados.html">Pokemongodb::Pokemon::Gyarados</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Haunter.html">Pokemongodb::Pokemon::Haunter</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Hitmonchan.html">Pokemongodb::Pokemon::Hitmonchan</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Hitmonlee.html">Pokemongodb::Pokemon::Hitmonlee</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Horsea.html">Pokemongodb::Pokemon::Horsea</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Hypno.html">Pokemongodb::Pokemon::Hypno</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Ivysaur.html">Pokemongodb::Pokemon::Ivysaur</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Jigglypuff.html">Pokemongodb::Pokemon::Jigglypuff</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kadabra.html">Pokemongodb::Pokemon::Kadabra</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kakuna.html">Pokemongodb::Pokemon::Kakuna</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kangaskhan.html">Pokemongodb::Pokemon::Kangaskhan</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Kingler.html">Pokemongodb::Pokemon::Kingler</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Koffing.html">Pokemongodb::Pokemon::Koffing</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Krabby.html">Pokemongodb::Pokemon::Krabby</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Lapras.html">Pokemongodb::Pokemon::Lapras</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Lickitung.html">Pokemongodb::Pokemon::Lickitung</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Machamp.html">Pokemongodb::Pokemon::Machamp</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Machoke.html">Pokemongodb::Pokemon::Machoke</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Machop.html">Pokemongodb::Pokemon::Machop</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Magikarp.html">Pokemongodb::Pokemon::Magikarp</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Magmar.html">Pokemongodb::Pokemon::Magmar</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Magnemite.html">Pokemongodb::Pokemon::Magnemite</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Magneton.html">Pokemongodb::Pokemon::Magneton</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Mankey.html">Pokemongodb::Pokemon::Mankey</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Marowak.html">Pokemongodb::Pokemon::Marowak</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Meowth.html">Pokemongodb::Pokemon::Meowth</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Metapod.html">Pokemongodb::Pokemon::Metapod</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Mewtwo.html">Pokemongodb::Pokemon::Mewtwo</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Moltres.html">Pokemongodb::Pokemon::Moltres</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/MrMime.html">Pokemongodb::Pokemon::MrMime</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Muk.html">Pokemongodb::Pokemon::Muk</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Nidoking.html">Pokemongodb::Pokemon::Nidoking</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Ninetales.html">Pokemongodb::Pokemon::Ninetales</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Oddish.html">Pokemongodb::Pokemon::Oddish</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Omanyte.html">Pokemongodb::Pokemon::Omanyte</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Omastar.html">Pokemongodb::Pokemon::Omastar</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Onix.html">Pokemongodb::Pokemon::Onix</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Paras.html">Pokemongodb::Pokemon::Paras</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Parasect.html">Pokemongodb::Pokemon::Parasect</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Persian.html">Pokemongodb::Pokemon::Persian</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Pidgeot.html">Pokemongodb::Pokemon::Pidgeot</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Pidgeotto.html">Pokemongodb::Pokemon::Pidgeotto</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Pidgey.html">Pokemongodb::Pokemon::Pidgey</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Pikachu.html">Pokemongodb::Pokemon::Pikachu</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Pinsir.html">Pokemongodb::Pokemon::Pinsir</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Poliwag.html">Pokemongodb::Pokemon::Poliwag</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Poliwhirl.html">Pokemongodb::Pokemon::Poliwhirl</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Poliwrath.html">Pokemongodb::Pokemon::Poliwrath</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Ponyta.html">Pokemongodb::Pokemon::Ponyta</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Porygon.html">Pokemongodb::Pokemon::Porygon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Primeape.html">Pokemongodb::Pokemon::Primeape</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Quality.html">Pokemongodb::Pokemon::Quality</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Raticate.html">Pokemongodb::Pokemon::Raticate</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Rattata.html">Pokemongodb::Pokemon::Rattata</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Sandslash.html">Pokemongodb::Pokemon::Sandslash</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Scyther.html">Pokemongodb::Pokemon::Scyther</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Seadra.html">Pokemongodb::Pokemon::Seadra</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Seaking.html">Pokemongodb::Pokemon::Seaking</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Seel.html">Pokemongodb::Pokemon::Seel</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Shellder.html">Pokemongodb::Pokemon::Shellder</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Slowbro.html">Pokemongodb::Pokemon::Slowbro</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Slowpoke.html">Pokemongodb::Pokemon::Slowpoke</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Snorlax.html">Pokemongodb::Pokemon::Snorlax</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Spearow.html">Pokemongodb::Pokemon::Spearow</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Squirtle.html">Pokemongodb::Pokemon::Squirtle</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Starmie.html">Pokemongodb::Pokemon::Starmie</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Staryu.html">Pokemongodb::Pokemon::Staryu</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Tangela.html">Pokemongodb::Pokemon::Tangela</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Tauros.html">Pokemongodb::Pokemon::Tauros</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Tentacool.html">Pokemongodb::Pokemon::Tentacool</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Tentacruel.html">Pokemongodb::Pokemon::Tentacruel</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Vaporeon.html">Pokemongodb::Pokemon::Vaporeon</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Venomoth.html">Pokemongodb::Pokemon::Venomoth</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Venonat.html">Pokemongodb::Pokemon::Venonat</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Venusaur.html">Pokemongodb::Pokemon::Venusaur</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Victreebel.html">Pokemongodb::Pokemon::Victreebel</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Vileplume.html">Pokemongodb::Pokemon::Vileplume</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Voltorb.html">Pokemongodb::Pokemon::Voltorb</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Vulpix.html">Pokemongodb::Pokemon::Vulpix</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Wartortle.html">Pokemongodb::Pokemon::Wartortle</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Weedle.html">Pokemongodb::Pokemon::Weedle</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Weepinbell.html">Pokemongodb::Pokemon::Weepinbell</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Weezing.html">Pokemongodb::Pokemon::Weezing</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Wigglytuff.html">Pokemongodb::Pokemon::Wigglytuff</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Zapdos.html">Pokemongodb::Pokemon::Zapdos</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Zubat.html">Pokemongodb::Pokemon::Zubat</a>
+  
+    <li><a href="../Pokemongodb/Type.html">Pokemongodb::Type</a>
+  
+    <li><a href="../Pokemongodb/Type/Bug.html">Pokemongodb::Type::Bug</a>
+  
+    <li><a href="../Pokemongodb/Type/Dark.html">Pokemongodb::Type::Dark</a>
+  
+    <li><a href="../Pokemongodb/Type/Dragon.html">Pokemongodb::Type::Dragon</a>
+  
+    <li><a href="../Pokemongodb/Type/Electric.html">Pokemongodb::Type::Electric</a>
+  
+    <li><a href="../Pokemongodb/Type/Fairy.html">Pokemongodb::Type::Fairy</a>
+  
+    <li><a href="../Pokemongodb/Type/Fighting.html">Pokemongodb::Type::Fighting</a>
+  
+    <li><a href="../Pokemongodb/Type/Fire.html">Pokemongodb::Type::Fire</a>
+  
+    <li><a href="../Pokemongodb/Type/Flying.html">Pokemongodb::Type::Flying</a>
+  
+    <li><a href="../Pokemongodb/Type/Ghost.html">Pokemongodb::Type::Ghost</a>
+  
+    <li><a href="../Pokemongodb/Type/Grass.html">Pokemongodb::Type::Grass</a>
+  
+    <li><a href="../Pokemongodb/Type/Ground.html">Pokemongodb::Type::Ground</a>
+  
+    <li><a href="../Pokemongodb/Type/Ice.html">Pokemongodb::Type::Ice</a>
+  
+    <li><a href="../Pokemongodb/Type/Normal.html">Pokemongodb::Type::Normal</a>
+  
+    <li><a href="../Pokemongodb/Type/Poison.html">Pokemongodb::Type::Poison</a>
+  
+    <li><a href="../Pokemongodb/Type/Psychic.html">Pokemongodb::Type::Psychic</a>
+  
+    <li><a href="../Pokemongodb/Type/Rock.html">Pokemongodb::Type::Rock</a>
+  
+    <li><a href="../Pokemongodb/Type/Steel.html">Pokemongodb::Type::Steel</a>
+  
+    <li><a href="../Pokemongodb/Type/Water.html">Pokemongodb::Type::Water</a>
+  
+    <li><a href="../TypeTest.html">TypeTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Pokemongodb::Pokemon</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-candy_to_evolve" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">candy_to_evolve</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-evolves_from" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">evolves_from</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-all" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns array of all moves</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span>.<span class="ruby-identifier">all</span>
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">BugBite</span>, <span class="ruby-operator">...</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="all-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">file_names</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file_name</span><span class="ruby-operator">|</span> 
+    <span class="ruby-identifier">const_name</span> = <span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;_&quot;</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:capitalize</span>).<span class="ruby-identifier">join</span>
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- all-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- all-method -->
+
+    
+      <div id="method-c-find" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find</span><span
+            class="method-args">(query)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns pokemon by id, string, or symbol</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">1</span>)
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-string">&#39;ivysaur&#39;</span>)
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(:<span class="ruby-identifier">venusaur</span>)
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="find-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+    <span class="ruby-identifier">all</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">query</span> }
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">query</span>.<span class="ruby-identifier">capitalize</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">query</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">capitalize</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="protected-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Class Methods</h3>
+
+    
+      <div id="method-c-evolves_from" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">evolves_from</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns nil or evolution precursor</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="evolves_from-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">evolves_from</span>
+  <span class="ruby-identifier">all</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">evolves_into</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- evolves_from-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- evolves_from-method -->
+
+    
+    </section><!-- protected-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

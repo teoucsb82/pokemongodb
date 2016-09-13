@@ -6,6 +6,21 @@ class PokemonTest < Minitest::Test
     it { assert_equal Pokemongodb::Pokemon.all.length, 147 }
   end
 
+  describe '.find' do
+    it "returns the pokemon by id or name (symbol or string" do
+      assert_equal Pokemongodb::Pokemon.find(1), Pokemongodb::Pokemon::Bulbasaur
+      assert_equal Pokemongodb::Pokemon.find('ivysaur'), Pokemongodb::Pokemon::Ivysaur
+      assert_equal Pokemongodb::Pokemon.find(:venusaur), Pokemongodb::Pokemon::Venusaur
+
+      assert_equal Pokemongodb::Pokemon.find(7), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('squirtle'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('Squirtle'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('SQUIRTLE'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find(:squirtle), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find(:SQUIRTLE), Pokemongodb::Pokemon::Squirtle
+    end
+  end
+
   describe '.evolves_from' do
     it "returns the pokemon it evolves from, or nil if no previous evolution" do
       assert_equal Pokemongodb::Pokemon::Bulbasaur.evolves_from, nil
