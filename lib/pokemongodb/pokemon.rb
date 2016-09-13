@@ -33,6 +33,37 @@ class Pokemongodb
       []
     end
 
+    # Returns pokemon that get countered.
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Squirtle.countered_by
+    #   => [Pokemongodb::Pokemon::Bulbasaur]
+    def self.countered_by
+      countering_types = []
+      self.types.each do |type|
+        type.weak_against.each do |weak_against|
+          countering_types << weak_against
+        end
+      end 
+      countering_types = countering_types.uniq
+
+      countering_pokemon = []
+      countering_types.each do |type|
+        countering_pokemon += find_by_type(type)
+      end
+      countering_pokemon = countering_pokemon.uniq
+
+      final_pokmeon = []
+      countering_pokemon.each do |p|
+        if p.move_types & countering_types == p.move_types
+          final_pokmeon << p
+        end
+      end
+
+      return final_pokmeon
+    end
+
+
     # Returns pokemon by id, string, or symbol
     #
     # Example:

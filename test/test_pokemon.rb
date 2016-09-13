@@ -61,17 +61,29 @@ class PokemonTest < Minitest::Test
     end
   end
 
-  # describe '.counter_for' do
-  #   it "returns pokemon that are countered by the subject" do
-  #     assert Pokemongodb::Pokemon::Bulbasaur.counter_for == []
-  #   end
-  # end
+  describe '.counter_for' do
+    it "returns pokemon that are countered by the subject" do
+      assert_equal Pokemongodb::Pokemon::Beedrill.counter_for, [Pokemongodb::Pokemon::Bulbasaur]
+      # assert Pokemongodb::Pokemon::Flareon.counter_for  == Pokemongodb::Pokemon::Bulbasaur
+      # assert Pokemongodb::Pokemon::Moltres.counter_for  == Pokemongodb::Pokemon::Bulbasaur
+      # assert Pokemongodb::Pokemon::Grimer.counter_for   == Pokemongodb::Pokemon::Bulbasaur
+      # assert Pokemongodb::Pokemon::Nidoking.counter_for == Pokemongodb::Pokemon::Bulbasaur
+    end
+  end
 
-  # describe '.countered_by' do
-  #   it "returns pokemon that counter the subject" do
-  #     assert Pokemongodb::Pokemon::Bulbasaur.countered_by == []
-  #   end
-  # end
+  describe '.countered_by' do
+    it "returns pokemon that counter the subject" do
+      bulbasaur_counters = [
+        Pokemongodb::Pokemon::Beedrill, 
+        Pokemongodb::Pokemon::Flareon, 
+        Pokemongodb::Pokemon::Moltres, 
+        Pokemongodb::Pokemon::Grimer, 
+        Pokemongodb::Pokemon::Nidoking
+      ]
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.countered_by, bulbasaur_counters
+      assert_equal Pokemongodb::Pokemon::Snorlax.countered_by, []
+    end
+  end
 
   describe '.evolves_from' do
     it "returns the pokemon it evolves from, or nil if no previous evolution" do
