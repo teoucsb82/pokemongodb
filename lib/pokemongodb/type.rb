@@ -77,4 +77,21 @@ class Pokemongodb
   end
 end
 
-Dir["./lib/pokemongodb/types/*.rb"].each {|file| require file }
+require 'pokemongodb/types/dark'
+require 'pokemongodb/types/bug'
+require 'pokemongodb/types/dragon'
+require 'pokemongodb/types/electric'
+require 'pokemongodb/types/fairy'
+require 'pokemongodb/types/fighting'
+require 'pokemongodb/types/fire'
+require 'pokemongodb/types/flying'
+require 'pokemongodb/types/ghost'
+require 'pokemongodb/types/grass'
+require 'pokemongodb/types/ground'
+require 'pokemongodb/types/ice'
+require 'pokemongodb/types/normal'
+require 'pokemongodb/types/poison'
+require 'pokemongodb/types/psychic'
+require 'pokemongodb/types/rock'
+require 'pokemongodb/types/steel'
+require 'pokemongodb/types/water'

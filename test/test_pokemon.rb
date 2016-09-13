@@ -21,6 +21,18 @@ class PokemonTest < Minitest::Test
     end
   end
 
+  describe '.counter_for' do
+    it "returns pokemon that are countered by the subject" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.counter_for, []
+    end
+  end
+
+  describe '.countered_by' do
+    it "returns pokemon that counter the subject" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.countered_by, []
+    end
+  end
+
   describe '.evolves_from' do
     it "returns the pokemon it evolves from, or nil if no previous evolution" do
       assert_equal Pokemongodb::Pokemon::Bulbasaur.evolves_from, nil
