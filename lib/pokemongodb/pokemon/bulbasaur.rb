@@ -34,6 +34,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Ivysaur
       end
 
       def self.flee_rate

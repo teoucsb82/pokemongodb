@@ -87,26 +87,59 @@ class PokemonTest < Minitest::Test
 
   describe '.evolves_from' do
     it "returns the pokemon it evolves from, or nil if no previous evolution" do
-      assert Pokemongodb::Pokemon::Bulbasaur.evolves_from == nil
-      assert Pokemongodb::Pokemon::Ivysaur.evolves_from   == Pokemongodb::Pokemon::Bulbasaur
-      assert Pokemongodb::Pokemon::Venusaur.evolves_from  == Pokemongodb::Pokemon::Ivysaur
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.evolves_from, nil
+      assert_equal Pokemongodb::Pokemon::Ivysaur.evolves_from, Pokemongodb::Pokemon::Bulbasaur
+      assert_equal Pokemongodb::Pokemon::Venusaur.evolves_from, Pokemongodb::Pokemon::Ivysaur
     end
   end
   
   describe '.evolves_into' do
     it "returns the pokemon it evolves into, or nil if no further evolution" do
-      assert Pokemongodb::Pokemon::Bulbasaur.evolves_into == Pokemongodb::Pokemon::Ivysaur
-      assert Pokemongodb::Pokemon::Ivysaur.evolves_into   == Pokemongodb::Pokemon::Venusaur
-      assert Pokemongodb::Pokemon::Venusaur.evolves_into  == nil
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.evolves_into, Pokemongodb::Pokemon::Ivysaur
+      assert_equal Pokemongodb::Pokemon::Ivysaur.evolves_into, Pokemongodb::Pokemon::Venusaur
+      assert_equal Pokemongodb::Pokemon::Venusaur.evolves_into, nil
     end
   end
   
   describe '.move_types' do
     it "returns array of all possible move types" do
-      assert Pokemongodb::Pokemon::Bulbasaur.move_types.length == 3
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.move_types.length, 3
       assert Pokemongodb::Pokemon::Bulbasaur.move_types.include?(Pokemongodb::Type::Normal)
       assert Pokemongodb::Pokemon::Bulbasaur.move_types.include?(Pokemongodb::Type::Grass)
       assert Pokemongodb::Pokemon::Bulbasaur.move_types.include?(Pokemongodb::Type::Poison)
+    end
+  end
+
+  describe '.fast_move_types' do
+    it "returns array of all possible fast move types" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.fast_move_types.length, 2
+      assert Pokemongodb::Pokemon::Bulbasaur.fast_move_types.include?(Pokemongodb::Type::Normal)
+      assert Pokemongodb::Pokemon::Bulbasaur.fast_move_types.include?(Pokemongodb::Type::Grass)
+    end
+  end
+
+  describe '.charge_move_types' do
+    it "returns array of all possible charge move types" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.charge_move_types.length, 2
+      assert Pokemongodb::Pokemon::Bulbasaur.charge_move_types.include?(Pokemongodb::Type::Grass)
+      assert Pokemongodb::Pokemon::Bulbasaur.charge_move_types.include?(Pokemongodb::Type::Poison)
+    end
+  end
+
+  describe '.fast_move' do
+    it "returns array of all possible fast moves" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.fast_moves.length, 2
+      assert Pokemongodb::Pokemon::Bulbasaur.fast_moves.include?(Pokemongodb::Move::Tackle)
+      assert Pokemongodb::Pokemon::Bulbasaur.fast_moves.include?(Pokemongodb::Move::VineWhip)
+    end
+  end
+
+  describe '.charge_move' do
+    it "returns array of all possible charge moves" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.charge_moves.length, 3
+      assert Pokemongodb::Pokemon::Bulbasaur.charge_moves.include?(Pokemongodb::Move::PowerWhip)
+      assert Pokemongodb::Pokemon::Bulbasaur.charge_moves.include?(Pokemongodb::Move::SeedBomb)
+      assert Pokemongodb::Pokemon::Bulbasaur.charge_moves.include?(Pokemongodb::Move::SludgeBomb)
     end
   end
 end

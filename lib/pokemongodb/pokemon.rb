@@ -1,43 +1,7 @@
 class Pokemongodb
   class Pokemon
-    attr_reader :base_attack
-    attr_reader :base_defense
-    attr_reader :base_stamina
-    attr_reader :buddy_candy_distance
     attr_reader :candy_to_evolve
-    attr_reader :capture_rate
-    attr_reader :cp_gain
-    attr_reader :evolves_into
-    attr_reader :flee_rate
-    attr_reader :height
-    attr_reader :locations
-    attr_reader :max_cp
-    attr_reader :moves
-    attr_reader :name
-    attr_reader :perfect_iv
-    attr_reader :types
-    attr_reader :weight
-
-    def initialize(id)
-      pokemon = Pokemongodb::Pokemon.find(id)
-      @base_attack          = pokemon.base_attack
-      @base_defense         = pokemon.base_defense
-      @base_stamina         = pokemon.base_stamina
-      @buddy_candy_distance = pokemon.buddy_candy_distance
-      @candy_to_evolve      = pokemon.candy_to_evolve
-      @capture_rate         = pokemon.capture_rate
-      @cp_gain              = pokemon.cp_gain
-      @evolves_into         = pokemon.evolves_into
-      @flee_rate            = pokemon.flee_rate
-      @height               = pokemon.height
-      @locations            = pokemon.locations
-      @max_cp               = pokemon.max_cp
-      @moves                = pokemon.moves
-      @name                 = pokemon.name
-      @perfect_iv           = pokemon.perfect_iv
-      @types                = pokemon.types
-      @weight               = pokemon.weight
-    end
+    attr_reader :evolves_from
 
     # Returns array of all moves
     #
@@ -196,13 +160,22 @@ class Pokemongodb
       ]
     end
 
-    # Returns pokemon that get countered.
+    # Returns pokemon that the current pokemon will be a counter for.
     #
     # Example:
     #   >> Pokemongodb::Pokemon::Bulbasaur.counter_for
     #   => [Pokemongodb::Pokemon::Squirtle]
-    def self.counter_for
-      []
+    def self.strong_against
+      p = []
+      # easy case
+      if self.types.length == 1
+        t = types.first
+        t.strong_against.each do |t2|
+          p << Pokemongodb::Pokemon.find_by_type(t2)
+        end
+      else
+      end
+      p
     end
 
     # Returns pokemon that get countered.
@@ -235,6 +208,36 @@ class Pokemongodb
       return final_pokmeon
     end
 
+
+    # Returns pokemon by id, string, or symbol
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon.find(1)
+    #   => Pokemongodb::Pokemon::Bulbasaur
+    #   >> Pokemongodb::Pokemon.find('ivysaur')
+    #   => Pokemongodb::Pokemon::Ivysaur
+    #   >> Pokemongodb::Pokemon.find(:venusaur)
+    #   => Pokemongodb::Pokemon::Venusaur
+    def self.find(query)
+      if query.is_a?(Integer)
+        all.detect { |type| type.id == query }
+      elsif query.is_a?(String)
+        Pokemongodb::Pokemon.const_get(query.capitalize)
+      elsif query.is_a?(Symbol)
+        Pokemongodb::Pokemon.const_get(query.to_s.capitalize)
+      else
+        nil
+      end
+    end
+
+    # Returns pokemon by type
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon.find_by_type(Pokemongodb::Type::Water)
+    #   => [Pokemongodb::Pokemon::Blastoise, Pokemongodb::Pokemon::Cloyster, ...]
+    def self.find_by_type(t)
+      all.select { |pokemon| pokemon.types.include?(t) }.uniq
+    end
     # Returns nil or evolution precursor
     #
     # Example:
@@ -250,9 +253,30 @@ class Pokemongodb
     #
     # Example:
     #   >> Pokemongodb::Pokemon::Bulbasaur.move_types
-    #   => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass, Pokemongodb::Type::Poison]
+    #   => [[Pokemongodb::Type::Grass, 3]
     def self.move_types
-      moves.map { |m| m.type }.uniq
+      (fast_move_types + charge_move_types).uniq
+    end
+
+    # Returns array of possible move types
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.fast_move_types
+    #   => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]
+    def self.fast_move_types
+      fast_moves.map(&:type).uniq
+    end
+
+    def self.fast_moves
+      moves.select { |move| move.category == :fast }
+    end
+
+    def self.charge_moves
+      moves.select { |move| move.category == :charge }
+    end
+
+    def self.charge_move_types
+      charge_moves.map(&:type).uniq
     end
   end
 end

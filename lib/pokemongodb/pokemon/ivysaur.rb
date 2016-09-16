@@ -34,6 +34,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Venusaur
       end
 
       def self.flee_rate
