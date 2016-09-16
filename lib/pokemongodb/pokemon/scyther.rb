@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FuryCutter,
-         Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::BugBuzz,
-         Pokemongodb::Move::NightSlash,
-         Pokemongodb::Move::XScissor
+          Pokemongodb::Move::SteelWing,
+          Pokemongodb::Move::BugBuzz,
+          Pokemongodb::Move::NightSlash,
+          Pokemongodb::Move::XScissor
         ]
+      end
+
+      def self.name
+        "scyther"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

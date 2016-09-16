@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::WaterPulse
         ]
+      end
+
+      def self.name
+        "vaporeon"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

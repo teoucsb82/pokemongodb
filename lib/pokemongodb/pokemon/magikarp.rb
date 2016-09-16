@@ -56,16 +56,16 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Splash,
-         Pokemongodb::Move::Struggle
+          Pokemongodb::Move::Struggle
         ]
       end
 
-      def self.perfect_iv
-        150
+      def self.name
+        "magikarp"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        0
       end
 
       def self.types

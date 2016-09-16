@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FrostBreath,
-         Pokemongodb::Move::IceShard,
-         Pokemongodb::Move::Blizzard,
-         Pokemongodb::Move::DragonPulse,
-         Pokemongodb::Move::IceBeam
+          Pokemongodb::Move::IceShard,
+          Pokemongodb::Move::Blizzard,
+          Pokemongodb::Move::DragonPulse,
+          Pokemongodb::Move::IceBeam
         ]
+      end
+
+      def self.name
+        "lapras"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

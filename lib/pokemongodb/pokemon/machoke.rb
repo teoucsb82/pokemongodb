@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::KarateChop,
-         Pokemongodb::Move::LowKick,
-         Pokemongodb::Move::BrickBreak,
-         Pokemongodb::Move::CrossChop,
-         Pokemongodb::Move::Submission
+          Pokemongodb::Move::LowKick,
+          Pokemongodb::Move::BrickBreak,
+          Pokemongodb::Move::CrossChop,
+          Pokemongodb::Move::Submission
         ]
+      end
+
+      def self.name
+        "machoke"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

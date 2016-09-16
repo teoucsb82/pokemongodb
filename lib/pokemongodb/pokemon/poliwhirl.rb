@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bubble,
-         Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::BubbleBeam,
-         Pokemongodb::Move::MudBomb,
-         Pokemongodb::Move::Scald
+          Pokemongodb::Move::MudShot,
+          Pokemongodb::Move::BubbleBeam,
+          Pokemongodb::Move::MudBomb,
+          Pokemongodb::Move::Scald
         ]
+      end
+
+      def self.name
+        "poliwhirl"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

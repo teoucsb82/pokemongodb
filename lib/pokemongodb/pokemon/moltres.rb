@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Ember,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::Flamethrower,
-         Pokemongodb::Move::HeatWave
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::Flamethrower,
+          Pokemongodb::Move::HeatWave
         ]
+      end
+
+      def self.name
+        "moltres"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

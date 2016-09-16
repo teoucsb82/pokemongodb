@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Spark,
-         Pokemongodb::Move::ThunderShock,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::MagnetBomb,
-         Pokemongodb::Move::Thunderbolt
+          Pokemongodb::Move::ThunderShock,
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::MagnetBomb,
+          Pokemongodb::Move::Thunderbolt
         ]
+      end
+
+      def self.name
+        "magnemite"
       end
 
       def self.perfect_iv
         508
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

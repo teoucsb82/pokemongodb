@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::SeedBomb
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::SeedBomb
         ]
+      end
+
+      def self.name
+        "exeggcute"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

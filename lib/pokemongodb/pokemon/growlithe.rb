@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::Ember,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::FlameWheel,
-         Pokemongodb::Move::Flamethrower
+          Pokemongodb::Move::Ember,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::FlameWheel,
+          Pokemongodb::Move::Flamethrower
         ]
+      end
+
+      def self.name
+        "growlithe"
       end
 
       def self.perfect_iv
         762
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

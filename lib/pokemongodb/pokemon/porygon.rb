@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::Psybeam,
-         Pokemongodb::Move::SignalBeam
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::Psybeam,
+          Pokemongodb::Move::SignalBeam
         ]
+      end
+
+      def self.name
+        "porygon"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

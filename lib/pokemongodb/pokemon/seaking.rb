@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Peck,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::IcyWind,
-         Pokemongodb::Move::Megahorn,
-         Pokemongodb::Move::DrillRun
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::IcyWind,
+          Pokemongodb::Move::Megahorn,
+          Pokemongodb::Move::DrillRun
         ]
+      end
+
+      def self.name
+        "seaking"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

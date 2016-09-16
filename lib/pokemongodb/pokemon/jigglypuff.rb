@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FeintAttack,
-         Pokemongodb::Move::Pound,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::DazzlingGleam,
-         Pokemongodb::Move::DisarmingVoice
+          Pokemongodb::Move::Pound,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::DazzlingGleam,
+          Pokemongodb::Move::DisarmingVoice
         ]
+      end
+
+      def self.name
+        "jigglypuff"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

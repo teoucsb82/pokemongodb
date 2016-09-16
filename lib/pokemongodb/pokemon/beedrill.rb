@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::XScissor
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::XScissor
         ]
+      end
+
+      def self.name
+        "beedrill"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

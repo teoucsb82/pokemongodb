@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FuryCutter,
-         Pokemongodb::Move::Cut,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::AirCutter,
-         Pokemongodb::Move::LeafBlade
+          Pokemongodb::Move::Cut,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::AirCutter,
+          Pokemongodb::Move::LeafBlade
         ]
+      end
+
+      def self.name
+        "farfetchd"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

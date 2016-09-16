@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::RazorLeaf,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::SolarBeam,
-         Pokemongodb::Move::LeafBlade
+          Pokemongodb::Move::RazorLeaf,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::SolarBeam,
+          Pokemongodb::Move::LeafBlade
         ]
+      end
+
+      def self.name
+        "victreebel"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

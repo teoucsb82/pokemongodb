@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::Scratch,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::DarkPulse,
-         Pokemongodb::Move::NightSlash
+          Pokemongodb::Move::Scratch,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::DarkPulse,
+          Pokemongodb::Move::NightSlash
         ]
+      end
+
+      def self.name
+        "meowth"
       end
 
       def self.perfect_iv
         432
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

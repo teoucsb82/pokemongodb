@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Pound,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::DisarmingVoice,
-         Pokemongodb::Move::Moonblast
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::DisarmingVoice,
+          Pokemongodb::Move::Moonblast
         ]
+      end
+
+      def self.name
+        "clefairy"
       end
 
       def self.perfect_iv
         686
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

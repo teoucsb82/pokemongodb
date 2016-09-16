@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::RockSlide
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::RockSlide
         ]
+      end
+
+      def self.name
+        "omastar"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

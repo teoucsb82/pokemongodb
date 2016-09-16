@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::DragonBreath,
-         Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::DragonClaw,
-         Pokemongodb::Move::DragonPulse,
-         Pokemongodb::Move::HyperBeam
+          Pokemongodb::Move::SteelWing,
+          Pokemongodb::Move::DragonClaw,
+          Pokemongodb::Move::DragonPulse,
+          Pokemongodb::Move::HyperBeam
         ]
+      end
+
+      def self.name
+        "dragonite"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

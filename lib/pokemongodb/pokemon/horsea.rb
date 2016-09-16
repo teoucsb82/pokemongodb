@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bubble,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::BubbleBeam,
-         Pokemongodb::Move::DragonPulse,
-         Pokemongodb::Move::FlashCannon
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::BubbleBeam,
+          Pokemongodb::Move::DragonPulse,
+          Pokemongodb::Move::FlashCannon
         ]
+      end
+
+      def self.name
+        "horsea"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

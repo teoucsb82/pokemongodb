@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::SuckerPunch,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::MudBomb,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::SuckerPunch,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::MudBomb,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "dugtrio"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

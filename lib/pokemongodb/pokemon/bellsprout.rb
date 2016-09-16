@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::VineWhip,
-         Pokemongodb::Move::PowerWhip,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::Wrap
+          Pokemongodb::Move::VineWhip,
+          Pokemongodb::Move::PowerWhip,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::Wrap
         ]
+      end
+
+      def self.name
+        "bellsprout"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

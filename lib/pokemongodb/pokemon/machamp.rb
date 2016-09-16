@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BulletPunch,
-         Pokemongodb::Move::KarateChop,
-         Pokemongodb::Move::CrossChop,
-         Pokemongodb::Move::StoneEdge,
-         Pokemongodb::Move::Submission
+          Pokemongodb::Move::KarateChop,
+          Pokemongodb::Move::CrossChop,
+          Pokemongodb::Move::StoneEdge,
+          Pokemongodb::Move::Submission
         ]
+      end
+
+      def self.name
+        "machamp"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

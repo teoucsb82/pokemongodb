@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MetalClaw,
-         Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::Bulldoze,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::RockTomb
+          Pokemongodb::Move::MudShot,
+          Pokemongodb::Move::Bulldoze,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::RockTomb
         ]
+      end
+
+      def self.name
+        "sandslash"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

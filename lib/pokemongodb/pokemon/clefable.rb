@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Pound,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::DazzlingGleam,
-         Pokemongodb::Move::Moonblast,
-         Pokemongodb::Move::Psychic
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::DazzlingGleam,
+          Pokemongodb::Move::Moonblast,
+          Pokemongodb::Move::Psychic
         ]
+      end
+
+      def self.name
+        "clefable"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

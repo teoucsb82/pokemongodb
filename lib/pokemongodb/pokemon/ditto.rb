@@ -56,16 +56,16 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Pound,
-         Pokemongodb::Move::Struggle
+          Pokemongodb::Move::Struggle
         ]
+      end
+
+      def self.name
+        "ditto"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

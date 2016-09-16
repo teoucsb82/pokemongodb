@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::BugBuzz,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::SignalBeam
+          Pokemongodb::Move::Confusion,
+          Pokemongodb::Move::BugBuzz,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::SignalBeam
         ]
+      end
+
+      def self.name
+        "butterfree"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

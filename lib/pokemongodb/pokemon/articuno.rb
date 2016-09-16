@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FrostBreath,
-         Pokemongodb::Move::Blizzard,
-         Pokemongodb::Move::IceBeam,
-         Pokemongodb::Move::IcyWind
+          Pokemongodb::Move::Blizzard,
+          Pokemongodb::Move::IceBeam,
+          Pokemongodb::Move::IcyWind
         ]
+      end
+
+      def self.name
+        "articuno"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

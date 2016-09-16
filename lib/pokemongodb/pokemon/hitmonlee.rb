@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::LowKick,
-         Pokemongodb::Move::RockSmash,
-         Pokemongodb::Move::BrickBreak,
-         Pokemongodb::Move::LowSweep,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::RockSmash,
+          Pokemongodb::Move::BrickBreak,
+          Pokemongodb::Move::LowSweep,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "hitmonlee"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

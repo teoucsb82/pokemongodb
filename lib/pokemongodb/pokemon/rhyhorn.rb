@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::RockSmash,
-         Pokemongodb::Move::Bulldoze,
-         Pokemongodb::Move::HornAttack,
-         Pokemongodb::Move::Stomp
+          Pokemongodb::Move::RockSmash,
+          Pokemongodb::Move::Bulldoze,
+          Pokemongodb::Move::HornAttack,
+          Pokemongodb::Move::Stomp
         ]
+      end
+
+      def self.name
+        "rhyhorn"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

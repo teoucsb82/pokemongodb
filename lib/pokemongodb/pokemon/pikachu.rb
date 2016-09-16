@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::QuickAttack,
-         Pokemongodb::Move::ThunderShock,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::Thunder,
-         Pokemongodb::Move::Thunderbolt
+          Pokemongodb::Move::ThunderShock,
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::Thunder,
+          Pokemongodb::Move::Thunderbolt
         ]
       end
 
-      def self.perfect_iv
-        507
+      def self.name
+        "pikachu"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        0
       end
 
       def self.types

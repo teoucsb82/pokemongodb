@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FrostBreath,
-         Pokemongodb::Move::IceShard,
-         Pokemongodb::Move::Blizzard,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::IcyWind
+          Pokemongodb::Move::IceShard,
+          Pokemongodb::Move::Blizzard,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::IcyWind
         ]
+      end
+
+      def self.name
+        "cloyster"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

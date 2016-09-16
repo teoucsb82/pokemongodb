@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::HornAttack,
-         Pokemongodb::Move::IronHead
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::HornAttack,
+          Pokemongodb::Move::IronHead
         ]
+      end
+
+      def self.name
+        "tauros"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

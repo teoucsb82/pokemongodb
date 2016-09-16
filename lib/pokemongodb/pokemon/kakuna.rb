@@ -56,17 +56,17 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::PoisonSting,
-         Pokemongodb::Move::Struggle
+          Pokemongodb::Move::PoisonSting,
+          Pokemongodb::Move::Struggle
         ]
+      end
+
+      def self.name
+        "kakuna"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

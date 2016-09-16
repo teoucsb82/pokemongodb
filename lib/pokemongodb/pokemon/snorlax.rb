@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Lick,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::HyperBeam
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::HyperBeam
         ]
+      end
+
+      def self.name
+        "snorlax"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

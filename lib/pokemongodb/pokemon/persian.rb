@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FeintAttack,
-         Pokemongodb::Move::Scratch,
-         Pokemongodb::Move::NightSlash,
-         Pokemongodb::Move::PlayRough,
-         Pokemongodb::Move::PowerGem
+          Pokemongodb::Move::Scratch,
+          Pokemongodb::Move::NightSlash,
+          Pokemongodb::Move::PlayRough,
+          Pokemongodb::Move::PowerGem
         ]
+      end
+
+      def self.name
+        "persian"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

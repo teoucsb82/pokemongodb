@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::Peck,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::HornAttack,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::Peck,
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::HornAttack,
+          Pokemongodb::Move::WaterPulse
         ]
+      end
+
+      def self.name
+        "goldeen"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::RockSmash,
-         Pokemongodb::Move::BoneClub,
-         Pokemongodb::Move::Bulldoze,
-         Pokemongodb::Move::Dig
+          Pokemongodb::Move::RockSmash,
+          Pokemongodb::Move::BoneClub,
+          Pokemongodb::Move::Bulldoze,
+          Pokemongodb::Move::Dig
         ]
+      end
+
+      def self.name
+        "cubone"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

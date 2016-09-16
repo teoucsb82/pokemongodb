@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::RockThrow,
-         Pokemongodb::Move::Dig,
-         Pokemongodb::Move::RockSlide,
-         Pokemongodb::Move::RockTomb
+          Pokemongodb::Move::RockThrow,
+          Pokemongodb::Move::Dig,
+          Pokemongodb::Move::RockSlide,
+          Pokemongodb::Move::RockTomb
         ]
+      end
+
+      def self.name
+        "geodude"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::Scratch,
-         Pokemongodb::Move::CrossPoison,
-         Pokemongodb::Move::SeedBomb,
-         Pokemongodb::Move::XScissor
+          Pokemongodb::Move::Scratch,
+          Pokemongodb::Move::CrossPoison,
+          Pokemongodb::Move::SeedBomb,
+          Pokemongodb::Move::XScissor
         ]
+      end
+
+      def self.name
+        "paras"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

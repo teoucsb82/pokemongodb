@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Lick,
-         Pokemongodb::Move::SuckerPunch,
-         Pokemongodb::Move::DarkPulse,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::OminousWind
+          Pokemongodb::Move::SuckerPunch,
+          Pokemongodb::Move::DarkPulse,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::OminousWind
         ]
+      end
+
+      def self.name
+        "gastly"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

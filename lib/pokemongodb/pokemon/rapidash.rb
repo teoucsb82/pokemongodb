@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Ember,
-         Pokemongodb::Move::LowKick,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::HeatWave,
-         Pokemongodb::Move::DrillRun
+          Pokemongodb::Move::LowKick,
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::HeatWave,
+          Pokemongodb::Move::DrillRun
         ]
+      end
+
+      def self.name
+        "rapidash"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

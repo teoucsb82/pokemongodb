@@ -56,17 +56,17 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::Struggle
+          Pokemongodb::Move::BugBite,
+          Pokemongodb::Move::Struggle
         ]
+      end
+
+      def self.name
+        "caterpie"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

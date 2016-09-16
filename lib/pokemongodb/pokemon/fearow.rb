@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Peck,
-         Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::Twister,
-         Pokemongodb::Move::DrillRun
+          Pokemongodb::Move::SteelWing,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::Twister,
+          Pokemongodb::Move::DrillRun
         ]
+      end
+
+      def self.name
+        "fearow"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

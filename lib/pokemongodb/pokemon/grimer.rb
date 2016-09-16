@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::MudBomb,
-         Pokemongodb::Move::Sludge,
-         Pokemongodb::Move::SludgeBomb
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::MudBomb,
+          Pokemongodb::Move::Sludge,
+          Pokemongodb::Move::SludgeBomb
         ]
+      end
+
+      def self.name
+        "grimer"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

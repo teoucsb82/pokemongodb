@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::WingAttack,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::AirCutter,
-         Pokemongodb::Move::Twister
+          Pokemongodb::Move::WingAttack,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::AirCutter,
+          Pokemongodb::Move::Twister
         ]
+      end
+
+      def self.name
+        "pidgeotto"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

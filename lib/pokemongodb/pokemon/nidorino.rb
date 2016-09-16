@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::PoisonSting,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::Dig,
-         Pokemongodb::Move::HornAttack,
-         Pokemongodb::Move::SludgeBomb
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::Dig,
+          Pokemongodb::Move::HornAttack,
+          Pokemongodb::Move::SludgeBomb
         ]
+      end
+
+      def self.name
+        "nidorino"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

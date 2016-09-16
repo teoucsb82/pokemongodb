@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bubble,
-         Pokemongodb::Move::PoisonSting,
-         Pokemongodb::Move::BubbleBeam,
-         Pokemongodb::Move::WaterPulse,
-         Pokemongodb::Move::Wrap
+          Pokemongodb::Move::PoisonSting,
+          Pokemongodb::Move::BubbleBeam,
+          Pokemongodb::Move::WaterPulse,
+          Pokemongodb::Move::Wrap
         ]
+      end
+
+      def self.name
+        "tentacool"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

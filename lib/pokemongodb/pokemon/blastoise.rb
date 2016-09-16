@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::FlashCannon,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::IceBeam
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::FlashCannon,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::IceBeam
         ]
+      end
+
+      def self.name
+        "blastoise"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

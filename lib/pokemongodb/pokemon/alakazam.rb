@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::PsychoCut,
-         Pokemongodb::Move::DazzlingGleam,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::ShadowBall
+          Pokemongodb::Move::PsychoCut,
+          Pokemongodb::Move::DazzlingGleam,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::ShadowBall
         ]
+      end
+
+      def self.name
+        "alakazam"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

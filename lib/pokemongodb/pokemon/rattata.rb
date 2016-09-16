@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::QuickAttack,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::Dig,
-         Pokemongodb::Move::HyperFang
+          Pokemongodb::Move::QuickAttack,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::Dig,
+          Pokemongodb::Move::HyperFang
         ]
+      end
+
+      def self.name
+        "rattata"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

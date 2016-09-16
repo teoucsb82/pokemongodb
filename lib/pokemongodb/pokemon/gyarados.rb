@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::DragonPulse,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::Twister
+          Pokemongodb::Move::DragonPulse,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::Twister
         ]
+      end
+
+      def self.name
+        "gyarados"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

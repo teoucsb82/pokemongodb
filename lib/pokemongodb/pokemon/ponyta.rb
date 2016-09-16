@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::Ember,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::FlameWheel,
-         Pokemongodb::Move::FlameCharge
+          Pokemongodb::Move::Ember,
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::FlameWheel,
+          Pokemongodb::Move::FlameCharge
         ]
+      end
+
+      def self.name
+        "ponyta"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

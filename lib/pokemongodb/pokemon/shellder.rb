@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::IceShard,
-         Pokemongodb::Move::BubbleBeam,
-         Pokemongodb::Move::IcyWind,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::IceShard,
+          Pokemongodb::Move::BubbleBeam,
+          Pokemongodb::Move::IcyWind,
+          Pokemongodb::Move::WaterPulse
         ]
+      end
+
+      def self.name
+        "shellder"
       end
 
       def self.perfect_iv
         470
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

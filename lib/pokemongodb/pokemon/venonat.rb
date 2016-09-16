@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::PoisonFang,
-         Pokemongodb::Move::Psybeam,
-         Pokemongodb::Move::SignalBeam
+          Pokemongodb::Move::Confusion,
+          Pokemongodb::Move::PoisonFang,
+          Pokemongodb::Move::Psybeam,
+          Pokemongodb::Move::SignalBeam
         ]
+      end
+
+      def self.name
+        "venonat"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

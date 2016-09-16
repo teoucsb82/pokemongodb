@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::FireFang,
-         Pokemongodb::Move::Bulldoze,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::Flamethrower
+          Pokemongodb::Move::FireFang,
+          Pokemongodb::Move::Bulldoze,
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::Flamethrower
         ]
+      end
+
+      def self.name
+        "arcanine"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

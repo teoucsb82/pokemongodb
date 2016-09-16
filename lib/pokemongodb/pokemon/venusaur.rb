@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::RazorLeaf,
-         Pokemongodb::Move::VineWhip,
-         Pokemongodb::Move::PetalBlizzard,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::SolarBeam
+          Pokemongodb::Move::VineWhip,
+          Pokemongodb::Move::PetalBlizzard,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::SolarBeam
         ]
+      end
+
+      def self.name
+        "venusaur"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

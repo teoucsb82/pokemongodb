@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::RockTomb,
-         Pokemongodb::Move::Brine
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::RockTomb,
+          Pokemongodb::Move::Brine
         ]
+      end
+
+      def self.name
+        "omanyte"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

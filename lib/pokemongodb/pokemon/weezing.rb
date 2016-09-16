@@ -62,12 +62,12 @@ class Pokemongodb
         ]
       end
 
-      def self.perfect_iv
-        0
+      def self.name
+        "weezing"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        0
       end
 
       def self.types

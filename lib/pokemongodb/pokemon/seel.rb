@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Lick,
-         Pokemongodb::Move::IceShard,
-         Pokemongodb::Move::AquaJet,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::IcyWind
+          Pokemongodb::Move::IceShard,
+          Pokemongodb::Move::AquaJet,
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::IcyWind
         ]
+      end
+
+      def self.name
+        "seel"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

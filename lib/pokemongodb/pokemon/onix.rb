@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::RockThrow,
-         Pokemongodb::Move::IronHead,
-         Pokemongodb::Move::RockSlide,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::RockThrow,
+          Pokemongodb::Move::IronHead,
+          Pokemongodb::Move::RockSlide,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "onix"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

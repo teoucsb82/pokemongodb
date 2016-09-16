@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::Bite,
-         Pokemongodb::Move::DarkPulse,
-         Pokemongodb::Move::GunkShot,
-         Pokemongodb::Move::SludgeWave
+          Pokemongodb::Move::Bite,
+          Pokemongodb::Move::DarkPulse,
+          Pokemongodb::Move::GunkShot,
+          Pokemongodb::Move::SludgeWave
         ]
+      end
+
+      def self.name
+        "arbok"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

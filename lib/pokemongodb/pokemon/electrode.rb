@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::Spark,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::HyperBeam,
-         Pokemongodb::Move::Thunderbolt
+          Pokemongodb::Move::Spark,
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::HyperBeam,
+          Pokemongodb::Move::Thunderbolt
         ]
+      end
+
+      def self.name
+        "electrode"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

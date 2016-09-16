@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::IceBeam,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::IceBeam,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::WaterPulse
         ]
+      end
+
+      def self.name
+        "slowbro"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

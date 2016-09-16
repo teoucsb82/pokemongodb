@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Lick,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::HyperBeam,
-         Pokemongodb::Move::PowerWhip,
-         Pokemongodb::Move::Stomp
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::HyperBeam,
+          Pokemongodb::Move::PowerWhip,
+          Pokemongodb::Move::Stomp
         ]
+      end
+
+      def self.name
+        "lickitung"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::RockThrow,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::RockThrow,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "golem"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

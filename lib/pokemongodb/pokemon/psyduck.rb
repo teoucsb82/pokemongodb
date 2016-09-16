@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::CrossChop,
-         Pokemongodb::Move::Psybeam
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::CrossChop,
+          Pokemongodb::Move::Psybeam
         ]
+      end
+
+      def self.name
+        "psyduck"
       end
 
       def self.perfect_iv
         634
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

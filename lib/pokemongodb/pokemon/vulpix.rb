@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Ember,
-         Pokemongodb::Move::QuickAttack,
-         Pokemongodb::Move::BodySlam,
-         Pokemongodb::Move::Flamethrower,
-         Pokemongodb::Move::FlameCharge
+          Pokemongodb::Move::QuickAttack,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::Flamethrower,
+          Pokemongodb::Move::FlameCharge
         ]
+      end
+
+      def self.name
+        "vulpix"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

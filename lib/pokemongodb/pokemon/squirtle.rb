@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::Bubble,
-         Pokemongodb::Move::AquaJet,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::Bubble,
+          Pokemongodb::Move::AquaJet,
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::WaterPulse
         ]
       end
 
-      def self.perfect_iv
-        576
+      def self.name
+        "squirtle"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        0
       end
 
       def self.types

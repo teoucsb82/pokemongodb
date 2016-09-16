@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Peck,
-         Pokemongodb::Move::QuickAttack,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::DrillPeck,
-         Pokemongodb::Move::Twister
+          Pokemongodb::Move::QuickAttack,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::DrillPeck,
+          Pokemongodb::Move::Twister
         ]
+      end
+
+      def self.name
+        "spearow"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

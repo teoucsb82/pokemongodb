@@ -1,47 +1,47 @@
 class Pokemongodb
   class Pokemon
-    class Slowpoke < Pokemon
+    class Mr-mime < Pokemon
       def self.id
-        79
+        122
       end
 
       def self.base_attack
-        110
+        154
       end
 
       def self.base_defense
-        110
+        196
       end
 
       def self.base_stamina
-        180
+        80
       end
 
       def self.buddy_candy_distance
-        2
+        0
       end
       
       def self.candy_to_evolve
-        50
+        0
       end
 
       def self.capture_rate
-        0.4
+        0.24
       end
 
       def self.cp_gain
-        18
+        22
       end
 
       def self.evolves_into
       end
 
       def self.flee_rate
-        0.1
+        0.09
       end
 
       def self.height
-        1.2
+        1.3
       end
 
       def self.locations
@@ -50,21 +50,21 @@ class Pokemongodb
       end
 
       def self.max_cp
-        1218.9
+        1494.42
       end
 
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::Psybeam,
           Pokemongodb::Move::Psychic,
-          Pokemongodb::Move::Psyshock,
-          Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::ShadowBall
         ]
       end
 
       def self.name
-        "slowpoke"
+        "mr-mime"
       end
 
       def self.perfect_iv
@@ -73,13 +73,13 @@ class Pokemongodb
 
       def self.types
         [
-          Pokemongodb::Type::Water,
-          Pokemongodb::Type::Psychic
+          Pokemongodb::Type::Psychic,
+          Pokemongodb::Type::Fairy
         ]
       end
 
       def self.weight
-        36.0
+        54.5
       end
     end
   end

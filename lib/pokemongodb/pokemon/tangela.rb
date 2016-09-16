@@ -56,18 +56,18 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::VineWhip,
-         Pokemongodb::Move::PowerWhip,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::SolarBeam
+          Pokemongodb::Move::PowerWhip,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::SolarBeam
         ]
+      end
+
+      def self.name
+        "tangela"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

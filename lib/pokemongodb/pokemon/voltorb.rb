@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::Spark,
-         Pokemongodb::Move::Discharge,
-         Pokemongodb::Move::SignalBeam,
-         Pokemongodb::Move::Thunderbolt
+          Pokemongodb::Move::Spark,
+          Pokemongodb::Move::Discharge,
+          Pokemongodb::Move::SignalBeam,
+          Pokemongodb::Move::Thunderbolt
         ]
+      end
+
+      def self.name
+        "voltorb"
       end
 
       def self.perfect_iv
         479
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

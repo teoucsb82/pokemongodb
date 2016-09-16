@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::WingAttack,
-         Pokemongodb::Move::AirCutter,
-         Pokemongodb::Move::PoisonFang,
-         Pokemongodb::Move::OminousWind
+          Pokemongodb::Move::WingAttack,
+          Pokemongodb::Move::AirCutter,
+          Pokemongodb::Move::PoisonFang,
+          Pokemongodb::Move::OminousWind
         ]
+      end
+
+      def self.name
+        "golbat"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

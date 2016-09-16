@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Spark,
-         Pokemongodb::Move::ThunderShock,
-         Pokemongodb::Move::BrickBreak,
-         Pokemongodb::Move::Thunder,
-         Pokemongodb::Move::ThunderPunch
+          Pokemongodb::Move::ThunderShock,
+          Pokemongodb::Move::BrickBreak,
+          Pokemongodb::Move::Thunder,
+          Pokemongodb::Move::ThunderPunch
         ]
+      end
+
+      def self.name
+        "raichu"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

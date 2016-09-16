@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::DragonBreath,
-         Pokemongodb::Move::AquaTail,
-         Pokemongodb::Move::Twister,
-         Pokemongodb::Move::Wrap
+          Pokemongodb::Move::DragonBreath,
+          Pokemongodb::Move::AquaTail,
+          Pokemongodb::Move::Twister,
+          Pokemongodb::Move::Wrap
         ]
       end
 
-      def self.perfect_iv
-        561
+      def self.name
+        "dratini"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        0
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::Pound,
-         Pokemongodb::Move::Psybeam,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::Psyshock
+          Pokemongodb::Move::Pound,
+          Pokemongodb::Move::Psybeam,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::Psyshock
         ]
+      end
+
+      def self.name
+        "drowzee"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

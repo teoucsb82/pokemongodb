@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Lick,
-         Pokemongodb::Move::ShadowClaw,
-         Pokemongodb::Move::DarkPulse,
-         Pokemongodb::Move::ShadowBall,
-         Pokemongodb::Move::SludgeBomb
+          Pokemongodb::Move::ShadowClaw,
+          Pokemongodb::Move::DarkPulse,
+          Pokemongodb::Move::ShadowBall,
+          Pokemongodb::Move::SludgeBomb
         ]
+      end
+
+      def self.name
+        "haunter"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

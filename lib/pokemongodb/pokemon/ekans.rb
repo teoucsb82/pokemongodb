@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::PoisonSting,
-         Pokemongodb::Move::GunkShot,
-         Pokemongodb::Move::SludgeBomb,
-         Pokemongodb::Move::Wrap
+          Pokemongodb::Move::PoisonSting,
+          Pokemongodb::Move::GunkShot,
+          Pokemongodb::Move::SludgeBomb,
+          Pokemongodb::Move::Wrap
         ]
+      end
+
+      def self.name
+        "ekans"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

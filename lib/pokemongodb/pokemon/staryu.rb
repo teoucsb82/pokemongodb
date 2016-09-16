@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Tackle,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::BubbleBeam,
-         Pokemongodb::Move::PowerGem,
-         Pokemongodb::Move::Swift
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::BubbleBeam,
+          Pokemongodb::Move::PowerGem,
+          Pokemongodb::Move::Swift
         ]
+      end
+
+      def self.name
+        "staryu"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

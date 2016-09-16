@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FuryCutter,
-         Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::StoneEdge,
-         Pokemongodb::Move::WaterPulse
+          Pokemongodb::Move::MudShot,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::StoneEdge,
+          Pokemongodb::Move::WaterPulse
         ]
+      end
+
+      def self.name
+        "kabutops"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

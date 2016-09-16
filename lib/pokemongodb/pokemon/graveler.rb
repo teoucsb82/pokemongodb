@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::RockThrow,
-         Pokemongodb::Move::Dig,
-         Pokemongodb::Move::RockSlide,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::RockThrow,
+          Pokemongodb::Move::Dig,
+          Pokemongodb::Move::RockSlide,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "graveler"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

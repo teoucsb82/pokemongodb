@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::HyperBeam,
-         Pokemongodb::Move::IronHead
+          Pokemongodb::Move::SteelWing,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::HyperBeam,
+          Pokemongodb::Move::IronHead
         ]
+      end
+
+      def self.name
+        "aerodactyl"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

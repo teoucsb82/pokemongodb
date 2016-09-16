@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Acid,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::Blizzard,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::SludgeWave
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::Blizzard,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::SludgeWave
         ]
+      end
+
+      def self.name
+        "tentacruel"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

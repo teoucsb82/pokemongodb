@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::DragonBreath,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::Blizzard,
-         Pokemongodb::Move::DragonPulse,
-         Pokemongodb::Move::HydroPump
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::Blizzard,
+          Pokemongodb::Move::DragonPulse,
+          Pokemongodb::Move::HydroPump
         ]
+      end
+
+      def self.name
+        "seadra"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

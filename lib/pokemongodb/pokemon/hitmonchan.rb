@@ -56,20 +56,20 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BulletPunch,
-         Pokemongodb::Move::RockSmash,
-         Pokemongodb::Move::BrickBreak,
-         Pokemongodb::Move::FirePunch,
-         Pokemongodb::Move::IcePunch,
-         Pokemongodb::Move::ThunderPunch
+          Pokemongodb::Move::RockSmash,
+          Pokemongodb::Move::BrickBreak,
+          Pokemongodb::Move::FirePunch,
+          Pokemongodb::Move::IcePunch,
+          Pokemongodb::Move::ThunderPunch
         ]
+      end
+
+      def self.name
+        "hitmonchan"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

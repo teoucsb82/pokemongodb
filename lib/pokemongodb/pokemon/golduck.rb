@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::WaterGun,
-         Pokemongodb::Move::HydroPump,
-         Pokemongodb::Move::IceBeam,
-         Pokemongodb::Move::Psychic
+          Pokemongodb::Move::WaterGun,
+          Pokemongodb::Move::HydroPump,
+          Pokemongodb::Move::IceBeam,
+          Pokemongodb::Move::Psychic
         ]
+      end
+
+      def self.name
+        "golduck"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

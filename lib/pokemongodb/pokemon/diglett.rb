@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudSlap,
-         Pokemongodb::Move::Scratch,
-         Pokemongodb::Move::Dig,
-         Pokemongodb::Move::MudBomb,
-         Pokemongodb::Move::RockTomb
+          Pokemongodb::Move::Scratch,
+          Pokemongodb::Move::Dig,
+          Pokemongodb::Move::MudBomb,
+          Pokemongodb::Move::RockTomb
         ]
+      end
+
+      def self.name
+        "diglett"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

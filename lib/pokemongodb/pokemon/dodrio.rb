@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FeintAttack,
-         Pokemongodb::Move::SteelWing,
-         Pokemongodb::Move::AerialAce,
-         Pokemongodb::Move::AirCutter,
-         Pokemongodb::Move::DrillPeck
+          Pokemongodb::Move::SteelWing,
+          Pokemongodb::Move::AerialAce,
+          Pokemongodb::Move::AirCutter,
+          Pokemongodb::Move::DrillPeck
         ]
+      end
+
+      def self.name
+        "dodrio"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::BugBite,
-         Pokemongodb::Move::FuryCutter,
-         Pokemongodb::Move::CrossPoison,
-         Pokemongodb::Move::SolarBeam,
-         Pokemongodb::Move::XScissor
+          Pokemongodb::Move::FuryCutter,
+          Pokemongodb::Move::CrossPoison,
+          Pokemongodb::Move::SolarBeam,
+          Pokemongodb::Move::XScissor
         ]
+      end
+
+      def self.name
+        "parasect"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Bite,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::SludgeWave,
-         Pokemongodb::Move::StoneEdge
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::SludgeWave,
+          Pokemongodb::Move::StoneEdge
         ]
+      end
+
+      def self.name
+        "nidoqueen"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

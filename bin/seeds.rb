@@ -101,12 +101,12 @@ class Pokemongodb
         ]
       end
 
-      def self.perfect_iv
-        #{rankedboost.css('body > div.site-container > div > div > div > div > main > article > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(9) > div:nth-child(9) > table > tbody > tr:nth-child(2) > td:nth-child(2)').text.split.first.to_i}
+      def self.name
+        "#{name}"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        #{rankedboost.css('body > div.site-container > div > div > div > div > main > article > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(9) > div:nth-child(9) > table > tbody > tr:nth-child(2) > td:nth-child(2)').text.split.first.to_i}
       end
 
       def self.types
@@ -127,7 +127,7 @@ end
 end
 
 # skipped 29, 32, 124
-(1..150).to_a.each do |i|
+((1...29).to_a + [30, 31] + (33...124).to_a + (126..150).to_a).each do |i|
   puts "loading #{i}"
   load_pokemon(i)
 end

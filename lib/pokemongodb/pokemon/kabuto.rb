@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::Scratch,
-         Pokemongodb::Move::AncientPower,
-         Pokemongodb::Move::AquaJet,
-         Pokemongodb::Move::RockTomb
+          Pokemongodb::Move::Scratch,
+          Pokemongodb::Move::AncientPower,
+          Pokemongodb::Move::AquaJet,
+          Pokemongodb::Move::RockTomb
         ]
+      end
+
+      def self.name
+        "kabuto"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

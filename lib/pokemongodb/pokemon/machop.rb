@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::KarateChop,
-         Pokemongodb::Move::LowKick,
-         Pokemongodb::Move::BrickBreak,
-         Pokemongodb::Move::CrossChop,
-         Pokemongodb::Move::LowSweep
+          Pokemongodb::Move::LowKick,
+          Pokemongodb::Move::BrickBreak,
+          Pokemongodb::Move::CrossChop,
+          Pokemongodb::Move::LowSweep
         ]
+      end
+
+      def self.name
+        "machop"
       end
 
       def self.perfect_iv
         622
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

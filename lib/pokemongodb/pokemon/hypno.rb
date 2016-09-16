@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Confusion,
-         Pokemongodb::Move::ZenHeadbutt,
-         Pokemongodb::Move::Psychic,
-         Pokemongodb::Move::Psyshock,
-         Pokemongodb::Move::ShadowBall
+          Pokemongodb::Move::ZenHeadbutt,
+          Pokemongodb::Move::Psychic,
+          Pokemongodb::Move::Psyshock,
+          Pokemongodb::Move::ShadowBall
         ]
+      end
+
+      def self.name
+        "hypno"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

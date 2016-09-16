@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::FuryCutter,
-         Pokemongodb::Move::PoisonJab,
-         Pokemongodb::Move::Earthquake,
-         Pokemongodb::Move::Megahorn,
-         Pokemongodb::Move::SludgeWave
+          Pokemongodb::Move::PoisonJab,
+          Pokemongodb::Move::Earthquake,
+          Pokemongodb::Move::Megahorn,
+          Pokemongodb::Move::SludgeWave
         ]
+      end
+
+      def self.name
+        "nidoking"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

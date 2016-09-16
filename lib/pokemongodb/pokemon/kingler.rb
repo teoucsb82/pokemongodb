@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::MetalClaw,
-         Pokemongodb::Move::MudShot,
-         Pokemongodb::Move::ViceGrip,
-         Pokemongodb::Move::WaterPulse,
-         Pokemongodb::Move::XScissor
+          Pokemongodb::Move::MudShot,
+          Pokemongodb::Move::ViceGrip,
+          Pokemongodb::Move::WaterPulse,
+          Pokemongodb::Move::XScissor
         ]
+      end
+
+      def self.name
+        "kingler"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types

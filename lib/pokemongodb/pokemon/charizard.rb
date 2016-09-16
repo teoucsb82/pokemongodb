@@ -56,19 +56,19 @@ class Pokemongodb
       def self.moves
         [
           Pokemongodb::Move::Ember,
-         Pokemongodb::Move::WingAttack,
-         Pokemongodb::Move::DragonClaw,
-         Pokemongodb::Move::FireBlast,
-         Pokemongodb::Move::Flamethrower
+          Pokemongodb::Move::WingAttack,
+          Pokemongodb::Move::DragonClaw,
+          Pokemongodb::Move::FireBlast,
+          Pokemongodb::Move::Flamethrower
         ]
+      end
+
+      def self.name
+        "charizard"
       end
 
       def self.perfect_iv
         0
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types
