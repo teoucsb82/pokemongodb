@@ -6,6 +6,12 @@ class PokemonTest < Minitest::Test
     it { assert_equal Pokemongodb::Pokemon.all.length, 150 }
   end
 
+  describe '.role' do
+    it { assert_equal Pokemongodb::Pokemon.find("bulbasaur").role, Pokemongodb::Pokemon::Role::DEFENSE }
+    it { assert_equal Pokemongodb::Pokemon.find("charmander").role, Pokemongodb::Pokemon::Role::OFFENSE }
+    it { assert_equal Pokemongodb::Pokemon.find("pikachu").role, Pokemongodb::Pokemon::Role::OFFENSE }
+  end
+
   describe '.find' do
     it "returns the pokemon by id or name (symbol or string)" do
       assert_equal Pokemongodb::Pokemon.find(1), Pokemongodb::Pokemon::Bulbasaur

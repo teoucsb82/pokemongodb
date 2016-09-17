@@ -1,5 +1,10 @@
 class Pokemongodb
   class Pokemon
+    class Role
+      OFFENSE = :offense
+      DEFENSE = :defense
+    end
+
     attr_reader :candy_to_evolve
     attr_reader :evolves_from
 
@@ -166,6 +171,19 @@ class Pokemongodb
     # Returns pokemon by id, string, or symbol
     #
     # Example:
+    #   >> bulbasaur = Pokemongodb::Pokemon.find(1)
+    #   >> bulbasaur.role
+    #   => :defense
+    #   >> charmander = Pokemongodb::Pokemon.find(4)
+    #   >> charmander.role
+    #   => :offense
+    def self.role
+      self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
+    end
+
+    # Returns pokemon by id, string, or symbol
+    #
+    # Example:
     #   >> Pokemongodb::Pokemon.find(1)
     #   => Pokemongodb::Pokemon::Bulbasaur
     #   >> Pokemongodb::Pokemon.find('ivysaur')
@@ -222,11 +240,11 @@ class Pokemongodb
     end
 
     def self.fast_moves
-      moves.select { |move| move.category == :fast }
+      moves.select { |move| move.category == Pokemongodb::Move::Category::FAST }
     end
 
     def self.charge_moves
-      moves.select { |move| move.category == :charge }
+      moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
     end
 
     def self.charge_move_types
