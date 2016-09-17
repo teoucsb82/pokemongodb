@@ -34,6 +34,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Pidgeotto
       end
 
       def self.flee_rate
@@ -42,11 +43,6 @@ class Pokemongodb
 
       def self.height
         0.3
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -68,7 +64,7 @@ class Pokemongodb
       end
 
       def self.perfect_iv
-        0
+        388
       end
 
       def self.types

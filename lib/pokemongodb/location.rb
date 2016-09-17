@@ -38,6 +38,13 @@ class Pokemongodb
         Location::Port, 
         Location::Reservoir, 
         Location::Basin,
+        Location::CollegeCampus,
+        Location::ParkingLot,
+        Location::University,
+        Location::IndustrialPark,
+        Location::School,
+        Location::Railway,
+        Location::ShoppingCenter,
       ]
     end
   end
@@ -73,3 +80,10 @@ require 'pokemongodb/locations/stream'
 require 'pokemongodb/locations/port'
 require 'pokemongodb/locations/reservoir'
 require 'pokemongodb/locations/basin'
+require 'pokemongodb/locations/college_campus'
+require 'pokemongodb/locations/parking_lot'
+require 'pokemongodb/locations/university'
+require 'pokemongodb/locations/industrial_park'
+require 'pokemongodb/locations/school'
+require 'pokemongodb/locations/railway'
+require 'pokemongodb/locations/shopping_center'

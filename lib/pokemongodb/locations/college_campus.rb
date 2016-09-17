@@ -1,10 +1,9 @@
 class Pokemongodb
   class Location
-    class Residential < Location
+    class CollegeCampus < Location
       def self.types
         [
           Pokemongodb::Type::Electric,
-          Pokemongodb::Type::Fire,
           Pokemongodb::Type::Normal,
         ]
       end
