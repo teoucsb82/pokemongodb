@@ -3,6 +3,7 @@ class Pokemongodb
     class Garden < Location
       def self.types
         [
+          Pokemongodb::Type::Bug,
           Pokemongodb::Type::Grass,
         ]
       end

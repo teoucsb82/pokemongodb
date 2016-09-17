@@ -3,6 +3,7 @@ class Pokemongodb
     class NatureReserve < Location
       def self.types
         [
+          Pokemongodb::Type::Bug,
           Pokemongodb::Type::Grass,
         ]
       end
