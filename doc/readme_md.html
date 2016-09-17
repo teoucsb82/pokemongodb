@@ -51,6 +51,8 @@
       <li><a href="#label-Pokemon+Go+DataBase">Pokemon Go DataBase</a>
       <li><a href="#label-Quick+Installation">Quick Installation</a>
       <li><a href="#label-Using+the+gem">Using the gem</a>
+      <li><a href="#label-Find+your+pokemon">Find your pokemon</a>
+      <li><a href="#label-Get+basic+data+about+your+pokemon">Get basic data about your pokemon</a>
     </ul>
   </nav>
 </div>
@@ -460,6 +462,8 @@
   
     <li><a href="./Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
   
+    <li><a href="./Pokemongodb/Pokemon/Jynx.html">Pokemongodb::Pokemon::Jynx</a>
+  
     <li><a href="./Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
   
     <li><a href="./Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
@@ -514,6 +518,10 @@
   
     <li><a href="./Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
   
+    <li><a href="./Pokemongodb/Pokemon/NidoranF.html">Pokemongodb::Pokemon::NidoranF</a>
+  
+    <li><a href="./Pokemongodb/Pokemon/NidoranM.html">Pokemongodb::Pokemon::NidoranM</a>
+  
     <li><a href="./Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
   
     <li><a href="./Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
@@ -558,8 +566,6 @@
   
     <li><a href="./Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
   
-    <li><a href="./Pokemongodb/Pokemon/Quality.html">Pokemongodb::Pokemon::Quality</a>
-  
     <li><a href="./Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
   
     <li><a href="./Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
@@ -571,6 +577,8 @@
     <li><a href="./Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
   
     <li><a href="./Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
+  
+    <li><a href="./Pokemongodb/Pokemon/Role.html">Pokemongodb::Pokemon::Role</a>
   
     <li><a href="./Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
   
@@ -713,16 +721,41 @@ href="http://mongodatabase.herokuapp.com">MongoDatabase</a></p>
 
 <h2 id="label-Using+the+gem">Using the gem<span><a href="#label-Using+the+gem">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-<p>Once installed, the gem works similar to ActiveRecord. For instance, to
-load a Pokemon and view some basic data, run:</p>
+<p>Once installed, the gem works similar to ActiveRecord.</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@pokemon</span> = <span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-string">&quot;squirtle&quot;</span>)
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@pokemon</span>.<span class="ruby-identifier">type</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;water&quot;</span>
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@pokemon</span>.<span class="ruby-identifier">strong_against</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;fire&quot;</span>
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@pokemon</span>.<span class="ruby-identifier">best_role</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;defense&quot;</span>
+<h3 id="label-Find+your+pokemon">Find your pokemon<span><a href="#label-Find+your+pokemon">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<pre>&gt;&gt; @all_pokemon = Pokemongodb::Pokemon.all
+&gt;&gt; @squirtle = Pokemongodb::Pokemon.find(&quot;squirtle&quot;)</pre>
+
+<h3 id="label-Get+basic+data+about+your+pokemon">Get basic data about your pokemon<span><a href="#label-Get+basic+data+about+your+pokemon">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">id</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">types</span>
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">WATER</span>]
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">base_attack</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">112</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">base_defense</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">142</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">base_stamina</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">88</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">evolves_into</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Wartortle</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">max_cp</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">1008.69</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">moves</span>
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Tackle</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Bubble</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AquaJet</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AquaTail</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">WaterPulse</span>] 
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-ivar">@squirtle</span>.<span class="ruby-identifier">role</span>
+=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">defense</span>
 </pre>
 
 </div>

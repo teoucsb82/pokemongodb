@@ -101,9 +101,9 @@
     
     <li ><a href="#method-c-moves">::moves</a>
     
-    <li ><a href="#method-c-perfect_iv">::perfect_iv</a>
+    <li ><a href="#method-c-name">::name</a>
     
-    <li ><a href="#method-c-quality">::quality</a>
+    <li ><a href="#method-c-perfect_iv">::perfect_iv</a>
     
     <li ><a href="#method-c-types">::types</a>
     
@@ -518,6 +518,8 @@
   
     <li><a href="../../Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
   
+    <li><a href="../../Pokemongodb/Pokemon/Jynx.html">Pokemongodb::Pokemon::Jynx</a>
+  
     <li><a href="../../Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
   
     <li><a href="../../Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
@@ -572,6 +574,10 @@
   
     <li><a href="../../Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
   
+    <li><a href="../../Pokemongodb/Pokemon/NidoranF.html">Pokemongodb::Pokemon::NidoranF</a>
+  
+    <li><a href="../../Pokemongodb/Pokemon/NidoranM.html">Pokemongodb::Pokemon::NidoranM</a>
+  
     <li><a href="../../Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
   
     <li><a href="../../Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
@@ -616,8 +622,6 @@
   
     <li><a href="../../Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
   
-    <li><a href="../../Pokemongodb/Pokemon/Quality.html">Pokemongodb::Pokemon::Quality</a>
-  
     <li><a href="../../Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
   
     <li><a href="../../Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
@@ -629,6 +633,8 @@
     <li><a href="../../Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
   
     <li><a href="../../Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
+  
+    <li><a href="../../Pokemongodb/Pokemon/Role.html">Pokemongodb::Pokemon::Role</a>
   
     <li><a href="../../Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
   
@@ -1219,8 +1225,8 @@
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">moves</span>
   [
     <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Splash</span>,
-   <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Struggle</span>
-  ].<span class="ruby-identifier">sort</span>
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Struggle</span>
+  ]
 <span class="ruby-keyword">end</span></pre>
           </div><!-- moves-source -->
           
@@ -1230,6 +1236,39 @@
 
         
       </div><!-- moves-method -->
+
+    
+      <div id="method-c-name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">name</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="name-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon/magikarp.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-string">&quot;magikarp&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- name-method -->
 
     
       <div id="method-c-perfect_iv" class="method-detail ">
@@ -1251,9 +1290,9 @@
 
           
           <div class="method-source-code" id="perfect_iv-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon/magikarp.rb, line 63</span>
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon/magikarp.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">perfect_iv</span>
-  <span class="ruby-value">150</span>
+  <span class="ruby-value">0</span>
 <span class="ruby-keyword">end</span></pre>
           </div><!-- perfect_iv-source -->
           
@@ -1263,39 +1302,6 @@
 
         
       </div><!-- perfect_iv-method -->
-
-    
-      <div id="method-c-quality" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">quality</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="quality-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon/magikarp.rb, line 67</span>
-<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">quality</span>
-  <span class="ruby-comment"># Pokemongodb::Pokemon::Quality::</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- quality-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- quality-method -->
 
     
       <div id="method-c-types" class="method-detail ">

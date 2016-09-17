@@ -449,6 +449,8 @@
   
     <li><a href="./Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
   
+    <li><a href="./Pokemongodb/Pokemon/Jynx.html">Pokemongodb::Pokemon::Jynx</a>
+  
     <li><a href="./Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
   
     <li><a href="./Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
@@ -503,6 +505,10 @@
   
     <li><a href="./Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
   
+    <li><a href="./Pokemongodb/Pokemon/NidoranF.html">Pokemongodb::Pokemon::NidoranF</a>
+  
+    <li><a href="./Pokemongodb/Pokemon/NidoranM.html">Pokemongodb::Pokemon::NidoranM</a>
+  
     <li><a href="./Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
   
     <li><a href="./Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
@@ -547,8 +553,6 @@
   
     <li><a href="./Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
   
-    <li><a href="./Pokemongodb/Pokemon/Quality.html">Pokemongodb::Pokemon::Quality</a>
-  
     <li><a href="./Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
   
     <li><a href="./Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
@@ -560,6 +564,8 @@
     <li><a href="./Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
   
     <li><a href="./Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
+  
+    <li><a href="./Pokemongodb/Pokemon/Role.html">Pokemongodb::Pokemon::Role</a>
   
     <li><a href="./Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
   
@@ -828,7 +834,157 @@ s.files    = [&quot;lib/pokemongodb.rb&quot;,
               &quot;lib/pokemongodb/moves/wrap.rb&quot;,
               &quot;lib/pokemongodb/moves/x_scissor.rb&quot;,
               &quot;lib/pokemongodb/moves/zen_headbutt.rb&quot;,
-              &quot;lib/pokemongodb/pokemon.rb&quot;
+              &quot;lib/pokemongodb/pokemon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/abra.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/aerodactyl.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/alakazam.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/arbok.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/arcanine.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/articuno.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/beedrill.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/bellsprout.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/blastoise.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/bulbasaur.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/butterfree.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/caterpie.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/chansey.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/charizard.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/charmander.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/charmeleon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/clefable.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/clefairy.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/cloyster.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/cubone.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dewgong.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/diglett.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/ditto.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dodrio.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/doduo.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dragonair.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dragonite.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dratini.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/drowzee.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/dugtrio.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/eevee.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/ekans.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/electabuzz.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/electrode.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/exeggcute.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/exeggutor.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/farfetchd.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/fearow.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/flareon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/gastly.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/gengar.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/geodude.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/gloom.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/golbat.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/goldeen.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/golduck.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/golem.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/graveler.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/grimer.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/growlithe.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/gyarados.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/haunter.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/hitmonchan.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/hitmonlee.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/horsea.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/hypno.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/ivysaur.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/jigglypuff.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/jolteon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/jynx.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kabuto.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kabutops.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kadabra.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kakuna.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kangaskhan.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/kingler.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/koffing.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/krabby.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/lapras.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/lickitung.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/machamp.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/machoke.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/machop.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/magikarp.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/magmar.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/magnemite.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/magneton.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/mankey.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/marowak.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/meowth.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/metapod.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/mewtwo.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/moltres.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/mr_mime.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/muk.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidoking.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidoqueen.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidoran_f.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidoran_m.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidorina.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/nidorino.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/ninetales.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/oddish.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/omanyte.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/omastar.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/onix.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/paras.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/parasect.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/persian.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/pidgeot.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/pidgeotto.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/pidgey.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/pikachu.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/pinsir.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/poliwag.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/poliwhirl.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/poliwrath.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/ponyta.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/porygon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/primeape.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/psyduck.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/raichu.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/rapidash.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/raticate.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/rattata.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/rhydon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/rhyhorn.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/sandshrew.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/sandslash.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/scyther.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/seadra.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/seaking.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/seel.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/shellder.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/slowbro.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/slowpoke.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/snorlax.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/spearow.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/squirtle.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/starmie.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/staryu.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/tangela.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/tauros.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/tentacool.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/tentacruel.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/vaporeon.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/venomoth.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/venonat.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/venusaur.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/victreebel.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/vileplume.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/voltorb.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/vulpix.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/wartortle.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/weedle.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/weepinbell.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/weezing.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/wigglytuff.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/zapdos.rb&quot;,
+              &quot;lib/pokemongodb/pokemon/zubat.rb&quot;
             ]
 s.homepage = &quot;http://www.github.com/teoucsb82/pokemongodb&quot;
 s.license  = &quot;MIT&quot;</pre>

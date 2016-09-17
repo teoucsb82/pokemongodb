@@ -109,6 +109,7 @@
     <li>lib/pokemongodb/pokemon/ivysaur.rb
     <li>lib/pokemongodb/pokemon/jigglypuff.rb
     <li>lib/pokemongodb/pokemon/jolteon.rb
+    <li>lib/pokemongodb/pokemon/jynx.rb
     <li>lib/pokemongodb/pokemon/kabuto.rb
     <li>lib/pokemongodb/pokemon/kabutops.rb
     <li>lib/pokemongodb/pokemon/kadabra.rb
@@ -136,6 +137,8 @@
     <li>lib/pokemongodb/pokemon/muk.rb
     <li>lib/pokemongodb/pokemon/nidoking.rb
     <li>lib/pokemongodb/pokemon/nidoqueen.rb
+    <li>lib/pokemongodb/pokemon/nidoran_f.rb
+    <li>lib/pokemongodb/pokemon/nidoran_m.rb
     <li>lib/pokemongodb/pokemon/nidorina.rb
     <li>lib/pokemongodb/pokemon/nidorino.rb
     <li>lib/pokemongodb/pokemon/ninetales.rb
@@ -223,9 +226,23 @@
     
     <li ><a href="#method-c-all">::all</a>
     
+    <li ><a href="#method-c-charge_move_types">::charge_move_types</a>
+    
+    <li ><a href="#method-c-charge_moves">::charge_moves</a>
+    
     <li ><a href="#method-c-evolves_from">::evolves_from</a>
     
+    <li ><a href="#method-c-fast_move_types">::fast_move_types</a>
+    
+    <li ><a href="#method-c-fast_moves">::fast_moves</a>
+    
     <li ><a href="#method-c-find">::find</a>
+    
+    <li ><a href="#method-c-find_by_type">::find_by_type</a>
+    
+    <li ><a href="#method-c-move_types">::move_types</a>
+    
+    <li ><a href="#method-c-role">::role</a>
     
   </ul>
 </nav>
@@ -636,6 +653,8 @@
   
     <li><a href="../Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
   
+    <li><a href="../Pokemongodb/Pokemon/Jynx.html">Pokemongodb::Pokemon::Jynx</a>
+  
     <li><a href="../Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
   
     <li><a href="../Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
@@ -690,6 +709,10 @@
   
     <li><a href="../Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
   
+    <li><a href="../Pokemongodb/Pokemon/NidoranF.html">Pokemongodb::Pokemon::NidoranF</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/NidoranM.html">Pokemongodb::Pokemon::NidoranM</a>
+  
     <li><a href="../Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
   
     <li><a href="../Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
@@ -734,8 +757,6 @@
   
     <li><a href="../Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
   
-    <li><a href="../Pokemongodb/Pokemon/Quality.html">Pokemongodb::Pokemon::Quality</a>
-  
     <li><a href="../Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
   
     <li><a href="../Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
@@ -747,6 +768,8 @@
     <li><a href="../Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
   
     <li><a href="../Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
+  
+    <li><a href="../Pokemongodb/Pokemon/Role.html">Pokemongodb::Pokemon::Role</a>
   
     <li><a href="../Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
   
@@ -935,20 +958,168 @@
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span>.<span class="ruby-identifier">all</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">BugBite</span>, <span class="ruby-operator">...</span>]
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">all</span>
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>, <span class="ruby-operator">...</span>]
 </pre>
           
           
 
           
           <div class="method-source-code" id="all-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 20</span>
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">all</span>
-  <span class="ruby-identifier">file_names</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file_name</span><span class="ruby-operator">|</span> 
-    <span class="ruby-identifier">const_name</span> = <span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;_&quot;</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:capitalize</span>).<span class="ruby-identifier">join</span>
-    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)
-  <span class="ruby-keyword">end</span>
+  [ 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Abra</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Aerodactyl</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Alakazam</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Arbok</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Arcanine</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Articuno</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Beedrill</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bellsprout</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Blastoise</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Butterfree</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Caterpie</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Chansey</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Charizard</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Charmander</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Charmeleon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Clefable</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Clefairy</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Cloyster</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Cubone</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dewgong</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Diglett</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ditto</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dodrio</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Doduo</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dragonair</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dragonite</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dratini</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Drowzee</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Dugtrio</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Eevee</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ekans</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Electabuzz</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Electrode</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Exeggcute</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Exeggutor</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Farfetchd</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Fearow</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Flareon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Gastly</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Gengar</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Geodude</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Gloom</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Golbat</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Goldeen</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Golduck</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Golem</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Graveler</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Grimer</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Growlithe</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Gyarados</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Haunter</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Hitmonchan</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Hitmonlee</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Horsea</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Hypno</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Jigglypuff</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Jolteon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Jynx</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kabuto</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kabutops</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kadabra</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kakuna</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kangaskhan</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Kingler</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Koffing</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Krabby</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Lapras</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Lickitung</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Machamp</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Machoke</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Machop</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Magikarp</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Magmar</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Magnemite</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Magneton</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Mankey</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Marowak</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Meowth</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Metapod</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Mewtwo</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Moltres</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">MrMime</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Muk</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Nidoking</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Nidoqueen</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">NidoranF</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">NidoranM</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Nidorina</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Nidorino</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ninetales</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Oddish</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Omanyte</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Omastar</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Onix</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Paras</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Parasect</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Persian</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pidgeot</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pidgeotto</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pidgey</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pikachu</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pinsir</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Poliwag</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Poliwhirl</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Poliwrath</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ponyta</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Porygon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Primeape</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Psyduck</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Raichu</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Rapidash</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Raticate</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Rattata</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Rhydon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Rhyhorn</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Sandshrew</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Sandslash</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Scyther</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Seadra</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Seaking</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Seel</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Shellder</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Slowbro</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Slowpoke</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Snorlax</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Spearow</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Squirtle</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Starmie</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Staryu</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Tangela</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Tauros</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Tentacool</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Tentacruel</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Vaporeon</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venomoth</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venonat</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Victreebel</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Vileplume</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Voltorb</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Vulpix</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Wartortle</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Weedle</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Weepinbell</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Weezing</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Wigglytuff</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Zapdos</span>, 
+    <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Zubat</span>
+  ]
 <span class="ruby-keyword">end</span></pre>
           </div><!-- all-source -->
           
@@ -958,6 +1129,185 @@
 
         
       </div><!-- all-method -->
+
+    
+      <div id="method-c-charge_move_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">charge_move_types</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="charge_move_types-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">charge_move_types</span>
+  <span class="ruby-identifier">charge_moves</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:type</span>).<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- charge_move_types-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- charge_move_types-method -->
+
+    
+      <div id="method-c-charge_moves" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">charge_moves</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="charge_moves-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">charge_moves</span>
+  <span class="ruby-identifier">moves</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">move</span><span class="ruby-operator">|</span> <span class="ruby-identifier">move</span>.<span class="ruby-identifier">category</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Category</span><span class="ruby-operator">::</span><span class="ruby-constant">CHARGE</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- charge_moves-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- charge_moves-method -->
+
+    
+      <div id="method-c-evolves_from" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">evolves_from</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns nil or evolution precursor</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="evolves_from-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">evolves_from</span>
+  <span class="ruby-identifier">all</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">evolves_into</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- evolves_from-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- evolves_from-method -->
+
+    
+      <div id="method-c-fast_move_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fast_move_types</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns array of possible move types</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">fast_move_types</span>
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Normal</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="fast_move_types-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fast_move_types</span>
+  <span class="ruby-identifier">fast_moves</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:type</span>).<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fast_move_types-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fast_move_types-method -->
+
+    
+      <div id="method-c-fast_moves" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fast_moves</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fast_moves-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fast_moves</span>
+  <span class="ruby-identifier">moves</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">move</span><span class="ruby-operator">|</span> <span class="ruby-identifier">move</span>.<span class="ruby-identifier">category</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Category</span><span class="ruby-operator">::</span><span class="ruby-constant">FAST</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fast_moves-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fast_moves-method -->
 
     
       <div id="method-c-find" class="method-detail ">
@@ -989,7 +1339,7 @@
 
           
           <div class="method-source-code" id="find-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 36</span>
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 201</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">query</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
     <span class="ruby-identifier">all</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">query</span> }
@@ -1011,16 +1361,49 @@
       </div><!-- find-method -->
 
     
-    </section><!-- public-class-method-details -->
-  
-     <section id="protected-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Protected Class Methods</h3>
-
-    
-      <div id="method-c-evolves_from" class="method-detail ">
+      <div id="method-c-find_by_type" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">evolves_from</span><span
+          <span class="method-name">find_by_type</span><span
+            class="method-args">(t)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns pokemon by type</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find_by_type</span>(<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Water</span>)
+=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Blastoise</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Cloyster</span>, <span class="ruby-operator">...</span>]
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="find_by_type-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_by_type</span>(<span class="ruby-identifier">t</span>)
+  <span class="ruby-identifier">all</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pokemon</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pokemon</span>.<span class="ruby-identifier">types</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">t</span>) }.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_by_type-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_by_type-method -->
+
+    
+      <div id="method-c-move_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">move_types</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1030,35 +1413,76 @@
 
         <div class="method-description">
           
-          <p>Returns nil or evolution precursor</p>
+          <p>Returns array of possible move types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">move_types</span>
+=<span class="ruby-operator">&gt;</span> [[<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>, <span class="ruby-value">3</span>]
 </pre>
           
           
 
           
-          <div class="method-source-code" id="evolves_from-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 56</span>
-<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">evolves_from</span>
-  <span class="ruby-identifier">all</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">type</span><span class="ruby-operator">|</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">evolves_into</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span> }
+          <div class="method-source-code" id="move_types-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">move_types</span>
+  (<span class="ruby-identifier">fast_move_types</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">charge_move_types</span>).<span class="ruby-identifier">uniq</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- evolves_from-source -->
+          </div><!-- move_types-source -->
           
         </div>
 
         
 
         
-      </div><!-- evolves_from-method -->
+      </div><!-- move_types-method -->
 
     
-    </section><!-- protected-class-method-details -->
+      <div id="method-c-role" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">role</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns pokemon by id, string, or symbol</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">bulbasaur</span> = <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">1</span>)
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">bulbasaur</span>.<span class="ruby-identifier">role</span>
+=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">defense</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">charmander</span> = <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">4</span>)
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">charmander</span>.<span class="ruby-identifier">role</span>
+=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">offense</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="role-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">role</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">base_attack</span> <span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">base_defense</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Role</span><span class="ruby-operator">::</span><span class="ruby-constant">OFFENSE</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Role</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFENSE</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- role-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- role-method -->
+
+    
+    </section><!-- public-class-method-details -->
   
   </section><!-- 5Buntitled-5D -->
 
