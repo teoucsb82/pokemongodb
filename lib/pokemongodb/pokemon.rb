@@ -168,17 +168,25 @@ class Pokemongodb
       ]
     end
 
-    # Returns pokemon by id, string, or symbol
+    def self.charge_moves
+      moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
+    end
+
+    def self.charge_move_types
+      charge_moves.map(&:type).uniq
+    end
+
+    def self.fast_moves
+      moves.select { |move| move.category == Pokemongodb::Move::Category::FAST }
+    end
+
+    # Returns array of possible move types
     #
     # Example:
-    #   >> bulbasaur = Pokemongodb::Pokemon.find(1)
-    #   >> bulbasaur.role
-    #   => :defense
-    #   >> charmander = Pokemongodb::Pokemon.find(4)
-    #   >> charmander.role
-    #   => :offense
-    def self.role
-      self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
+    #   >> Pokemongodb::Pokemon::Bulbasaur.fast_move_types
+    #   => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]
+    def self.fast_move_types
+      fast_moves.map(&:type).uniq
     end
 
     # Returns pokemon by id, string, or symbol
@@ -230,25 +238,17 @@ class Pokemongodb
       (fast_move_types + charge_move_types).uniq
     end
 
-    # Returns array of possible move types
+    # Returns pokemon by id, string, or symbol
     #
     # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.fast_move_types
-    #   => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]
-    def self.fast_move_types
-      fast_moves.map(&:type).uniq
-    end
-
-    def self.fast_moves
-      moves.select { |move| move.category == Pokemongodb::Move::Category::FAST }
-    end
-
-    def self.charge_moves
-      moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
-    end
-
-    def self.charge_move_types
-      charge_moves.map(&:type).uniq
+    #   >> bulbasaur = Pokemongodb::Pokemon.find(1)
+    #   >> bulbasaur.role
+    #   => :defense
+    #   >> charmander = Pokemongodb::Pokemon.find(4)
+    #   >> charmander.role
+    #   => :offense
+    def self.role
+      self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
     end
   end
 end

@@ -20,14 +20,42 @@ gem "pokemongodb"
 Followed by a `bundle install`.
 
 ## Using the gem
-Once installed, the gem works similar to ActiveRecord. For instance, to load a Pokemon and view some basic data, run:
+Once installed, the gem works similar to ActiveRecord.
+
+### Find your pokemon
 
 ```
->> @pokemon = Pokemon.find("squirtle")
->> puts @pokemon.type
-=> "water"
->> puts @pokemon.strong_against
-=> "fire"
->> puts @pokemon.best_role
-=> "defense"
+>> @all_pokemon = Pokemongodb::Pokemon.all
+>> @squirtle = Pokemongodb::Pokemon.find("squirtle")
+```
+
+### Get basic data about your pokemon
+
+```
+>> @squirtle.id
+=> 7
+
+>> @squirtle.types
+=> [Pokemongodb::Type::WATER]
+
+>> @squirtle.base_attack
+=> 112
+
+>> @squirtle.base_defense
+=> 142
+
+>> @squirtle.base_stamina
+=> 88
+
+>> @squirtle.evolves_into
+=> Pokemongodb::Pokemon::Wartortle
+
+>> @squirtle.max_cp
+=> 1008.69
+
+>> @squirtle.moves
+=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::Bubble, Pokemongodb::Move::AquaJet, Pokemongodb::Move::AquaTail, Pokemongodb::Move::WaterPulse] 
+
+>> @squirtle.role
+=> :defense
 ```
