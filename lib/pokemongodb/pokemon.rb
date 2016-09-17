@@ -5,9 +5,6 @@ class Pokemongodb
       DEFENSE = :defense
     end
 
-    attr_reader :candy_to_evolve
-    attr_reader :evolves_from
-
     # Returns array of all moves
     #
     # Example:
@@ -168,16 +165,22 @@ class Pokemongodb
       ]
     end
 
-    def self.charge_moves
-      moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
-    end
-
+    # Returns array of possible charge move types
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.charge_move_types
+    #   => [Pokemongodb::Type::Poison, Pokemongodb::Type::Grass]
     def self.charge_move_types
       charge_moves.map(&:type).uniq
     end
 
-    def self.fast_moves
-      moves.select { |move| move.category == Pokemongodb::Move::Category::FAST }
+    # Returns array of possible charge moves
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.charge_moves
+    #   => [Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]
+    def self.charge_moves
+      moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
     end
 
     # Returns array of possible move types
@@ -189,13 +192,24 @@ class Pokemongodb
       fast_moves.map(&:type).uniq
     end
 
+    # Returns array of possible charge moves
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.fast_moves
+    #   => [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip]
+    def self.fast_moves
+      moves.select { |move| move.category == Pokemongodb::Move::Category::FAST }
+    end
+
     # Returns pokemon by id, string, or symbol
     #
     # Example:
     #   >> Pokemongodb::Pokemon.find(1)
     #   => Pokemongodb::Pokemon::Bulbasaur
+    #
     #   >> Pokemongodb::Pokemon.find('ivysaur')
     #   => Pokemongodb::Pokemon::Ivysaur
+    #
     #   >> Pokemongodb::Pokemon.find(:venusaur)
     #   => Pokemongodb::Pokemon::Venusaur
     def self.find(query)
@@ -218,15 +232,29 @@ class Pokemongodb
     def self.find_by_type(t)
       all.select { |pokemon| pokemon.types.include?(t) }.uniq
     end
-    # Returns nil or evolution precursor
+    
+    # Returns evolution precursor or nil
     #
     # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur
+    #   >> Pokemongodb::Pokemon::Bulbasaur.evolves_from
     #   => nil
-    #   >> Pokemongodb::Pokemon::Ivysaur
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.evolves_from
     #   => Pokemongodb::Type::Bulbasaur
     def self.evolves_from
       all.detect { |type| type.evolves_into == self }
+    end
+
+    # Returns next evolution or nil
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Wartortle.evolves_into
+    #   => Pokemongodb::Pokemon::Blastoise
+    #
+    #   >> Pokemongodb::Pokemon::Blastoise.evolves_into
+    #   => nil
+    def self.evolves_into
+      nil
     end
 
     # Returns array of possible move types
@@ -244,6 +272,7 @@ class Pokemongodb
     #   >> bulbasaur = Pokemongodb::Pokemon.find(1)
     #   >> bulbasaur.role
     #   => :defense
+    #
     #   >> charmander = Pokemongodb::Pokemon.find(4)
     #   >> charmander.role
     #   => :offense
