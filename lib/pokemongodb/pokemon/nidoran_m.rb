@@ -1,47 +1,48 @@
 class Pokemongodb
   class Pokemon
-    class MrMime < Pokemon
+    class NidoranM < Pokemon
       def self.id
-        122
+        32
       end
 
       def self.base_attack
-        154
+        110
       end
 
       def self.base_defense
-        196
+        94
       end
 
       def self.base_stamina
-        80
+        92
       end
 
       def self.buddy_candy_distance
-        0
+        2
       end
       
       def self.candy_to_evolve
-        0
+        25
       end
 
       def self.capture_rate
-        0.24
+        0.40
       end
 
       def self.cp_gain
-        22
+        0
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Nidorino
       end
 
       def self.flee_rate
-        0.09
+        0.15
       end
 
       def self.height
-        1.3
+        0.5
       end
 
       def self.locations
@@ -50,21 +51,21 @@ class Pokemongodb
       end
 
       def self.max_cp
-        1494.42
+        843.14
       end
 
       def self.moves
         [
-          Pokemongodb::Move::Confusion,
-          Pokemongodb::Move::ZenHeadbutt,
-          Pokemongodb::Move::Psybeam,
-          Pokemongodb::Move::Psychic,
-          Pokemongodb::Move::ShadowBall
+          Pokemongodb::Move::Peck,
+          Pokemongodb::Move::PoisonSting,
+          Pokemongodb::Move::BodySlam,
+          Pokemongodb::Move::HornAttack,
+          Pokemongodb::Move::SludgeBomb
         ]
       end
 
       def self.perfect_iv
-        0
+        481
       end
 
       def self.quality
@@ -73,13 +74,12 @@ class Pokemongodb
 
       def self.types
         [
-          Pokemongodb::Type::Psychic,
-          Pokemongodb::Type::Fairy
+          Pokemongodb::Type::Poison
         ]
       end
 
       def self.weight
-        54.5
+        9
       end
     end
   end

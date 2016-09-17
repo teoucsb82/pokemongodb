@@ -3,21 +3,21 @@ require 'pokemongodb'
 
 class PokemonTest < Minitest::Test
   describe '.all' do
-    it { assert Pokemongodb::Pokemon.all.length == 147 }
+    it { assert_equal Pokemongodb::Pokemon.all.length, 150 }
   end
 
   describe '.find' do
     it "returns the pokemon by id or name (symbol or string)" do
-      assert Pokemongodb::Pokemon.find(1)          == Pokemongodb::Pokemon::Bulbasaur
-      assert Pokemongodb::Pokemon.find('ivysaur')  == Pokemongodb::Pokemon::Ivysaur
-      assert Pokemongodb::Pokemon.find(:venusaur)  == Pokemongodb::Pokemon::Venusaur
+      assert_equal Pokemongodb::Pokemon.find(1), Pokemongodb::Pokemon::Bulbasaur
+      assert_equal Pokemongodb::Pokemon.find('ivysaur'), Pokemongodb::Pokemon::Ivysaur
+      assert_equal Pokemongodb::Pokemon.find(:venusaur), Pokemongodb::Pokemon::Venusaur
 
-      assert Pokemongodb::Pokemon.find(7)          == Pokemongodb::Pokemon::Squirtle
-      assert Pokemongodb::Pokemon.find('squirtle') == Pokemongodb::Pokemon::Squirtle
-      assert Pokemongodb::Pokemon.find('Squirtle') == Pokemongodb::Pokemon::Squirtle
-      assert Pokemongodb::Pokemon.find('SQUIRTLE') == Pokemongodb::Pokemon::Squirtle
-      assert Pokemongodb::Pokemon.find(:squirtle)  == Pokemongodb::Pokemon::Squirtle
-      assert Pokemongodb::Pokemon.find(:SQUIRTLE)  == Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find(7), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('squirtle'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('Squirtle'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find('SQUIRTLE'), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find(:squirtle), Pokemongodb::Pokemon::Squirtle
+      assert_equal Pokemongodb::Pokemon.find(:SQUIRTLE), Pokemongodb::Pokemon::Squirtle
     end
   end
 
@@ -58,30 +58,6 @@ class PokemonTest < Minitest::Test
         Pokemongodb::Pokemon::Wartortle
       ]
       assert_equal Pokemongodb::Pokemon.find_by_type(Pokemongodb::Type::Water), water_pokemon
-    end
-  end
-
-  describe '.counter_for' do
-    it "returns pokemon that are countered by the subject" do
-      assert_equal Pokemongodb::Pokemon::Beedrill.counter_for, [Pokemongodb::Pokemon::Bulbasaur]
-      # assert Pokemongodb::Pokemon::Flareon.counter_for  == Pokemongodb::Pokemon::Bulbasaur
-      # assert Pokemongodb::Pokemon::Moltres.counter_for  == Pokemongodb::Pokemon::Bulbasaur
-      # assert Pokemongodb::Pokemon::Grimer.counter_for   == Pokemongodb::Pokemon::Bulbasaur
-      # assert Pokemongodb::Pokemon::Nidoking.counter_for == Pokemongodb::Pokemon::Bulbasaur
-    end
-  end
-
-  describe '.countered_by' do
-    it "returns pokemon that counter the subject" do
-      bulbasaur_counters = [
-        Pokemongodb::Pokemon::Beedrill, 
-        Pokemongodb::Pokemon::Flareon, 
-        Pokemongodb::Pokemon::Moltres, 
-        Pokemongodb::Pokemon::Grimer, 
-        Pokemongodb::Pokemon::Nidoking
-      ]
-      assert_equal Pokemongodb::Pokemon::Bulbasaur.countered_by, bulbasaur_counters
-      assert_equal Pokemongodb::Pokemon::Snorlax.countered_by, []
     end
   end
 

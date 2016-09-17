@@ -69,6 +69,7 @@ class Pokemongodb
         Pokemongodb::Pokemon::Ivysaur, 
         Pokemongodb::Pokemon::Jigglypuff, 
         Pokemongodb::Pokemon::Jolteon, 
+        Pokemongodb::Pokemon::Jynx, 
         Pokemongodb::Pokemon::Kabuto, 
         Pokemongodb::Pokemon::Kabutops, 
         Pokemongodb::Pokemon::Kadabra, 
@@ -96,6 +97,8 @@ class Pokemongodb
         Pokemongodb::Pokemon::Muk, 
         Pokemongodb::Pokemon::Nidoking, 
         Pokemongodb::Pokemon::Nidoqueen, 
+        Pokemongodb::Pokemon::NidoranF, 
+        Pokemongodb::Pokemon::NidoranM, 
         Pokemongodb::Pokemon::Nidorina, 
         Pokemongodb::Pokemon::Nidorino, 
         Pokemongodb::Pokemon::Ninetales, 
@@ -159,55 +162,6 @@ class Pokemongodb
         Pokemongodb::Pokemon::Zubat
       ]
     end
-
-    # Returns pokemon that the current pokemon will be a counter for.
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.counter_for
-    #   => [Pokemongodb::Pokemon::Squirtle]
-    def self.strong_against
-      p = []
-      # easy case
-      if self.types.length == 1
-        t = types.first
-        t.strong_against.each do |t2|
-          p << Pokemongodb::Pokemon.find_by_type(t2)
-        end
-      else
-      end
-      p
-    end
-
-    # Returns pokemon that get countered.
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Squirtle.countered_by
-    #   => [Pokemongodb::Pokemon::Bulbasaur]
-    def self.countered_by
-      countering_types = []
-      self.types.each do |type|
-        type.weak_against.each do |weak_against|
-          countering_types << weak_against
-        end
-      end 
-      countering_types = countering_types.uniq
-
-      countering_pokemon = []
-      countering_types.each do |type|
-        countering_pokemon += find_by_type(type)
-      end
-      countering_pokemon = countering_pokemon.uniq
-
-      final_pokmeon = []
-      countering_pokemon.each do |p|
-        if p.move_types & countering_types == p.move_types
-          final_pokmeon << p
-        end
-      end
-
-      return final_pokmeon
-    end
-
 
     # Returns pokemon by id, string, or symbol
     #
@@ -340,6 +294,7 @@ require "pokemongodb/pokemon/hypno"
 require "pokemongodb/pokemon/ivysaur"
 require "pokemongodb/pokemon/jigglypuff"
 require "pokemongodb/pokemon/jolteon"
+require "pokemongodb/pokemon/jynx"
 require "pokemongodb/pokemon/kabuto"
 require "pokemongodb/pokemon/kabutops"
 require "pokemongodb/pokemon/kadabra"
@@ -367,6 +322,8 @@ require "pokemongodb/pokemon/mr_mime"
 require "pokemongodb/pokemon/muk"
 require "pokemongodb/pokemon/nidoking"
 require "pokemongodb/pokemon/nidoqueen"
+require "pokemongodb/pokemon/nidoran_f"
+require "pokemongodb/pokemon/nidoran_m"
 require "pokemongodb/pokemon/nidorina"
 require "pokemongodb/pokemon/nidorino"
 require "pokemongodb/pokemon/ninetales"

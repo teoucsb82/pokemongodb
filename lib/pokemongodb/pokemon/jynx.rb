@@ -1,28 +1,27 @@
 class Pokemongodb
   class Pokemon
-    class Mr-mime < Pokemon
+    class Jynx < Pokemon
       def self.id
-        122
+        124
       end
 
       def self.base_attack
-        154
+        172
       end
 
       def self.base_defense
-        196
+        134
       end
 
       def self.base_stamina
-        80
+        130
       end
 
       def self.buddy_candy_distance
-        0
+        3
       end
       
       def self.candy_to_evolve
-        0
       end
 
       def self.capture_rate
@@ -30,18 +29,18 @@ class Pokemongodb
       end
 
       def self.cp_gain
-        22
+        25
       end
 
       def self.evolves_into
       end
 
       def self.flee_rate
-        0.09
+        0.9
       end
 
       def self.height
-        1.3
+        1.4
       end
 
       def self.locations
@@ -50,36 +49,36 @@ class Pokemongodb
       end
 
       def self.max_cp
-        1494.42
+        1716.73
       end
 
       def self.moves
         [
-          Pokemongodb::Move::Confusion,
-          Pokemongodb::Move::ZenHeadbutt,
-          Pokemongodb::Move::Psybeam,
-          Pokemongodb::Move::Psychic,
-          Pokemongodb::Move::ShadowBall
+          Pokemongodb::Move::FrostBreath,
+          Pokemongodb::Move::Pound,
+          Pokemongodb::Move::DrainingKiss,
+          Pokemongodb::Move::IcePunch,
+          Pokemongodb::Move::Psyshock
         ]
       end
 
-      def self.name
-        "mr-mime"
+      def self.perfect_iv
+        980
       end
 
-      def self.perfect_iv
-        0
+      def self.quality
+        # Pokemongodb::Pokemon::Quality::
       end
 
       def self.types
         [
-          Pokemongodb::Type::Psychic,
-          Pokemongodb::Type::Fairy
+          Pokemongodb::Type::Ice,
+          Pokemongodb::Type::Psychic
         ]
       end
 
       def self.weight
-        54.5
+        40.6
       end
     end
   end
