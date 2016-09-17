@@ -45,11 +45,6 @@ class Pokemongodb
         0.7
       end
 
-      def self.locations
-        [
-        ]
-      end
-
       def self.max_cp
         1071.54
       end
@@ -68,8 +63,8 @@ class Pokemongodb
         "bulbasaur"
       end
 
-      def self.perfect_iv
-        0
+      def self.perfect_hatch_iv
+        612
       end
 
       def self.types

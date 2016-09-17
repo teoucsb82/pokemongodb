@@ -29,6 +29,17 @@ class Pokemongodb
       ]
     end
 
+    # Returns array of locations where type spawns
+    #
+    # Example:
+    #   >> Pokemongodb::Type::Normal.locations
+    #   => "Normal"
+    def self.locations
+      Pokemongodb::Location.all.select do |location|
+        location.types.include?(self)
+      end
+    end
+
     # Returns string name inferred from class name.
     #
     # Example:

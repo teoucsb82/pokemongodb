@@ -124,4 +124,20 @@ class PokemonTest < Minitest::Test
       assert Pokemongodb::Pokemon::Bulbasaur.charge_moves.include?(Pokemongodb::Move::SludgeBomb)
     end
   end
+
+  describe '.candy_to_evolve' do
+    it "returns number of candies to evolve, or nil if no evolution" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve, 25
+      assert_equal Pokemongodb::Pokemon::Ivysaur.candy_to_evolve, 100
+      assert_equal Pokemongodb::Pokemon::Venusaur.candy_to_evolve, nil
+    end
+  end
+
+  describe '.perfect_hatch_iv' do
+    it "returns integer of perfect iv for hatched egg, or nil if not hatchable" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv, 612
+      assert_equal Pokemongodb::Pokemon::Venusaur.perfect_hatch_iv, nil
+    end
+  end
+
 end

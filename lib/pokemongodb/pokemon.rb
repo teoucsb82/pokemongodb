@@ -164,7 +164,7 @@ class Pokemongodb
         Pokemongodb::Pokemon::Zubat
       ]
     end
-
+    
     # Returns array of possible charge move types
     #
     # Example:
@@ -245,18 +245,6 @@ class Pokemongodb
       all.detect { |type| type.evolves_into == self }
     end
 
-    # Returns next evolution or nil
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Wartortle.evolves_into
-    #   => Pokemongodb::Pokemon::Blastoise
-    #
-    #   >> Pokemongodb::Pokemon::Blastoise.evolves_into
-    #   => nil
-    def self.evolves_into
-      nil
-    end
-
     # Returns array of possible move types
     #
     # Example:
@@ -278,6 +266,19 @@ class Pokemongodb
     #   => :offense
     def self.role
       self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
+    end
+
+    private
+    def self.candy_to_evolve
+      nil
+    end
+
+    def self.evolves_into
+      nil
+    end
+
+    def self.perfect_hatch_iv
+      nil
     end
   end
 end

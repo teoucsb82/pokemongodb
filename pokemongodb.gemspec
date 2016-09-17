@@ -1,11 +1,22 @@
 Gem::Specification.new do |s|
   s.name     = "pokemongodb"
-  s.version  = "0.3.0.pre"
-  s.date     = "2016-09-12"
+  s.version  = "0.4.0.pre"
+  s.date     = "2016-09-17"
   s.summary  = "Quick Pokemon Go Database / API. Used to power www.mongodatabase.com"
   s.authors  = "TeoUCSB82"
   s.email    = "teo@dellamico.com"
   s.files    = ["lib/pokemongodb.rb", 
+                "lib/pokemongodb/location.rb",
+                "lib/pokemongodb/locations/farmland.rb",
+                "lib/pokemongodb/locations/forest.rb"
+                "lib/pokemongodb/locations/garden.rb"
+                "lib/pokemongodb/locations/golf_course.rb"
+                "lib/pokemongodb/locations/grassy_area.rb"
+                "lib/pokemongodb/locations/hiking_trail.rb"
+                "lib/pokemongodb/locations/meadow.rb"
+                "lib/pokemongodb/locations/nature_reserve.rb"
+                "lib/pokemongodb/locations/park.rb"
+                "lib/pokemongodb/locations/woodland.rb"
                 "lib/pokemongodb/type.rb",
                 "lib/pokemongodb/types/bug.rb",
                 "lib/pokemongodb/types/dark.rb",

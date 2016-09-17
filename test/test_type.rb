@@ -2,12 +2,28 @@ require 'minitest/autorun'
 require 'pokemongodb'
 
 class TypeTest < Minitest::Test
-  def test_that_there_are_eighteen_types
-    assert_equal 18, Pokemongodb::Type.all.length
+  describe '.all' do
+    it { assert_equal Pokemongodb::Type.all.length, 18 }
   end
 
-  def test_that_name_returns_string_from_class_name
-    assert_equal "Normal", Pokemongodb::Type::Normal.name
+  describe '.locations' do
+    grass_locations = [
+      Pokemongodb::Location::Farmland,
+      Pokemongodb::Location::Forest,
+      Pokemongodb::Location::Garden,
+      Pokemongodb::Location::GolfCourse,
+      Pokemongodb::Location::GrassyArea,
+      Pokemongodb::Location::HikingTrail,
+      Pokemongodb::Location::Meadow,
+      Pokemongodb::Location::NatureReserve,
+      Pokemongodb::Location::Park,
+      Pokemongodb::Location::Woodland
+    ]
+    it { assert_equal Pokemongodb::Type::Grass.locations, grass_locations }
+  end
+
+  describe '.name' do
+    it { assert_equal Pokemongodb::Type::Normal.name, "Normal" }
   end
 
   def test_that_defense_strong_does_a_reverse_lookup_to_find_matches

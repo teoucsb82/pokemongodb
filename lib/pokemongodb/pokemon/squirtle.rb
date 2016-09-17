@@ -45,11 +45,6 @@ class Pokemongodb
         0.5
       end
 
-      def self.locations
-        [
-        ]
-      end
-
       def self.max_cp
         1008.69
       end
@@ -69,7 +64,7 @@ class Pokemongodb
       end
 
       def self.perfect_iv
-        0
+        576
       end
 
       def self.types
