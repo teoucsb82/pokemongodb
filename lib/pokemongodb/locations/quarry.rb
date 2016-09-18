@@ -1,10 +1,8 @@
 class Pokemongodb
   class Location
-    class GolfCourse < Location
+    class Quarry < Location
       def self.types
         [
-          Pokemongodb::Type::Bug,
-          Pokemongodb::Type::Grass,
           Pokemongodb::Type::Ground,
         ]
       end

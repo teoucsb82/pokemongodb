@@ -45,6 +45,7 @@ class Pokemongodb
         Location::School,
         Location::Railway,
         Location::ShoppingCenter,
+        Location::Quarry,
       ]
     end
   end
@@ -87,3 +88,4 @@ require 'pokemongodb/locations/industrial_park'
 require 'pokemongodb/locations/school'
 require 'pokemongodb/locations/railway'
 require 'pokemongodb/locations/shopping_center'
+require 'pokemongodb/locations/quarry'

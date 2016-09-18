@@ -5,6 +5,7 @@ class Pokemongodb
         [
           Pokemongodb::Type::Bug,
           Pokemongodb::Type::Grass,
+          Pokemongodb::Type::Ground,
         ]
       end
     end

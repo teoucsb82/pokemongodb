@@ -6,6 +6,7 @@ class Pokemongodb
           Pokemongodb::Type::Bug,
           Pokemongodb::Type::Fire,
           Pokemongodb::Type::Grass,
+          Pokemongodb::Type::Ground,
         ]
       end
     end
