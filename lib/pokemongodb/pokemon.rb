@@ -93,6 +93,7 @@ class Pokemongodb
         Pokemongodb::Pokemon::Marowak, 
         Pokemongodb::Pokemon::Meowth, 
         Pokemongodb::Pokemon::Metapod, 
+        Pokemongodb::Pokemon::Mew, 
         Pokemongodb::Pokemon::Mewtwo, 
         Pokemongodb::Pokemon::Moltres, 
         Pokemongodb::Pokemon::MrMime, 
@@ -398,6 +399,7 @@ require "pokemongodb/pokemon/marowak"
 require "pokemongodb/pokemon/meowth"
 require "pokemongodb/pokemon/metapod"
 require "pokemongodb/pokemon/mewtwo"
+require "pokemongodb/pokemon/mew"
 require "pokemongodb/pokemon/moltres"
 require "pokemongodb/pokemon/mr_mime"
 require "pokemongodb/pokemon/muk"

@@ -3,7 +3,7 @@ require 'pokemongodb'
 
 class PokemonTest < Minitest::Test
   describe '.all' do
-    it { assert_equal Pokemongodb::Pokemon.all.length, 150 }
+    it { assert_equal Pokemongodb::Pokemon.all.length, 151 }
   end
 
   describe '.role' do

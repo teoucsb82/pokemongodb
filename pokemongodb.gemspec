@@ -243,6 +243,7 @@ Gem::Specification.new do |s|
                 "lib/pokemongodb/pokemon/marowak.rb",
                 "lib/pokemongodb/pokemon/meowth.rb",
                 "lib/pokemongodb/pokemon/metapod.rb",
+                "lib/pokemongodb/pokemon/mew.rb",
                 "lib/pokemongodb/pokemon/mewtwo.rb",
                 "lib/pokemongodb/pokemon/moltres.rb",
                 "lib/pokemongodb/pokemon/mr_mime.rb",
