@@ -67,6 +67,22 @@ class PokemonTest < Minitest::Test
     end
   end
 
+  describe '.strong_against' do
+    it "returns an array of pokemon that the subject is strong against" do
+      assert Pokemongodb::Pokemon::Squirtle.strong_against.include?(Pokemongodb::Pokemon::Charmander)
+      assert Pokemongodb::Pokemon::Charmander.strong_against.include?(Pokemongodb::Pokemon::Bulbasaur)
+      assert Pokemongodb::Pokemon::Bulbasaur.strong_against.include?(Pokemongodb::Pokemon::Squirtle)
+    end
+  end
+
+  describe '.weak_against' do
+    it "returns an array of pokemon that the subject is weak against" do
+      assert Pokemongodb::Pokemon::Squirtle.weak_against.include?(Pokemongodb::Pokemon::Bulbasaur)
+      assert Pokemongodb::Pokemon::Charmander.weak_against.include?(Pokemongodb::Pokemon::Squirtle)
+      assert Pokemongodb::Pokemon::Bulbasaur.weak_against.include?(Pokemongodb::Pokemon::Charmander)
+    end
+  end
+
   describe '.evolves_from' do
     it "returns the pokemon it evolves from, or nil if no previous evolution" do
       assert_equal Pokemongodb::Pokemon::Bulbasaur.evolves_from, nil

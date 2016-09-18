@@ -268,6 +268,32 @@ class Pokemongodb
       self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
     end
 
+    # Returns array of pokemon the subject is strong against
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.strong_against
+    #   => [Pokemongodb::Pokemon::Cubone, Pokemongodb::Pokemon::Diglett, ...]
+    def self.strong_against
+      p = []
+      self.types.map(&:strong_against).flatten.uniq.each do |type|
+        p += Pokemongodb::Pokemon.find_by_type(type)
+      end
+      return p.uniq
+    end
+
+    # Returns array of pokemon the subject is weak against
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.weak_against
+    #   => Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Butterfree, ... ]
+    def self.weak_against
+      p = []
+      self.types.map(&:weak_against).flatten.uniq.each do |type|
+        p += Pokemongodb::Pokemon.find_by_type(type)
+      end
+      return p.uniq
+    end
+
     protected
     def self.egg_hatch_distance
       nil
