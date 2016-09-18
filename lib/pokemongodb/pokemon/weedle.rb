@@ -33,6 +33,10 @@ class Pokemongodb
         7
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Kakuna
       end
@@ -59,10 +63,6 @@ class Pokemongodb
 
       def self.name
         "weedle"
-      end
-
-      def self.perfect_iv
-        256
       end
 
       def self.types

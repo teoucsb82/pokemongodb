@@ -33,6 +33,10 @@ class Pokemongodb
         30
       end
 
+      def self.egg_hatch_distance
+        5
+      end
+      
       def self.evolves_into
       end
 

@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Ivysaur
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "bulbasaur"
-      end
-
-      def self.perfect_hatch_iv
-        612
       end
 
       def self.types

@@ -34,6 +34,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Clefable
       end
 
       def self.flee_rate
@@ -42,11 +43,6 @@ class Pokemongodb
 
       def self.height
         0.6
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp

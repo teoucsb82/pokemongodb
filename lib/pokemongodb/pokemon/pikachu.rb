@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Raichu
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "pikachu"
-      end
-
-      def self.perfect_iv
-        507
       end
 
       def self.types

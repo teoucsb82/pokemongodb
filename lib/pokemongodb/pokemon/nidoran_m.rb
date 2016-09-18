@@ -29,8 +29,8 @@ class Pokemongodb
         0.40
       end
 
-      def self.cp_gain
-        0
+      def self.egg_hatch_distance
+        5
       end
 
       def self.evolves_into
@@ -43,11 +43,6 @@ class Pokemongodb
 
       def self.height
         0.5
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -64,12 +59,12 @@ class Pokemongodb
         ]
       end
 
-      def self.perfect_iv
-        481
+      def self.name
+        "nidoran♂"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        481
       end
 
       def self.types

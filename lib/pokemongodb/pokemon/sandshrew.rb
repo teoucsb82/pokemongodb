@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.egg_hatch_distance
+        5
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Sandslash
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "sandshrew"
-      end
-
-      def self.perfect_iv
-        456
       end
 
       def self.types

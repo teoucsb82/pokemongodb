@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.egg_hatch_distance
+        5
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Nidorina
       end
@@ -43,11 +47,6 @@ class Pokemongodb
 
       def self.height
         0.4
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -64,12 +63,8 @@ class Pokemongodb
         ]
       end
 
-      def self.perfect_iv
-        500
-      end
-
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.name
+        "nidoran♀"
       end
 
       def self.types

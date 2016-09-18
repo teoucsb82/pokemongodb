@@ -33,6 +33,10 @@ class Pokemongodb
         9
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Raticate
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "rattata"
-      end
-
-      def self.perfect_iv
-        332
       end
 
       def self.types

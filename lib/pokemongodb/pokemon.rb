@@ -268,6 +268,11 @@ class Pokemongodb
       self.base_attack > self.base_defense ? Role::OFFENSE : Role::DEFENSE
     end
 
+    protected
+    def self.egg_hatch_distance
+      nil
+    end
+
     private
     def self.candy_to_evolve
       nil
@@ -278,7 +283,9 @@ class Pokemongodb
     end
 
     def self.perfect_hatch_iv
-      nil
+      return nil unless self.egg_hatch_distance
+      ratio = 4 / 7.0
+      (self.max_cp * ratio).to_i
     end
   end
 end

@@ -33,6 +33,10 @@ class Pokemongodb
         14
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Charmeleon
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "charmander"
-      end
-
-      def self.perfect_iv
-        545
       end
 
       def self.types

@@ -33,6 +33,10 @@ class Pokemongodb
         10
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Fearow
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "spearow"
-      end
-
-      def self.perfect_iv
-        392
       end
 
       def self.types

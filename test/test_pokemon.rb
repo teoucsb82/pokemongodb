@@ -136,8 +136,24 @@ class PokemonTest < Minitest::Test
   describe '.perfect_hatch_iv' do
     it "returns integer of perfect iv for hatched egg, or nil if not hatchable" do
       assert_equal Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv, 612
+      assert_equal Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv, nil
       assert_equal Pokemongodb::Pokemon::Venusaur.perfect_hatch_iv, nil
     end
   end
 
+  describe '.egg_hatch_distance' do
+    it "returns integer of distance to hatch an egg, or nil if not hatchable from egg" do
+      assert_equal Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance, 2
+      assert_equal Pokemongodb::Pokemon::Pikachu.egg_hatch_distance, 2
+      assert_equal Pokemongodb::Pokemon::Caterpie.egg_hatch_distance, 2
+      
+      assert_equal Pokemongodb::Pokemon::Machop.egg_hatch_distance, 5
+      assert_equal Pokemongodb::Pokemon::Bellsprout.egg_hatch_distance, 5
+      
+      assert_equal Pokemongodb::Pokemon::Onyx.egg_hatch_distance, 10
+      assert_equal Pokemongodb::Pokemon::Scyther.egg_hatch_distance, 10
+   
+      assert_equal Pokemongodb::Pokemon::Venusaur.egg_hatch_distance, nil
+    end
+  end
 end

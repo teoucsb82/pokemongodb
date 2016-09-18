@@ -33,6 +33,10 @@ class Pokemongodb
         17
       end
 
+      def self.egg_hatch_distance
+        5
+      end
+
       def self.evolves_into
       end
 
@@ -65,10 +69,6 @@ class Pokemongodb
 
       def self.name
         "oddish"
-      end
-
-      def self.perfect_iv
-        0
       end
 
       def self.types

@@ -33,6 +33,10 @@ class Pokemongodb
         15
       end
 
+      def self.egg_hatch_distance
+        2
+      end
+
       def self.evolves_into
         Pokemongodb::Pokemon::Wartortle
       end
@@ -61,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "squirtle"
-      end
-
-      def self.perfect_iv
-        576
       end
 
       def self.types
