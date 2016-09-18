@@ -32,6 +32,10 @@ class Pokemongodb
       def self.cp_gain
         18
       end
+      
+      def self.egg_hatch_distance
+        2
+      end
 
       def self.evolves_into
         Pokemongodb::Pokemon::Clefable

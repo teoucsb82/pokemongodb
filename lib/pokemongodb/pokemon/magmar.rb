@@ -32,6 +32,10 @@ class Pokemongodb
       def self.cp_gain
         33
       end
+      
+      def self.egg_hatch_distance
+        10
+      end
 
       def self.evolves_into
       end

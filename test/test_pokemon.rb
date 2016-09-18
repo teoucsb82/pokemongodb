@@ -150,8 +150,9 @@ class PokemonTest < Minitest::Test
       assert_equal Pokemongodb::Pokemon::Machop.egg_hatch_distance, 5
       assert_equal Pokemongodb::Pokemon::Bellsprout.egg_hatch_distance, 5
       
-      assert_equal Pokemongodb::Pokemon::Onyx.egg_hatch_distance, 10
+      assert_equal Pokemongodb::Pokemon::Onix.egg_hatch_distance, 10
       assert_equal Pokemongodb::Pokemon::Scyther.egg_hatch_distance, 10
+      assert_equal Pokemongodb::Pokemon::Dratini.egg_hatch_distance, 10
    
       assert_equal Pokemongodb::Pokemon::Venusaur.egg_hatch_distance, nil
     end
