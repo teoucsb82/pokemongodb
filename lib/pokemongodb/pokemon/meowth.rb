@@ -38,6 +38,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Persian
       end
 
       def self.flee_rate
@@ -46,11 +47,6 @@ class Pokemongodb
 
       def self.height
         0.4
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp

@@ -20,9 +20,6 @@ class Pokemongodb
       def self.buddy_candy_distance
         3
       end
-      
-      def self.candy_to_evolve
-      end
 
       def self.capture_rate
         0.24
@@ -36,20 +33,12 @@ class Pokemongodb
         10
       end
 
-      def self.evolves_into
-      end
-
       def self.flee_rate
         0.9
       end
 
       def self.height
         1.4
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
