@@ -55,8 +55,8 @@ class Pokemongodb
         ]
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.name
+        "electabuzz"
       end
 
       def self.types
