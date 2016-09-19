@@ -227,6 +227,8 @@
     
     <li ><a href="#method-c-all">::all</a>
     
+    <li ><a href="#method-c-candy_to_evolve">::candy_to_evolve</a>
+    
     <li ><a href="#method-c-charge_move_types">::charge_move_types</a>
     
     <li ><a href="#method-c-charge_moves">::charge_moves</a>
@@ -234,6 +236,8 @@
     <li ><a href="#method-c-egg_hatch_distance">::egg_hatch_distance</a>
     
     <li ><a href="#method-c-evolves_from">::evolves_from</a>
+    
+    <li ><a href="#method-c-evolves_into">::evolves_into</a>
     
     <li ><a href="#method-c-fast_move_types">::fast_move_types</a>
     
@@ -244,6 +248,8 @@
     <li ><a href="#method-c-find_by_type">::find_by_type</a>
     
     <li ><a href="#method-c-move_types">::move_types</a>
+    
+    <li ><a href="#method-c-perfect_hatch_iv">::perfect_hatch_iv</a>
     
     <li ><a href="#method-c-role">::role</a>
     
@@ -1677,6 +1683,51 @@
       <h3 class="section-header">Protected Class Methods</h3>
 
     
+      <div id="method-c-candy_to_evolve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">candy_to_evolve</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns number of candies to evolve, or nil if no evolution</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="candy_to_evolve-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 311</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">candy_to_evolve</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- candy_to_evolve-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- candy_to_evolve-method -->
+
+    
       <div id="method-c-egg_hatch_distance" class="method-detail ">
         
         <div class="method-heading">
@@ -1690,13 +1741,26 @@
 
         <div class="method-description">
           
-          
+          <p>returns integer of distance to hatch an egg, or nil if not hatchable from
+egg</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">egg_hatch_distance</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Vulpix</span>.<span class="ruby-identifier">egg_hatch_distance</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">egg_hatch_distance</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+</pre>
           
           
 
           
           <div class="method-source-code" id="egg_hatch_distance-source">
-            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 299</span>
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 326</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">egg_hatch_distance</span>
   <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1708,6 +1772,95 @@
 
         
       </div><!-- egg_hatch_distance-method -->
+
+    
+      <div id="method-c-evolves_into" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">evolves_into</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>returns the pokemon it evolves into, or nil if no further evolution</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">evolves_into</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">evolves_into</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusayr</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">evolves_into</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="evolves_into-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">evolves_into</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- evolves_into-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- evolves_into-method -->
+
+    
+      <div id="method-c-perfect_hatch_iv" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">perfect_hatch_iv</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>returns integer of perfect iv for hatched egg, or nil if not hatchable</p>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">perfect_hatch_iv</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-value">612</span>
+
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">perfect_hatch_iv</span>
+=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="perfect_hatch_iv-source">
+            <pre><span class="ruby-comment"># File lib/pokemongodb/pokemon.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">perfect_hatch_iv</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">egg_hatch_distance</span>
+  <span class="ruby-identifier">ratio</span> = <span class="ruby-value">4</span> <span class="ruby-operator">/</span> <span class="ruby-value">7.0</span>
+  (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">max_cp</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">ratio</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- perfect_hatch_iv-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- perfect_hatch_iv-method -->
 
     
     </section><!-- protected-class-method-details -->

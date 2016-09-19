@@ -296,19 +296,60 @@ class Pokemongodb
     end
 
     protected
-    def self.egg_hatch_distance
-      nil
-    end
-
-    private
+    
+    # Returns number of candies to evolve, or nil if no evolution
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve
+    #   => 25
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.candy_to_evolve
+    #   => 100
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.candy_to_evolve
+    #   => nil
     def self.candy_to_evolve
       nil
     end
 
+    # returns integer of distance to hatch an egg, or nil if not hatchable from egg
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance
+    #   => 2
+    #
+    #   >> Pokemongodb::Pokemon::Vulpix.egg_hatch_distance
+    #   => 5
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.egg_hatch_distance
+    #   => nil
+    def self.egg_hatch_distance
+      nil
+    end
+
+    # returns the pokemon it evolves into, or nil if no further evolution
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.evolves_into
+    #   => Pokemongodb::Pokemon::Ivysaur
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.evolves_into
+    #   => Pokemongodb::Pokemon::Venusayr
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.evolves_into
+    #   => nil
     def self.evolves_into
       nil
     end
 
+    # returns integer of perfect iv for hatched egg, or nil if not hatchable
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv
+    #   => 612
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv
+    #   => nil
     def self.perfect_hatch_iv
       return nil unless self.egg_hatch_distance
       ratio = 4 / 7.0

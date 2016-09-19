@@ -47,8 +47,14 @@ Once installed, the gem works similar to ActiveRecord.
 >> @squirtle.base_stamina
 => 88
 
+>> @squirtle.charge_moves
+=> [Pokemongodb::Move::AquaJet, Pokemongodb::Move::AquaTail, Pokemongodb::Move::WaterPulse] 
+
 >> @squirtle.evolves_into
 => Pokemongodb::Pokemon::Wartortle
+
+>> @squirtle.fast_moves
+=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::Bubble] 
 
 >> @squirtle.max_cp
 => 1008.69
@@ -56,6 +62,6 @@ Once installed, the gem works similar to ActiveRecord.
 >> @squirtle.moves
 => [Pokemongodb::Move::Tackle, Pokemongodb::Move::Bubble, Pokemongodb::Move::AquaJet, Pokemongodb::Move::AquaTail, Pokemongodb::Move::WaterPulse] 
 
->> @squirtle.role
+ >> @squirtle.role
 => :defense
 ```
