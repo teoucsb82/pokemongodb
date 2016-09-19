@@ -23,6 +23,7 @@ Followed by a `bundle install`.
 
 ### `#all`
 Returns array of all moves
+
 Example:
 
 ```
@@ -31,6 +32,7 @@ Example:
 ```
 
 ### `#base_attack`
+
 Example:
 
 ```
@@ -39,6 +41,7 @@ Example:
 ```
 
 ### `#base_defense`
+
 Example:
 
 ```
@@ -47,6 +50,7 @@ Example:
 ```
 
 ### `#base_stamina`
+
 Example:
 
 ```
@@ -56,6 +60,7 @@ Example:
 
 ### `#buddy_candy_distance`
 Returns distance (in km) to generate a new buddy candy
+
 Example:
 
 ```
@@ -68,6 +73,7 @@ Example:
 
 ### `#charge_move_types`
 Returns array of possible charge move types
+
 Example:
 
 ```
@@ -77,6 +83,7 @@ Example:
 
 ### `#candy_to_evolve`
 Returns number of candies to evolve, or nil if no evolution
+
 Example:
 
 ```
@@ -92,6 +99,7 @@ Example:
 
 ### `#capture_rate`
 Returns capture rate in decimal (percentage).
+
 Example:
 
 ```
@@ -101,6 +109,7 @@ Example:
 
 ### `#charge_moves`
 Returns array of possible charge moves
+
 Example:
 
 ```
@@ -110,6 +119,7 @@ Example:
 
 ### `#cp_gain`
 Returns cp gain per level up.
+
 Example:
 
 ```
@@ -119,6 +129,7 @@ Example:
 
 ### `#egg_hatch_distance`
 returns integer of distance to hatch an egg, or nil if not hatchable from egg
+
 Example:
 
 ```
@@ -134,6 +145,7 @@ Example:
 
 ### `#evolves_from`
 Returns evolution precursor or nil
+
 Example:
 
 ```
@@ -146,6 +158,7 @@ Example:
 
 ### `#evolves_into`
 returns the pokemon it evolves into, or nil if no further evolution
+
 Example:
 
 ```
@@ -161,6 +174,7 @@ Example:
 
 ### `#fast_move_types`
 Returns array of possible move types
+
 Example:
 
 ```
@@ -170,6 +184,7 @@ Example:
 
 ### `#fast_moves`
 Returns array of possible charge moves
+
 Example:
 
 ```
@@ -179,6 +194,7 @@ Example:
 
 ### `#find(query)`
 Returns pokemon by id, string, or symbol
+
 Example:
 
 ```
@@ -194,6 +210,7 @@ Example:
 
 ### `#find_by_type(t)`
 Returns pokemon by type
+
 Example:
 
 ```
@@ -203,6 +220,7 @@ Example:
 
 ### `#flee_rate`
 Returns capture rate in decimal (percentage).
+
 Example:
 
 ```
@@ -211,6 +229,7 @@ Example:
 ```
 
 ### `#height`
+
 Example:
 
 ```
@@ -220,6 +239,7 @@ Example:
 
 ### `#id`
 Returns pokedex id
+
 Example:
 
 ```
@@ -228,6 +248,7 @@ Example:
 ```
 
 ### `#max_cp`
+
 Example:
 
 ```
@@ -237,6 +258,7 @@ Example:
 
 ### `#moves`
 Returns array of all moves
+
 Example:
 
 ```
@@ -252,6 +274,7 @@ Example:
 
 ### `#move_types`
 Returns array of possible move types
+
 Example:
 
 ```
@@ -260,6 +283,7 @@ Example:
 ```
 
 ### `#name`
+
 Example:
 
 ```
@@ -269,6 +293,7 @@ Example:
 
 ### `#perfect_hatch_iv`
 returns integer of perfect iv for hatched egg, or nil if not hatchable
+
 Example:
 
 ```
@@ -281,6 +306,7 @@ Example:
 
 ### `#role`
 Returns pokemon by id, string, or symbol
+
 Example:
 
 ```
@@ -295,6 +321,7 @@ Example:
 
 ### `#strong_against`
 Returns array of pokemon the subject is strong against
+
 Example:
 
 ```
@@ -304,6 +331,7 @@ Example:
 
 ### `#types`
 Returns array of pokemon types
+
 Example:
 
 ```
@@ -316,6 +344,7 @@ Example:
 
 ### `#weak_against`
 Returns array of pokemon the subject is weak against
+
 Example:
 
 ```
@@ -324,6 +353,7 @@ Example:
 ```
 
 ### `#weight`
+
 
 Example:
 
