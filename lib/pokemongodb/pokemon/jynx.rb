@@ -55,7 +55,6 @@ class Pokemongodb
         ]
       end
 
-      
       def self.name
         "jynx"
       end
