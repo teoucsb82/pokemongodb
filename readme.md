@@ -45,7 +45,7 @@ Example:
 Example:
 
 ```
->> Pokemongodb::Pokemon::Bulbasaur.base_attack
+>> Pokemongodb::Pokemon::Bulbasaur.base_defense
 => 126
 ```
 
@@ -54,7 +54,7 @@ Example:
 Example:
 
 ```
->> Pokemongodb::Pokemon::Bulbasaur.base_attack
+>> Pokemongodb::Pokemon::Bulbasaur.base_stamina
 => 90
 ```
 
