@@ -4,6 +4,7 @@ class Pokemongodb
       def self.types
         [
           Pokemongodb::Type::Fairy,
+          Pokemongodb::Type::Ghost,
         ]
       end
     end

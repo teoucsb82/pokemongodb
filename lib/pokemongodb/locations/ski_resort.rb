@@ -1,11 +1,9 @@
 class Pokemongodb
   class Location
-    class Lake < Location
+    class SkiResort < Location
       def self.types
         [
           Pokemongodb::Type::Ice,
-          Pokemongodb::Type::Poison,
-          Pokemongodb::Type::Water,
         ]
       end
     end

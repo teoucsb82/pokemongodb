@@ -4,6 +4,7 @@ class Pokemongodb
       def self.types
         [
           Pokemongodb::Type::Electric,
+          Pokemongodb::Type::Rock,
         ]
       end
     end

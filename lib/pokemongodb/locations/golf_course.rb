@@ -4,6 +4,7 @@ class Pokemongodb
       def self.types
         [
           Pokemongodb::Type::Bug,
+          Pokemongodb::Type::Dragon,
           Pokemongodb::Type::Grass,
           Pokemongodb::Type::Ground,
         ]

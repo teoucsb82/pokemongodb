@@ -1,22 +1,62 @@
 Gem::Specification.new do |s|
   s.name     = "pokemongodb"
   s.version  = "0.4.0.pre"
-  s.date     = "2016-09-17"
+  s.date     = "2016-09-18"
   s.summary  = "Quick Pokemon Go Database / API. Used to power www.mongodatabase.com"
   s.authors  = "TeoUCSB82"
   s.email    = "teo@dellamico.com"
   s.files    = ["lib/pokemongodb.rb", 
                 "lib/pokemongodb/location.rb",
+                "lib/pokemongodb/locations/arid_climate.rb",
+                "lib/pokemongodb/locations/basin.rb",
+                "lib/pokemongodb/locations/beach.rb",
+                "lib/pokemongodb/locations/canal.rb",
+                "lib/pokemongodb/locations/cemetary.rb",
+                "lib/pokemongodb/locations/church.rb",
+                "lib/pokemongodb/locations/city.rb",
+                "lib/pokemongodb/locations/college_campus.rb",
+                "lib/pokemongodb/locations/dock.rb",
                 "lib/pokemongodb/locations/farmland.rb",
-                "lib/pokemongodb/locations/forest.rb"
-                "lib/pokemongodb/locations/garden.rb"
-                "lib/pokemongodb/locations/golf_course.rb"
-                "lib/pokemongodb/locations/grassy_area.rb"
-                "lib/pokemongodb/locations/hiking_trail.rb"
-                "lib/pokemongodb/locations/meadow.rb"
-                "lib/pokemongodb/locations/nature_reserve.rb"
-                "lib/pokemongodb/locations/park.rb"
-                "lib/pokemongodb/locations/woodland.rb"
+                "lib/pokemongodb/locations/forest.rb",
+                "lib/pokemongodb/locations/garden.rb",
+                "lib/pokemongodb/locations/glacier.rb",
+                "lib/pokemongodb/locations/golf_course.rb",
+                "lib/pokemongodb/locations/grassy_area.rb",
+                "lib/pokemongodb/locations/gym.rb",
+                "lib/pokemongodb/locations/harbor.rb",
+                "lib/pokemongodb/locations/hiking_trail.rb",
+                "lib/pokemongodb/locations/hospital.rb",
+                "lib/pokemongodb/locations/industrial_area.rb",
+                "lib/pokemongodb/locations/industrial_park.rb",
+                "lib/pokemongodb/locations/lake.rb",
+                "lib/pokemongodb/locations/landmark.rb",
+                "lib/pokemongodb/locations/library.rb",
+                "lib/pokemongodb/locations/marsh.rb",
+                "lib/pokemongodb/locations/meadow.rb",
+                "lib/pokemongodb/locations/mountain.rb",
+                "lib/pokemongodb/locations/nature_reserve.rb",
+                "lib/pokemongodb/locations/neighborhood.rb",
+                "lib/pokemongodb/locations/ocean.rb",
+                "lib/pokemongodb/locations/park.rb",
+                "lib/pokemongodb/locations/parking_lot.rb",
+                "lib/pokemongodb/locations/port.rb",
+                "lib/pokemongodb/locations/quarry.rb",
+                "lib/pokemongodb/locations/railway.rb",
+                "lib/pokemongodb/locations/recreation_area.rb",
+                "lib/pokemongodb/locations/reservoir.rb",
+                "lib/pokemongodb/locations/residential.rb",
+                "lib/pokemongodb/locations/river.rb",
+                "lib/pokemongodb/locations/riverbank.rb",
+                "lib/pokemongodb/locations/school.rb",
+                "lib/pokemongodb/locations/shopping_center.rb",
+                "lib/pokemongodb/locations/ski_resort.rb",
+                "lib/pokemongodb/locations/sports_center.rb",
+                "lib/pokemongodb/locations/stadium.rb",
+                "lib/pokemongodb/locations/stream.rb",
+                "lib/pokemongodb/locations/university.rb",
+                "lib/pokemongodb/locations/warm_climate.rb",
+                "lib/pokemongodb/locations/wetland.rb",
+                "lib/pokemongodb/locations/woodland.rb",
                 "lib/pokemongodb/type.rb",
                 "lib/pokemongodb/types/bug.rb",
                 "lib/pokemongodb/types/dark.rb",

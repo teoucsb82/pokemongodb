@@ -11,10 +11,132 @@ class Pokemongodb
     #   >> Pokemongodb::Move.all
     #   => [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]
     def self.all
-      file_names.map do |file_name| 
-        const_name = file_name.split("_").map(&:capitalize).join
-        Pokemongodb::Move.const_get(const_name)
-      end
+      [
+        Move::Acid,
+        Move::AerialAce,
+        Move::AirCutter,
+        Move::AncientPower,
+        Move::AquaJet,
+        Move::AquaTail,
+        Move::Bite,
+        Move::Blizzard,
+        Move::BodySlam,
+        Move::BoneClub,
+        Move::BrickBreak,
+        Move::Brine,
+        Move::Bubble,
+        Move::BubbleBeam,
+        Move::BugBite,
+        Move::BugBuzz,
+        Move::Bulldoze,
+        Move::BulletPunch,
+        Move::Confusion,
+        Move::CrossChop,
+        Move::CrossPoison,
+        Move::Cut,
+        Move::DarkPulse,
+        Move::DazzlingGleam,
+        Move::Dig,
+        Move::DisarmingVoice,
+        Move::Discharge,
+        Move::DragonBreath,
+        Move::DragonClaw,
+        Move::DragonPulse,
+        Move::DrainingKiss,
+        Move::DrillPeck,
+        Move::DrillRun,
+        Move::Earthquake,
+        Move::Ember,
+        Move::FeintAttack,
+        Move::FireBlast,
+        Move::FireFang,
+        Move::FirePunch,
+        Move::FlameBurst,
+        Move::FlameCharge,
+        Move::FlameWheel,
+        Move::Flamethrower,
+        Move::FlashCannon,
+        Move::FrostBreath,
+        Move::FuryCutter,
+        Move::GunkShot,
+        Move::HeatWave,
+        Move::HornAttack,
+        Move::Hurricane,
+        Move::HydroPump,
+        Move::HyperBeam,
+        Move::HyperFang,
+        Move::IceBeam,
+        Move::IcePunch,
+        Move::IceShard,
+        Move::IcyWind,
+        Move::IronHead,
+        Move::KarateChop,
+        Move::LeafBlade,
+        Move::Lick,
+        Move::LowKick,
+        Move::LowSweep,
+        Move::MagnetBomb,
+        Move::Megahorn,
+        Move::MetalClaw,
+        Move::Moonblast,
+        Move::MudBomb,
+        Move::MudShot,
+        Move::MudSlap,
+        Move::NightSlash,
+        Move::OminousWind,
+        Move::Peck,
+        Move::PetalBlizzard,
+        Move::PlayRough,
+        Move::PoisonFang,
+        Move::PoisonJab,
+        Move::PoisonSting,
+        Move::Pound,
+        Move::PowerGem,
+        Move::PowerWhip,
+        Move::Psybeam,
+        Move::Psychic,
+        Move::PsychoCut,
+        Move::Psyshock,
+        Move::QuickAttack,
+        Move::RazorLeaf,
+        Move::RockSlide,
+        Move::RockSmash,
+        Move::RockThrow,
+        Move::RockTomb,
+        Move::Scald,
+        Move::Scratch,
+        Move::SeedBomb,
+        Move::ShadowBall,
+        Move::ShadowClaw,
+        Move::SignalBeam,
+        Move::Sludge,
+        Move::SludgeBomb,
+        Move::SludgeWave,
+        Move::SolarBeam,
+        Move::Spark,
+        Move::Splash,
+        Move::SteelWing,
+        Move::Stomp,
+        Move::StoneEdge,
+        Move::Struggle,
+        Move::Submission,
+        Move::SuckerPunch,
+        Move::Swift,
+        Move::Tackle,
+        Move::Thunder,
+        Move::ThunderPunch,
+        Move::ThunderShock,
+        Move::Thunderbolt,
+        Move::Twister,
+        Move::ViceGrip,
+        Move::VineWhip,
+        Move::WaterGun,
+        Move::WaterPulse,
+        Move::WingAttack,
+        Move::Wrap,
+        Move::XScissor,
+        Move::ZenHeadbutt,
+      ]
     end
 
     # Returns category enum based on energy value.
@@ -34,10 +156,8 @@ class Pokemongodb
     #   >> Pokemongodb::Move.charge
     #   => [Pokemongodb::Move::AerielAce, Pokemongodb::Move::AirCutter, ...]
     def self.charge
-      file_names.map do |file_name| 
-        const_name = file_name.split("_").map(&:capitalize).join
-        m = Pokemongodb::Move.const_get(const_name)
-        m.category == Category::CHARGE ? m : next
+      self.all.select do |move|
+        move.category == Category::CHARGE
       end
     end
 
@@ -65,17 +185,9 @@ class Pokemongodb
     #   >> Pokemongodb::Move.fast
     #   => [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]
     def self.fast
-      file_names.map do |file_name| 
-        const_name = file_name.split("_").map(&:capitalize).join
-        m = Pokemongodb::Move.const_get(const_name)
-        m.category == Category::FAST ? m : next
+      self.all.select do |move|
+        move.category == Category::FAST
       end
-    end
-
-    private
-    def self.file_names
-      dir = Dir["./lib/pokemongodb/moves/*"]
-      return dir.map { |path| path.split("moves/").last.gsub(".rb", "") }
     end
   end
 end

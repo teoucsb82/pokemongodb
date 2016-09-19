@@ -1,10 +1,9 @@
 class Pokemongodb
   class Location
-    class Landmark < Location
+    class SportsCenter < Location
       def self.types
         [
-          Pokemongodb::Type::Dragon,
-          Pokemongodb::Type::Fairy,
+          Pokemongodb::Type::Fighting,
         ]
       end
     end

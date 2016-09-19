@@ -5,7 +5,9 @@ class Pokemongodb
         [
           Pokemongodb::Type::Electric,
           Pokemongodb::Type::Fire,
+          Pokemongodb::Type::Ghost,
           Pokemongodb::Type::Normal,
+          Pokemongodb::Type::Psychic,
         ]
       end
     end

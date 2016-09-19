@@ -5,6 +5,8 @@ class Pokemongodb
         [
           Pokemongodb::Type::Bug,
           Pokemongodb::Type::Grass,
+          Pokemongodb::Type::Ice,
+          Pokemongodb::Type::Psychic,
         ]
       end
     end
