@@ -380,7 +380,7 @@ Example:
 => :charge
 ```
 
-### `Pokemongodb::Move.charge
+### `Pokemongodb::Move.charge`
 Returns array of all charge moves.
 
 Example:
@@ -390,8 +390,8 @@ Example:
 => [Pokemongodb::Move::AerielAce, Pokemongodb::Move::AirCutter, ...]
 ```
 
-### `Pokemongodb::Move::#{Move}.cooldown
-Returns float of time required after completing move until next is available.
+### `Pokemongodb::Move::#{Move}.cooldown`
+Returns float of time required (in seconds) after completing move until next is available.
 
 Example:
 
@@ -400,7 +400,7 @@ Example:
 => 1.05
 ```
 
-### `Pokemongodb::Move::#{Move}.dps
+### `Pokemongodb::Move::#{Move}.dps`
 Returns float of calculated damage per second.
 
 Example:
@@ -410,7 +410,7 @@ Example:
 => 9.52
 ```
 
-### `Pokemongodb::Move::#{Move}.energy
+### `Pokemongodb::Move::#{Move}.energy`
 Returns integer for energy generated (positive) or spent (negative) per move.
 
 Example:
@@ -423,7 +423,7 @@ Example:
 => -25
 ```
 
-### `Pokemongodb::Move::#{Move}.eps
+### `Pokemongodb::Move::#{Move}.eps`
 Returns float of calculated energy per second.
 
 Example:
@@ -433,7 +433,7 @@ Example:
 => 6.67
 ```
 
-### `Pokemongodb::Move.fast
+### `Pokemongodb::Move.fast`
 Returns array of all fast moves.
 
 Example:
@@ -443,7 +443,7 @@ Example:
 => [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]
 ```
 
-### `Pokemongodb::Move::#{Move}.power
+### `Pokemongodb::Move::#{Move}.power`
 
 Example:
 
@@ -452,7 +452,7 @@ Example:
 => 10
 ```
 
-### `Pokemongodb::Move::#{Move}.type
+### `Pokemongodb::Move::#{Move}.type`
 Returns move type.
 
 Example:
@@ -460,4 +460,94 @@ Example:
 ```
 >> Pokemongodb::Move::Acid.type
 => Pokemongodb::Type::Poison
+```
+
+## Pokemongodb::Type methods
+
+### `Pokemongodb::Type.all`
+Returns array of all types
+
+Example:
+
+```
+>> Pokemongodb::Type.all
+=> [Pokemongodb::Type::Bug, Pokemongodb::Type::Dark, ...]
+```
+
+### `Pokemongodb::Type::#{Type}.defense_strong`
+Returns array of types where you have a strong defense.
+
+Example:
+
+```
+>> Pokemongodb::Type::Dark.defense_strong
+=> [Pokemongodb::Type::Dark, Pokemongodb::Type::Ghost]
+```
+
+### `Pokemongodb::Type::#{Type}.defense_weak`
+Returns array of types where you have a weak defense.
+
+Example:
+
+```
+>> Pokemongodb::Type::Bug.defense_weak
+=> [Pokemongodb::Type::Flying, Pokemongodb::Type::Fire, Pokemongodb::Type::Dark]
+```
+
+### `Pokemongodb::Type::#{Type}.locations`
+Returns array of locations for a type.
+
+Example:
+
+```
+>> Pokemongodb::Type::Normal.locations
+=> [Pokemongodb::Location::CollegeCampus, Pokemongodb::Location::ParkingLot, Pokemongodb::Location::Residential] 
+```
+
+### `Pokemongodb::Type::#{Type}.name`
+Example:
+
+```
+>> Pokemongodb::Type::Normal.name
+=> "normal"
+```
+
+### `Pokemongodb::Type::#{Type}.offense_strong`
+Returns array of types where you have a strong offense.
+
+Example:
+
+```
+>> Pokemongodb::Type::Dark.offense_strong
+=> [Pokemongodb::Type::Ghost, Pokemongodb::Type::Psychic]
+```
+
+### `Pokemongodb::Type::#{Type}.offense_weak`
+Returns array of types where you have a weak offense.
+
+Example:
+
+```
+>> Pokemongodb::Type::Dark.offense_weak
+=> [Pokemongodb::Type::Dark, Pokemongodb::Type::Fairy, Pokemongodb::Type::Fighting]
+```
+
+### `Pokemongodb::Type::#{Type}.strong_against`
+Returns array of types the subject is strong against
+
+Example:
+
+```
+>> Pokemongodb::Type::Steel.strong_against
+=> [Pokemongodb::Type::Fairy, Pokemongodb::Type::Ice, Pokemongodb::Type::Rock]
+```
+
+### `Pokemongodb::Type::#{Type}.weak_against`
+Returns array of types the subject is weak against
+
+Example:
+
+```
+>> Pokemongodb::Type::Grass.weak_against
+=> [Pokemongodb::Type::Bug, Pokemongodb::Type::Fire, Pokemongodb::Type::Flying, Pokemongodb::Type::Poison]
 ```

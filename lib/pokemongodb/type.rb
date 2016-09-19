@@ -33,7 +33,7 @@ class Pokemongodb
     #
     # Example:
     #   >> Pokemongodb::Type::Normal.locations
-    #   => "Normal"
+    #   => [Pokemongodb::Location::CollegeCampus, Pokemongodb::Location::ParkingLot, ...] 
     def self.locations
       Pokemongodb::Location.all.select do |location|
         location.types.include?(self)
