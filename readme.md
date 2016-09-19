@@ -21,7 +21,7 @@ Followed by a `bundle install`.
 
 ## Available Methods
 
-### `#all`
+### `Pokemongo::Pokemon.all`
 Returns array of all moves
 
 Example:
@@ -31,7 +31,7 @@ Example:
 => [Pokemongodb::Pokemon::Bulbasaur, Pokemongodb::Pokemon::Ivysaur, ...]
 ```
 
-### `#base_attack`
+### `Pokemongo::Pokemon::#{PokemonName}.base_attack`
 
 Example:
 
@@ -40,7 +40,7 @@ Example:
 => 126
 ```
 
-### `#base_defense`
+### `Pokemongo::Pokemon::#{PokemonName}.base_defense`
 
 Example:
 
@@ -49,7 +49,7 @@ Example:
 => 126
 ```
 
-### `#base_stamina`
+### `Pokemongo::Pokemon::#{PokemonName}.base_stamina`
 
 Example:
 
@@ -58,7 +58,7 @@ Example:
 => 90
 ```
 
-### `#buddy_candy_distance`
+### `Pokemongo::Pokemon::#{PokemonName}.buddy_candy_distance`
 Returns distance (in km) to generate a new buddy candy
 
 Example:
@@ -71,7 +71,7 @@ Example:
 => 2
 ```
 
-### `#charge_move_types`
+### `Pokemongo::Pokemon::#{PokemonName}.charge_move_types`
 Returns array of possible charge move types
 
 Example:
@@ -81,7 +81,7 @@ Example:
 => [Pokemongodb::Type::Poison, Pokemongodb::Type::Grass]
 ```
 
-### `#candy_to_evolve`
+### `Pokemongo::Pokemon::#{PokemonName}.candy_to_evolve`
 Returns number of candies to evolve, or nil if no evolution
 
 Example:
@@ -97,7 +97,7 @@ Example:
 => nil
 ```
 
-### `#capture_rate`
+### `Pokemongo::Pokemon::#{PokemonName}.capture_rate`
 Returns capture rate in decimal (percentage).
 
 Example:
@@ -107,7 +107,7 @@ Example:
 => 0.16
 ```
 
-### `#charge_moves`
+### `Pokemongo::Pokemon::#{PokemonName}.charge_moves`
 Returns array of possible charge moves
 
 Example:
@@ -117,7 +117,7 @@ Example:
 => [Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]
 ```
 
-### `#cp_gain`
+### `Pokemongo::Pokemon::#{PokemonName}.cp_gain`
 Returns cp gain per level up.
 
 Example:
@@ -127,7 +127,7 @@ Example:
 => 16
 ```
 
-### `#egg_hatch_distance`
+### `Pokemongo::Pokemon::#{PokemonName}.egg_hatch_distance`
 returns integer of distance to hatch an egg, or nil if not hatchable from egg
 
 Example:
@@ -143,7 +143,7 @@ Example:
 => nil
 ```
 
-### `#evolves_from`
+### `Pokemongo::Pokemon::#{PokemonName}.evolves_from`
 Returns evolution precursor or nil
 
 Example:
@@ -156,7 +156,7 @@ Example:
 => Pokemongodb::Type::Bulbasaur
 ```
 
-### `#evolves_into`
+### `Pokemongo::Pokemon::#{PokemonName}.evolves_into`
 returns the pokemon it evolves into, or nil if no further evolution
 
 Example:
@@ -172,7 +172,7 @@ Example:
 => nil
 ```
 
-### `#fast_move_types`
+### `Pokemongo::Pokemon::#{PokemonName}.fast_move_types`
 Returns array of possible move types
 
 Example:
@@ -182,7 +182,7 @@ Example:
 => [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]
 ```
 
-### `#fast_moves`
+### `Pokemongo::Pokemon::#{PokemonName}.fast_moves`
 Returns array of possible charge moves
 
 Example:
@@ -192,7 +192,7 @@ Example:
 => [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip]
 ```
 
-### `#find(query)`
+### `Pokemongo::Pokemon.find(query)`
 Returns pokemon by id, string, or symbol
 
 Example:
@@ -208,7 +208,7 @@ Example:
 => Pokemongodb::Pokemon::Venusaur
 ```
 
-### `#find_by_type(t)`
+### `Pokemongo::Pokemon.find_by_type(t)`
 Returns pokemon by type
 
 Example:
@@ -218,7 +218,7 @@ Example:
 => [Pokemongodb::Pokemon::Blastoise, Pokemongodb::Pokemon::Cloyster, ...]
 ```
 
-### `#flee_rate`
+### `Pokemongo::Pokemon::#{PokemonName}.flee_rate`
 Returns capture rate in decimal (percentage).
 
 Example:
@@ -228,7 +228,7 @@ Example:
 => 0.1
 ```
 
-### `#height`
+### `Pokemongo::Pokemon::#{PokemonName}.height`
 
 Example:
 
@@ -237,7 +237,7 @@ Example:
 => 0.7
 ```
 
-### `#id`
+### `Pokemongo::Pokemon::#{PokemonName}.id`
 Returns pokedex id
 
 Example:
@@ -247,7 +247,7 @@ Example:
 => 1
 ```
 
-### `#max_cp`
+### `Pokemongo::Pokemon::#{PokemonName}.max_cp`
 
 Example:
 
@@ -256,7 +256,7 @@ Example:
 => 1071.54
 ```
 
-### `#moves`
+### `Pokemongo::Pokemon::#{PokemonName}.moves`
 Returns array of all moves
 
 Example:
@@ -272,7 +272,7 @@ Example:
    ]
 ```
 
-### `#move_types`
+### `Pokemongo::Pokemon::#{PokemonName}.move_types`
 Returns array of possible move types
 
 Example:
@@ -282,7 +282,7 @@ Example:
 => [[Pokemongodb::Type::Grass, 3]
 ```
 
-### `#name`
+### `Pokemongo::Pokemon::#{PokemonName}.name`
 
 Example:
 
@@ -291,7 +291,7 @@ Example:
 => "bulbasaur"
 ```
 
-### `#perfect_hatch_iv`
+### `Pokemongo::Pokemon::#{PokemonName}.perfect_hatch_iv`
 returns integer of perfect iv for hatched egg, or nil if not hatchable
 
 Example:
@@ -304,7 +304,7 @@ Example:
 => nil
 ```
 
-### `#role`
+### `Pokemongo::Pokemon.role`
 Returns pokemon by id, string, or symbol
 
 Example:
@@ -319,7 +319,7 @@ Example:
 => :offense
 ```
 
-### `#strong_against`
+### `Pokemongo::Pokemon::#{PokemonName}.strong_against`
 Returns array of pokemon the subject is strong against
 
 Example:
@@ -329,7 +329,7 @@ Example:
 => [Pokemongodb::Pokemon::Cubone, Pokemongodb::Pokemon::Diglett, ...]
 ```
 
-### `#types`
+### `Pokemongo::Pokemon::#{PokemonName}.types`
 Returns array of pokemon types
 
 Example:
@@ -342,7 +342,7 @@ Example:
    ]
 ```
 
-### `#weak_against`
+### `Pokemongo::Pokemon::#{PokemonName}.weak_against`
 Returns array of pokemon the subject is weak against
 
 Example:
@@ -352,7 +352,7 @@ Example:
 => Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Butterfree, ... ]
 ```
 
-### `#weight`
+### `Pokemongo::Pokemon::#{PokemonName}.weight`
 
 
 Example:
