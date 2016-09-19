@@ -55,12 +55,13 @@ class Pokemongodb
         ]
       end
 
-      def self.perfect_iv
-        980
+      
+      def self.name
+        "jynx"
       end
 
-      def self.quality
-        # Pokemongodb::Pokemon::Quality::
+      def self.perfect_iv
+        980
       end
 
       def self.types
