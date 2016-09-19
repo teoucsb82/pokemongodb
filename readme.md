@@ -19,49 +19,183 @@ gem "pokemongodb"
 
 Followed by a `bundle install`.
 
-## Using the gem
-Once installed, the gem works similar to ActiveRecord.
+## Available Methods
 
-### Find your pokemon
-
-```
->> @all_pokemon = Pokemongodb::Pokemon.all
->> @squirtle = Pokemongodb::Pokemon.find("squirtle")
-```
-
-### Get basic data about your pokemon
+### .all
+Returns array of all moves
+Example:
 
 ```
->> @squirtle.id
-=> 7
+>> Pokemongodb::Pokemon.all
+=> [Pokemongodb::Pokemon::Bulbasaur, Pokemongodb::Pokemon::Ivysaur, ...]
+```
 
->> @squirtle.types
-=> [Pokemongodb::Type::WATER]
+### .charge_move_types
+Returns array of possible charge move types
+Example:
 
->> @squirtle.base_attack
-=> 112
+```
+>> Pokemongodb::Pokemon::Bulbasaur.charge_move_types
+=> [Pokemongodb::Type::Poison, Pokemongodb::Type::Grass]
+```
 
->> @squirtle.base_defense
-=> 142
+### .candy_to_evolve
+Returns number of candies to evolve, or nil if no evolution
+Example:
 
->> @squirtle.base_stamina
-=> 88
+```
+>> Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve
+=> 25
 
->> @squirtle.charge_moves
-=> [Pokemongodb::Move::AquaJet, Pokemongodb::Move::AquaTail, Pokemongodb::Move::WaterPulse] 
+>> Pokemongodb::Pokemon::Ivysaur.candy_to_evolve
+=> 100
 
->> @squirtle.evolves_into
-=> Pokemongodb::Pokemon::Wartortle
+>> Pokemongodb::Pokemon::Venusaur.candy_to_evolve
+=> nil
+```
 
->> @squirtle.fast_moves
-=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::Bubble] 
+### .charge_moves
+Returns array of possible charge moves
+Example:
 
->> @squirtle.max_cp
-=> 1008.69
+```
+>> Pokemongodb::Pokemon::Bulbasaur.charge_moves
+=> [Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]
+```
 
->> @squirtle.moves
-=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::Bubble, Pokemongodb::Move::AquaJet, Pokemongodb::Move::AquaTail, Pokemongodb::Move::WaterPulse] 
+### .egg_hatch_distance
+returns integer of distance to hatch an egg, or nil if not hatchable from egg
+Example:
 
- >> @squirtle.role
+```
+>> Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance
+=> 2
+
+>> Pokemongodb::Pokemon::Vulpix.egg_hatch_distance
+=> 5
+
+>> Pokemongodb::Pokemon::Venusaur.egg_hatch_distance
+=> nil
+```
+
+### .evolves_from
+Returns evolution precursor or nil
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.evolves_from
+=> nil
+
+>> Pokemongodb::Pokemon::Ivysaur.evolves_from
+=> Pokemongodb::Type::Bulbasaur
+```
+
+### .evolves_into
+returns the pokemon it evolves into, or nil if no further evolution
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.evolves_into
+=> Pokemongodb::Pokemon::Ivysaur
+
+>> Pokemongodb::Pokemon::Ivysaur.evolves_into
+=> Pokemongodb::Pokemon::Venusayr
+
+>> Pokemongodb::Pokemon::Venusaur.evolves_into
+=> nil
+```
+
+### .fast_move_types
+Returns array of possible move types
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.fast_move_types
+=> [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]
+```
+
+### .fast_moves
+Returns array of possible charge moves
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.fast_moves
+=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip]
+```
+
+### .find(query)
+Returns pokemon by id, string, or symbol
+Example:
+
+```
+>> Pokemongodb::Pokemon.find(1)
+=> Pokemongodb::Pokemon::Bulbasaur
+
+>> Pokemongodb::Pokemon.find('ivysaur')
+=> Pokemongodb::Pokemon::Ivysaur
+
+>> Pokemongodb::Pokemon.find(:venusaur)
+=> Pokemongodb::Pokemon::Venusaur
+```
+
+### .find_by_type(t)
+Returns pokemon by type
+Example:
+
+```
+>> Pokemongodb::Pokemon.find_by_type(Pokemongodb::Type::Water)
+=> [Pokemongodb::Pokemon::Blastoise, Pokemongodb::Pokemon::Cloyster, ...]
+```
+
+### .move_types
+Returns array of possible move types
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.move_types
+=> [[Pokemongodb::Type::Grass, 3]
+```
+
+### .perfect_hatch_iv
+returns integer of perfect iv for hatched egg, or nil if not hatchable
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv
+=> 612
+
+>> Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv
+=> nil
+```
+
+### .role
+Returns pokemon by id, string, or symbol
+Example:
+
+```
+>> bulbasaur = Pokemongodb::Pokemon.find(1)
+>> bulbasaur.role
 => :defense
+
+>> charmander = Pokemongodb::Pokemon.find(4)
+>> charmander.role
+=> :offense
+```
+
+### .strong_against
+Returns array of pokemon the subject is strong against
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.strong_against
+=> [Pokemongodb::Pokemon::Cubone, Pokemongodb::Pokemon::Diglett, ...]
+```
+
+### .weak_against
+Returns array of pokemon the subject is weak against
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.weak_against
+=> Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Butterfree, ... ]
 ```
