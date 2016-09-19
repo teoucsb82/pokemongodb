@@ -144,6 +144,7 @@ class Pokemongodb
     # Example:
     #   >> Pokemongodb::Move::Acid.category
     #   => :fast
+    #
     #   >> Pokemongodb::Move::AerielAce.category
     #   => :charge
     def self.category

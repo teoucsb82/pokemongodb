@@ -19,7 +19,9 @@ gem "pokemongodb"
 
 Followed by a `bundle install`.
 
-## Available Methods
+# Available Methods
+
+## Pokemongodb::Pokemon methods
 
 ### `Pokemongodb::Pokemon.all`
 Returns array of all moves
@@ -263,13 +265,7 @@ Example:
 
 ```
 >> Pokemongodb::Pokemon::Bulbasaur.moves
-=> [
-     Pokemongodb::Move::Tackle,
-     Pokemongodb::Move::VineWhip,
-     Pokemongodb::Move::PowerWhip,
-     Pokemongodb::Move::SeedBomb,
-     Pokemongodb::Move::SludgeBomb
-   ]
+=> [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip, Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]
 ```
 
 ### `Pokemongodb::Pokemon::#{PokemonName}.move_types`
@@ -279,7 +275,7 @@ Example:
 
 ```
 >> Pokemongodb::Pokemon::Bulbasaur.move_types
-=> [[Pokemongodb::Type::Grass, 3]
+=> [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass, Pokemongodb::Type::Poison] 
 ```
 
 ### `Pokemongodb::Pokemon::#{PokemonName}.name`
@@ -336,10 +332,7 @@ Example:
 
 ```
 >> Pokemongodb::Pokemon::Bulbasaur.types
-=> [
-     Pokemongodb::Type::Grass,
-     Pokemongodb::Type::Poison
-   ]
+=> [Pokemongodb::Type::Grass, Pokemongodb::Type::Poison]
 ```
 
 ### `Pokemongodb::Pokemon::#{PokemonName}.weak_against`
@@ -360,4 +353,111 @@ Example:
 ```
 >> Pokemongodb::Pokemon::Bulbasaur.weight
 => 6.9
+```
+
+## Pokemongodb::Move methods
+
+### `Pokemongodb::Move.all`
+Returns array of all moves
+
+Example:
+
+```
+>> Pokemongodb::Move.all
+=> [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]
+```
+
+### `Pokemongodb::Move::#{Move}.category`
+Returns category enum based on energy value.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.category
+=> :fast
+
+>> Pokemongodb::Move::AerielAce.category
+=> :charge
+```
+
+### `Pokemongodb::Move.charge
+Returns array of all charge moves.
+
+Example:
+
+```
+>> Pokemongodb::Move.charge
+=> [Pokemongodb::Move::AerielAce, Pokemongodb::Move::AirCutter, ...]
+```
+
+### `Pokemongodb::Move::#{Move}.cooldown
+Returns float of time required after completing move until next is available.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.cooldown
+=> 1.05
+```
+
+### `Pokemongodb::Move::#{Move}.dps
+Returns float of calculated damage per second.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.dps
+=> 9.52
+```
+
+### `Pokemongodb::Move::#{Move}.energy
+Returns integer for energy generated (positive) or spent (negative) per move.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.energy
+=> 7
+
+>> Pokemongodb::Move::AerialAce.energy
+=> -25
+```
+
+### `Pokemongodb::Move::#{Move}.eps
+Returns float of calculated energy per second.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.eps
+=> 6.67
+```
+
+### `Pokemongodb::Move.fast
+Returns array of all fast moves.
+
+Example:
+
+```
+>> Pokemongodb::Move.fast
+=> [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]
+```
+
+### `Pokemongodb::Move::#{Move}.power
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.power
+=> 10
+```
+
+### `Pokemongodb::Move::#{Move}.type
+Returns move type.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.type
+=> Pokemongodb::Type::Poison
 ```
