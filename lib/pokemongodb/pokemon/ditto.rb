@@ -18,11 +18,7 @@ class Pokemongodb
       end
 
       def self.buddy_candy_distance
-        0
-      end
-      
-      def self.candy_to_evolve
-        0
+        2
       end
 
       def self.capture_rate
@@ -33,20 +29,12 @@ class Pokemongodb
         13
       end
 
-      def self.evolves_into
-      end
-
       def self.flee_rate
         0.1
       end
 
       def self.height
         0.3
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -62,10 +50,6 @@ class Pokemongodb
 
       def self.name
         "ditto"
-      end
-
-      def self.perfect_iv
-        0
       end
 
       def self.types

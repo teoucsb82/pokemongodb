@@ -86,11 +86,6 @@ class Pokemongodb
         #{json['height'] / 10.0}
       end
 
-      def self.locations
-        [
-        ]
-      end
-
       def self.max_cp
         #{rankedboost.css('body > div.site-container > div > div > div > div > main > article > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(2)').text.to_f}
       end

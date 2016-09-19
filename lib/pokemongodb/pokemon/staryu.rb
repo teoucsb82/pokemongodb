@@ -38,6 +38,7 @@ class Pokemongodb
       end
 
       def self.evolves_into
+        Pokemongodb::Pokemon::Starmie
       end
 
       def self.flee_rate
@@ -46,11 +47,6 @@ class Pokemongodb
 
       def self.height
         0.8
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -69,10 +65,6 @@ class Pokemongodb
 
       def self.name
         "staryu"
-      end
-
-      def self.perfect_iv
-        0
       end
 
       def self.types

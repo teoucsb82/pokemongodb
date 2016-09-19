@@ -18,11 +18,7 @@ class Pokemongodb
       end
 
       def self.buddy_candy_distance
-        0
-      end
-      
-      def self.candy_to_evolve
-        0
+        3
       end
 
       def self.capture_rate
@@ -33,20 +29,12 @@ class Pokemongodb
         31
       end
 
-      def self.evolves_into
-      end
-
       def self.flee_rate
         0.06
       end
 
       def self.height
         0.8
-      end
-
-      def self.locations
-        [
-        ]
       end
 
       def self.max_cp
@@ -64,10 +52,6 @@ class Pokemongodb
 
       def self.name
         "jolteon"
-      end
-
-      def self.perfect_iv
-        0
       end
 
       def self.types

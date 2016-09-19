@@ -67,10 +67,6 @@ class Pokemongodb
         "clefairy"
       end
 
-      def self.perfect_iv
-        686
-      end
-
       def self.types
         [
           Pokemongodb::Type::Fairy
