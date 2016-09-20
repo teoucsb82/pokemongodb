@@ -29,8 +29,6 @@ ratings:
   - "**.php"
   - "**.py"
   - "**.rb"
-exclude_paths:
-- test/
 engines:
   rubocop:
     enabled: true
@@ -68,3 +66,4 @@ exclude_paths:
 - doc/js/**/*
 - spec/**/*
 - "**/vendor/**/*"
+- test/
