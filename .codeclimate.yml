@@ -65,6 +65,6 @@ ratings:
   - "**.go"
 exclude_paths:
 - doc/**/*
-- doc/js/*
+- doc/js/**/*
 - spec/**/*
 - "**/vendor/**/*"
