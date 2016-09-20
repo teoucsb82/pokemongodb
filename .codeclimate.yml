@@ -13,9 +13,6 @@ engines:
       - javascript
       - python
       - php
-    exclude_fingerprints:
-    - 139cb5fa38846bf1491c3c45f9759534 #search_index.js
-    - 8ada88a2360dc22a5f39367092026391 #searcher.js
   eslint:
     enabled: true
   fixme:
@@ -65,5 +62,6 @@ ratings:
   - "**.rb"
   - "**.go"
 exclude_paths:
+- doc/**/*
 - spec/**/*
 - "**/vendor/**/*"
