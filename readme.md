@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/teoucsb82/pokemongodb/badges/issue_count.svg)](https://codeclimate.com/github/teoucsb82/pokemongodb)
 
 # Pokemon Go DataBase
-Quick Pokemon Go Database featuring stats on all available Pokemon, Moves, Types, etc. Used to power [MongoDatabase](http://mongodatabase.herokuapp.com)
+Quick Pokemon Go Database featuring stats on all available Pokemon, Moves, Types, etc. Add it to your project to get the latest stats, movesets, and quick math on Pokemon from Pokemon Go.
 
 ## Quick Installation
 To install on your system, run:
@@ -20,7 +20,30 @@ gem "pokemongodb"
 
 Followed by a `bundle install`.
 
-# Available Methods
+## Quickstart
+The gem comes preloaded with a bunch of handy methods, detailed in full below. Here are a few demo scenarios, you should be able to get the hang of it fairly quickly.
+
+### Find out what a particular pokemon is good against in a gym fight:
+Let's assume you're about to attack an enemy gym. Let's pretend there's a Blastoise defending it, and you're not sure what to bring.
+
+Example:
+```
+# let's figure out what we're up against!
+=> @defending_pokemon = Pokemongodb::Pokemon::Blastoise
+=> @defending_pokemon.types
+>> [Pokemongodb::Type::Water]
+
+# ok so it's a water type. what does that do for us...
+=> @defending_type = @defending_pokemon.types.first
+=> @defending_type.weak_against
+>> [Pokemongodb::Type::Grass] 
+
+# sweet! It's weak against grass types! But we can do better
+=> @defending_pokemon.weak_against
+>> [Pokemongodb::Pokemon::Bellsprout, Pokemongodb::Pokemon::Bulbasaur, Pokemongodb::Pokemon::Exeggcute, Pokemongodb::Pokemon::Exeggutor, Pokemongodb::Pokemon::Gloom, Pokemongodb::Pokemon::Ivysaur, Pokemongodb::Pokemon::Oddish, Pokemongodb::Pokemon::Paras, Pokemongodb::Pokemon::Parasect, Pokemongodb::Pokemon::Tangela, Pokemongodb::Pokemon::Venusaur, Pokemongodb::Pokemon::Victreebel, Pokemongodb::Pokemon::Vileplume, Pokemongodb::Pokemon::Weepinbell] 
+```
+
+# Full List of Available Methods
 
 ## Pokemongodb::Pokemon methods
 
