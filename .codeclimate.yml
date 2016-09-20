@@ -34,9 +34,11 @@ exclude_paths:
 engines:
   rubocop:
     enabled: true
-    #checks:
-    # Rubocop/Metrics/ClassLength:
-    #   enabled: false
+    checks:
+      Rubocop/Lint/UselessAccessModifier:
+        enabled: false
+      Rubocop/Metrics/MethodLength:
+        enabled: false
   brakeman:
     enabled: true
     #exclude_fingerprints:
@@ -63,5 +65,6 @@ ratings:
   - "**.go"
 exclude_paths:
 - doc/**/*
+- doc/js/*
 - spec/**/*
 - "**/vendor/**/*"
