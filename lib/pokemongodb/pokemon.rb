@@ -165,6 +165,21 @@ class Pokemongodb
         Pokemongodb::Pokemon::Zubat
       ]
     end
+
+    # Returns number of candies to evolve, or nil if no evolution
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve
+    #   => 25
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.candy_to_evolve
+    #   => 100
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.candy_to_evolve
+    #   => nil
+    def self.candy_to_evolve
+      nil
+    end
     
     # Returns array of possible charge move types
     #
@@ -182,6 +197,36 @@ class Pokemongodb
     #   => [Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]
     def self.charge_moves
       moves.select { |move| move.category == Pokemongodb::Move::Category::CHARGE }
+    end
+
+    # returns integer of distance to hatch an egg, or nil if not hatchable from egg
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance
+    #   => 2
+    #
+    #   >> Pokemongodb::Pokemon::Vulpix.egg_hatch_distance
+    #   => 5
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.egg_hatch_distance
+    #   => nil
+    def self.egg_hatch_distance
+      nil
+    end
+
+    # returns the pokemon it evolves into, or nil if no further evolution
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.evolves_into
+    #   => Pokemongodb::Pokemon::Ivysaur
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.evolves_into
+    #   => Pokemongodb::Pokemon::Venusayr
+    #
+    #   >> Pokemongodb::Pokemon::Venusaur.evolves_into
+    #   => nil
+    def self.evolves_into
+      nil
     end
 
     # Returns array of possible move types
@@ -255,6 +300,20 @@ class Pokemongodb
       (fast_move_types + charge_move_types).uniq
     end
 
+    # returns integer of perfect iv for hatched egg, or nil if not hatchable
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv
+    #   => 612
+    #
+    #   >> Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv
+    #   => nil
+    def self.perfect_hatch_iv
+      return nil unless self.egg_hatch_distance
+      ratio = 4 / 7.0
+      (self.max_cp * ratio).to_i
+    end
+
     # Returns pokemon by id, string, or symbol
     #
     # Example:
@@ -275,11 +334,7 @@ class Pokemongodb
     #   >> Pokemongodb::Pokemon::Bulbasaur.strong_against
     #   => [Pokemongodb::Pokemon::Cubone, Pokemongodb::Pokemon::Diglett, ...]
     def self.strong_against
-      p = []
-      self.types.map(&:strong_against).flatten.uniq.each do |type|
-        p += Pokemongodb::Pokemon.find_by_type(type)
-      end
-      return p.uniq
+      self.find_type_against(:strong_against)
     end
 
     # Returns array of pokemon the subject is weak against
@@ -288,72 +343,16 @@ class Pokemongodb
     #   >> Pokemongodb::Pokemon::Bulbasaur.weak_against
     #   => Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Butterfree, ... ]
     def self.weak_against
+      self.find_type_against(:weak_against)
+    end
+
+    private
+    def self.find_type_against(mapped_type)
       p = []
-      self.types.map(&:weak_against).flatten.uniq.each do |type|
+      self.types.map(&mapped_type).flatten.uniq.each do |type|
         p += Pokemongodb::Pokemon.find_by_type(type)
       end
       return p.uniq
-    end
-
-    protected
-    
-    # Returns number of candies to evolve, or nil if no evolution
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve
-    #   => 25
-    #
-    #   >> Pokemongodb::Pokemon::Ivysaur.candy_to_evolve
-    #   => 100
-    #
-    #   >> Pokemongodb::Pokemon::Venusaur.candy_to_evolve
-    #   => nil
-    def self.candy_to_evolve
-      nil
-    end
-
-    # returns integer of distance to hatch an egg, or nil if not hatchable from egg
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance
-    #   => 2
-    #
-    #   >> Pokemongodb::Pokemon::Vulpix.egg_hatch_distance
-    #   => 5
-    #
-    #   >> Pokemongodb::Pokemon::Venusaur.egg_hatch_distance
-    #   => nil
-    def self.egg_hatch_distance
-      nil
-    end
-
-    # returns the pokemon it evolves into, or nil if no further evolution
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.evolves_into
-    #   => Pokemongodb::Pokemon::Ivysaur
-    #
-    #   >> Pokemongodb::Pokemon::Ivysaur.evolves_into
-    #   => Pokemongodb::Pokemon::Venusayr
-    #
-    #   >> Pokemongodb::Pokemon::Venusaur.evolves_into
-    #   => nil
-    def self.evolves_into
-      nil
-    end
-
-    # returns integer of perfect iv for hatched egg, or nil if not hatchable
-    #
-    # Example:
-    #   >> Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv
-    #   => 612
-    #
-    #   >> Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv
-    #   => nil
-    def self.perfect_hatch_iv
-      return nil unless self.egg_hatch_distance
-      ratio = 4 / 7.0
-      (self.max_cp * ratio).to_i
     end
   end
 end
