@@ -1,3 +1,39 @@
+---
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    checks:
+      Similar code:
+        enabled: false
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
+    exclude_fingerprints:
+    - 139cb5fa38846bf1491c3c45f9759534 #search_index.js
+    - 8ada88a2360dc22a5f39367092026391 #searcher.js
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths:
+- test/
 engines:
   rubocop:
     enabled: true
