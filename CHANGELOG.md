@@ -1,3 +1,7 @@
+### 1.0.1 - 2016-09-19
+
+* Standardized .to_s method for view displaying.
+
 ### 1.0.1 - 2016-09-18
 
 * Added proper names to Mr Mime, Electabuzz, Jynx.

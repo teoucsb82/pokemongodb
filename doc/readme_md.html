@@ -2,1411 +2,724 @@
 
 <html>
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="UTF-8">
 
 <title>readme - RDoc Documentation</title>
-
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
 
 
-<body class="file">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
     <a href="./table_of_contents.html#classes">Classes</a>
     <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
+  </div>
+</div>
 
-
-  <nav id="search-section" class="section project-section" class="initially-hidden">
+    <div id="search-section" role="search" class="project-section initially-hidden">
   <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
              title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
   </form>
+</div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
-
+  </div>
 
   
-<div id="table-of-contents">
-  <nav class="section">
-    <h3 class="section-header">Table of Contents</h3>
-    <ul>
-      <li><a href="#label-Pokemon+Go+DataBase">Pokemon Go DataBase</a>
-      <li><a href="#label-Quick+Installation">Quick Installation</a>
-      <li><a href="#label-Available+Methods">Available Methods</a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon+methods">Pokemongodb::Pokemon methods</a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon.all"><code>Pokemongodb::Pokemon.all</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_attack"><code>Pokemongodb::Pokemon::#{PokemonName}.base_attack</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_defense"><code>Pokemongodb::Pokemon::#{PokemonName}.base_defense</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_stamina"><code>Pokemongodb::Pokemon::#{PokemonName}.base_stamina</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.buddy_candy_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.buddy_candy_distance</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_move_types</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.candy_to_evolve"><code>Pokemongodb::Pokemon::#{PokemonName}.candy_to_evolve</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.capture_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.capture_rate</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_moves</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.cp_gain"><code>Pokemongodb::Pokemon::#{PokemonName}.cp_gain</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.egg_hatch_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.egg_hatch_distance</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_from"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_from</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_into"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_into</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_move_types</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_moves</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon.find%28query%29"><code>Pokemongodb::Pokemon.find(query)</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon.find_by_type%28t%29"><code>Pokemongodb::Pokemon.find_by_type(t)</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.flee_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.flee_rate</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.height"><code>Pokemongodb::Pokemon::#{PokemonName}.height</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.id"><code>Pokemongodb::Pokemon::#{PokemonName}.id</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.max_cp"><code>Pokemongodb::Pokemon::#{PokemonName}.max_cp</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.moves"><code>Pokemongodb::Pokemon::#{PokemonName}.moves</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.move_types</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.name"><code>Pokemongodb::Pokemon::#{PokemonName}.name</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.perfect_hatch_iv"><code>Pokemongodb::Pokemon::#{PokemonName}.perfect_hatch_iv</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon.role"><code>Pokemongodb::Pokemon.role</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.strong_against"><code>Pokemongodb::Pokemon::#{PokemonName}.strong_against</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.types"><code>Pokemongodb::Pokemon::#{PokemonName}.types</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weak_against"><code>Pokemongodb::Pokemon::#{PokemonName}.weak_against</code></a>
-      <li><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weight"><code>Pokemongodb::Pokemon::#{PokemonName}.weight</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove+methods">Pokemongodb::Move methods</a>
-      <li><a href="#label-Pokemongodb%3A%3AMove.all"><code>Pokemongodb::Move.all</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.category"><code>Pokemongodb::Move::#{Move}.category</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove.charge"><code>Pokemongodb::Move.charge</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.cooldown"><code>Pokemongodb::Move::#{Move}.cooldown</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.dps"><code>Pokemongodb::Move::#{Move}.dps</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.energy"><code>Pokemongodb::Move::#{Move}.energy</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.eps"><code>Pokemongodb::Move::#{Move}.eps</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove.fast"><code>Pokemongodb::Move.fast</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.power"><code>Pokemongodb::Move::#{Move}.power</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.type"><code>Pokemongodb::Move::#{Move}.type</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType+methods">Pokemongodb::Type methods</a>
-      <li><a href="#label-Pokemongodb%3A%3AType.all"><code>Pokemongodb::Type.all</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_strong"><code>Pokemongodb::Type::#{Type}.defense_strong</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_weak"><code>Pokemongodb::Type::#{Type}.defense_weak</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.locations"><code>Pokemongodb::Type::#{Type}.locations</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.name"><code>Pokemongodb::Type::#{Type}.name</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_strong"><code>Pokemongodb::Type::#{Type}.offense_strong</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_weak"><code>Pokemongodb::Type::#{Type}.offense_weak</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.strong_against"><code>Pokemongodb::Type::#{Type}.strong_against</code></a>
-      <li><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.weak_against"><code>Pokemongodb::Type::#{Type}.weak_against</code></a>
-    </ul>
-  </nav>
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Pokemon+Go+DataBase">Pokemon Go DataBase</a>
+    <li><a href="#label-Quick+Installation">Quick Installation</a>
+    <li><a href="#label-Quickstart">Quickstart</a>
+    <li><a href="#label-Find+out+what+a+particular+pokemon+is+good+against+in+a+gym+fight-3A">Find out what a particular pokemon is good against in a gym fight:</a>
+    <li><a href="#label-let-27s+figure+out+what+we-27re+up+against-21">let&#39;s figure out what we&#39;re up against!</a>
+    <li><a href="#label-ok+so+it-27s+a+water+type.+what+does+that+do+for+us...">ok so it&#39;s a water type. what does that do for us…</a>
+    <li><a href="#label-sweet-21+It-27s+weak+against+grass+types-21+But+we+can+do+better">sweet! It&#39;s weak against grass types! But we can do better</a>
+    <li><a href="#label-Full+List+of+Available+Methods">Full List of Available Methods</a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon+methods">Pokemongodb::Pokemon methods</a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon.all"><code>Pokemongodb::Pokemon.all</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_attack"><code>Pokemongodb::Pokemon::#{PokemonName}.base_attack</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_defense"><code>Pokemongodb::Pokemon::#{PokemonName}.base_defense</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_stamina"><code>Pokemongodb::Pokemon::#{PokemonName}.base_stamina</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.buddy_candy_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.buddy_candy_distance</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_move_types</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.candy_to_evolve"><code>Pokemongodb::Pokemon::#{PokemonName}.candy_to_evolve</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.capture_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.capture_rate</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_moves</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.cp_gain"><code>Pokemongodb::Pokemon::#{PokemonName}.cp_gain</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.egg_hatch_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.egg_hatch_distance</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_from"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_from</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_into"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_into</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_move_types</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_moves</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon.find-28query-29"><code>Pokemongodb::Pokemon.find(query)</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon.find_by_type-28t-29"><code>Pokemongodb::Pokemon.find_by_type(t)</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.flee_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.flee_rate</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.height"><code>Pokemongodb::Pokemon::#{PokemonName}.height</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.id"><code>Pokemongodb::Pokemon::#{PokemonName}.id</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.max_cp"><code>Pokemongodb::Pokemon::#{PokemonName}.max_cp</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.moves"><code>Pokemongodb::Pokemon::#{PokemonName}.moves</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.move_types</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.name"><code>Pokemongodb::Pokemon::#{PokemonName}.name</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.perfect_hatch_iv"><code>Pokemongodb::Pokemon::#{PokemonName}.perfect_hatch_iv</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon.role"><code>Pokemongodb::Pokemon.role</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.strong_against"><code>Pokemongodb::Pokemon::#{PokemonName}.strong_against</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.types"><code>Pokemongodb::Pokemon::#{PokemonName}.types</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weak_against"><code>Pokemongodb::Pokemon::#{PokemonName}.weak_against</code></a>
+    <li><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weight"><code>Pokemongodb::Pokemon::#{PokemonName}.weight</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove+methods">Pokemongodb::Move methods</a>
+    <li><a href="#label-Pokemongodb-3A-3AMove.all"><code>Pokemongodb::Move.all</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.category"><code>Pokemongodb::Move::#{Move}.category</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove.charge"><code>Pokemongodb::Move.charge</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.cooldown"><code>Pokemongodb::Move::#{Move}.cooldown</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.dps"><code>Pokemongodb::Move::#{Move}.dps</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.energy"><code>Pokemongodb::Move::#{Move}.energy</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.eps"><code>Pokemongodb::Move::#{Move}.eps</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove.fast"><code>Pokemongodb::Move.fast</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.power"><code>Pokemongodb::Move::#{Move}.power</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.type"><code>Pokemongodb::Move::#{Move}.type</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType+methods">Pokemongodb::Type methods</a>
+    <li><a href="#label-Pokemongodb-3A-3AType.all"><code>Pokemongodb::Type.all</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_strong"><code>Pokemongodb::Type::#{Type}.defense_strong</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_weak"><code>Pokemongodb::Type::#{Type}.defense_weak</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.locations"><code>Pokemongodb::Type::#{Type}.locations</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.name"><code>Pokemongodb::Type::#{Type}.name</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_strong"><code>Pokemongodb::Type::#{Type}.offense_strong</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_weak"><code>Pokemongodb::Type::#{Type}.offense_weak</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.strong_against"><code>Pokemongodb::Type::#{Type}.strong_against</code></a>
+    <li><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.weak_against"><code>Pokemongodb::Type::#{Type}.weak_against</code></a>
+  </ul>
 </div>
 
 
   <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./CHANGELOG_md.html">CHANGELOG</a>
-  
-    <li class="file"><a href="./Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="./pokemongodb_gemspec.html">pokemongodb.gemspec</a>
-  
-    <li class="file"><a href="./readme_md.html">readme</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
 
   <ul class="link-list">
   
-    <li><a href="./LocationTest.html">LocationTest</a>
+    <li><a href="./CHANGELOG_md.html">CHANGELOG</a>
   
-    <li><a href="./MoveTest.html">MoveTest</a>
+    <li><a href="./Rakefile.html">Rakefile</a>
   
-    <li><a href="./PokemonTest.html">PokemonTest</a>
+    <li><a href="./pokemongodb_gemspec.html">pokemongodb.gemspec</a>
   
-    <li><a href="./Pokemongodb.html">Pokemongodb</a>
-  
-    <li><a href="./Pokemongodb/Location.html">Pokemongodb::Location</a>
-  
-    <li><a href="./Pokemongodb/Location/AridClimate.html">Pokemongodb::Location::AridClimate</a>
-  
-    <li><a href="./Pokemongodb/Location/Basin.html">Pokemongodb::Location::Basin</a>
-  
-    <li><a href="./Pokemongodb/Location/Beach.html">Pokemongodb::Location::Beach</a>
-  
-    <li><a href="./Pokemongodb/Location/Canal.html">Pokemongodb::Location::Canal</a>
-  
-    <li><a href="./Pokemongodb/Location/Cemetary.html">Pokemongodb::Location::Cemetary</a>
-  
-    <li><a href="./Pokemongodb/Location/Church.html">Pokemongodb::Location::Church</a>
-  
-    <li><a href="./Pokemongodb/Location/City.html">Pokemongodb::Location::City</a>
-  
-    <li><a href="./Pokemongodb/Location/CollegeCampus.html">Pokemongodb::Location::CollegeCampus</a>
-  
-    <li><a href="./Pokemongodb/Location/Dock.html">Pokemongodb::Location::Dock</a>
-  
-    <li><a href="./Pokemongodb/Location/Farmland.html">Pokemongodb::Location::Farmland</a>
-  
-    <li><a href="./Pokemongodb/Location/Forest.html">Pokemongodb::Location::Forest</a>
-  
-    <li><a href="./Pokemongodb/Location/Garden.html">Pokemongodb::Location::Garden</a>
-  
-    <li><a href="./Pokemongodb/Location/Glacier.html">Pokemongodb::Location::Glacier</a>
-  
-    <li><a href="./Pokemongodb/Location/GolfCourse.html">Pokemongodb::Location::GolfCourse</a>
-  
-    <li><a href="./Pokemongodb/Location/GrassyArea.html">Pokemongodb::Location::GrassyArea</a>
-  
-    <li><a href="./Pokemongodb/Location/Gym.html">Pokemongodb::Location::Gym</a>
-  
-    <li><a href="./Pokemongodb/Location/Harbor.html">Pokemongodb::Location::Harbor</a>
-  
-    <li><a href="./Pokemongodb/Location/HikingTrail.html">Pokemongodb::Location::HikingTrail</a>
-  
-    <li><a href="./Pokemongodb/Location/Hospital.html">Pokemongodb::Location::Hospital</a>
-  
-    <li><a href="./Pokemongodb/Location/IndustrialArea.html">Pokemongodb::Location::IndustrialArea</a>
-  
-    <li><a href="./Pokemongodb/Location/IndustrialPark.html">Pokemongodb::Location::IndustrialPark</a>
-  
-    <li><a href="./Pokemongodb/Location/Lake.html">Pokemongodb::Location::Lake</a>
-  
-    <li><a href="./Pokemongodb/Location/Landmark.html">Pokemongodb::Location::Landmark</a>
-  
-    <li><a href="./Pokemongodb/Location/Library.html">Pokemongodb::Location::Library</a>
-  
-    <li><a href="./Pokemongodb/Location/Marsh.html">Pokemongodb::Location::Marsh</a>
-  
-    <li><a href="./Pokemongodb/Location/Meadow.html">Pokemongodb::Location::Meadow</a>
-  
-    <li><a href="./Pokemongodb/Location/Mountain.html">Pokemongodb::Location::Mountain</a>
-  
-    <li><a href="./Pokemongodb/Location/NatureReserve.html">Pokemongodb::Location::NatureReserve</a>
-  
-    <li><a href="./Pokemongodb/Location/Neighborhood.html">Pokemongodb::Location::Neighborhood</a>
-  
-    <li><a href="./Pokemongodb/Location/Ocean.html">Pokemongodb::Location::Ocean</a>
-  
-    <li><a href="./Pokemongodb/Location/Park.html">Pokemongodb::Location::Park</a>
-  
-    <li><a href="./Pokemongodb/Location/ParkingLot.html">Pokemongodb::Location::ParkingLot</a>
-  
-    <li><a href="./Pokemongodb/Location/Port.html">Pokemongodb::Location::Port</a>
-  
-    <li><a href="./Pokemongodb/Location/Quarry.html">Pokemongodb::Location::Quarry</a>
-  
-    <li><a href="./Pokemongodb/Location/Railway.html">Pokemongodb::Location::Railway</a>
-  
-    <li><a href="./Pokemongodb/Location/RecreationArea.html">Pokemongodb::Location::RecreationArea</a>
-  
-    <li><a href="./Pokemongodb/Location/Reservoir.html">Pokemongodb::Location::Reservoir</a>
-  
-    <li><a href="./Pokemongodb/Location/Residential.html">Pokemongodb::Location::Residential</a>
-  
-    <li><a href="./Pokemongodb/Location/River.html">Pokemongodb::Location::River</a>
-  
-    <li><a href="./Pokemongodb/Location/Riverbank.html">Pokemongodb::Location::Riverbank</a>
-  
-    <li><a href="./Pokemongodb/Location/School.html">Pokemongodb::Location::School</a>
-  
-    <li><a href="./Pokemongodb/Location/ShoppingCenter.html">Pokemongodb::Location::ShoppingCenter</a>
-  
-    <li><a href="./Pokemongodb/Location/SkiResort.html">Pokemongodb::Location::SkiResort</a>
-  
-    <li><a href="./Pokemongodb/Location/SportsCenter.html">Pokemongodb::Location::SportsCenter</a>
-  
-    <li><a href="./Pokemongodb/Location/Stadium.html">Pokemongodb::Location::Stadium</a>
-  
-    <li><a href="./Pokemongodb/Location/Stream.html">Pokemongodb::Location::Stream</a>
-  
-    <li><a href="./Pokemongodb/Location/University.html">Pokemongodb::Location::University</a>
-  
-    <li><a href="./Pokemongodb/Location/WarmClimate.html">Pokemongodb::Location::WarmClimate</a>
-  
-    <li><a href="./Pokemongodb/Location/Wetland.html">Pokemongodb::Location::Wetland</a>
-  
-    <li><a href="./Pokemongodb/Location/Woodland.html">Pokemongodb::Location::Woodland</a>
-  
-    <li><a href="./Pokemongodb/Move.html">Pokemongodb::Move</a>
-  
-    <li><a href="./Pokemongodb/Move/Acid.html">Pokemongodb::Move::Acid</a>
-  
-    <li><a href="./Pokemongodb/Move/AerialAce.html">Pokemongodb::Move::AerialAce</a>
-  
-    <li><a href="./Pokemongodb/Move/AirCutter.html">Pokemongodb::Move::AirCutter</a>
-  
-    <li><a href="./Pokemongodb/Move/AncientPower.html">Pokemongodb::Move::AncientPower</a>
-  
-    <li><a href="./Pokemongodb/Move/AquaJet.html">Pokemongodb::Move::AquaJet</a>
-  
-    <li><a href="./Pokemongodb/Move/AquaTail.html">Pokemongodb::Move::AquaTail</a>
-  
-    <li><a href="./Pokemongodb/Move/Bite.html">Pokemongodb::Move::Bite</a>
-  
-    <li><a href="./Pokemongodb/Move/Blizzard.html">Pokemongodb::Move::Blizzard</a>
-  
-    <li><a href="./Pokemongodb/Move/BodySlam.html">Pokemongodb::Move::BodySlam</a>
-  
-    <li><a href="./Pokemongodb/Move/BoneClub.html">Pokemongodb::Move::BoneClub</a>
-  
-    <li><a href="./Pokemongodb/Move/BrickBreak.html">Pokemongodb::Move::BrickBreak</a>
-  
-    <li><a href="./Pokemongodb/Move/Brine.html">Pokemongodb::Move::Brine</a>
-  
-    <li><a href="./Pokemongodb/Move/Bubble.html">Pokemongodb::Move::Bubble</a>
-  
-    <li><a href="./Pokemongodb/Move/BubbleBeam.html">Pokemongodb::Move::BubbleBeam</a>
-  
-    <li><a href="./Pokemongodb/Move/BugBite.html">Pokemongodb::Move::BugBite</a>
-  
-    <li><a href="./Pokemongodb/Move/BugBuzz.html">Pokemongodb::Move::BugBuzz</a>
-  
-    <li><a href="./Pokemongodb/Move/Bulldoze.html">Pokemongodb::Move::Bulldoze</a>
-  
-    <li><a href="./Pokemongodb/Move/BulletPunch.html">Pokemongodb::Move::BulletPunch</a>
-  
-    <li><a href="./Pokemongodb/Move/Category.html">Pokemongodb::Move::Category</a>
-  
-    <li><a href="./Pokemongodb/Move/Confusion.html">Pokemongodb::Move::Confusion</a>
-  
-    <li><a href="./Pokemongodb/Move/CrossChop.html">Pokemongodb::Move::CrossChop</a>
-  
-    <li><a href="./Pokemongodb/Move/CrossPoison.html">Pokemongodb::Move::CrossPoison</a>
-  
-    <li><a href="./Pokemongodb/Move/Cut.html">Pokemongodb::Move::Cut</a>
-  
-    <li><a href="./Pokemongodb/Move/DarkPulse.html">Pokemongodb::Move::DarkPulse</a>
-  
-    <li><a href="./Pokemongodb/Move/DazzlingGleam.html">Pokemongodb::Move::DazzlingGleam</a>
-  
-    <li><a href="./Pokemongodb/Move/Dig.html">Pokemongodb::Move::Dig</a>
-  
-    <li><a href="./Pokemongodb/Move/DisarmingVoice.html">Pokemongodb::Move::DisarmingVoice</a>
-  
-    <li><a href="./Pokemongodb/Move/Discharge.html">Pokemongodb::Move::Discharge</a>
-  
-    <li><a href="./Pokemongodb/Move/DragonBreath.html">Pokemongodb::Move::DragonBreath</a>
-  
-    <li><a href="./Pokemongodb/Move/DragonClaw.html">Pokemongodb::Move::DragonClaw</a>
-  
-    <li><a href="./Pokemongodb/Move/DragonPulse.html">Pokemongodb::Move::DragonPulse</a>
-  
-    <li><a href="./Pokemongodb/Move/DrainingKiss.html">Pokemongodb::Move::DrainingKiss</a>
-  
-    <li><a href="./Pokemongodb/Move/DrillPeck.html">Pokemongodb::Move::DrillPeck</a>
-  
-    <li><a href="./Pokemongodb/Move/DrillRun.html">Pokemongodb::Move::DrillRun</a>
-  
-    <li><a href="./Pokemongodb/Move/Earthquake.html">Pokemongodb::Move::Earthquake</a>
-  
-    <li><a href="./Pokemongodb/Move/Ember.html">Pokemongodb::Move::Ember</a>
-  
-    <li><a href="./Pokemongodb/Move/FeintAttack.html">Pokemongodb::Move::FeintAttack</a>
-  
-    <li><a href="./Pokemongodb/Move/FireBlast.html">Pokemongodb::Move::FireBlast</a>
-  
-    <li><a href="./Pokemongodb/Move/FireFang.html">Pokemongodb::Move::FireFang</a>
-  
-    <li><a href="./Pokemongodb/Move/FirePunch.html">Pokemongodb::Move::FirePunch</a>
-  
-    <li><a href="./Pokemongodb/Move/FlameBurst.html">Pokemongodb::Move::FlameBurst</a>
-  
-    <li><a href="./Pokemongodb/Move/FlameCharge.html">Pokemongodb::Move::FlameCharge</a>
-  
-    <li><a href="./Pokemongodb/Move/FlameWheel.html">Pokemongodb::Move::FlameWheel</a>
-  
-    <li><a href="./Pokemongodb/Move/Flamethrower.html">Pokemongodb::Move::Flamethrower</a>
-  
-    <li><a href="./Pokemongodb/Move/FlashCannon.html">Pokemongodb::Move::FlashCannon</a>
-  
-    <li><a href="./Pokemongodb/Move/FrostBreath.html">Pokemongodb::Move::FrostBreath</a>
-  
-    <li><a href="./Pokemongodb/Move/FuryCutter.html">Pokemongodb::Move::FuryCutter</a>
-  
-    <li><a href="./Pokemongodb/Move/GunkShot.html">Pokemongodb::Move::GunkShot</a>
-  
-    <li><a href="./Pokemongodb/Move/HeatWave.html">Pokemongodb::Move::HeatWave</a>
-  
-    <li><a href="./Pokemongodb/Move/HornAttack.html">Pokemongodb::Move::HornAttack</a>
-  
-    <li><a href="./Pokemongodb/Move/Hurricane.html">Pokemongodb::Move::Hurricane</a>
-  
-    <li><a href="./Pokemongodb/Move/HydroPump.html">Pokemongodb::Move::HydroPump</a>
-  
-    <li><a href="./Pokemongodb/Move/HyperBeam.html">Pokemongodb::Move::HyperBeam</a>
-  
-    <li><a href="./Pokemongodb/Move/HyperFang.html">Pokemongodb::Move::HyperFang</a>
-  
-    <li><a href="./Pokemongodb/Move/IceBeam.html">Pokemongodb::Move::IceBeam</a>
-  
-    <li><a href="./Pokemongodb/Move/IcePunch.html">Pokemongodb::Move::IcePunch</a>
-  
-    <li><a href="./Pokemongodb/Move/IceShard.html">Pokemongodb::Move::IceShard</a>
-  
-    <li><a href="./Pokemongodb/Move/IcyWind.html">Pokemongodb::Move::IcyWind</a>
-  
-    <li><a href="./Pokemongodb/Move/IronHead.html">Pokemongodb::Move::IronHead</a>
-  
-    <li><a href="./Pokemongodb/Move/KarateChop.html">Pokemongodb::Move::KarateChop</a>
-  
-    <li><a href="./Pokemongodb/Move/LeafBlade.html">Pokemongodb::Move::LeafBlade</a>
-  
-    <li><a href="./Pokemongodb/Move/Lick.html">Pokemongodb::Move::Lick</a>
-  
-    <li><a href="./Pokemongodb/Move/LowKick.html">Pokemongodb::Move::LowKick</a>
-  
-    <li><a href="./Pokemongodb/Move/LowSweep.html">Pokemongodb::Move::LowSweep</a>
-  
-    <li><a href="./Pokemongodb/Move/MagnetBomb.html">Pokemongodb::Move::MagnetBomb</a>
-  
-    <li><a href="./Pokemongodb/Move/Megahorn.html">Pokemongodb::Move::Megahorn</a>
-  
-    <li><a href="./Pokemongodb/Move/MetalClaw.html">Pokemongodb::Move::MetalClaw</a>
-  
-    <li><a href="./Pokemongodb/Move/Moonblast.html">Pokemongodb::Move::Moonblast</a>
-  
-    <li><a href="./Pokemongodb/Move/MudBomb.html">Pokemongodb::Move::MudBomb</a>
-  
-    <li><a href="./Pokemongodb/Move/MudShot.html">Pokemongodb::Move::MudShot</a>
-  
-    <li><a href="./Pokemongodb/Move/MudSlap.html">Pokemongodb::Move::MudSlap</a>
-  
-    <li><a href="./Pokemongodb/Move/NightSlash.html">Pokemongodb::Move::NightSlash</a>
-  
-    <li><a href="./Pokemongodb/Move/OminousWind.html">Pokemongodb::Move::OminousWind</a>
-  
-    <li><a href="./Pokemongodb/Move/Peck.html">Pokemongodb::Move::Peck</a>
-  
-    <li><a href="./Pokemongodb/Move/PetalBlizzard.html">Pokemongodb::Move::PetalBlizzard</a>
-  
-    <li><a href="./Pokemongodb/Move/PlayRough.html">Pokemongodb::Move::PlayRough</a>
-  
-    <li><a href="./Pokemongodb/Move/PoisonFang.html">Pokemongodb::Move::PoisonFang</a>
-  
-    <li><a href="./Pokemongodb/Move/PoisonJab.html">Pokemongodb::Move::PoisonJab</a>
-  
-    <li><a href="./Pokemongodb/Move/PoisonSting.html">Pokemongodb::Move::PoisonSting</a>
-  
-    <li><a href="./Pokemongodb/Move/Pound.html">Pokemongodb::Move::Pound</a>
-  
-    <li><a href="./Pokemongodb/Move/PowerGem.html">Pokemongodb::Move::PowerGem</a>
-  
-    <li><a href="./Pokemongodb/Move/PowerWhip.html">Pokemongodb::Move::PowerWhip</a>
-  
-    <li><a href="./Pokemongodb/Move/Psybeam.html">Pokemongodb::Move::Psybeam</a>
-  
-    <li><a href="./Pokemongodb/Move/Psychic.html">Pokemongodb::Move::Psychic</a>
-  
-    <li><a href="./Pokemongodb/Move/PsychoCut.html">Pokemongodb::Move::PsychoCut</a>
-  
-    <li><a href="./Pokemongodb/Move/Psyshock.html">Pokemongodb::Move::Psyshock</a>
-  
-    <li><a href="./Pokemongodb/Move/QuickAttack.html">Pokemongodb::Move::QuickAttack</a>
-  
-    <li><a href="./Pokemongodb/Move/RazorLeaf.html">Pokemongodb::Move::RazorLeaf</a>
-  
-    <li><a href="./Pokemongodb/Move/RockSlide.html">Pokemongodb::Move::RockSlide</a>
-  
-    <li><a href="./Pokemongodb/Move/RockSmash.html">Pokemongodb::Move::RockSmash</a>
-  
-    <li><a href="./Pokemongodb/Move/RockThrow.html">Pokemongodb::Move::RockThrow</a>
-  
-    <li><a href="./Pokemongodb/Move/RockTomb.html">Pokemongodb::Move::RockTomb</a>
-  
-    <li><a href="./Pokemongodb/Move/Scald.html">Pokemongodb::Move::Scald</a>
-  
-    <li><a href="./Pokemongodb/Move/Scratch.html">Pokemongodb::Move::Scratch</a>
-  
-    <li><a href="./Pokemongodb/Move/SeedBomb.html">Pokemongodb::Move::SeedBomb</a>
-  
-    <li><a href="./Pokemongodb/Move/ShadowBall.html">Pokemongodb::Move::ShadowBall</a>
-  
-    <li><a href="./Pokemongodb/Move/ShadowClaw.html">Pokemongodb::Move::ShadowClaw</a>
-  
-    <li><a href="./Pokemongodb/Move/SignalBeam.html">Pokemongodb::Move::SignalBeam</a>
-  
-    <li><a href="./Pokemongodb/Move/Sludge.html">Pokemongodb::Move::Sludge</a>
-  
-    <li><a href="./Pokemongodb/Move/SludgeBomb.html">Pokemongodb::Move::SludgeBomb</a>
-  
-    <li><a href="./Pokemongodb/Move/SludgeWave.html">Pokemongodb::Move::SludgeWave</a>
-  
-    <li><a href="./Pokemongodb/Move/SolarBeam.html">Pokemongodb::Move::SolarBeam</a>
-  
-    <li><a href="./Pokemongodb/Move/Spark.html">Pokemongodb::Move::Spark</a>
-  
-    <li><a href="./Pokemongodb/Move/Splash.html">Pokemongodb::Move::Splash</a>
-  
-    <li><a href="./Pokemongodb/Move/SteelWing.html">Pokemongodb::Move::SteelWing</a>
-  
-    <li><a href="./Pokemongodb/Move/Stomp.html">Pokemongodb::Move::Stomp</a>
-  
-    <li><a href="./Pokemongodb/Move/StoneEdge.html">Pokemongodb::Move::StoneEdge</a>
-  
-    <li><a href="./Pokemongodb/Move/Struggle.html">Pokemongodb::Move::Struggle</a>
-  
-    <li><a href="./Pokemongodb/Move/Submission.html">Pokemongodb::Move::Submission</a>
-  
-    <li><a href="./Pokemongodb/Move/SuckerPunch.html">Pokemongodb::Move::SuckerPunch</a>
-  
-    <li><a href="./Pokemongodb/Move/Swift.html">Pokemongodb::Move::Swift</a>
-  
-    <li><a href="./Pokemongodb/Move/Tackle.html">Pokemongodb::Move::Tackle</a>
-  
-    <li><a href="./Pokemongodb/Move/Thunder.html">Pokemongodb::Move::Thunder</a>
-  
-    <li><a href="./Pokemongodb/Move/ThunderPunch.html">Pokemongodb::Move::ThunderPunch</a>
-  
-    <li><a href="./Pokemongodb/Move/ThunderShock.html">Pokemongodb::Move::ThunderShock</a>
-  
-    <li><a href="./Pokemongodb/Move/Thunderbolt.html">Pokemongodb::Move::Thunderbolt</a>
-  
-    <li><a href="./Pokemongodb/Move/Twister.html">Pokemongodb::Move::Twister</a>
-  
-    <li><a href="./Pokemongodb/Move/ViceGrip.html">Pokemongodb::Move::ViceGrip</a>
-  
-    <li><a href="./Pokemongodb/Move/VineWhip.html">Pokemongodb::Move::VineWhip</a>
-  
-    <li><a href="./Pokemongodb/Move/WaterGun.html">Pokemongodb::Move::WaterGun</a>
-  
-    <li><a href="./Pokemongodb/Move/WaterPulse.html">Pokemongodb::Move::WaterPulse</a>
-  
-    <li><a href="./Pokemongodb/Move/WingAttack.html">Pokemongodb::Move::WingAttack</a>
-  
-    <li><a href="./Pokemongodb/Move/Wrap.html">Pokemongodb::Move::Wrap</a>
-  
-    <li><a href="./Pokemongodb/Move/XScissor.html">Pokemongodb::Move::XScissor</a>
-  
-    <li><a href="./Pokemongodb/Move/ZenHeadbutt.html">Pokemongodb::Move::ZenHeadbutt</a>
-  
-    <li><a href="./Pokemongodb/Pokemon.html">Pokemongodb::Pokemon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Abra.html">Pokemongodb::Pokemon::Abra</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Aerodactyl.html">Pokemongodb::Pokemon::Aerodactyl</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Alakazam.html">Pokemongodb::Pokemon::Alakazam</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Arbok.html">Pokemongodb::Pokemon::Arbok</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Arcanine.html">Pokemongodb::Pokemon::Arcanine</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Articuno.html">Pokemongodb::Pokemon::Articuno</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Beedrill.html">Pokemongodb::Pokemon::Beedrill</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Bellsprout.html">Pokemongodb::Pokemon::Bellsprout</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Blastoise.html">Pokemongodb::Pokemon::Blastoise</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Bulbasaur.html">Pokemongodb::Pokemon::Bulbasaur</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Butterfree.html">Pokemongodb::Pokemon::Butterfree</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Caterpie.html">Pokemongodb::Pokemon::Caterpie</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Chansey.html">Pokemongodb::Pokemon::Chansey</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Charizard.html">Pokemongodb::Pokemon::Charizard</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Charmander.html">Pokemongodb::Pokemon::Charmander</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Charmeleon.html">Pokemongodb::Pokemon::Charmeleon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Clefable.html">Pokemongodb::Pokemon::Clefable</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Clefairy.html">Pokemongodb::Pokemon::Clefairy</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Cloyster.html">Pokemongodb::Pokemon::Cloyster</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Cubone.html">Pokemongodb::Pokemon::Cubone</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dewgong.html">Pokemongodb::Pokemon::Dewgong</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Diglett.html">Pokemongodb::Pokemon::Diglett</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Ditto.html">Pokemongodb::Pokemon::Ditto</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dodrio.html">Pokemongodb::Pokemon::Dodrio</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Doduo.html">Pokemongodb::Pokemon::Doduo</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dragonair.html">Pokemongodb::Pokemon::Dragonair</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dragonite.html">Pokemongodb::Pokemon::Dragonite</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dratini.html">Pokemongodb::Pokemon::Dratini</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Drowzee.html">Pokemongodb::Pokemon::Drowzee</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Dugtrio.html">Pokemongodb::Pokemon::Dugtrio</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Eevee.html">Pokemongodb::Pokemon::Eevee</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Ekans.html">Pokemongodb::Pokemon::Ekans</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Electabuzz.html">Pokemongodb::Pokemon::Electabuzz</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Electrode.html">Pokemongodb::Pokemon::Electrode</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Exeggcute.html">Pokemongodb::Pokemon::Exeggcute</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Exeggutor.html">Pokemongodb::Pokemon::Exeggutor</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Farfetchd.html">Pokemongodb::Pokemon::Farfetchd</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Fearow.html">Pokemongodb::Pokemon::Fearow</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Flareon.html">Pokemongodb::Pokemon::Flareon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Gastly.html">Pokemongodb::Pokemon::Gastly</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Gengar.html">Pokemongodb::Pokemon::Gengar</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Geodude.html">Pokemongodb::Pokemon::Geodude</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Gloom.html">Pokemongodb::Pokemon::Gloom</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Golbat.html">Pokemongodb::Pokemon::Golbat</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Goldeen.html">Pokemongodb::Pokemon::Goldeen</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Golduck.html">Pokemongodb::Pokemon::Golduck</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Golem.html">Pokemongodb::Pokemon::Golem</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Graveler.html">Pokemongodb::Pokemon::Graveler</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Grimer.html">Pokemongodb::Pokemon::Grimer</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Growlithe.html">Pokemongodb::Pokemon::Growlithe</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Gyarados.html">Pokemongodb::Pokemon::Gyarados</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Haunter.html">Pokemongodb::Pokemon::Haunter</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Hitmonchan.html">Pokemongodb::Pokemon::Hitmonchan</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Hitmonlee.html">Pokemongodb::Pokemon::Hitmonlee</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Horsea.html">Pokemongodb::Pokemon::Horsea</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Hypno.html">Pokemongodb::Pokemon::Hypno</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Ivysaur.html">Pokemongodb::Pokemon::Ivysaur</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Jigglypuff.html">Pokemongodb::Pokemon::Jigglypuff</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Jolteon.html">Pokemongodb::Pokemon::Jolteon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Jynx.html">Pokemongodb::Pokemon::Jynx</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kabuto.html">Pokemongodb::Pokemon::Kabuto</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kabutops.html">Pokemongodb::Pokemon::Kabutops</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kadabra.html">Pokemongodb::Pokemon::Kadabra</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kakuna.html">Pokemongodb::Pokemon::Kakuna</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kangaskhan.html">Pokemongodb::Pokemon::Kangaskhan</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Kingler.html">Pokemongodb::Pokemon::Kingler</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Koffing.html">Pokemongodb::Pokemon::Koffing</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Krabby.html">Pokemongodb::Pokemon::Krabby</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Lapras.html">Pokemongodb::Pokemon::Lapras</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Lickitung.html">Pokemongodb::Pokemon::Lickitung</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Machamp.html">Pokemongodb::Pokemon::Machamp</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Machoke.html">Pokemongodb::Pokemon::Machoke</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Machop.html">Pokemongodb::Pokemon::Machop</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Magikarp.html">Pokemongodb::Pokemon::Magikarp</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Magmar.html">Pokemongodb::Pokemon::Magmar</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Magnemite.html">Pokemongodb::Pokemon::Magnemite</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Magneton.html">Pokemongodb::Pokemon::Magneton</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Mankey.html">Pokemongodb::Pokemon::Mankey</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Marowak.html">Pokemongodb::Pokemon::Marowak</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Meowth.html">Pokemongodb::Pokemon::Meowth</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Metapod.html">Pokemongodb::Pokemon::Metapod</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Mew.html">Pokemongodb::Pokemon::Mew</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Mewtwo.html">Pokemongodb::Pokemon::Mewtwo</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Moltres.html">Pokemongodb::Pokemon::Moltres</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/MrMime.html">Pokemongodb::Pokemon::MrMime</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Muk.html">Pokemongodb::Pokemon::Muk</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Nidoking.html">Pokemongodb::Pokemon::Nidoking</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Nidoqueen.html">Pokemongodb::Pokemon::Nidoqueen</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/NidoranF.html">Pokemongodb::Pokemon::NidoranF</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/NidoranM.html">Pokemongodb::Pokemon::NidoranM</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Nidorina.html">Pokemongodb::Pokemon::Nidorina</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Nidorino.html">Pokemongodb::Pokemon::Nidorino</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Ninetales.html">Pokemongodb::Pokemon::Ninetales</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Oddish.html">Pokemongodb::Pokemon::Oddish</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Omanyte.html">Pokemongodb::Pokemon::Omanyte</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Omastar.html">Pokemongodb::Pokemon::Omastar</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Onix.html">Pokemongodb::Pokemon::Onix</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Paras.html">Pokemongodb::Pokemon::Paras</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Parasect.html">Pokemongodb::Pokemon::Parasect</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Persian.html">Pokemongodb::Pokemon::Persian</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Pidgeot.html">Pokemongodb::Pokemon::Pidgeot</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Pidgeotto.html">Pokemongodb::Pokemon::Pidgeotto</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Pidgey.html">Pokemongodb::Pokemon::Pidgey</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Pikachu.html">Pokemongodb::Pokemon::Pikachu</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Pinsir.html">Pokemongodb::Pokemon::Pinsir</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Poliwag.html">Pokemongodb::Pokemon::Poliwag</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Poliwhirl.html">Pokemongodb::Pokemon::Poliwhirl</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Poliwrath.html">Pokemongodb::Pokemon::Poliwrath</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Ponyta.html">Pokemongodb::Pokemon::Ponyta</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Porygon.html">Pokemongodb::Pokemon::Porygon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Primeape.html">Pokemongodb::Pokemon::Primeape</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Psyduck.html">Pokemongodb::Pokemon::Psyduck</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Raichu.html">Pokemongodb::Pokemon::Raichu</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Rapidash.html">Pokemongodb::Pokemon::Rapidash</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Raticate.html">Pokemongodb::Pokemon::Raticate</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Rattata.html">Pokemongodb::Pokemon::Rattata</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Rhydon.html">Pokemongodb::Pokemon::Rhydon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Rhyhorn.html">Pokemongodb::Pokemon::Rhyhorn</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Role.html">Pokemongodb::Pokemon::Role</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Sandshrew.html">Pokemongodb::Pokemon::Sandshrew</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Sandslash.html">Pokemongodb::Pokemon::Sandslash</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Scyther.html">Pokemongodb::Pokemon::Scyther</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Seadra.html">Pokemongodb::Pokemon::Seadra</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Seaking.html">Pokemongodb::Pokemon::Seaking</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Seel.html">Pokemongodb::Pokemon::Seel</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Shellder.html">Pokemongodb::Pokemon::Shellder</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Slowbro.html">Pokemongodb::Pokemon::Slowbro</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Slowpoke.html">Pokemongodb::Pokemon::Slowpoke</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Snorlax.html">Pokemongodb::Pokemon::Snorlax</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Spearow.html">Pokemongodb::Pokemon::Spearow</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Squirtle.html">Pokemongodb::Pokemon::Squirtle</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Starmie.html">Pokemongodb::Pokemon::Starmie</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Staryu.html">Pokemongodb::Pokemon::Staryu</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Tangela.html">Pokemongodb::Pokemon::Tangela</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Tauros.html">Pokemongodb::Pokemon::Tauros</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Tentacool.html">Pokemongodb::Pokemon::Tentacool</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Tentacruel.html">Pokemongodb::Pokemon::Tentacruel</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Vaporeon.html">Pokemongodb::Pokemon::Vaporeon</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Venomoth.html">Pokemongodb::Pokemon::Venomoth</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Venonat.html">Pokemongodb::Pokemon::Venonat</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Venusaur.html">Pokemongodb::Pokemon::Venusaur</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Victreebel.html">Pokemongodb::Pokemon::Victreebel</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Vileplume.html">Pokemongodb::Pokemon::Vileplume</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Voltorb.html">Pokemongodb::Pokemon::Voltorb</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Vulpix.html">Pokemongodb::Pokemon::Vulpix</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Wartortle.html">Pokemongodb::Pokemon::Wartortle</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Weedle.html">Pokemongodb::Pokemon::Weedle</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Weepinbell.html">Pokemongodb::Pokemon::Weepinbell</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Weezing.html">Pokemongodb::Pokemon::Weezing</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Wigglytuff.html">Pokemongodb::Pokemon::Wigglytuff</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Zapdos.html">Pokemongodb::Pokemon::Zapdos</a>
-  
-    <li><a href="./Pokemongodb/Pokemon/Zubat.html">Pokemongodb::Pokemon::Zubat</a>
-  
-    <li><a href="./Pokemongodb/Type.html">Pokemongodb::Type</a>
-  
-    <li><a href="./Pokemongodb/Type/Bug.html">Pokemongodb::Type::Bug</a>
-  
-    <li><a href="./Pokemongodb/Type/Dark.html">Pokemongodb::Type::Dark</a>
-  
-    <li><a href="./Pokemongodb/Type/Dragon.html">Pokemongodb::Type::Dragon</a>
-  
-    <li><a href="./Pokemongodb/Type/Electric.html">Pokemongodb::Type::Electric</a>
-  
-    <li><a href="./Pokemongodb/Type/Fairy.html">Pokemongodb::Type::Fairy</a>
-  
-    <li><a href="./Pokemongodb/Type/Fighting.html">Pokemongodb::Type::Fighting</a>
-  
-    <li><a href="./Pokemongodb/Type/Fire.html">Pokemongodb::Type::Fire</a>
-  
-    <li><a href="./Pokemongodb/Type/Flying.html">Pokemongodb::Type::Flying</a>
-  
-    <li><a href="./Pokemongodb/Type/Ghost.html">Pokemongodb::Type::Ghost</a>
-  
-    <li><a href="./Pokemongodb/Type/Grass.html">Pokemongodb::Type::Grass</a>
-  
-    <li><a href="./Pokemongodb/Type/Ground.html">Pokemongodb::Type::Ground</a>
-  
-    <li><a href="./Pokemongodb/Type/Ice.html">Pokemongodb::Type::Ice</a>
-  
-    <li><a href="./Pokemongodb/Type/Normal.html">Pokemongodb::Type::Normal</a>
-  
-    <li><a href="./Pokemongodb/Type/Poison.html">Pokemongodb::Type::Poison</a>
-  
-    <li><a href="./Pokemongodb/Type/Psychic.html">Pokemongodb::Type::Psychic</a>
-  
-    <li><a href="./Pokemongodb/Type/Rock.html">Pokemongodb::Type::Rock</a>
-  
-    <li><a href="./Pokemongodb/Type/Steel.html">Pokemongodb::Type::Steel</a>
-  
-    <li><a href="./Pokemongodb/Type/Water.html">Pokemongodb::Type::Water</a>
-  
-    <li><a href="./TypeTest.html">TypeTest</a>
+    <li><a href="./readme_md.html">readme</a>
   
   </ul>
-</nav>
+</div>
 
   </div>
 </nav>
 
-<div id="documentation" class="description">
-  
-<p><a
-href="https://codeclimate.com/github/teoucsb82/pokemongodb/badges/gpa.svg">{Code
-Climate</a>]
-<a
-href="https://codeclimate.com/github/teoucsb82/pokemongodb/badges/issue_count.svg">{Code
-Climate</a>]</p>
+<main role="main" aria-label="Page readme.md">
 
-<h1 id="label-Pokemon+Go+DataBase">Pokemon Go DataBase<span><a href="#label-Pokemon+Go+DataBase">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<p><a href="https://badge.fury.io/rb/pokemongodb"><img
+src="https://badge.fury.io/rb/pokemongodb.svg"></a> <a
+href="https://codeclimate.com/github/teoucsb82/pokemongodb"><img
+src="https://codeclimate.com/github/teoucsb82/pokemongodb/badges/gpa.svg"></a>
+<a href="https://codeclimate.com/github/teoucsb82/pokemongodb"><img
+src="https://codeclimate.com/github/teoucsb82/pokemongodb/badges/issue_count.svg"></a></p>
+
+<h1 id="label-Pokemon+Go+DataBase">Pokemon Go DataBase<span><a href="#label-Pokemon+Go+DataBase">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
 <p>Quick Pokemon Go Database featuring stats on all available Pokemon, Moves,
-Types, etc. Used to power <a
-href="http://mongodatabase.herokuapp.com">MongoDatabase</a></p>
+Types, etc. Add it to your project to get the latest stats, movesets, and
+quick math on Pokemon from Pokemon Go.</p>
 
-<h2 id="label-Quick+Installation">Quick Installation<span><a href="#label-Quick+Installation">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-Quick+Installation">Quick Installation<span><a href="#label-Quick+Installation">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>To install on your system, run:</p>
 
-<pre>gem install pokemongodb</pre>
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">pokemongodb</span>
+</pre>
 
 <p>Or, to layer into a rails application, add directly to your gemfile:</p>
 
-<pre>gem &quot;pokemongodb&quot;</pre>
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&quot;pokemongodb&quot;</span>
+</pre>
 
 <p>Followed by a <code>bundle install</code>.</p>
 
-<h1 id="label-Available+Methods">Available Methods<span><a href="#label-Available+Methods">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<h2 id="label-Quickstart">Quickstart<span><a href="#label-Quickstart">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h2 id="label-Pokemongodb%3A%3APokemon+methods"><a href="Pokemongodb/Pokemon.html">Pokemongodb::Pokemon</a> methods<span><a href="#label-Pokemongodb%3A%3APokemon+methods">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<p>The gem comes preloaded with a bunch of handy methods, detailed in full
+below. Here are a few demo scenarios, you should be able to get the hang of
+it fairly quickly.</p>
 
-<h3 id="label-Pokemongodb%3A%3APokemon.all"><code>Pokemongodb::Pokemon.all</code><span><a href="#label-Pokemongodb%3A%3APokemon.all">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Find+out+what+a+particular+pokemon+is+good+against+in+a+gym+fight-3A">Find out what a particular pokemon is good against in a gym fight:<span><a href="#label-Find+out+what+a+particular+pokemon+is+good+against+in+a+gym+fight-3A">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Let&#39;s assume you&#39;re about to attack an enemy gym. Let&#39;s pretend
+there&#39;s a Blastoise defending it, and you&#39;re not sure what to
+bring.</p>
+
+<p>Example: “`</p>
+
+<h1 id="label-let-27s+figure+out+what+we-27re+up+against-21">let&#39;s figure out what we&#39;re up against!<span><a href="#label-let-27s+figure+out+what+we-27re+up+against-21">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>=&gt; @defending_pokemon = <a
+href="Pokemongodb/Pokemon/Blastoise.html">Pokemongodb::Pokemon::Blastoise</a>
+=&gt; @defending_pokemon.types</p>
+
+<blockquote>
+<blockquote>
+<p>[Pokemongodb::Type::Water]</p>
+</blockquote>
+</blockquote>
+
+<h1 id="label-ok+so+it-27s+a+water+type.+what+does+that+do+for+us...">ok so it&#39;s a water type. what does that do for us…<span><a href="#label-ok+so+it-27s+a+water+type.+what+does+that+do+for+us...">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>=&gt; @defending_type = @defending_pokemon.types.first =&gt;
+@defending_type.weak_against</p>
+
+<blockquote>
+<blockquote>
+<p>[Pokemongodb::Type::Grass]</p>
+</blockquote>
+</blockquote>
+
+<h1 id="label-sweet-21+It-27s+weak+against+grass+types-21+But+we+can+do+better">sweet! It&#39;s weak against grass types! But we can do better<span><a href="#label-sweet-21+It-27s+weak+against+grass+types-21+But+we+can+do+better">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>=&gt; @defending_pokemon.weak_against</p>
+
+<blockquote>
+<blockquote>
+<p>[Pokemongodb::Pokemon::Bellsprout, <a
+href="Pokemongodb/Pokemon/Bulbasaur.html">Pokemongodb::Pokemon::Bulbasaur</a>,
+<a
+href="Pokemongodb/Pokemon/Exeggcute.html">Pokemongodb::Pokemon::Exeggcute</a>,
+<a
+href="Pokemongodb/Pokemon/Exeggutor.html">Pokemongodb::Pokemon::Exeggutor</a>,
+<a href="Pokemongodb/Pokemon/Gloom.html">Pokemongodb::Pokemon::Gloom</a>,
+<a
+href="Pokemongodb/Pokemon/Ivysaur.html">Pokemongodb::Pokemon::Ivysaur</a>,
+<a href="Pokemongodb/Pokemon/Oddish.html">Pokemongodb::Pokemon::Oddish</a>,
+<a href="Pokemongodb/Pokemon/Paras.html">Pokemongodb::Pokemon::Paras</a>,
+<a
+href="Pokemongodb/Pokemon/Parasect.html">Pokemongodb::Pokemon::Parasect</a>,
+<a
+href="Pokemongodb/Pokemon/Tangela.html">Pokemongodb::Pokemon::Tangela</a>,
+<a
+href="Pokemongodb/Pokemon/Venusaur.html">Pokemongodb::Pokemon::Venusaur</a>,
+<a
+href="Pokemongodb/Pokemon/Victreebel.html">Pokemongodb::Pokemon::Victreebel</a>,
+<a
+href="Pokemongodb/Pokemon/Vileplume.html">Pokemongodb::Pokemon::Vileplume</a>,
+Pokemongodb::Pokemon::Weepinbell] “`</p>
+</blockquote>
+</blockquote>
+
+<h1 id="label-Full+List+of+Available+Methods">Full List of Available Methods<span><a href="#label-Full+List+of+Available+Methods">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h2 id="label-Pokemongodb-3A-3APokemon+methods"><a href="Pokemongodb/Pokemon.html">Pokemongodb::Pokemon</a> methods<span><a href="#label-Pokemongodb-3A-3APokemon+methods">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Pokemongodb-3A-3APokemon.all"><code>Pokemongodb::Pokemon.all</code><span><a href="#label-Pokemongodb-3A-3APokemon.all">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all moves</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">all</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon.all
+=&gt; [Pokemongodb::Pokemon::Bulbasaur, Pokemongodb::Pokemon::Ivysaur, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_attack"><code>Pokemongodb::Pokemon::#{PokemonName}.base_attack</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_attack">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
-
-<p>Example:</p>
-
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">base_attack</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">126</span>
-</pre>
-
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_defense"><code>Pokemongodb::Pokemon::#{PokemonName}.base_defense</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_defense">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_attack"><code>Pokemongodb::Pokemon::#{PokemonName}.base_attack</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_attack">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">base_defense</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">126</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.base_attack
+=&gt; 126</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_stamina"><code>Pokemongodb::Pokemon::#{PokemonName}.base_stamina</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.base_stamina">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_defense"><code>Pokemongodb::Pokemon::#{PokemonName}.base_defense</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_defense">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">base_stamina</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">90</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.base_defense
+=&gt; 126</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.buddy_candy_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.buddy_candy_distance</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.buddy_candy_distance">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_stamina"><code>Pokemongodb::Pokemon::#{PokemonName}.base_stamina</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.base_stamina">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.base_stamina
+=&gt; 90</pre>
+
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.buddy_candy_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.buddy_candy_distance</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.buddy_candy_distance">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns distance (in km) to generate a new buddy candy</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Pidgey</span>.<span class="ruby-identifier">buddy_candy_distance</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Pidgey.buddy_candy_distance
+=&gt; 1
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">buddy_candy_distance</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.buddy_candy_distance
+=&gt; 2</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_move_types</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_move_types">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_move_types</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_move_types">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of possible charge move types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">charge_move_types</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Poison</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.charge_move_types
+=&gt; [Pokemongodb::Type::Poison, Pokemongodb::Type::Grass]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.candy_to_evolve"><code>Pokemongodb::Pokemon::#{PokemonName}.candy_to_evolve</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.candy_to_evolve">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.candy_to_evolve"><code>Pokemongodb::Pokemon::#{PokemonName}.candy_to_evolve</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.candy_to_evolve">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns number of candies to evolve, or nil if no evolution</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.candy_to_evolve
+=&gt; 25
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>
+&gt;&gt; Pokemongodb::Pokemon::Ivysaur.candy_to_evolve
+=&gt; 100
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">candy_to_evolve</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Venusaur.candy_to_evolve
+=&gt; nil</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.capture_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.capture_rate</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.capture_rate">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.capture_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.capture_rate</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.capture_rate">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns capture rate in decimal (percentage).</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">capture_rate</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.16</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.capture_rate
+=&gt; 0.16</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_moves</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.charge_moves">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.charge_moves</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.charge_moves">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of possible charge moves</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">charge_moves</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">PowerWhip</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">SeedBomb</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">SludgeBomb</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.charge_moves
+=&gt; [Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.cp_gain"><code>Pokemongodb::Pokemon::#{PokemonName}.cp_gain</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.cp_gain">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.cp_gain"><code>Pokemongodb::Pokemon::#{PokemonName}.cp_gain</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.cp_gain">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns cp gain per level up.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">cp_gain</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.cp_gain
+=&gt; 16</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.egg_hatch_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.egg_hatch_distance</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.egg_hatch_distance">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.egg_hatch_distance"><code>Pokemongodb::Pokemon::#{PokemonName}.egg_hatch_distance</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.egg_hatch_distance">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>returns integer of distance to hatch an egg, or nil if not hatchable from
 egg</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">egg_hatch_distance</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.egg_hatch_distance
+=&gt; 2
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Vulpix</span>.<span class="ruby-identifier">egg_hatch_distance</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>
+&gt;&gt; Pokemongodb::Pokemon::Vulpix.egg_hatch_distance
+=&gt; 5
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">egg_hatch_distance</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Venusaur.egg_hatch_distance
+=&gt; nil</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_from"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_from</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_from">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_from"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_from</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_from">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns evolution precursor or nil</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">evolves_from</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.evolves_from
+=&gt; nil
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">evolves_from</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Ivysaur.evolves_from
+=&gt; Pokemongodb::Type::Bulbasaur</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_into"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_into</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.evolves_into">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_into"><code>Pokemongodb::Pokemon::#{PokemonName}.evolves_into</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.evolves_into">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>returns the pokemon it evolves into, or nil if no further evolution</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">evolves_into</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.evolves_into
+=&gt; Pokemongodb::Pokemon::Ivysaur
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">evolves_into</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusayr</span>
+&gt;&gt; Pokemongodb::Pokemon::Ivysaur.evolves_into
+=&gt; Pokemongodb::Pokemon::Venusayr
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>.<span class="ruby-identifier">evolves_into</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Venusaur.evolves_into
+=&gt; nil</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_move_types</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_move_types">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_move_types</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_move_types">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of possible move types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">fast_move_types</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Normal</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.fast_move_types
+=&gt; [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_moves</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.fast_moves">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_moves"><code>Pokemongodb::Pokemon::#{PokemonName}.fast_moves</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.fast_moves">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of possible charge moves</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">fast_moves</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Tackle</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">VineWhip</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.fast_moves
+=&gt; [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon.find%28query%29"><code>Pokemongodb::Pokemon.find(query)</code><span><a href="#label-Pokemongodb%3A%3APokemon.find%28query%29">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon.find-28query-29"><code>Pokemongodb::Pokemon.find(query)</code><span><a href="#label-Pokemongodb-3A-3APokemon.find-28query-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns pokemon by id, string, or symbol</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">1</span>)
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon.find(1)
+=&gt; Pokemongodb::Pokemon::Bulbasaur
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-string">&#39;ivysaur&#39;</span>)
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>
+&gt;&gt; Pokemongodb::Pokemon.find(&#39;ivysaur&#39;)
+=&gt; Pokemongodb::Pokemon::Ivysaur
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(:<span class="ruby-identifier">venusaur</span>)
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Venusaur</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon.find(:venusaur)
+=&gt; Pokemongodb::Pokemon::Venusaur</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon.find_by_type%28t%29"><code>Pokemongodb::Pokemon.find_by_type(t)</code><span><a href="#label-Pokemongodb%3A%3APokemon.find_by_type%28t%29">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon.find_by_type-28t-29"><code>Pokemongodb::Pokemon.find_by_type(t)</code><span><a href="#label-Pokemongodb-3A-3APokemon.find_by_type-28t-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns pokemon by type</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find_by_type</span>(<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Water</span>)
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Blastoise</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Cloyster</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon.find_by_type(Pokemongodb::Type::Water)
+=&gt; [Pokemongodb::Pokemon::Blastoise, Pokemongodb::Pokemon::Cloyster, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.flee_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.flee_rate</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.flee_rate">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.flee_rate"><code>Pokemongodb::Pokemon::#{PokemonName}.flee_rate</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.flee_rate">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns capture rate in decimal (percentage).</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">flee_rate</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.1</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.flee_rate
+=&gt; 0.1</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.height"><code>Pokemongodb::Pokemon::#{PokemonName}.height</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.height">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.height"><code>Pokemongodb::Pokemon::#{PokemonName}.height</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.height">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">height</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.7</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.height
+=&gt; 0.7</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.id"><code>Pokemongodb::Pokemon::#{PokemonName}.id</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.id">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.id"><code>Pokemongodb::Pokemon::#{PokemonName}.id</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.id">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns pokedex id</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">id</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.id
+=&gt; 1</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.max_cp"><code>Pokemongodb::Pokemon::#{PokemonName}.max_cp</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.max_cp">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.max_cp"><code>Pokemongodb::Pokemon::#{PokemonName}.max_cp</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.max_cp">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">max_cp</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">1071.54</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.max_cp
+=&gt; 1071.54</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.moves"><code>Pokemongodb::Pokemon::#{PokemonName}.moves</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.moves">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.moves"><code>Pokemongodb::Pokemon::#{PokemonName}.moves</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.moves">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all moves</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">moves</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Tackle</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">VineWhip</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">PowerWhip</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">SeedBomb</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">SludgeBomb</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.moves
+=&gt; [Pokemongodb::Move::Tackle, Pokemongodb::Move::VineWhip, Pokemongodb::Move::PowerWhip, Pokemongodb::Move::SeedBomb, Pokemongodb::Move::SludgeBomb]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.move_types</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.move_types">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.move_types"><code>Pokemongodb::Pokemon::#{PokemonName}.move_types</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.move_types">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of possible move types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">move_types</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Normal</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Poison</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.move_types
+=&gt; [Pokemongodb::Type::Normal, Pokemongodb::Type::Grass, Pokemongodb::Type::Poison]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.name"><code>Pokemongodb::Pokemon::#{PokemonName}.name</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.name">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.name"><code>Pokemongodb::Pokemon::#{PokemonName}.name</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.name">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">name</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;bulbasaur&quot;</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.name
+=&gt; &quot;bulbasaur&quot;</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.perfect_hatch_iv"><code>Pokemongodb::Pokemon::#{PokemonName}.perfect_hatch_iv</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.perfect_hatch_iv">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.perfect_hatch_iv"><code>Pokemongodb::Pokemon::#{PokemonName}.perfect_hatch_iv</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.perfect_hatch_iv">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>returns integer of perfect iv for hatched egg, or nil if not hatchable</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">perfect_hatch_iv</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">612</span>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.perfect_hatch_iv
+=&gt; 612
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Ivysaur</span>.<span class="ruby-identifier">perfect_hatch_iv</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
-</pre>
+&gt;&gt; Pokemongodb::Pokemon::Ivysaur.perfect_hatch_iv
+=&gt; nil</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon.role"><code>Pokemongodb::Pokemon.role</code><span><a href="#label-Pokemongodb%3A%3APokemon.role">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon.role"><code>Pokemongodb::Pokemon.role</code><span><a href="#label-Pokemongodb-3A-3APokemon.role">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns pokemon by id, string, or symbol</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">bulbasaur</span> = <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">1</span>)
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">bulbasaur</span>.<span class="ruby-identifier">role</span>
-=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">defense</span>
+<pre>&gt;&gt; bulbasaur = Pokemongodb::Pokemon.find(1)
+&gt;&gt; bulbasaur.role
+=&gt; :defense
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">charmander</span> = <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">4</span>)
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">charmander</span>.<span class="ruby-identifier">role</span>
-=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">offense</span>
-</pre>
+&gt;&gt; charmander = Pokemongodb::Pokemon.find(4)
+&gt;&gt; charmander.role
+=&gt; :offense</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.strong_against"><code>Pokemongodb::Pokemon::#{PokemonName}.strong_against</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.strong_against">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.strong_against"><code>Pokemongodb::Pokemon::#{PokemonName}.strong_against</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.strong_against">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of pokemon the subject is strong against</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">strong_against</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Cubone</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Diglett</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.strong_against
+=&gt; [Pokemongodb::Pokemon::Cubone, Pokemongodb::Pokemon::Diglett, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.types"><code>Pokemongodb::Pokemon::#{PokemonName}.types</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.types">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.types"><code>Pokemongodb::Pokemon::#{PokemonName}.types</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.types">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of pokemon types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">types</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Poison</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.types
+=&gt; [Pokemongodb::Type::Grass, Pokemongodb::Type::Poison]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weak_against"><code>Pokemongodb::Pokemon::#{PokemonName}.weak_against</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weak_against">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weak_against"><code>Pokemongodb::Pokemon::#{PokemonName}.weak_against</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weak_against">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of pokemon the subject is weak against</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">weak_against</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Beedrill</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Butterfree</span>, <span class="ruby-operator">...</span> ]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.weak_against
+=&gt; Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Butterfree, ... ]</pre>
 
-<h3 id="label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weight"><code>Pokemongodb::Pokemon::#{PokemonName}.weight</code><span><a href="#label-Pokemongodb%3A%3APokemon%3A%3A%23%7BPokemonName%7D.weight">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weight"><code>Pokemongodb::Pokemon::#{PokemonName}.weight</code><span><a href="#label-Pokemongodb-3A-3APokemon-3A-3A-23-7BPokemonName-7D.weight">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Pokemon</span><span class="ruby-operator">::</span><span class="ruby-constant">Bulbasaur</span>.<span class="ruby-identifier">weight</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">6.9</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Pokemon::Bulbasaur.weight
+=&gt; 6.9</pre>
 
-<h2 id="label-Pokemongodb%3A%3AMove+methods"><a href="Pokemongodb/Move.html">Pokemongodb::Move</a> methods<span><a href="#label-Pokemongodb%3A%3AMove+methods">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-Pokemongodb-3A-3AMove+methods"><a href="Pokemongodb/Move.html">Pokemongodb::Move</a> methods<span><a href="#label-Pokemongodb-3A-3AMove+methods">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h3 id="label-Pokemongodb%3A%3AMove.all"><code>Pokemongodb::Move.all</code><span><a href="#label-Pokemongodb%3A%3AMove.all">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove.all"><code>Pokemongodb::Move.all</code><span><a href="#label-Pokemongodb-3A-3AMove.all">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all moves</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span>.<span class="ruby-identifier">all</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">BugBite</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move.all
+=&gt; [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.category"><code>Pokemongodb::Move::#{Move}.category</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.category">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.category"><code>Pokemongodb::Move::#{Move}.category</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.category">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns category enum based on energy value.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">category</span>
-=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">fast</span>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.category
+=&gt; :fast
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AerielAce</span>.<span class="ruby-identifier">category</span>
-=<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">charge</span>
-</pre>
+&gt;&gt; Pokemongodb::Move::AerielAce.category
+=&gt; :charge</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove.charge"><code>Pokemongodb::Move.charge</code><span><a href="#label-Pokemongodb%3A%3AMove.charge">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove.charge"><code>Pokemongodb::Move.charge</code><span><a href="#label-Pokemongodb-3A-3AMove.charge">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all charge moves.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span>.<span class="ruby-identifier">charge</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AerielAce</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AirCutter</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move.charge
+=&gt; [Pokemongodb::Move::AerielAce, Pokemongodb::Move::AirCutter, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.cooldown"><code>Pokemongodb::Move::#{Move}.cooldown</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.cooldown">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.cooldown"><code>Pokemongodb::Move::#{Move}.cooldown</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.cooldown">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns float of time required (in seconds) after completing move until
 next is available.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">cooldown</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.05</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.cooldown
+=&gt; 1.05</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.dps"><code>Pokemongodb::Move::#{Move}.dps</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.dps">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.dps"><code>Pokemongodb::Move::#{Move}.dps</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.dps">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns float of calculated damage per second.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">dps</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">9.52</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.dps
+=&gt; 9.52</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.energy"><code>Pokemongodb::Move::#{Move}.energy</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.energy">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.energy"><code>Pokemongodb::Move::#{Move}.energy</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.energy">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns integer for energy generated (positive) or spent (negative) per
 move.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">energy</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.energy
+=&gt; 7
 
-<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">AerialAce</span>.<span class="ruby-identifier">energy</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">-25</span>
-</pre>
+&gt;&gt; Pokemongodb::Move::AerialAce.energy
+=&gt; -25</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.eps"><code>Pokemongodb::Move::#{Move}.eps</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.eps">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.eps"><code>Pokemongodb::Move::#{Move}.eps</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.eps">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns float of calculated energy per second.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">eps</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">6.67</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.eps
+=&gt; 6.67</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove.fast"><code>Pokemongodb::Move.fast</code><span><a href="#label-Pokemongodb%3A%3AMove.fast">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove.fast"><code>Pokemongodb::Move.fast</code><span><a href="#label-Pokemongodb-3A-3AMove.fast">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all fast moves.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span>.<span class="ruby-identifier">fast</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">BugBite</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move.fast
+=&gt; [Pokemongodb::Move::Acid, Pokemongodb::Move::BugBite, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.power"><code>Pokemongodb::Move::#{Move}.power</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.power">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.power"><code>Pokemongodb::Move::#{Move}.power</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.power">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">power</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.power
+=&gt; 10</pre>
 
-<h3 id="label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.type"><code>Pokemongodb::Move::#{Move}.type</code><span><a href="#label-Pokemongodb%3A%3AMove%3A%3A%23%7BMove%7D.type">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.type"><code>Pokemongodb::Move::#{Move}.type</code><span><a href="#label-Pokemongodb-3A-3AMove-3A-3A-23-7BMove-7D.type">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns move type.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Move</span><span class="ruby-operator">::</span><span class="ruby-constant">Acid</span>.<span class="ruby-identifier">type</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Poison</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Move::Acid.type
+=&gt; Pokemongodb::Type::Poison</pre>
 
-<h2 id="label-Pokemongodb%3A%3AType+methods"><a href="Pokemongodb/Type.html">Pokemongodb::Type</a> methods<span><a href="#label-Pokemongodb%3A%3AType+methods">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-Pokemongodb-3A-3AType+methods"><a href="Pokemongodb/Type.html">Pokemongodb::Type</a> methods<span><a href="#label-Pokemongodb-3A-3AType+methods">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h3 id="label-Pokemongodb%3A%3AType.all"><code>Pokemongodb::Type.all</code><span><a href="#label-Pokemongodb%3A%3AType.all">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType.all"><code>Pokemongodb::Type.all</code><span><a href="#label-Pokemongodb-3A-3AType.all">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of all types</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span>.<span class="ruby-identifier">all</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bug</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>, <span class="ruby-operator">...</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type.all
+=&gt; [Pokemongodb::Type::Bug, Pokemongodb::Type::Dark, ...]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_strong"><code>Pokemongodb::Type::#{Type}.defense_strong</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_strong">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_strong"><code>Pokemongodb::Type::#{Type}.defense_strong</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_strong">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types where you have a strong defense.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>.<span class="ruby-identifier">defense_strong</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Ghost</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Dark.defense_strong
+=&gt; [Pokemongodb::Type::Dark, Pokemongodb::Type::Ghost]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_weak"><code>Pokemongodb::Type::#{Type}.defense_weak</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.defense_weak">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_weak"><code>Pokemongodb::Type::#{Type}.defense_weak</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.defense_weak">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types where you have a weak defense.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bug</span>.<span class="ruby-identifier">defense_weak</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Flying</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Fire</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Bug.defense_weak
+=&gt; [Pokemongodb::Type::Flying, Pokemongodb::Type::Fire, Pokemongodb::Type::Dark]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.locations"><code>Pokemongodb::Type::#{Type}.locations</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.locations">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.locations"><code>Pokemongodb::Type::#{Type}.locations</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.locations">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of locations for a type.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Normal</span>.<span class="ruby-identifier">locations</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Location</span><span class="ruby-operator">::</span><span class="ruby-constant">CollegeCampus</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Location</span><span class="ruby-operator">::</span><span class="ruby-constant">ParkingLot</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Location</span><span class="ruby-operator">::</span><span class="ruby-constant">Residential</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Normal.locations
+=&gt; [Pokemongodb::Location::CollegeCampus, Pokemongodb::Location::ParkingLot, Pokemongodb::Location::Residential]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.name"><code>Pokemongodb::Type::#{Type}.name</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.name">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.name"><code>Pokemongodb::Type::#{Type}.name</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.name">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Normal</span>.<span class="ruby-identifier">name</span>
-=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;normal&quot;</span>
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Normal.name
+=&gt; &quot;normal&quot;</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_strong"><code>Pokemongodb::Type::#{Type}.offense_strong</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_strong">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_strong"><code>Pokemongodb::Type::#{Type}.offense_strong</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_strong">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types where you have a strong offense.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>.<span class="ruby-identifier">offense_strong</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Ghost</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Psychic</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Dark.offense_strong
+=&gt; [Pokemongodb::Type::Ghost, Pokemongodb::Type::Psychic]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_weak"><code>Pokemongodb::Type::#{Type}.offense_weak</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.offense_weak">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_weak"><code>Pokemongodb::Type::#{Type}.offense_weak</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.offense_weak">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types where you have a weak offense.</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>.<span class="ruby-identifier">offense_weak</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Dark</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Fairy</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Fighting</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Dark.offense_weak
+=&gt; [Pokemongodb::Type::Dark, Pokemongodb::Type::Fairy, Pokemongodb::Type::Fighting]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.strong_against"><code>Pokemongodb::Type::#{Type}.strong_against</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.strong_against">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.strong_against"><code>Pokemongodb::Type::#{Type}.strong_against</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.strong_against">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types the subject is strong against</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Steel</span>.<span class="ruby-identifier">strong_against</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Fairy</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Ice</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Rock</span>]
-</pre>
+<pre>&gt;&gt; Pokemongodb::Type::Steel.strong_against
+=&gt; [Pokemongodb::Type::Fairy, Pokemongodb::Type::Ice, Pokemongodb::Type::Rock]</pre>
 
-<h3 id="label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.weak_against"><code>Pokemongodb::Type::#{Type}.weak_against</code><span><a href="#label-Pokemongodb%3A%3AType%3A%3A%23%7BType%7D.weak_against">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+<h3 id="label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.weak_against"><code>Pokemongodb::Type::#{Type}.weak_against</code><span><a href="#label-Pokemongodb-3A-3AType-3A-3A-23-7BType-7D.weak_against">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>Returns array of types the subject is weak against</p>
 
 <p>Example:</p>
 
-<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Grass</span>.<span class="ruby-identifier">weak_against</span>
-=<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Bug</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Fire</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Flying</span>, <span class="ruby-constant">Pokemongodb</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Poison</span>]
-</pre>
-
-</div>
+<pre>&gt;&gt; Pokemongodb::Type::Grass.weak_against
+=&gt; [Pokemongodb::Type::Bug, Pokemongodb::Type::Fire, Pokemongodb::Type::Flying, Pokemongodb::Type::Poison]</pre>
+</main>
 
 
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

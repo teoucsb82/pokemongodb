@@ -1,7 +1,6 @@
-Sun, 18 Sep 2016 21:23:52 -0700
-./CHANGELOG.md	Sat, 17 Sep 2016 15:29:27 -0700
-./doc/created.rid	Sun, 18 Sep 2016 21:23:52 -0700
-./lib/pokemongodb/location.rb	Sun, 18 Sep 2016 17:32:23 -0700
+Tue, 20 Sep 2016 22:01:31 -0700
+./CHANGELOG.md	Tue, 20 Sep 2016 22:01:10 -0700
+./lib/pokemongodb/location.rb	Tue, 20 Sep 2016 22:00:27 -0700
 ./lib/pokemongodb/locations/arid_climate.rb	Sat, 17 Sep 2016 15:57:58 -0700
 ./lib/pokemongodb/locations/basin.rb	Sat, 17 Sep 2016 16:11:14 -0700
 ./lib/pokemongodb/locations/beach.rb	Sat, 17 Sep 2016 16:04:00 -0700
@@ -52,7 +51,7 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/locations/warm_climate.rb	Sat, 17 Sep 2016 15:57:34 -0700
 ./lib/pokemongodb/locations/wetland.rb	Sat, 17 Sep 2016 16:04:18 -0700
 ./lib/pokemongodb/locations/woodland.rb	Sat, 17 Sep 2016 21:08:26 -0700
-./lib/pokemongodb/move.rb	Sun, 18 Sep 2016 21:03:37 -0700
+./lib/pokemongodb/move.rb	Tue, 20 Sep 2016 21:54:31 -0700
 ./lib/pokemongodb/moves/acid.rb	Mon, 12 Sep 2016 12:42:37 -0700
 ./lib/pokemongodb/moves/aerial_ace.rb	Mon, 12 Sep 2016 18:13:09 -0700
 ./lib/pokemongodb/moves/air_cutter.rb	Mon, 12 Sep 2016 12:47:50 -0700
@@ -209,7 +208,7 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/pokemon/dugtrio.rb	Sun, 18 Sep 2016 17:03:43 -0700
 ./lib/pokemongodb/pokemon/eevee.rb	Sun, 18 Sep 2016 17:04:41 -0700
 ./lib/pokemongodb/pokemon/ekans.rb	Sat, 17 Sep 2016 21:41:00 -0700
-./lib/pokemongodb/pokemon/electabuzz.rb	Sun, 18 Sep 2016 17:10:24 -0700
+./lib/pokemongodb/pokemon/electabuzz.rb	Sun, 18 Sep 2016 21:50:50 -0700
 ./lib/pokemongodb/pokemon/electrode.rb	Sun, 18 Sep 2016 17:03:18 -0700
 ./lib/pokemongodb/pokemon/exeggcute.rb	Sun, 18 Sep 2016 17:08:17 -0700
 ./lib/pokemongodb/pokemon/exeggutor.rb	Sun, 18 Sep 2016 17:08:26 -0700
@@ -236,7 +235,7 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/pokemon/ivysaur.rb	Sat, 17 Sep 2016 15:46:26 -0700
 ./lib/pokemongodb/pokemon/jigglypuff.rb	Sun, 18 Sep 2016 16:41:57 -0700
 ./lib/pokemongodb/pokemon/jolteon.rb	Sun, 18 Sep 2016 17:05:15 -0700
-./lib/pokemongodb/pokemon/jynx.rb	Sun, 18 Sep 2016 17:13:06 -0700
+./lib/pokemongodb/pokemon/jynx.rb	Sun, 18 Sep 2016 21:42:43 -0700
 ./lib/pokemongodb/pokemon/kabuto.rb	Sun, 18 Sep 2016 17:13:17 -0700
 ./lib/pokemongodb/pokemon/kabutops.rb	Sun, 18 Sep 2016 17:13:25 -0700
 ./lib/pokemongodb/pokemon/kadabra.rb	Sun, 18 Sep 2016 17:13:39 -0700
@@ -261,7 +260,7 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/pokemon/mew.rb	Sun, 18 Sep 2016 16:37:57 -0700
 ./lib/pokemongodb/pokemon/mewtwo.rb	Sun, 18 Sep 2016 17:17:02 -0700
 ./lib/pokemongodb/pokemon/moltres.rb	Sun, 18 Sep 2016 17:17:09 -0700
-./lib/pokemongodb/pokemon/mr_mime.rb	Sun, 18 Sep 2016 17:17:24 -0700
+./lib/pokemongodb/pokemon/mr_mime.rb	Sun, 18 Sep 2016 21:51:15 -0700
 ./lib/pokemongodb/pokemon/muk.rb	Sun, 18 Sep 2016 17:09:33 -0700
 ./lib/pokemongodb/pokemon/nidoking.rb	Sat, 17 Sep 2016 21:15:12 -0700
 ./lib/pokemongodb/pokemon/nidoqueen.rb	Sat, 17 Sep 2016 21:11:56 -0700
@@ -328,8 +327,8 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/pokemon/wigglytuff.rb	Sun, 18 Sep 2016 16:45:09 -0700
 ./lib/pokemongodb/pokemon/zapdos.rb	Sun, 18 Sep 2016 16:45:00 -0700
 ./lib/pokemongodb/pokemon/zubat.rb	Sun, 18 Sep 2016 16:44:35 -0700
-./lib/pokemongodb/pokemon.rb	Sun, 18 Sep 2016 17:59:24 -0700
-./lib/pokemongodb/type.rb	Sun, 18 Sep 2016 21:15:19 -0700
+./lib/pokemongodb/pokemon.rb	Tue, 20 Sep 2016 21:58:23 -0700
+./lib/pokemongodb/type.rb	Tue, 20 Sep 2016 21:58:11 -0700
 ./lib/pokemongodb/types/bug.rb	Mon, 12 Sep 2016 11:00:17 -0700
 ./lib/pokemongodb/types/dark.rb	Mon, 12 Sep 2016 10:19:53 -0700
 ./lib/pokemongodb/types/dragon.rb	Mon, 12 Sep 2016 10:19:37 -0700
@@ -348,12 +347,11 @@ Sun, 18 Sep 2016 21:23:52 -0700
 ./lib/pokemongodb/types/rock.rb	Mon, 12 Sep 2016 10:23:26 -0700
 ./lib/pokemongodb/types/steel.rb	Mon, 12 Sep 2016 10:23:13 -0700
 ./lib/pokemongodb/types/water.rb	Mon, 12 Sep 2016 10:23:24 -0700
-./lib/pokemongodb.rb	Sat, 17 Sep 2016 15:18:00 -0700
-./pokemongodb-1.0.0.gem	Sun, 18 Sep 2016 21:23:34 -0700
-./pokemongodb.gemspec	Sun, 18 Sep 2016 21:22:48 -0700
+./lib/pokemongodb.rb	Tue, 20 Sep 2016 21:56:19 -0700
+./pokemongodb.gemspec	Tue, 20 Sep 2016 21:44:32 -0700
 ./Rakefile	Mon, 12 Sep 2016 10:10:02 -0700
-./readme.md	Sun, 18 Sep 2016 21:21:38 -0700
-./test/test_location.rb	Sun, 18 Sep 2016 17:40:09 -0700
-./test/test_move.rb	Mon, 12 Sep 2016 18:26:58 -0700
-./test/test_pokemon.rb	Sun, 18 Sep 2016 18:00:14 -0700
-./test/test_type.rb	Sat, 17 Sep 2016 15:42:20 -0700
+./readme.md	Tue, 20 Sep 2016 00:12:25 -0700
+./test/test_location.rb	Tue, 20 Sep 2016 22:00:39 -0700
+./test/test_move.rb	Tue, 20 Sep 2016 21:50:19 -0700
+./test/test_pokemon.rb	Tue, 20 Sep 2016 21:59:07 -0700
+./test/test_type.rb	Tue, 20 Sep 2016 21:57:17 -0700
