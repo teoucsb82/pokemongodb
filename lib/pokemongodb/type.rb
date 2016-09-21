@@ -1,5 +1,5 @@
 class Pokemongodb
-  class Type
+  class Type < Pokemongodb
 
     # Returns array of all available Types.
     #
@@ -38,15 +38,6 @@ class Pokemongodb
       Pokemongodb::Location.all.select do |location|
         location.types.include?(self)
       end
-    end
-
-    # Returns string name inferred from class name.
-    #
-    # Example:
-    #   >> Pokemongodb::Type::Normal.name
-    #   => "Normal"
-    def self.name
-      to_s.split("::").last
     end
 
     # Returns array of types where both the offense and defense are strong.

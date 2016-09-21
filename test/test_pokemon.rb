@@ -173,4 +173,8 @@ class PokemonTest < Minitest::Test
       assert_equal Pokemongodb::Pokemon::Venusaur.egg_hatch_distance, nil
     end
   end
+
+  def test_that_to_s_returns_formatted_name
+    assert_equal Pokemongodb::Pokemon::Scyther.to_s, "scyther"
+  end
 end

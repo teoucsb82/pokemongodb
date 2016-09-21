@@ -1,5 +1,5 @@
 class Pokemongodb
-  class Location
+  class Location < Pokemongodb
 
     # Returns array of all available locations.
     #

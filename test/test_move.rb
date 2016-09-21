@@ -47,4 +47,9 @@ class MoveTest < Minitest::Test
   def test_that_charge_moves_use_energy
     assert_equal @charge_move.eps, -8.62
   end
+
+  def test_that_to_s_returns_formatted_name
+    assert_equal @fast_move.to_s, "acid"
+    assert_equal @charge_move.to_s, "aerial ace"
+  end
 end

@@ -22,10 +22,6 @@ class TypeTest < Minitest::Test
     it { assert_equal Pokemongodb::Type::Grass.locations, grass_locations }
   end
 
-  describe '.name' do
-    it { assert_equal Pokemongodb::Type::Normal.name, "Normal" }
-  end
-
   def test_that_defense_strong_does_a_reverse_lookup_to_find_matches
     dark_expected_types = [
       Pokemongodb::Type::Dark, 
@@ -68,5 +64,10 @@ class TypeTest < Minitest::Test
 
   def test_that_weak_against_returns_empty_array_if_nothing_matches
     assert_empty Pokemongodb::Type::Normal.weak_against
+  end
+
+  def test_that_to_s_returns_formatted_name
+    assert_equal Pokemongodb::Type::Normal.to_s, "normal"
+    assert_equal Pokemongodb::Type::Dark.to_s, "dark"
   end
 end

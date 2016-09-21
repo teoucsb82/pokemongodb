@@ -1,5 +1,5 @@
 class Pokemongodb
-  class Move
+  class Move < Pokemongodb
     class Category
       FAST = :fast
       CHARGE = :charge
