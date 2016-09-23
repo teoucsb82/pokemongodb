@@ -60,6 +60,19 @@ class Pokemongodb
         Location::Woodland,
       ]
     end
+
+    # Returns array of pokemon who can use the move
+    #
+    # Example:
+    #   >> Pokemongodb::Location::Beach.available_pokemon
+    #   => [Pokemongodb::Pokemon::Arcanine, Pokemongodb::Pokemon::Charizard... ]
+    def self.available_pokemon
+      pokemon_at_location = []
+      self.types.each do |type|
+        pokemon_at_location += Pokemongodb::Pokemon.find_by_type(type)
+      end
+      pokemon_at_location.uniq
+    end
   end
 end
 

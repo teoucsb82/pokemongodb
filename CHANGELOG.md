@@ -1,4 +1,8 @@
-### 1.1.1 - 2016-09-23
+### 1.2.0 - 2016-09-23
+
+* Added #available_pokemon method to Locations.
+
+### 1.1.0 - 2016-09-23
 
 * Added #used_by method to Moves.
 

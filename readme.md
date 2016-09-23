@@ -496,6 +496,17 @@ Example:
 => [Pokemongodb::Pokemon::Arbok, Pokemongodb::Pokemon::Bellsprout...]
 ```
 
+## Pokemongodb::Location methods
+
+### `Pokemongodb::Location::#{Location}.available_pokemon`
+Returns array of all pokemon who can be found at this location.
+
+Example:
+
+```
+>> Pokemongodb::Location::Beach.available_pokemon
+=> [Pokemongodb::Pokemon::Arcanine, Pokemongodb::Pokemon::Charizard... ]
+```
 
 ## Pokemongodb::Type methods
 
