@@ -486,6 +486,17 @@ Example:
 => Pokemongodb::Type::Poison
 ```
 
+### `Pokemongodb::Move::#{Move}.used_by`
+Returns array of all pokemon who can use the move.
+
+Example:
+
+```
+>> Pokemongodb::Move::Acid.used_by
+=> [Pokemongodb::Pokemon::Arbok, Pokemongodb::Pokemon::Bellsprout...]
+```
+
+
 ## Pokemongodb::Type methods
 
 ### `Pokemongodb::Type.all`

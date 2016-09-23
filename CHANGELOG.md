@@ -1,3 +1,7 @@
+### 1.1.1 - 2016-09-23
+
+* Added #used_by method to Moves.
+
 ### 1.0.1 - 2016-09-19
 
 * Standardized .to_s method for view displaying.

@@ -190,6 +190,15 @@ class Pokemongodb
         move.category == Category::FAST
       end
     end
+    
+    # Returns array of pokemon who can use the move
+    #
+    # Example:
+    #   >> Pokemongodb::Move::Acid.used_by
+    #   => [Pokemongodb::Pokemon::Arbok, Pokemongodb::Pokemon::Bellsprout...]
+    def self.used_by
+      Pokemongodb::Pokemon.all.select { |x| x.moves.include?(self) }
+    end
   end
 end
 

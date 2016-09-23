@@ -52,4 +52,9 @@ class MoveTest < Minitest::Test
     assert_equal @fast_move.to_s, "acid"
     assert_equal @charge_move.to_s, "aerial ace"
   end
+
+  def test_that_used_by_returns_pokemon_who_can_use_the_move
+    assert_equal @fast_move.used_by, [Pokemongodb::Pokemon::Arbok, Pokemongodb::Pokemon::Bellsprout, Pokemongodb::Pokemon::Ekans, Pokemongodb::Pokemon::Gloom, Pokemongodb::Pokemon::Oddish, Pokemongodb::Pokemon::Tentacruel, Pokemongodb::Pokemon::Victreebel, Pokemongodb::Pokemon::Vileplume, Pokemongodb::Pokemon::Weepinbell]
+    assert_equal @charge_move.used_by, [Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Dodrio, Pokemongodb::Pokemon::Doduo, Pokemongodb::Pokemon::Farfetchd, Pokemongodb::Pokemon::Fearow, Pokemongodb::Pokemon::Pidgeot, Pokemongodb::Pokemon::Pidgeotto, Pokemongodb::Pokemon::Pidgey, Pokemongodb::Pokemon::Spearow]
+  end
 end
