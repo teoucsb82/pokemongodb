@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
 
+      def self.description
+        "If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon's parent is sure to be in the area, and it will become violently enraged at you."
+      end
+       
       def self.egg_hatch_distance
         5
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         22
       end
       
+      def self.description
+        "Hitmonlee's legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         20
       end
 
+      def self.description
+        "The surface of Poliwhirl's body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Poliwrath
       end

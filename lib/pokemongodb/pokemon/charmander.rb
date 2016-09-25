@@ -33,6 +33,10 @@ class Pokemongodb
         14
       end
 
+      def self.description
+        "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely."
+      end
+       
       def self.egg_hatch_distance
         2
       end

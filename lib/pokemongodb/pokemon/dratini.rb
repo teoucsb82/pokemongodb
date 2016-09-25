@@ -33,6 +33,10 @@ class Pokemongodb
         14
       end
 
+      def self.description
+        "Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up."
+      end
+       
       def self.egg_hatch_distance
         2
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         38
       end
 
+      def self.description
+        "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself."
+      end
+       
       def self.flee_rate
         0.05
       end

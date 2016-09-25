@@ -29,6 +29,10 @@ class Pokemongodb
         27
       end
 
+      def self.description
+        "Apparently, the heads aren't the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest."
+      end
+       
       def self.flee_rate
         0.06
       end

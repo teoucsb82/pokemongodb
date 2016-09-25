@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
       
+      def self.description
+        "Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell."
+      end
+       
       def self.egg_hatch_distance
         10
       end

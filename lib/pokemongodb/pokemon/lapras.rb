@@ -29,6 +29,10 @@ class Pokemongodb
         43
       end
 
+      def self.description
+        "People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain."
+      end
+       
       def self.egg_hatch_distance
         10
       end

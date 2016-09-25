@@ -33,6 +33,10 @@ class Pokemongodb
         9
       end
 
+      def self.description
+        "Abra needs to sleep for eighteen hours a day. If it doesn't, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping."
+      end
+       
       def self.egg_hatch_distance
         5
       end

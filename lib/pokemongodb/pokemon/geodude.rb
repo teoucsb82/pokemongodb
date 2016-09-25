@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
       
+      def self.description
+        "When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food."
+      end
+       
       def self.egg_hatch_distance
         2
       end

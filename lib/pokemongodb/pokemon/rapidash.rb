@@ -29,6 +29,10 @@ class Pokemongodb
         32
       end
 
+      def self.description
+        "Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph."
+      end
+       
       def self.flee_rate
         0.06
       end

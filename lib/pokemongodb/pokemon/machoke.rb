@@ -33,6 +33,10 @@ class Pokemongodb
         26
       end
 
+      def self.description
+        "Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Machamp
       end

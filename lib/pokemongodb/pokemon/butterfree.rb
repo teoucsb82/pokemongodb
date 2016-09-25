@@ -29,6 +29,10 @@ class Pokemongodb
         21
       end
 
+      def self.description
+        "Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest."
+      end
+       
       def self.flee_rate
         0.06
       end

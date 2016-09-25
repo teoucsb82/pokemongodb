@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
       
+      def self.description
+        "Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing."
+      end
+       
       def self.egg_hatch_distance
         10
       end

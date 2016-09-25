@@ -29,6 +29,10 @@ class Pokemongodb
         33
       end
 
+      def self.description
+        "Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid."
+      end
+       
       def self.flee_rate
         0.06
       end

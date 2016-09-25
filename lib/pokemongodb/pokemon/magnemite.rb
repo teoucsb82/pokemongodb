@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted."
+      end
+       
       def self.egg_hatch_distance
         5
       end

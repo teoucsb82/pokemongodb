@@ -29,6 +29,10 @@ class Pokemongodb
         31
       end
 
+      def self.description
+        "Jolteon's cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles."
+      end
+       
       def self.flee_rate
         0.06
       end

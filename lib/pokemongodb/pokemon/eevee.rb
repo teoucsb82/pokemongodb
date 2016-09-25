@@ -29,6 +29,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve."
+      end
+       
       def self.egg_hatch_distance
         10
       end

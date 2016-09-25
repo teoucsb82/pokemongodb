@@ -33,6 +33,10 @@ class Pokemongodb
         14
       end
 
+      def self.description
+        "Staryu apparently communicates with the stars in the night sky by flashing the red core at the center of its body. If parts of its body are torn, this Pokémon simply regenerates the missing pieces and limbs."
+      end
+       
       def self.egg_hatch_distance
         5
       end

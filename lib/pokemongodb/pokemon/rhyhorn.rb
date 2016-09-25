@@ -33,6 +33,10 @@ class Pokemongodb
         17
       end
 
+      def self.description
+        "Rhyhorn's brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something."
+      end
+       
       def self.egg_hatch_distance
         5
       end

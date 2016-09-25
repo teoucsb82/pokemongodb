@@ -29,6 +29,10 @@ class Pokemongodb
         32
       end
 
+      def self.description
+        "Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum."
+      end
+       
       def self.flee_rate
         0.06
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying."
+      end
+       
       def self.egg_hatch_distance
         5
       end

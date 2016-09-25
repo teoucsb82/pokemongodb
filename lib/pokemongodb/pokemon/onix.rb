@@ -29,6 +29,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory."
+      end
+       
       def self.egg_hatch_distance
         5
       end

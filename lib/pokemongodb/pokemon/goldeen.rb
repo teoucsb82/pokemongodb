@@ -33,6 +33,10 @@ class Pokemongodb
         14
       end
 
+      def self.description
+        "Goldeen loves swimming wild and free in rivers and ponds. If one of these Pokémon is placed in an aquarium, it will shatter even the thickest glass with one ram of its horn and make its escape."
+      end
+       
       def self.egg_hatch_distance
         5
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Dragonite
       end

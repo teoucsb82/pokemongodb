@@ -33,6 +33,10 @@ class Pokemongodb
         9
       end
 
+      def self.description
+        "Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere."
+      end
+       
       def self.egg_hatch_distance
         2
       end

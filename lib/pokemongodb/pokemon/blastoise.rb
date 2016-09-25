@@ -29,6 +29,10 @@ class Pokemongodb
         37
       end
 
+      def self.description
+        "Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet."
+      end
+       
       def self.flee_rate
         0.05
       end

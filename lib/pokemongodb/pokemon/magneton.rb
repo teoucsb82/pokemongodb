@@ -29,6 +29,10 @@ class Pokemongodb
         27
       end
 
+      def self.description
+        "Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball."
+      end
+       
       def self.flee_rate
         0.06
       end

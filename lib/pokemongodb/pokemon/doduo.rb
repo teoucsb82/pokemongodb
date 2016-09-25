@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "Doduo's two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains."
+      end
+       
       def self.egg_hatch_distance
         5
       end

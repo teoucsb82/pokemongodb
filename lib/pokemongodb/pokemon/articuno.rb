@@ -29,6 +29,10 @@ class Pokemongodb
         43
       end
 
+      def self.description
+        "Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall."
+      end
+       
       def self.flee_rate
         0.1
       end

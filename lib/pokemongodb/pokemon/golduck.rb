@@ -29,6 +29,10 @@ class Pokemongodb
         35
       end
 
+      def self.description
+        "Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas."
+      end
+       
       def self.flee_rate
         0.06
       end

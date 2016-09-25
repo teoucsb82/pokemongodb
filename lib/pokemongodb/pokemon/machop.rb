@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts."
+      end
+       
       def self.egg_hatch_distance
         5
       end

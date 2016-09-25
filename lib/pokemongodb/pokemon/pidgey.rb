@@ -33,6 +33,10 @@ class Pokemongodb
         10
       end
 
+      def self.description
+        "Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings."
+      end
+       
       def self.egg_hatch_distance
         2
       end

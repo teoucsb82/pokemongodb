@@ -29,6 +29,10 @@ class Pokemongodb
         35
       end
 
+      def self.description
+        "Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights."
+      end
+       
       def self.flee_rate
         0.06
       end

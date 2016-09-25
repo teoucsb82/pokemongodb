@@ -29,6 +29,10 @@ class Pokemongodb
         28
       end
 
+      def self.description
+        "Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness."
+      end
+       
       def self.flee_rate
         0.07
       end

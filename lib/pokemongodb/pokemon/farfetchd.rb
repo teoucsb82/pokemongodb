@@ -29,6 +29,10 @@ class Pokemongodb
         18
       end
 
+      def self.description
+        "Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks."
+      end
+       
       def self.egg_hatch_distance
         5
       end

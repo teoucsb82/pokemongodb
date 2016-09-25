@@ -29,6 +29,10 @@ class Pokemongodb
         38
       end
 
+      def self.description
+        "Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead."
+      end
+       
       def self.flee_rate
         0.06
       end

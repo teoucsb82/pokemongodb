@@ -29,6 +29,10 @@ class Pokemongodb
         36
       end
 
+      def self.description
+        "Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it."
+      end
+       
       def self.flee_rate
         0.05
       end

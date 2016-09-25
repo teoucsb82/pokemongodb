@@ -29,6 +29,10 @@ class Pokemongodb
         28
       end
 
+      def self.description
+        "Golbat bites down on prey with its four fangs and drinks the victim's blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon."
+      end
+       
       def self.flee_rate
         0.07
       end

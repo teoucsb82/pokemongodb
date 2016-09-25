@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind."
+      end
+       
       def self.egg_hatch_distance
         5
       end

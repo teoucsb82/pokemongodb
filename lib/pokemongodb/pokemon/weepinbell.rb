@@ -33,6 +33,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Victreebel
       end

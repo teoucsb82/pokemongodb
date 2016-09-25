@@ -29,6 +29,10 @@ class Pokemongodb
         50
       end
 
+      def self.description
+        "Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land."
+      end
+       
       def self.flee_rate
         0.05
       end

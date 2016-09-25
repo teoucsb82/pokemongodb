@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "Sandshrew has a very dry hide that is extremely tough. The Pokémon can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep."
+      end
+       
       def self.egg_hatch_distance
         5
       end

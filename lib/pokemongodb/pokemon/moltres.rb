@@ -29,6 +29,10 @@ class Pokemongodb
         47
       end
 
+      def self.description
+        "Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself."
+      end
+       
       def self.flee_rate
         0.1
       end

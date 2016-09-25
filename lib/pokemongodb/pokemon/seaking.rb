@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
 
+      def self.description
+        "Seaking is very protective of its eggs. The male and female will take turns patrolling around their nest and eggs. The guarding of eggs by these Pokémon goes on for over a month."
+      end
+       
       def self.flee_rate
         0.07
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         38
       end
 
+      def self.description
+        "There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people."
+      end
+       
       def self.flee_rate
         0.05
       end

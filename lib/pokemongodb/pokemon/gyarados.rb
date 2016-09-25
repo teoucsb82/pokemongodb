@@ -29,6 +29,10 @@ class Pokemongodb
         39
       end
 
+      def self.description
+        "Once Gyarados goes on a rampage, its ferociously violent blood doesn't calm until it has burned everything down. There are records of this Pokémon's rampages lasting a whole month."
+      end
+       
       def self.flee_rate
         0.07
       end

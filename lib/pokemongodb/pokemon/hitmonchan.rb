@@ -29,6 +29,10 @@ class Pokemongodb
         22
       end
 
+      def self.description
+        "Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         7
       end
 
+      def self.description
+        "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose)."
+      end
+       
       def self.egg_hatch_distance
         2
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         45
       end
 
+      def self.description
+        "Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts."
+      end
+       
       def self.flee_rate
         0.1
       end

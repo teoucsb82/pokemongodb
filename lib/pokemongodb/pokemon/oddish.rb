@@ -33,6 +33,10 @@ class Pokemongodb
         17
       end
 
+      def self.description
+        "Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon's feet are thought to change shape and become similar to the roots of trees."
+      end
+       
       def self.egg_hatch_distance
         5
       end

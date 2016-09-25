@@ -29,6 +29,10 @@ class Pokemongodb
         26
       end
 
+      def self.description
+        "This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible."
+      end
+       
       def self.flee_rate
         0.07
       end

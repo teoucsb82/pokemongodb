@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
       
+      def self.description
+        "When this Pokémon sings, it never pauses to breathe. If it is in a battle against an opponent that does not easily fall asleep, Jigglypuff cannot breathe, endangering its life."
+      end
+       
       def self.egg_hatch_distance
         2
       end

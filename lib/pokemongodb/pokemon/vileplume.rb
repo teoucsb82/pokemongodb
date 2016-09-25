@@ -29,6 +29,10 @@ class Pokemongodb
         36
       end
 
+      def self.description
+        "Vileplume has the world's largest petals. They are used to attract prey that are then doused with toxic spores. Once the prey are immobilized, this Pokémon catches and devours them."
+      end
+       
       def self.flee_rate
         0.05
       end

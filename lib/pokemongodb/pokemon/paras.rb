@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life."
+      end
+       
       def self.egg_hatch_distance
         5
       end

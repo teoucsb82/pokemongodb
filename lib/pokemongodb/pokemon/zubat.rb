@@ -33,6 +33,10 @@ class Pokemongodb
         9
       end
 
+      def self.description
+        "Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down."
+      end
+       
       def self.egg_hatch_distance
         2
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         34
       end
 
+      def self.description
+        "Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon's course."
+      end
+       
       def self.flee_rate
         0.05
       end

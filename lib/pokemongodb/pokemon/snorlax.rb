@@ -29,6 +29,10 @@ class Pokemongodb
         45
       end
       
+      def self.description
+        "Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         40
       end
 
+      def self.description
+        "Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water."
+      end
+       
       def self.flee_rate
         0.06
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         32
       end
 
+      def self.description
+        "Wigglytuff's body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon."
+      end
+       
       def self.flee_rate
         0.06
       end

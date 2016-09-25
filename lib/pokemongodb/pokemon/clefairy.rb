@@ -33,6 +33,10 @@ class Pokemongodb
         18
       end
       
+      def self.description
+        "On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other."
+      end
+       
       def self.egg_hatch_distance
         2
       end

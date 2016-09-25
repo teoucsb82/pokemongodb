@@ -33,6 +33,10 @@ class Pokemongodb
         20
       end
 
+      def self.description
+        "Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Gengar
       end

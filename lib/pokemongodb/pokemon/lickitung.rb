@@ -29,6 +29,10 @@ class Pokemongodb
         24
       end
 
+      def self.description
+        "Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things."
+      end
+       
       def self.egg_hatch_distance
         5
       end

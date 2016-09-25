@@ -33,6 +33,10 @@ class Pokemongodb
         15
       end
 
+      def self.description
+        "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds."
+      end
+       
       def self.egg_hatch_distance
         2
       end

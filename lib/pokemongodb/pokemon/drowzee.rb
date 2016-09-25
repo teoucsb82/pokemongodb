@@ -33,6 +33,10 @@ class Pokemongodb
         15
       end
 
+      def self.description
+        "If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils."
+      end
+       
       def self.egg_hatch_distance
         5
       end

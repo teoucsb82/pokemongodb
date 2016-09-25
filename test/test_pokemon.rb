@@ -177,4 +177,14 @@ class PokemonTest < Minitest::Test
   def test_that_to_s_returns_formatted_name
     assert_equal Pokemongodb::Pokemon::Scyther.to_s, "scyther"
   end
+
+  def test_that_pokemon_have_descriptions
+    assert_equal Pokemongodb::Pokemon::Scyther.description, "Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke."
+  end
+
+  def test_that_all_pokemon_have_a_description
+    Pokemongodb::Pokemon.all.each do |pokemon|
+      refute_nil pokemon.description
+    end
+  end
 end

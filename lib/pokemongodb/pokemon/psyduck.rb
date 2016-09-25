@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "If it uses its mysterious power, Psyduck can't remember having done so. It apparently can't form a memory of such an event because it goes into an altered state that is much like deep sleep."
+      end
+       
       def self.egg_hatch_distance
         5
       end

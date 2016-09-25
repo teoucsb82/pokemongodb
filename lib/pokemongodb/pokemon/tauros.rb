@@ -29,6 +29,10 @@ class Pokemongodb
         27
       end
 
+      def self.description
+        "This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself."
+      end
+       
       def self.egg_hatch_distance
         5
       end

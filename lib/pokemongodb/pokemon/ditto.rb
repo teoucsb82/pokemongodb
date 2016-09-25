@@ -29,6 +29,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong."
+      end
+       
       def self.flee_rate
         0.1
       end

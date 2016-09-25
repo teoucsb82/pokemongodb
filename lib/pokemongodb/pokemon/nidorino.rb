@@ -33,6 +33,10 @@ class Pokemongodb
         20
       end
 
+      def self.description
+        "Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Nidoking
       end

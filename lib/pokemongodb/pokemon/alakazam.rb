@@ -29,6 +29,10 @@ class Pokemongodb
         26
       end
 
+      def self.description
+        "Alakazam's brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world."
+      end
+       
       def self.flee_rate
         0.05
       end

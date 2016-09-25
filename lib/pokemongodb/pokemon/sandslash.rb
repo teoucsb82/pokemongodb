@@ -29,6 +29,10 @@ class Pokemongodb
         26
       end
 
+      def self.description
+        "Sandslash can roll up its body as if it were a ball covered with large spikes. In battle, this Pokémon will try to make the foe flinch by jabbing it with its spines. It then leaps at the stunned foe to tear wildly with its sharp claws."
+      end
+       
       def self.flee_rate
         0.06
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
 
+      def self.description
+        "Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow."
+      end
+       
       def self.flee_rate
         0.05
       end

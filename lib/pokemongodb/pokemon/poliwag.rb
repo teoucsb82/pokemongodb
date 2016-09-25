@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "Poliwag has a very thin skin. It is possible to see the Pokémon's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it."
+      end
+       
       def self.egg_hatch_distance
         5
       end

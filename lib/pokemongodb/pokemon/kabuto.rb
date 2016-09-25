@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
       
+      def self.description
+        "Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years."
+      end
+       
       def self.egg_hatch_distance
         10
       end

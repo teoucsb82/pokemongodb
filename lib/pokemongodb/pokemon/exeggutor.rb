@@ -29,6 +29,10 @@ class Pokemongodb
         40
       end
 
+      def self.description
+        "Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute."
+      end
+       
       def self.flee_rate
         0.06
       end

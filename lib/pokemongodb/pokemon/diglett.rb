@@ -33,6 +33,10 @@ class Pokemongodb
         7
       end
 
+      def self.description
+        "Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables."
+      end
+       
       def self.egg_hatch_distance
         5
       end

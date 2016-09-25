@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn."
+      end
+
       def self.egg_hatch_distance
         5
       end

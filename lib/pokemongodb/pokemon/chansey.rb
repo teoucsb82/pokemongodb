@@ -29,6 +29,10 @@ class Pokemongodb
         10
       end
       
+      def self.description
+        "Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite."
+      end
+       
       def self.egg_hatch_distance
         10
       end

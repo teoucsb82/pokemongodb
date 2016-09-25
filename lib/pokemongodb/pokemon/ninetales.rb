@@ -29,6 +29,10 @@ class Pokemongodb
         32
       end
 
+      def self.description
+        "Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech."
+      end
+       
       def self.flee_rate
         0.06
       end

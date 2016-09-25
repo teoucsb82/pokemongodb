@@ -29,6 +29,10 @@ class Pokemongodb
         22
       end
 
+      def self.description
+        "Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real."
+      end
+
       def self.egg_hatch_distance
         5
       end

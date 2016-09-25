@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out."
+      end
+       
       def self.egg_hatch_distance
         5
       end

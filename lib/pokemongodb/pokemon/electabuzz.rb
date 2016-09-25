@@ -29,6 +29,10 @@ class Pokemongodb
         31
       end
       
+      def self.description
+        "When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods."
+      end
+       
       def self.egg_hatch_distance
         10
       end

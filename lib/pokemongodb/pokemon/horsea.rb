@@ -33,6 +33,10 @@ class Pokemongodb
         12
       end
 
+      def self.description
+        "If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back."
+      end
+       
       def self.egg_hatch_distance
         5
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution."
+      end
+       
       def self.egg_hatch_distance
         5
       end

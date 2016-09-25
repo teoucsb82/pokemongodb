@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Tangela's vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day."
+      end
+       
       def self.egg_hatch_distance
         5
       end

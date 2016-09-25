@@ -29,6 +29,10 @@ class Pokemongodb
         36
       end
 
+      def self.description
+        "Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young."
+      end
+       
       def self.flee_rate
         0.05
       end

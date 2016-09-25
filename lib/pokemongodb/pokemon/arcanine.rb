@@ -29,6 +29,10 @@ class Pokemongodb
         40
       end
       
+      def self.description
+        "Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power."
+      end
+       
       def self.flee_rate
         0.06
       end

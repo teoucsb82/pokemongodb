@@ -57,4 +57,11 @@ class MoveTest < Minitest::Test
     assert_equal @fast_move.used_by, [Pokemongodb::Pokemon::Arbok, Pokemongodb::Pokemon::Bellsprout, Pokemongodb::Pokemon::Ekans, Pokemongodb::Pokemon::Gloom, Pokemongodb::Pokemon::Oddish, Pokemongodb::Pokemon::Tentacruel, Pokemongodb::Pokemon::Victreebel, Pokemongodb::Pokemon::Vileplume, Pokemongodb::Pokemon::Weepinbell]
     assert_equal @charge_move.used_by, [Pokemongodb::Pokemon::Beedrill, Pokemongodb::Pokemon::Dodrio, Pokemongodb::Pokemon::Doduo, Pokemongodb::Pokemon::Farfetchd, Pokemongodb::Pokemon::Fearow, Pokemongodb::Pokemon::Pidgeot, Pokemongodb::Pokemon::Pidgeotto, Pokemongodb::Pokemon::Pidgey, Pokemongodb::Pokemon::Spearow]
   end
+
+  def test_that_all_moves_have_dps_and_eps
+    @all_moves.each do |move|
+      refute_nil move.dps
+      refute_nil move.eps
+    end
+  end
 end

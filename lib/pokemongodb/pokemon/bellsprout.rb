@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron."
+      end
+       
       def self.egg_hatch_distance
         5
       end

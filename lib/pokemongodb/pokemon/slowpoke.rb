@@ -33,6 +33,10 @@ class Pokemongodb
         18
       end
 
+      def self.description
+        "Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge."
+      end
+       
       def self.egg_hatch_distance
         5
       end

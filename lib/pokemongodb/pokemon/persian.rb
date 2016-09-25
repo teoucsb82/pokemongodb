@@ -29,6 +29,10 @@ class Pokemongodb
         24
       end
 
+      def self.description
+        "Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon's surrounding vicinity. It becomes docile if grabbed by the whiskers."
+      end
+       
       def self.flee_rate
         0.07
       end

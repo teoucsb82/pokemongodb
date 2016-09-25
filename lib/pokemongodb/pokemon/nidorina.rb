@@ -33,6 +33,10 @@ class Pokemongodb
         20
       end
 
+      def self.description
+        "When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Nidoqueen
       end

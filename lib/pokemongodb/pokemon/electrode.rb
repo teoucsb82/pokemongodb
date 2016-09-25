@@ -29,6 +29,10 @@ class Pokemongodb
         24
       end
 
+      def self.description
+        "One of Electrode's characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated."
+      end
+       
       def self.flee_rate
         0.06
       end

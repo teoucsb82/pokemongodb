@@ -29,6 +29,10 @@ class Pokemongodb
         31
       end
 
+      def self.description
+        "Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago."
+      end
+       
       def self.flee_rate
         0.06
       end

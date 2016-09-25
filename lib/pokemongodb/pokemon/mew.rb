@@ -29,6 +29,10 @@ class Pokemongodb
         48
       end
 
+      def self.description
+        "Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people."
+      end
+       
       def self.flee_rate
         0.1
       end

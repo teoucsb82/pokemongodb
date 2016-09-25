@@ -33,6 +33,10 @@ class Pokemongodb
         16
       end
 
+      def self.description
+        "Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head."
+      end
+       
       def self.egg_hatch_distance
         5
       end

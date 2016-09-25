@@ -29,6 +29,10 @@ class Pokemongodb
         32
       end
 
+      def self.description
+        "Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times."
+      end
+       
       def self.egg_hatch_distance
         10
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         19
       end
 
+      def self.description
+        "Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won't forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things."
+      end
+       
       def self.egg_hatch_distance
         5
       end

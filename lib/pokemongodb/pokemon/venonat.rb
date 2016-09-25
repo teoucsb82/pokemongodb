@@ -33,6 +33,10 @@ class Pokemongodb
         15
       end
 
+      def self.description
+        "Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey."
+      end
+       
       def self.egg_hatch_distance
         5
       end

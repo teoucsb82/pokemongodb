@@ -29,6 +29,10 @@ class Pokemongodb
         33
       end
       
+      def self.description
+        "In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings."
+      end
+       
       def self.egg_hatch_distance
         10
       end

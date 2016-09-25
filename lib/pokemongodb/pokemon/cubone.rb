@@ -33,6 +33,10 @@ class Pokemongodb
         15
       end
 
+      def self.description
+        "Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds."
+      end
+       
       def self.egg_hatch_distance
         5
       end

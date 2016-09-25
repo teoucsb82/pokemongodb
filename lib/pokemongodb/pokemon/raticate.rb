@@ -29,6 +29,10 @@ class Pokemongodb
         21
       end
 
+      def self.description
+        "Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses."
+      end
+       
       def self.flee_rate
         0.07
       end

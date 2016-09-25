@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
 
+      def self.description
+        "Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system."
+      end
+       
       def self.flee_rate
         0.06
       end

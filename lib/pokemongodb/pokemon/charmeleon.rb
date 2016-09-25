@@ -33,6 +33,10 @@ class Pokemongodb
         23
       end
 
+      def self.description
+        "Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Charizard
       end

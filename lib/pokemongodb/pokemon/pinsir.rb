@@ -29,6 +29,10 @@ class Pokemongodb
         31
       end
       
+      def self.description
+        "Pinsir has a pair of massive horns. Protruding from the surface of these horns are thorns. These thorns are driven deeply into the foe's body when the pincer closes, making it tough for the foe to escape."
+      end
+       
       def self.egg_hatch_distance
         10
       end

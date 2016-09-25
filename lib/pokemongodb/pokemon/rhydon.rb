@@ -29,6 +29,10 @@ class Pokemongodb
         33
       end
 
+      def self.description
+        "Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat."
+      end
+       
       def self.flee_rate
         0.06
       end

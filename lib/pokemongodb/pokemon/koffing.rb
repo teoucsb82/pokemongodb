@@ -33,6 +33,10 @@ class Pokemongodb
         17
       end
 
+      def self.description
+        "Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon."
+      end
+       
       def self.egg_hatch_distance
         5
       end

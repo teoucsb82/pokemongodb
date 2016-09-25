@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once."
+      end
+       
       def self.flee_rate
         0.07
       end

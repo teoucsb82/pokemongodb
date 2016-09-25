@@ -33,6 +33,10 @@ class Pokemongodb
         18
       end
 
+      def self.description
+        "Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Pidgeot
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         31
       end
 
+      def self.description
+        "Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs."
+      end
+       
       def self.flee_rate
         0.05
       end

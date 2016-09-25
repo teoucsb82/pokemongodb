@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey."
+      end
+       
       def self.flee_rate
         0.07
       end

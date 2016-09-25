@@ -29,6 +29,10 @@ class Pokemongodb
         38
       end
 
+      def self.description
+        "This Pokémon's favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather."
+      end
+       
       def self.flee_rate
         0.06
       end

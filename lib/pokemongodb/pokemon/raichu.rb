@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
 
+      def self.description
+        "This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity."
+      end
+       
       def self.flee_rate
         0.06
       end

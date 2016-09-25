@@ -33,6 +33,10 @@ class Pokemongodb
         10
       end
 
+      def self.description
+        "Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger."
+      end
+       
       def self.egg_hatch_distance
         2
       end

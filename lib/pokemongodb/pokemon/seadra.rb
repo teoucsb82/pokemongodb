@@ -29,6 +29,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole."
+      end
+       
       def self.flee_rate
         0.06
       end

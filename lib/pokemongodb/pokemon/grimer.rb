@@ -33,6 +33,10 @@ class Pokemongodb
         19
       end
 
+      def self.description
+        "Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body."
+      end
+       
       def self.egg_hatch_distance
         5
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         17
       end
 
+      def self.description
+        "Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Alakazam
       end

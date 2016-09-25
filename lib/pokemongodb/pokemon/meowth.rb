@@ -33,6 +33,10 @@ class Pokemongodb
         11
       end
 
+      def self.description
+        "Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light."
+      end
+       
       def self.egg_hatch_distance
         5
       end

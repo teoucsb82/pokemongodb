@@ -33,6 +33,10 @@ class Pokemongodb
         25
       end
 
+      def self.description
+        "From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Vileplume
       end

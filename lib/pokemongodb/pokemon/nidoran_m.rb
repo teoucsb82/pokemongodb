@@ -28,6 +28,10 @@ class Pokemongodb
       def self.capture_rate
         0.40
       end
+      
+      def self.description
+        "Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice."
+      end
 
       def self.egg_hatch_distance
         5

@@ -33,6 +33,10 @@ class Pokemongodb
         4
       end
 
+      def self.description
+        "Magikarp is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is."
+      end
+       
       def self.egg_hatch_distance
         2
       end

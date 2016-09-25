@@ -29,6 +29,10 @@ class Pokemongodb
         24
       end
 
+      def self.description
+        "Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon's tempered and hardened spirit is not easily broken."
+      end
+       
       def self.flee_rate
         0.06
       end

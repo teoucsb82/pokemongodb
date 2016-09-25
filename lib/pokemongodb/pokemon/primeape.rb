@@ -29,6 +29,10 @@ class Pokemongodb
         27
       end
       
+      def self.description
+        "When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time."
+      end
+       
       def self.flee_rate
         0.06
       end

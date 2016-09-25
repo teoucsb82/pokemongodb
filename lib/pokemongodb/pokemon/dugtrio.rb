@@ -29,6 +29,10 @@ class Pokemongodb
         17
       end
 
+      def self.description
+        "Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly."
+      end
+       
       def self.flee_rate
         0.06
       end

@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "When Mankey starts shaking and its nasal breathing turns rough, it's a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath."
+      end
+       
       def self.egg_hatch_distance
         5
       end

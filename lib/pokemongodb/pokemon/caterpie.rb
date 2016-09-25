@@ -33,6 +33,10 @@ class Pokemongodb
         7
       end
 
+      def self.description
+        "Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor."
+      end
+       
       def self.egg_hatch_distance
         2
       end

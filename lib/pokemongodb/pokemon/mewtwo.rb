@@ -29,6 +29,10 @@ class Pokemongodb
         60
       end
 
+      def self.description
+        "Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon's body, they failed to endow Mewtwo with a compassionate heart."
+      end
+       
       def self.flee_rate
         0.1
       end

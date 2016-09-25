@@ -29,6 +29,10 @@ class Pokemongodb
         27
       end
 
+      def self.description
+        "Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires."
+      end
+       
       def self.flee_rate
         0.07
       end

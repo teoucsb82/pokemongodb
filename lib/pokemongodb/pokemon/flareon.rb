@@ -29,6 +29,10 @@ class Pokemongodb
         39
       end
 
+      def self.description
+        "Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon's body temperature can rise to a maximum of 1,650 degrees Fahrenheit."
+      end
+       
       def self.flee_rate
         0.06
       end

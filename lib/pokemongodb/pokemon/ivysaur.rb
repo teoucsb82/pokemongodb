@@ -33,6 +33,10 @@ class Pokemongodb
         24
       end
 
+      def self.description
+        "There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Venusaur
       end

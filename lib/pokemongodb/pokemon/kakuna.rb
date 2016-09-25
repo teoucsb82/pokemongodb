@@ -33,6 +33,10 @@ class Pokemongodb
         7
       end
 
+      def self.description
+        "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Beedrill
       end

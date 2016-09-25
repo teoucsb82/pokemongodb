@@ -29,6 +29,10 @@ class Pokemongodb
         38
       end
 
+      def self.description
+        "Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon."
+      end
+       
       def self.flee_rate
         0.05
       end

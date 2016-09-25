@@ -33,6 +33,10 @@ class Pokemongodb
         13
       end
 
+      def self.description
+        "Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes."
+      end
+       
       def self.egg_hatch_distance
         5
       end

@@ -29,6 +29,10 @@ class Pokemongodb
         21
       end
 
+      def self.description
+        "Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm."
+      end
+       
       def self.flee_rate
         0.06
       end

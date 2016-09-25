@@ -29,6 +29,10 @@ class Pokemongodb
         37
       end
 
+      def self.description
+        "Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort."
+      end
+       
       def self.flee_rate
         0.05
       end

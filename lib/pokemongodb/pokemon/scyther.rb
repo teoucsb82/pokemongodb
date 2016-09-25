@@ -29,6 +29,10 @@ class Pokemongodb
         30
       end
       
+      def self.description
+        "Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke."
+      end
+       
       def self.egg_hatch_distance
         10
       end

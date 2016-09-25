@@ -33,6 +33,10 @@ class Pokemongodb
         22
       end
 
+      def self.description
+        "Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent."
+      end
+       
       def self.egg_hatch_distance
         5
       end

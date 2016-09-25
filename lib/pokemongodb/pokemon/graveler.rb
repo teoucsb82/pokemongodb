@@ -33,6 +33,10 @@ class Pokemongodb
         21
       end
 
+      def self.description
+        "Rocks are Graveler's favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom."
+      end
+       
       def self.evolves_into
         Pokemongodb::Pokemon::Golem
       end
