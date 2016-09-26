@@ -1,3 +1,7 @@
+### 1.4.0 - 2016-09-25
+
+* Added MoveSets and Pokemon::Name.move_sets
+
 ### 1.3.0 - 2016-09-25
 
 * Added #description to Pokemon.

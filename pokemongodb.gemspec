@@ -1,11 +1,12 @@
 Gem::Specification.new do |s|
   s.name     = "pokemongodb"
-  s.version  = "1.3.0"
+  s.version  = "1.4.0"
   s.date     = "2016-09-18"
   s.summary  = "Quick Pokemon Go Database / API. Used to power www.mongodatabase.com"
   s.authors  = "TeoUCSB82"
   s.email    = "teo@dellamico.com"
   s.files    = ["lib/pokemongodb.rb", 
+                "lib/pokemongodb/move_set.rb",
                 "lib/pokemongodb/location.rb",
                 "lib/pokemongodb/locations/arid_climate.rb",
                 "lib/pokemongodb/locations/basin.rb",

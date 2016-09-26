@@ -139,6 +139,15 @@ class Pokemongodb
       all.detect { |type| type.evolves_into == self }
     end
 
+    # Returns all available MoveSets for Pokemon
+    #
+    # Example:
+    #   >> Pokemongodb::Pokemon::Bulbasaur.move_sets
+    #   => [#<Pokemongodb::MoveSet:0xXXXXXX @fast_move=Pokemongodb::Move::VineWhip, @charge_move=Pokemongodb::Move::SludgeBomb, @dps=18.76>, ...]
+    def self.move_sets
+      Pokemongodb::MoveSet.from_pokemon(self)
+    end
+
     # Returns array of possible move types
     #
     # Example:

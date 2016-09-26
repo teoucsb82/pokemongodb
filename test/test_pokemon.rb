@@ -187,4 +187,10 @@ class PokemonTest < Minitest::Test
       refute_nil pokemon.description
     end
   end
+
+  def test_that_movesets_returns_all_possible_movesets
+    Pokemongodb::Pokemon.all.each do |pokemon|
+      assert pokemon.move_sets.length != 0
+    end
+  end
 end
