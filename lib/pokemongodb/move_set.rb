@@ -1,5 +1,8 @@
 class Pokemongodb
   class MoveSet < Pokemongodb
+    attr_reader :fast_move
+    attr_reader :charge_move
+
     # Returns all available MoveSets for Pokemon
     #
     # Example:
