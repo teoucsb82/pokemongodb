@@ -1,3 +1,7 @@
+### 1.3.0 - 2016-09-25
+
+* Added #description to Pokemon.
+
 ### 1.2.0 - 2016-09-23
 
 * Added #available_pokemon method to Locations.

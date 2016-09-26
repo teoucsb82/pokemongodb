@@ -153,6 +153,16 @@ Example:
 => 16
 ```
 
+### `Pokemongodb::Pokemon::#{PokemonName}.description`
+Returns flavor text description of pokemon
+
+Example:
+
+```
+>> Pokemongodb::Pokemon::Bulbasaur.description
+=> Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+```
+
 ### `Pokemongodb::Pokemon::#{PokemonName}.egg_hatch_distance`
 returns integer of distance to hatch an egg, or nil if not hatchable from egg
 
